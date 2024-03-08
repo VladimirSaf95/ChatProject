@@ -1,8 +1,6 @@
 from fixture.helper_base import HelperBase
 import pytest
 
-
-
 def test_clickchatbuttom(app):
     helper_base= HelperBase(app)
     app.open_home_page()

@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException, TimeoutException, InvalidElementStateException
+from selenium.webdriver.common.action_chains import ActionChains
 import logging
 import os
 import jsonpickle
@@ -16,7 +17,7 @@ class HelperBase:
 
     def setup_browser_window_size(self):
         # Устанавливаем размер окна браузера
-        self.app.wd.set_window_size(1920, 2400)
+        self.app.wd.set_window_size(1200, 700)
 
     def scroll_to_element(self, element):
         wd = self.app.wd
@@ -37,6 +38,17 @@ class HelperBase:
                 self.logger.warning(f"Element {field_id} is not enabled and cannot be cleared.")
         except NoSuchElementException:
             self.logger.error(f"Element {field_id} not found")
+
+    def click_element_by_xpath(self, xpath):
+        wd = self.app.wd
+        try:
+            element = WebDriverWait(wd, self.TIMEOUT).until(
+                EC.visibility_of_element_located((By.XPATH, xpath))
+            )
+            self.scroll_to_element(element)
+            self.click_element_with_retry(element)
+        except TimeoutException:
+            self.logger.error(f"Timeout: Element {xpath} not found or not clickable")
 
     def click_element_by_css_selector(self, selector):
         wd = self.app.wd
@@ -92,7 +104,8 @@ class HelperBase:
         wd = self.app.wd
         try:
             WebDriverWait(wd, 3).until(
-                EC.presence_of_element_located((By.CLASS_NAME, modalname))
+                EC.presence_of_element_located((By.CLASS_NAME, modalname)) and
+                EC.visibility_of_element_located((By.CLASS_NAME, modalname))
             )
             if mbuttonname:
                 button = wd.find_elements(By.CSS_SELECTOR, mbuttonname)
@@ -100,6 +113,17 @@ class HelperBase:
                     button[0].click()
         except (TimeoutException, NoSuchElementException):
             pass
+
+    def is_modal_displayed(self, modal_class):
+        wd = self.app.wd
+        try:
+            WebDriverWait(wd, 3).until(
+                EC.presence_of_element_located((By.CLASS_NAME, modal_class)) and
+                EC.visibility_of_element_located((By.CLASS_NAME, modal_class))
+            )
+            return True  # Модальное окно отображается
+        except (TimeoutException, NoSuchElementException):
+            return False  # Модальное окно не отображается
 
     def click_checkbox_with_js(self, element):
         wd = self.app.wd
