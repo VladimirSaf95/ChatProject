@@ -2,6 +2,7 @@ from fixture.api_client import APIClient
 import pytest
 import json
 import requests
+import time
 import os
 from urllib.parse import quote
 
@@ -21,9 +22,11 @@ def test_deletedmsg(api_client):
 
 
 def test_unblockplayers(api_client):
-
+    #Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока
+    time.sleep(15)
     #Получаем информацию о том, сколько было забанненых игроков ДО
     getuserbanbefore = api_client.getuserban()
+    total_before = getuserbanbefore.json()["pagination"]["total"]
 
     event_id = os.environ.get("EVENT_ID_B")
 
@@ -48,7 +51,8 @@ def test_unblockplayers(api_client):
     )
 
     response = api_client.delete_token_s(url, json=data)
-
+    #Необходима задержка, чтобы успел отработать запрос на получение забаненных юзеров
+    time.sleep(3)
     print("URL запроса:", response.url)
 
     # Проверка кода состояния
@@ -56,14 +60,11 @@ def test_unblockplayers(api_client):
 
     # Получаем информацию о том, сколько было забанненых игроков ПОСЛЕ
     getuserbanafter = api_client.getuserban()
+    total_after = getuserbanafter.json()["pagination"]["total"]
 
     #Проверяем, что нужный ключ есть в ответе
     assert "total" in getuserbanbefore.json()["pagination"], "The key 'total' is not found in the JSON response before"
     assert "total" in getuserbanafter.json()["pagination"], "The key 'total' is not found in the JSON response after"
-
-    # Получаем значение из ключа total
-    total_before = getuserbanbefore.json()["pagination"]["total"]
-    total_after = getuserbanafter.json()["pagination"]["total"]
 
     # Проверяем, что забаненных игроков уменьшелось на один
     assert total_after == total_before - 1, "The 'total' value did not decrease by one"

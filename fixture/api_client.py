@@ -85,3 +85,4 @@ class APIClient:
 
     def getuserban(self):
         return self.get_token_s(f"api/v1/synapse/user/ban/{self.xnodeid}")
+

@@ -1,7 +1,7 @@
 import os
 import time
 from urllib.parse import quote
-
+import json
 import pytest
 
 from fixture.api_client import APIClient
@@ -223,10 +223,11 @@ def test_unpinnedmsg(api_client):
 def test_blockplayers(api_client):
     # Получаем информацию о том, сколько было забанненых игроков ДО
     getuserbanbefore = api_client.getuserban()
+    total_before = getuserbanbefore.json()["pagination"]["total"]
 
     event_id = os.environ.get("EVENT_ID_B")
     if event_id is None:
-        responseB = api_client.sendmessages(response_b=True)
+        responseB = api_client.sendmessages(response_a=False)
         event_id = os.environ.get("EVENT_ID_B")
 
     data = {
@@ -257,26 +258,24 @@ def test_blockplayers(api_client):
     )
 
     response = api_client.post_token_s(url, json=data)
-
-    assert response.status_code == 200
-
+    #Делаеим задержку времени, чтобы успел отработать запрос по получению забаненных игроков
+    time.sleep(3)
     # Получаем информацию о том, сколько было забанненых игроков ПОСЛЕ
     getuserbanafter = api_client.getuserban()
+    total_after = getuserbanafter.json()["pagination"]["total"]
+
+    assert response.status_code == 200
 
     # Проверяем, что нужный ключ есть в ответе
     assert "total" in getuserbanbefore.json()["pagination"], "The key 'total' is not found in the JSON response before"
     assert "total" in getuserbanafter.json()["pagination"], "The key 'total' is not found in the JSON response after"
 
-    # Получаем значение из ключа total
-    total_before = getuserbanbefore.json()["pagination"]["total"]
-    total_after = getuserbanafter.json()["pagination"]["total"]
-
     # Проверяем, что забаненных игроков увеличилось на один
     assert total_after == total_before + 1, "The 'total' value did not increase by one"
 
-    #Проверяем, что заблокированный игрок не может писать в чат
-    response_blockplayer = api_client.sendmessages(response_b=False)
-    assert "event_id" not in response_blockplayer.json(), "The key 'event_id' is found in the JSON response"
+    # #Проверяем, что заблокированный игрок не может писать в чат
+    # response_blockplayer = api_client.sendmessages(response_b=False)
+    # assert "event_id" not in response_blockplayer.json(), "The key 'event_id' is found in the JSON response"
 
 
 

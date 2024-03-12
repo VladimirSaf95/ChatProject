@@ -159,7 +159,16 @@ class HelperBase:
         elements = wd.find_elements(By.CLASS_NAME, class_name)
         return elements
 
-    def clickchatbuttom(self):
+    def check_chatbutton_existence(self):
+        wd = self.app.wd
+        test_id = "chat-close-icon"
+        selector = f'[data-testid="{test_id}"]'
+        try:
+            wd.find_element(By.CSS_SELECTOR, selector)
+            return True
+        except NoSuchElementException:
+            return False
+    def clickchatbutton(self):
         test_id = "chat-chatButton-openButton"
         selector = f'[data-testid="{test_id}"]'
         self.click_element_by_css_selector(selector)
