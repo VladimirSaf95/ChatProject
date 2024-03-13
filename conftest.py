@@ -33,7 +33,7 @@ def app(request, config):
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="chrome")
+    parser.addoption("--browser", action="store", default="safari")
     parser.addoption("--target", action="store", default="target.json")
 
 # Фикстура для API тестов
