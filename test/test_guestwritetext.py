@@ -2,7 +2,7 @@ from fixture.helper_base import HelperBase
 import pytest
 
 #Проверка под гостем, что при клике на поле ввода сообщения открывается страница авторизации
-def test_click_chat_button_close(app):
+def test_guest_write_text(app):
     helper_base = HelperBase(app)
     #Определяем селектор для нажатия по полю ввода сообщение
     selector = ".sc-hknOHE"

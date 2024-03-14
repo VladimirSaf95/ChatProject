@@ -17,9 +17,10 @@ def config(request):
 def app(request, config):
     # Фикстура для инициализации приложения (открытия браузера).
     web_config = config["web"]
+    api_config = config["api"]
     browser = request.config.getoption("--browser")
 
-    app_fixture = Application(browser=browser, base_url=web_config['baseUrl'])
+    app_fixture = Application(browser=browser, base_url=web_config['baseUrl'], roomA=api_config['roomA'], roomB=api_config['roomB'])
     app_fixture.open_home_page()
 
     # При необходимости можно добавить код для предварительной настройки приложения.
@@ -33,7 +34,7 @@ def app(request, config):
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="safari")
+    parser.addoption("--browser", action="store", default="chrome")
     parser.addoption("--target", action="store", default="target.json")
 
 # Фикстура для API тестов
@@ -41,7 +42,7 @@ def pytest_addoption(parser):
 def api_client(request, config):
     # Фикстура для работы с API.
     api_config = config["api"]
-    api_fixture = APIClient(base_url_api=api_config['baseUrl'], token_1=api_config['token_1'], token_adm=api_config['token_adm'], token_s=api_config['token_s'],roomA=api_config['roomA'], roomB=api_config['roomB'], xnodeid=api_config['X-Node-Id'], senderid=api_config['senderId'],
+    api_fixture = APIClient(base_url_api=api_config['baseUrl'], token_1=api_config['token_1'], token_adm=api_config['token_adm'], token_s=api_config['token_s'], roomA=api_config['roomA'], roomB=api_config['roomB'], xnodeid=api_config['X-Node-Id'], senderid=api_config['senderId'],
                             senderid_adm=api_config['senderId_adm'])
 
     # При необходимости можно добавить код для предварительной настройки API.

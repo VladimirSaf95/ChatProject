@@ -159,6 +159,11 @@ class HelperBase:
         elements = wd.find_elements(By.CLASS_NAME, class_name)
         return elements
 
+    def find_elements_by_tag(self, tag_name):
+        wd = self.app.wd
+        elements = wd.find_elements(By.TAG_NAME, tag_name)
+        return elements
+
     def check_chatbutton_existence(self):
         wd = self.app.wd
         test_id = "chat-close-icon"
@@ -172,3 +177,10 @@ class HelperBase:
         test_id = "chat-chatButton-openButton"
         selector = f'[data-testid="{test_id}"]'
         self.click_element_by_css_selector(selector)
+
+    def find_element_by_text(self, text):
+        wd = self.app.wd
+        try:
+            return wd.find_element(By.XPATH, f"//*[text()='{text}']")
+        except NoSuchElementException:
+            return None

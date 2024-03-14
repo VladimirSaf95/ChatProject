@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 class Application():
 
-    def __init__(self, browser, base_url):
+    def __init__(self, browser, base_url, roomA, roomB):
         if browser == "chrome":
             self.wd = webdriver.Chrome()
         elif browser == "safari":
@@ -15,6 +15,8 @@ class Application():
             raise ValueError(f"Неправильно указан браузер: {browser}")
 
         self.base_url = base_url
+        self.roomA = roomA
+        self.roomB = roomB
 
     def is_valid(self):
         try:
@@ -26,8 +28,11 @@ class Application():
     def is_valid_s(self):
         return self.wd.current_url
 
+    def is_valid_localation(self, local):
+        return self.wd.current_url.endswith(local)
+
     def open_home_page(self):
-        modified_base_url = self.base_url.rstrip('/')  # Удаляем / в конце, если есть
+        modified_base_url = self.checkurl("/en")  # Удаляем / в конце, если есть
         self.wd.get(modified_base_url)
 
     def checkurl(self, endpoint):
@@ -35,6 +40,9 @@ class Application():
         correct_url = f"{base_url}{endpoint}"
         return correct_url
 
+    def open_changelocation_ru(self):
+        login_url = self.checkurl("/ru")  # Вызываем метод checkurl класса
+        self.wd.get(login_url)
 
     def open_signin_page(self):
         login_url = self.checkurl("/user/login")  # Вызываем метод checkurl класса
