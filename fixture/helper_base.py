@@ -164,6 +164,11 @@ class HelperBase:
         elements = wd.find_elements(By.TAG_NAME, tag_name)
         return elements
 
+    def find_elements_by_css_selector(self, selector_name):
+        wd = self.app.wd
+        elements = wd.find_elements(By.CSS_SELECTOR, selector_name)
+        return elements
+
     def check_chatbutton_existence(self):
         wd = self.app.wd
         test_id = "chat-close-icon"
