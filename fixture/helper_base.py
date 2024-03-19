@@ -17,7 +17,7 @@ class HelperBase:
 
     def setup_browser_window_size(self):
         # Устанавливаем размер окна браузера
-        self.app.wd.set_window_size(1200, 700)
+        self.app.wd.set_window_size(1920, 1080)
 
     def scroll_to_element(self, element):
         wd = self.app.wd
@@ -174,7 +174,7 @@ class HelperBase:
         test_id = "chat-close-icon"
         selector = f'[data-testid="{test_id}"]'
         try:
-            wd.find_element(By.CSS_SELECTOR, selector)
+            wd.find_element(By.CLASS_NAME, "chat--opened")
             return True
         except NoSuchElementException:
             return False
@@ -189,3 +189,8 @@ class HelperBase:
             return wd.find_element(By.XPATH, f"//*[text()='{text}']")
         except NoSuchElementException:
             return None
+
+    def find_elements_by_id(self, id_name):
+        wd = self.app.wd
+        elements = wd.find_elements(By.ID, id_name)
+        return elements

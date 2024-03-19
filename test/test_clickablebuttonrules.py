@@ -7,11 +7,13 @@ import requests
 #Проверка отображение правил чата на локали RU и EN
 def test_openrules(app):
     helper_base = HelperBase(app)
+    test_id = "chat-header-rulesButton"
+    selector = f'[data-testid="{test_id}"]'
     # Проверяем, если чат открыт, если нет, то открываем
     if not helper_base.check_chatbutton_existence():
         helper_base.clickchatbutton()
     # Кликаем по селектору иконки правил чата
-    helper_base.click_element_by_css_selector(".hgwQLS")
+    helper_base.click_element_by_css_selector(selector)
     # Проверяем, если отображается модальное окно с правилами
     assert helper_base.is_modal_displayed("ReactModal__Content")
 
@@ -34,11 +36,11 @@ def test_openrules(app):
 
     # Проверяем если включена локаль RU, если да, то в модальном окне правил смотрим что тест на анг языке
     if app.is_valid_localation("/ru"):
-        response = requests.get("URL страницы")
+        response = requests.get(app.is_valid_s())
         # Проверяем, что код статуса равен 200
         if response.status_code == 200:
             # Кликаем по селектору иконки правил чата
-            helper_base.click_element_by_css_selector(".hgwQLS")
+            helper_base.click_element_by_css_selector(selector)
             # Находим элемент с текстом "Правила чата" на странице с русским языком
             chat_rules_element_ru = helper_base.find_element_by_text("Правила чата")
             if chat_rules_element_ru:

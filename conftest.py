@@ -12,8 +12,22 @@ def config(request):
     with open(config_file) as f:
         return json.load(f)
 
-# Фикстура для UI тестов
+# Фикстура для API тестов
 @pytest.fixture(scope="session", autouse=True)
+def api_client(request, config):
+    # Фикстура для работы с API.
+    api_config = config["api"]
+    api_fixture = APIClient(base_url_api=api_config['baseUrl'], token_1=api_config['token_1'], token_adm=api_config['token_adm'], token_s=api_config['token_s'], roomA=api_config['roomA'], roomB=api_config['roomB'], xnodeid=api_config['X-Node-Id'], senderid=api_config['senderId'],
+                            senderid_adm=api_config['senderId_adm'])
+
+    # При необходимости можно добавить код для предварительной настройки API.
+
+    yield api_fixture  # Завершение фикстуры.
+
+    # Код для финализации после каждого теста, если необходимо
+
+# Фикстура для UI тестов
+@pytest.fixture(scope="session", autouse=False)
 def app(request, config):
     # Фикстура для инициализации приложения (открытия браузера).
     web_config = config["web"]
@@ -34,19 +48,7 @@ def app(request, config):
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="safari")
+    parser.addoption("--browser", action="store", default="chrome")
     parser.addoption("--target", action="store", default="target.json")
 
-# Фикстура для API тестов
-@pytest.fixture(scope="session", autouse=True)
-def api_client(request, config):
-    # Фикстура для работы с API.
-    api_config = config["api"]
-    api_fixture = APIClient(base_url_api=api_config['baseUrl'], token_1=api_config['token_1'], token_adm=api_config['token_adm'], token_s=api_config['token_s'], roomA=api_config['roomA'], roomB=api_config['roomB'], xnodeid=api_config['X-Node-Id'], senderid=api_config['senderId'],
-                            senderid_adm=api_config['senderId_adm'])
 
-    # При необходимости можно добавить код для предварительной настройки API.
-
-    yield api_fixture  # Завершение фикстуры.
-
-    # Код для финализации после каждого теста, если необходимо

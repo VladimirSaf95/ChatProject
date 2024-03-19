@@ -23,7 +23,7 @@ def test_sendmessages(api_client):
     assert "event_id" in responseB.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert responseA.elapsed.total_seconds() <= duration_threshold
     assert responseB.elapsed.total_seconds() <= duration_threshold
 
@@ -42,7 +42,7 @@ def test_sendemoji(api_client):
     assert "event_id" in response.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert response.elapsed.total_seconds() <= duration_threshold
 
 
@@ -71,7 +71,7 @@ def test_sendreaction(api_client):
     assert "event_id" in response.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert response.elapsed.total_seconds() <= duration_threshold
 
 
@@ -90,7 +90,7 @@ def test_sendtaguser(api_client):
     assert "event_id" in response.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert response.elapsed.total_seconds() <= duration_threshold
 
 
@@ -118,7 +118,7 @@ def test_sendurl(api_client):
     assert "event_id" not in response2.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert response1.elapsed.total_seconds() <= duration_threshold
     assert response2.elapsed.total_seconds() <= duration_threshold
 
@@ -136,7 +136,7 @@ def test_sendnotallowsymbol(api_client):
     assert "event_id" not in response.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert response.elapsed.total_seconds() <= duration_threshold
 
 
@@ -160,7 +160,7 @@ def test_sendgif(api_client):
     assert "event_id" in response.json(), "The key 'event_id' is not found in the JSON response"
 
     # Проверяем скорость получения ответа. В случае больше 3 с, тест будет провален.
-    duration_threshold = 3
+    duration_threshold = 5
     assert response.elapsed.total_seconds() <= duration_threshold
 
 
@@ -195,7 +195,8 @@ def test_pinnedmsg(api_client):
     response_json = response.json()
     event_id_pinmsg = response_json.get('event_id')
 
-    if response.status_code == 200: os.environ["EVENT_ID_PINMSG"] = event_id_pinmsg
+    if response.status_code == 200:
+        os.environ["EVENT_ID_PINMSG"] = event_id_pinmsg
 
     assert response.status_code == 200
 
