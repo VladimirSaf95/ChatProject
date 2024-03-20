@@ -18,6 +18,11 @@ class Application():
         self.roomA = roomA
         self.roomB = roomB
 
+        options = Options()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+
     def is_valid(self):
         try:
             self.wd.current_url
