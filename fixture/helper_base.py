@@ -171,10 +171,9 @@ class HelperBase:
 
     def check_chatbutton_existence(self):
         wd = self.app.wd
-        test_id = "chat-close-icon"
-        selector = f'[data-testid="{test_id}"]'
+        selector = "chat--opened"
         try:
-            wd.find_element(By.CLASS_NAME, "chat--opened")
+            wd.find_element(By.CLASS_NAME, selector)
             return True
         except NoSuchElementException:
             return False
