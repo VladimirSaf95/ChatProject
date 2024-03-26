@@ -17,7 +17,7 @@ class HelperBase:
 
     def setup_browser_window_size(self):
         # Устанавливаем размер окна браузера
-        self.app.wd.set_window_size(1920, 1080)
+        self.app.wd.set_window_size(1280, 1920)
 
     def scroll_to_element(self, element):
         wd = self.app.wd

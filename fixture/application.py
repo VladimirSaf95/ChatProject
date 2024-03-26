@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 class Application():
 
-    def __init__(self, browser, base_url, roomA, roomB):
+    def __init__(self, browser, base_url):
         if browser == "chrome":
             self.wd = webdriver.Chrome()
         elif browser == "safari":
@@ -15,8 +15,6 @@ class Application():
             raise ValueError(f"Неправильно указан браузер: {browser}")
 
         self.base_url = base_url
-        self.roomA = roomA
-        self.roomB = roomB
 
         options = Options()
         options.add_argument("--headless")

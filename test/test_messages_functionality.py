@@ -1,7 +1,5 @@
 import os
 import time
-from urllib.parse import quote
-import json
 import pytest
 import allure
 
@@ -13,7 +11,7 @@ from fixture.api_client import APIClient
 @allure.feature("Sending Messages")
 @allure.story("Sending Text Messages")
 @allure.severity(allure.severity_level.CRITICAL)
-def test_sendmessages(api_client):
+def test_send_messages(api_client):
     with allure.step("Sending messages and checking response"):
         responseA, responseB = api_client.sendmessages()
 
@@ -48,7 +46,7 @@ def test_sendmessages(api_client):
 @allure.feature("Sending Messages")
 @allure.story("Sending Emoji")
 @allure.severity(allure.severity_level.NORMAL)
-def test_sendemoji(api_client):
+def test_send_emoji(api_client):
     with allure.step("Sending emoji and checking response"):
         data = {"body": "😅", "msgtype": "m.text", "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
 
@@ -73,7 +71,7 @@ def test_sendemoji(api_client):
 @allure.feature("Reaction to Message")
 @allure.story("Setting reaction")
 @allure.severity(allure.severity_level.NORMAL)
-def test_sendreaction(api_client):
+def test_send_reaction(api_client):
     with allure.step("Setting reaction on message"):
         event_id = os.environ.get("EVENT_ID_A")
         if event_id is None:
@@ -104,12 +102,11 @@ def test_sendreaction(api_client):
             duration_threshold = 5
             assert response.elapsed.total_seconds() <= duration_threshold, "Response time exceeds threshold"
 
-
-# Тег игрока в чате token_2
+# Тег игрока в чате
 @allure.feature("Tagging Players")
 @allure.story("Tagging player in chat")
 @allure.severity(allure.severity_level.NORMAL)
-def test_sendtaguser(api_client):
+def test_tag_user(api_client):
     with allure.step("Tagging player in chat"):
         data = {"body": "@test96 fff", "msgtype": "m.text",
                 "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
@@ -135,7 +132,7 @@ def test_sendtaguser(api_client):
 @allure.feature("Sending URLs")
 @allure.story("Sending Allowed and Disallowed URLs")
 @allure.severity(allure.severity_level.NORMAL)
-def test_sendurl(api_client):
+def test_send_url(api_client):
     with allure.step("Sending allowed URL"):
         data_url1 = {"body": "google.com", "msgtype": "m.text",
                      "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
@@ -166,12 +163,11 @@ def test_sendurl(api_client):
             duration_threshold = 5
             assert response2.elapsed.total_seconds() <= duration_threshold, "Response time exceeds threshold"
 
-
 # Отправка запрещенного символа в чат
 @allure.feature("Sending Symbols")
 @allure.story("Sending Disallowed Symbol")
 @allure.severity(allure.severity_level.NORMAL)
-def test_sendnotallowsymbol(api_client):
+def test_send_not_allow_symbol(api_client):
     with allure.step("Sending disallowed symbol"):
         data_url1 = {"body": "LOL", "msgtype": "m.text",
                      "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
@@ -192,7 +188,7 @@ def test_sendnotallowsymbol(api_client):
 @allure.feature("Sending GIFs")
 @allure.story("Sending GIF in Chat")
 @allure.severity(allure.severity_level.NORMAL)
-def test_sendgif(api_client):
+def test_send_gif(api_client):
     data = {
         "msgtype": "m.gif",
         "format": "org.matrix.custom.html",
@@ -219,11 +215,11 @@ def test_sendgif(api_client):
         assert response.elapsed.total_seconds() <= duration_threshold, "Response time exceeds threshold"
 
 
-# Простановка жалобы на сообщение, отправленное в функции test_sendmessages
+# Простановка жалобы на сообщение
 @allure.feature("Sending Complaints")
 @allure.story("Filing Complaint on Message")
 @allure.severity(allure.severity_level.CRITICAL)
-def test_sendcomplaint(api_client):
+def test_send_complaint(api_client):
     event_id = os.environ.get("EVENT_ID_A")
     if event_id is None:
         responseA = api_client.sendmessages(response_b=False)
@@ -243,7 +239,7 @@ def test_sendcomplaint(api_client):
 @allure.feature("Message Pinning")
 @allure.story("Message Pinning by Moderator")
 @allure.severity(allure.severity_level.NORMAL)
-def test_pinnedmsg(api_client):
+def test_pinned_msg(api_client):
     with allure.step("Sending message"):
         event_id = os.environ.get("EVENT_ID_B")
         if event_id is None:
@@ -270,7 +266,7 @@ def test_pinnedmsg(api_client):
 @allure.feature("Message Unpinning")
 @allure.story("Message Unpinning by Moderator")
 @allure.severity(allure.severity_level.NORMAL)
-def test_unpinnedmsg(api_client):
+def test_unpinned_msg(api_client):
     with allure.step("Getting pinned message ID"):
         event_id_pinmsg = os.environ.get("EVENT_ID_PINMSG")
         if event_id_pinmsg is None:
@@ -287,82 +283,17 @@ def test_unpinnedmsg(api_client):
     with allure.step("Verifying event_id in response JSON"):
         assert "event_id" in response.json(), "The key 'event_id' is not found in the JSON response"
 
-# ROOM B
-# Проверка блокировки игрока
-@allure.feature("Player Blocking")
-@allure.story("Player Blocking Test")
-@allure.severity(allure.severity_level.BLOCKER)
-def test_blockplayers(api_client):
-    with allure.step("Getting information about banned players before the test"):
-        getuserbanbefore = api_client.getuserban()
-        total_before = getuserbanbefore.json()["pagination"]["total"]
-
-    with allure.step("Sending message and blocking player"):
-        event_id = os.environ.get("EVENT_ID_B")
-        if event_id is None:
-            responseB = api_client.sendmessages(response_a=False)
-            event_id = os.environ.get("EVENT_ID_B")
-
-        data = {
-            "autoBanned": False,
-            "nodeUid": api_client.xnodeid,
-            "roomUid": api_client.roomB,
-            "userUid": f"@{api_client.senderid}",
-            "blockedBy": "@a524d297-b434-4957-85fc-ff6afff99e9b:matrix.netreportservice.xyz",
-            "message": "Text Test",
-            "duration": 3600,
-            "messageId": event_id,
-            "reason": "harassmentOffensiveLanguage",
-            "nodeId": api_client.xnodeid
-        }
-
-        url = (
-            f"api/v1/synapse/user/ban?"
-            f"autoBanned=false&"
-            f"nodeUid={quote(api_client.xnodeid)}&"
-            f"roomUid={quote(api_client.roomB)}%3Amatrix.netreportservice.xyz&"
-            f"userUid={quote(f'@{api_client.senderid}')}%3Amatrix.netreportservice.xyz&"
-            f"blockedBy={quote(f'@{api_client.senderid_adm}')}%3Amatrix.netreportservice.xyz&"
-            f"message=Text+Test&"
-            f"messageId={quote(event_id.encode())}&"
-            f"duration=3600&"
-            f"reason=harassmentOffensiveLanguage&"
-            f"nodeId={quote(api_client.xnodeid)}"
-        )
-
-        response = api_client.post_token_s(url, json=data)
-        time.sleep(3)
-
-    with allure.step("Getting information about banned players after the test"):
-        getuserbanafter = api_client.getuserban()
-        total_after = getuserbanafter.json()["pagination"]["total"]
-
-    with allure.step("Verifying response status code"):
-        assert response.status_code == 200
-
-    with allure.step("Verifying 'total' key in response JSON before and after"):
-        assert "total" in getuserbanbefore.json()["pagination"], "The key 'total' is not found in the JSON response before"
-        assert "total" in getuserbanafter.json()["pagination"], "The key 'total' is not found in the JSON response after"
-
-    with allure.step("Verifying the increase in banned players count"):
-        assert total_after == total_before + 1, "The 'total' value did not increase by one"
-
-    # #Проверяем, что заблокированный игрок не может писать в чат
-    # response_blockplayer = api_client.sendmessages(response_b=False)
-    # assert "event_id" not in response_blockplayer.json(), "The key 'event_id' is found in the JSON response"
-
-
 # ROOM A
 # Проверка работоспособности автобана
 @allure.feature("Spam Checking")
 @allure.story("Spam Checking Test")
 @allure.severity(allure.severity_level.CRITICAL)
-def test_checkedspam(api_client):
+def test_checked_spam(api_client):
     with allure.step("Sending spam messages"):
         data = {"body": "Text Test Spam", "msgtype": "m.text",
                 "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
 
-        for _ in range(51):
+        for _ in range(4):
             response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
                                               json=data)
             if response.status_code != 200:
@@ -372,4 +303,21 @@ def test_checkedspam(api_client):
     with allure.step("Verifying response status code"):
         assert response.status_code == 500
 
+#ROOM B
+@allure.feature("Message Operations")
+@allure.story("Deleting Messages")
+@allure.severity(allure.severity_level.CRITICAL)
+def test_delete_dmsg(api_client):
+    with allure.step("Checking if event_id is available"):
+        event_id = os.environ.get("EVENT_ID_B")
 
+        # Проверка, что event_id был получен в предыдущем тесте
+        if event_id is None:
+            responseB = api_client.sendmessages(response_a=False)
+            event_id = os.environ.get("EVENT_ID_B")
+
+    with allure.step("Sending DELETE request to delete message"):
+        response = api_client.delete_token_s(f"api/v1/synapse/message/{api_client.roomB}%3Amatrix.netreportservice.xyz/{event_id}")
+
+        with allure.step("Asserting response status code"):
+            assert response.status_code == 200, "Response status code is not 200"

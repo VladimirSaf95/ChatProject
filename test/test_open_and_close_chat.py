@@ -1,6 +1,5 @@
 from fixture.helper_base import HelperBase
 import pytest
-import time
 import allure
 
 #Проверка на открытие чата
