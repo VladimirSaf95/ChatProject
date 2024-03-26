@@ -39,7 +39,7 @@ def init_authorization(request, config):
     web_config = config["web"]
 
     # Создаем экземпляр класса Authorization
-    auth = Authorization(base_url=web_config['baseUrl'], xnodeid=api_config['X-Node-Id'])
+    auth = Authorization(base_url=os.getenv("API_BASE_URL"), xnodeid=api_config['X-Node-Id'])
 
     # Получение токена API и Matrix для игрока
     player_api_token = auth.get_api_token(api_config['Login_player'], api_config['Password_player'])
