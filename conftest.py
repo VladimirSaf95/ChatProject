@@ -49,11 +49,10 @@ def init_authorization(request, config):
     # Получение токена API и Matrix для администратора
     admin_api_token = auth.get_api_token(api_config['Login_admin'], api_config['Password_admin'])
     admin_access_token, admin_user_id = auth.get_matrix_token(admin_api_token)
-    
+
     # Получение идентификаторов комнат
     roomA, roomB = auth.get_rooms_id()
-    os.environ['ROOM_ID_A'] = roomA
-    os.environ['ROOM_ID_B'] = roomB
+    
     print(f'Значения {player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, roomB}')
     # Возвращаем кортеж с объектом Authorization и идентификаторами комнат, чтобы его можно было использовать в тестах
     return auth, player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, roomB, admin_api_token
