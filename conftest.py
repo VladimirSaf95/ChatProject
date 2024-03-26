@@ -9,7 +9,7 @@ import json
 @pytest.fixture(scope="session", autouse=True)
 def config(request):
 
-   
+
         # Если нет, загружаем данные из файла target.json
         config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
         with open(config_file) as f:
