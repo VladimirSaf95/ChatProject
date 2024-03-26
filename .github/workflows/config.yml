@@ -34,6 +34,16 @@ jobs:
         run: |
           docker-compose up --exit-code-from regression || true
 
+      - name: Print environment variables
+        run: |
+          echo "BASE_URL: $BASE_URL"
+          echo "API_BASE_URL: $API_BASE_URL"
+          echo "X_NODE_ID: $X_NODE_ID"
+          echo "LOGIN_PLAYER: $LOGIN_PLAYER"
+          echo "PASSWORD_PLAYER: $PASSWORD_PLAYER"
+          echo "LOGIN_ADMIN: $LOGIN_ADMIN"
+          echo "PASSWORD_ADMIN: $PASSWORD_ADMIN"
+
       - name: Copy history from gh-pages to allure-results
         run: |
           if [ -d "./.github/gh-pages/history" ]; then
@@ -61,3 +71,5 @@ jobs:
           branch: gh-pages
           folder: allure-report
           clean: true
+          
+
