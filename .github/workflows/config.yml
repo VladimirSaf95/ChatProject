@@ -42,6 +42,9 @@ jobs:
 
       - name: Update Allure history
         run: |
+          if [ ! -d "./.github/gh-pages/history" ]; then
+            sudo mkdir -p ./.github/gh-pages/history
+          fi
           sudo cp -R allure-report/history/* ./.github/gh-pages/history/
 
       - name: Deploy to GitHub Pages
