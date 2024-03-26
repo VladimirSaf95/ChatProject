@@ -8,6 +8,13 @@ import json
 
 @pytest.fixture(scope="session", autouse=True)
 def config(request):
+    print("BASE_URL:", os.getenv("BASE_URL"))
+    print("API_BASE_URL:", os.getenv("API_BASE_URL"))
+    print("X_NODE_ID:", os.getenv("X_NODE_ID"))
+    print("LOGIN_PLAYER:", os.getenv("LOGIN_PLAYER"))
+    print("PASSWORD_PLAYER:", os.getenv("PASSWORD_PLAYER"))
+    print("LOGIN_ADMIN:", os.getenv("LOGIN_ADMIN"))
+    print("PASSWORD_ADMIN:", os.getenv("PASSWORD_ADMIN"))
     # Проверяем, запущен ли тест на GitHub Actions
     if os.getenv("GITHUB_ACTIONS"):
         # Если да, загружаем данные из переменных окружения
