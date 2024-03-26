@@ -9,7 +9,23 @@ import json
 @pytest.fixture(scope="session", autouse=True)
 def config(request):
 
-
+    # Проверяем, запущен ли тест на GitHub Actions
+    if os.getenv("GITHUB_ACTIONS"):
+        # Если да, загружаем данные из переменных окружения
+        return {
+            "web": {
+                "baseUrl": os.getenv("BASE_URL")
+            },
+            "api": {
+                "baseUrl": os.getenv("API_BASE_URL"),
+                "X-Node-Id": os.getenv("X_NODE_ID"),
+                "Login_player": os.getenv("LOGIN_PLAYER"),
+                "Password_player": os.getenv("PASSWORD_PLAYER"),
+                "Login_admin": os.getenv("LOGIN_ADMIN"),
+                "Password_admin": os.getenv("PASSWORD_ADMIN")
+            }
+        }
+    else:
         # Если нет, загружаем данные из файла target.json
         config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
         with open(config_file) as f:
@@ -28,15 +44,12 @@ def init_authorization(request, config):
     # Получение токена API и Matrix для игрока
     player_api_token = auth.get_api_token(api_config['Login_player'], api_config['Password_player'])
     player_access_token, player_user_id = auth.get_matrix_token(player_api_token)
-    os.environ['ACCESS_TOKEN_PLAYER'] = player_access_token
-    os.environ['USER_ID_PLAYER'] = player_user_id
+
 
     # Получение токена API и Matrix для администратора
     admin_api_token = auth.get_api_token(api_config['Login_admin'], api_config['Password_admin'])
     admin_access_token, admin_user_id = auth.get_matrix_token(admin_api_token)
-    os.environ['ACCESS_TOKEN_ADMIN'] = admin_access_token
-    os.environ['USER_ID_ADMIN'] = admin_user_id
-
+    
     # Получение идентификаторов комнат
     roomA, roomB = auth.get_rooms_id()
     os.environ['ROOM_ID_A'] = roomA
