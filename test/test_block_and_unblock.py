@@ -51,7 +51,7 @@ def test_block_players(api_client):
             "nodeUid": api_client.xnodeid,
             "roomUid": api_client.roomB,
             "userUid": f"@{api_client.senderid}",
-            "blockedBy": "@a524d297-b434-4957-85fc-ff6afff99e9b:matrix.netreportservice.xyz",
+            "blockedBy": f"@a524d297-b434-4957-85fc-ff6afff99e9b:{api_client.room_second_part}",
             "message": "Text Test",
             "duration": 3600,
             "messageId": event_id,
@@ -63,9 +63,9 @@ def test_block_players(api_client):
             f"api/v1/synapse/user/ban?"
             f"autoBanned=false&"
             f"nodeUid={quote(api_client.xnodeid)}&"
-            f"roomUid={quote(api_client.roomB)}%3Amatrix.netreportservice.xyz&"
-            f"userUid={quote(f'@{api_client.senderid}')}%3Amatrix.netreportservice.xyz&"
-            f"blockedBy={quote(f'@{api_client.senderid_adm}')}%3Amatrix.netreportservice.xyz&"
+            f"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&"
+            f"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&"
+            f"blockedBy={quote(f'@{api_client.senderid_adm}')}%3A{api_client.room_second_part}&"
             f"message=Text+Test&"
             f"messageId={quote(event_id.encode())}&"
             f"duration=3600&"
@@ -128,8 +128,8 @@ def test_unblock_players(api_client):
         url = (
             f"api/v1/synapse/user/ban?"
             f"nodeUid={quote(api_client.xnodeid)}&"
-            f"userUid={quote(f'@{api_client.senderid}')}%3Amatrix.netreportservice.xyz&"
-            f"roomUid={quote(api_client.roomB)}%3Amatrix.netreportservice.xyz&"
+            f"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&"
+            f"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&"
         )
 
     with allure.step("Sending request to unblock user"):

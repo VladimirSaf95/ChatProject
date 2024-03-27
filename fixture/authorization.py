@@ -3,9 +3,10 @@ import os
 
 class Authorization:
 
-    def __init__(self, base_url, xnodeid):
+    def __init__(self, base_url, xnodeid, api_base_url):
         self.base_url = base_url
         self.xnodeid = xnodeid
+        self.api_base_url = api_base_url
 
     def get_api_token(self, login, password):
 
@@ -15,7 +16,7 @@ class Authorization:
         if self.base_url.endswith("/"):
             self.base_url = self.base_url[:-1]  # Удаляем последний символ "/"
 
-        url = 'https://sso-api.k8demo.cyou/account/user/login'
+        url = 'https://sso-api.slotegrator.tech/account/user/login'
         headers = {
             'accept': 'application/json',
             'x-Node-Id': self.xnodeid,
@@ -100,7 +101,7 @@ class Authorization:
             'Content-Type': 'application/json',
         }
         data = {"token": api_token}
-        response = requests.post(f"https://sandbox.multichat.work/api/v1/synapse/auth?token={api_token}&nodeId={self.xnodeid}", json=data, headers=headers)
+        response = requests.post(f"{self.api_base_url}/api/v1/synapse/auth?token={api_token}&nodeId={self.xnodeid}", json=data, headers=headers)
         if response.status_code == 200:
             response_json = response.json()
             access_token = response_json.get('accessToken')
@@ -111,20 +112,24 @@ class Authorization:
             print(f"Error in request: {response.status_code}")
             return None, None
 
-
     def get_rooms_id(self):
-        response = requests.get(f"https://sandbox.multichat.work/api/v1/correspondence/rooms/{self.xnodeid}")
+        response = requests.get(f"{self.api_base_url}/api/v1/correspondence/rooms/{self.xnodeid}")
         # Проверка успешности запроса
         if response.status_code == 200:
             # Преобразование текста ответа в формат JSON
             response_json = response.json()
 
             # Получение matrixUid для первых двух элементов списка
-            matrix_uids = [item['matrixUid'].split(':')[0] for item in response_json[:2]]
+            matrix_uids = []
+            for item in response_json[:2]:
+                # Разбиваем строку по ":" и сохраняем обе части в отдельные переменные
+                first_part, second_part = item['matrixUid'].split(':')
+                # Добавляем эти части в список matrix_uids
+                matrix_uids.append((first_part, second_part))
 
             # Проверка, что в списке есть два элемента
             if len(matrix_uids) >= 2:
-                roomA = matrix_uids[0]
-                roomB = matrix_uids[1]
-                return roomA, roomB
-        return None, None
+                roomA, room_second_part = matrix_uids[0]
+                roomB = matrix_uids[1][0]  # Берем только первую часть для roomB
+                return roomA, room_second_part, roomB
+        return None, None, None

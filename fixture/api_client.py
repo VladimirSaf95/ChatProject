@@ -2,12 +2,13 @@ import requests
 import os
 
 class APIClient:
-    def __init__(self, base_url_api, token_1, token_s, token_adm, roomA, roomB, xnodeid, senderid, senderid_adm):
+    def __init__(self, base_url_api, token_1, token_s, token_adm, roomA, room_second_part, roomB, xnodeid, senderid, senderid_adm):
         self.base_url_api = base_url_api
         self.token_1 = token_1
         self.token_s = token_s
         self.token_adm = token_adm
         self.roomA = roomA
+        self.room_second_part = room_second_part
         self.roomB = roomB
         self.xnodeid = xnodeid
         self.senderid = senderid
@@ -23,6 +24,9 @@ class APIClient:
         # Add authorization token to headers
         if 'Authorization' not in headers:
             headers['Authorization'] = f'Bearer {self.token_1}'
+
+        # Add the header to disable content decompression
+        headers['Accept-Encoding'] = 'identity'
 
         response = None
 
@@ -62,10 +66,10 @@ class APIClient:
     def sendmessages(self, event_id_A=None, event_id_B=None,  response_a=True, response_b=True):
 
         data = {"body": "Text Test", "msgtype": "m.text",
-                "senderId": f"@{self.senderid}:matrix.netreportservice.xyz"}
+                "senderId": f"@{self.senderid}:{self.room_second_part}"}
 
-        responseA = self.post_token1(f"{self.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message", json=data)
-        responseB = self.post_token1(f"{self.roomB}%3Amatrix.netreportservice.xyz/send/m.room.message", json=data)
+        responseA = self.post_token1(f"{self.roomA}%3A{self.room_second_part}/send/m.room.message", json=data)
+        responseB = self.post_token1(f"{self.roomB}%3A{self.room_second_part}/send/m.room.message", json=data)
 
         responseA_json, responseB_json = responseA.json(), responseB.json()
         event_id_A, event_id_B = responseA_json.get('event_id'), responseB_json.get('event_id')

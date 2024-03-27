@@ -48,9 +48,9 @@ def test_send_messages(api_client):
 @allure.severity(allure.severity_level.NORMAL)
 def test_send_emoji(api_client):
     with allure.step("Sending emoji and checking response"):
-        data = {"body": "😅", "msgtype": "m.text", "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
+        data = {"body": "😅", "msgtype": "m.text", "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
-        response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+        response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                           json=data)
 
         with allure.step("Check response code"):
@@ -86,7 +86,7 @@ def test_send_reaction(api_client):
             }
         }
 
-        response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.reaction",
+        response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.reaction",
                                           json=data)
 
         with allure.step("Check response code"):
@@ -109,9 +109,9 @@ def test_send_reaction(api_client):
 def test_tag_user(api_client):
     with allure.step("Tagging player in chat"):
         data = {"body": "@test96 fff", "msgtype": "m.text",
-                "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
+                "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
-        response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+        response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                           json=data)
 
         with allure.step("Check response code"):
@@ -135,9 +135,9 @@ def test_tag_user(api_client):
 def test_send_url(api_client):
     with allure.step("Sending allowed URL"):
         data_url1 = {"body": "google.com", "msgtype": "m.text",
-                     "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
+                     "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
-        response1 = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+        response1 = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                            json=data_url1)
 
         with allure.step("Asserting response for allowed URL"):
@@ -150,9 +150,9 @@ def test_send_url(api_client):
 
     with allure.step("Sending disallowed URL"):
         data_url2 = {"body": "example.com", "msgtype": "m.text",
-                     "senderId": "@97884aeb-3618-46e0-bb1f-eeed55db52f1:matrix.netreportservice.xyz"}
+                     "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
-        response2 = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+        response2 = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                            json=data_url2)
 
         with allure.step("Asserting response for disallowed URL"):
@@ -170,9 +170,9 @@ def test_send_url(api_client):
 def test_send_not_allow_symbol(api_client):
     with allure.step("Sending disallowed symbol"):
         data_url1 = {"body": "LOL", "msgtype": "m.text",
-                     "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
+                     "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
-        response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+        response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                           json=data_url1)
 
         with allure.step("Asserting response for disallowed symbol"):
@@ -192,12 +192,12 @@ def test_send_gif(api_client):
     data = {
         "msgtype": "m.gif",
         "format": "org.matrix.custom.html",
-        "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz",
+        "senderId": f"@{api_client.senderid}:{api_client.room_second_part}",
         "body": "{\"type\":\"GIF\",\"imgUrl\":\"https://media.tenor.com/2w1XsfvQD5kAAAAM/hhgf.gif\"}"
     }
 
     with allure.step("Sending GIF message"):
-        response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+        response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                           json=data)
 
     with allure.step("Asserting response status code"):
@@ -225,7 +225,7 @@ def test_send_complaint(api_client):
         responseA = api_client.sendmessages(response_b=False)
         event_id = os.environ.get("EVENT_ID_A")
 
-    data = {"eventUid": event_id, "channelUid": f"{api_client.roomA}%3Amatrix.netreportservice.xyz",
+    data = {"eventUid": event_id, "channelUid": f"{api_client.roomA}%3A{api_client.room_second_part}",
             "reason": "trolling"}
 
     with allure.step("Filing complaint on message"):
@@ -248,7 +248,7 @@ def test_pinned_msg(api_client):
 
     with allure.step("Pinning message"):
         data = {"pinned": [{"messageId": event_id, "text": "Text Test"}]}
-        response = api_client.post_token_adm(f"{api_client.roomB}%3Amatrix.netreportservice.xyz/send/m.room.pinned_events",
+        response = api_client.post_token_adm(f"{api_client.roomB}%3A{api_client.room_second_part}/send/m.room.pinned_events",
                                              json=data)
         response_json = response.json()
         event_id_pinmsg = response_json.get('event_id')
@@ -274,7 +274,7 @@ def test_unpinned_msg(api_client):
 
     with allure.step("Unpinning the message"):
         data = {}
-        response = api_client.post_token_adm(f"{api_client.roomB}%3Amatrix.netreportservice.xyz/redact/{event_id_pinmsg}",
+        response = api_client.post_token_adm(f"{api_client.roomB}%3A{api_client.room_second_part}/redact/{event_id_pinmsg}",
                                              json=data)
 
     with allure.step("Verifying response status code"):
@@ -291,10 +291,10 @@ def test_unpinned_msg(api_client):
 def test_checked_spam(api_client):
     with allure.step("Sending spam messages"):
         data = {"body": "Text Test Spam", "msgtype": "m.text",
-                "senderId": f"@{api_client.senderid}:matrix.netreportservice.xyz"}
+                "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
         for _ in range(4):
-            response = api_client.post_token1(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/send/m.room.message",
+            response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
                                               json=data)
             if response.status_code != 200:
                 break
@@ -317,7 +317,7 @@ def test_delete_dmsg(api_client):
             event_id = os.environ.get("EVENT_ID_B")
 
     with allure.step("Sending DELETE request to delete message"):
-        response = api_client.delete_token_s(f"api/v1/synapse/message/{api_client.roomB}%3Amatrix.netreportservice.xyz/{event_id}")
+        response = api_client.delete_token_s(f"api/v1/synapse/message/{api_client.roomB}%3A{api_client.room_second_part}/{event_id}")
 
         with allure.step("Asserting response status code"):
             assert response.status_code == 200, "Response status code is not 200"

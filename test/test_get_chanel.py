@@ -15,8 +15,7 @@ import allure
 def test_get_chanel(api_client):
     with allure.step("Sending GET request for channels"):
         # Отправка GET-запроса
-        response = api_client.get(f"{api_client.roomA}%3Amatrix.netreportservice.xyz/state/m.room.power_levels?roomId=", api_client.roomA)
-        print("URL запроса:", response.url)
+        response = api_client.get(f"{api_client.roomA}:{api_client.room_second_part}/state/m.room.power_levels?roomId={api_client.roomA}%3A{api_client.room_second_part}")
 
         with allure.step("Asserting response status code"):
             # Проверка кода состояния
@@ -31,7 +30,7 @@ def test_get_chanel(api_client):
 def test_get_chanel_matrix(api_client):
     with allure.step("Sending GET request for channels"):
         # Отправка GET-запроса
-        response = requests.get(f"https://sandbox.multichat.work/api/v1/correspondence/rooms/{api_client.xnodeid}")
+        response = requests.get(f"{api_client.base_url_api}/api/v1/correspondence/rooms/{api_client.xnodeid}")
 
         with allure.step("Asserting response status code"):
             # Проверка кода состояния
@@ -49,8 +48,8 @@ def test_get_chanel_matrix(api_client):
                 room_info_1 = rooms[0]
 
                 assert room_info_1.get("default") == True
-                assert room_info_1.get("name") == "Room A"
-                assert room_info_1.get("matrixUid") == f"{api_client.roomA}:matrix.netreportservice.xyz"
+                assert room_info_1.get("name") == "Room A_1"
+                assert room_info_1.get("matrixUid") == f"{api_client.roomA}:{api_client.room_second_part}"
                 assert room_info_1.get("order") == 1
                 assert "p2Uid" in room_info_1
                 assert "avatarPath" in room_info_1
@@ -60,7 +59,7 @@ def test_get_chanel_matrix(api_client):
 
                 assert room_info_2.get("default") == False
                 assert room_info_2.get("name") == "Room B"
-                assert room_info_2.get("matrixUid") == f"{api_client.roomB}:matrix.netreportservice.xyz"
+                assert room_info_2.get("matrixUid") == f"{api_client.roomB}:{api_client.room_second_part}"
                 assert room_info_2.get("order") == 2
                 assert "p2Uid" in room_info_2
                 assert "avatarPath" in room_info_2

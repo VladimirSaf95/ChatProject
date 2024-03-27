@@ -39,7 +39,7 @@ def init_authorization(request, config):
     web_config = config["web"]
 
     # Создаем экземпляр класса Authorization
-    auth = Authorization(base_url=web_config['baseUrl'], xnodeid=api_config['X-Node-Id'])
+    auth = Authorization(base_url=web_config['baseUrl'], api_base_url=api_config['baseUrl'], xnodeid=api_config['X-Node-Id'])
 
     # Получение токена API и Matrix для игрока
     player_api_token = auth.get_api_token(api_config['Login_player'], api_config['Password_player'])
@@ -51,11 +51,11 @@ def init_authorization(request, config):
     admin_access_token, admin_user_id = auth.get_matrix_token(admin_api_token)
 
     # Получение идентификаторов комнат
-    roomA, roomB = auth.get_rooms_id()
+    roomA, room_second_part, roomB = auth.get_rooms_id()
     
-    print(f'Значения {player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, roomB}')
+    print(f'Значения {player_access_token, player_user_id, admin_access_token, admin_user_id,  roomA, room_second_part, roomB}')
     # Возвращаем кортеж с объектом Authorization и идентификаторами комнат, чтобы его можно было использовать в тестах
-    return auth, player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, roomB, admin_api_token
+    return auth, player_access_token, player_user_id, admin_access_token, admin_user_id,  roomA, room_second_part, roomB, admin_api_token
 
 
 # Фикстура для API тестов
@@ -63,7 +63,7 @@ def init_authorization(request, config):
 def api_client(request, config, init_authorization):
     # Фикстура для работы с API.
     api_config = config["api"]
-    auth, player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, roomB, admin_api_token = init_authorization
+    auth, player_access_token, player_user_id, admin_access_token, admin_user_id,  roomA, room_second_part, roomB, admin_api_token = init_authorization
 
     api_fixture = APIClient(
         base_url_api=api_config['baseUrl'],
@@ -71,6 +71,7 @@ def api_client(request, config, init_authorization):
         token_s=admin_api_token,
         token_adm=admin_access_token,
         roomA=roomA,
+        room_second_part=room_second_part,
         roomB=roomB,
         xnodeid=api_config['X-Node-Id'],
         senderid=player_user_id,
@@ -89,8 +90,9 @@ def app(request, config, init_authorization):
     # Фикстура для инициализации приложения (открытия браузера).
     web_config = config["web"]
     browser = request.config.getoption("--browser")
+    auth, player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, room_second_part, roomB, admin_api_token = init_authorization
 
-    app_fixture = Application(browser=browser, base_url=web_config['baseUrl'])
+    app_fixture = Application(browser=browser, base_url=web_config['baseUrl'], roomA=roomA, room_second_part=room_second_part, roomB=roomB)
     app_fixture.open_home_page()
 
     # При необходимости можно добавить код для предварительной настройки приложения.

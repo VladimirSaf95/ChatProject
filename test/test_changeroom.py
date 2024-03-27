@@ -8,9 +8,6 @@ import os
 @allure.story("Clicking Chat Room")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_click_chat_room(app):
-    # Получаем данные переменные из переменных окружения
-    roomA = os.environ.get("ROOM_ID_A")
-    roomB = os.environ.get("ROOM_ID_B")
 
     with allure.step("Checking if chat button exists"):
         helper_base = HelperBase(app)
@@ -21,8 +18,8 @@ def test_click_chat_room(app):
             time.sleep(5)
 
     # Получаем селекторы для комнат A и B
-    selectorA = f'[data-test-id-roomitem="chat-carouselRooms-room{roomA}:matrix.netreportservice.xyz"]'
-    selectorB = f'[data-test-id-roomitem="chat-carouselRooms-room{roomB}:matrix.netreportservice.xyz"]'
+    selectorA = f'[data-test-id-roomitem="chat-carouselRooms-room{app.roomA}:{app.room_second_part}"]'
+    selectorB = f'[data-test-id-roomitem="chat-carouselRooms-room{app.roomB}:{app.room_second_part}"]'
 
     # Получаем элементы для комнаты A
     room_items_A = helper_base.find_elements_by_css_selector(selectorA)
