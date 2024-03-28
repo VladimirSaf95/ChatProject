@@ -28,4 +28,4 @@ COPY ./requirements.txt /usr/workspace
 # Install Python dependencies
 RUN pip3 install -r requirements.txt
 
-RUN mkdir -p allure-results/history && chown -R $USER:$USER allure-results
+RUN mkdir -p allure-results/history && chown -R $(whoami):$(whoami) allure-results
