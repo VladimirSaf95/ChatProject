@@ -28,9 +28,3 @@ COPY ./requirements.txt /usr/workspace
 # Install Python dependencies
 RUN pip3 install -r requirements.txt
 
-# Create directory for Allure results
-# Создание директории allure-results/history
-RUN mkdir -p allure-results/history
-
-# Изменение прав доступа к директории
-RUN chmod -R 777 allure-results
