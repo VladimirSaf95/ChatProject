@@ -3,24 +3,21 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
-import os
+from webdriver_manager.chrome import ChromeDriverManager
 
 class Application():
 
     def __init__(self, browser, base_url, roomA, room_second_part, roomB):
         if browser == "chrome":
-            if os.getenv("DOCKER_CONTAINER"):
-                # Указание пути к ChromeDriver и бинарному файлу Chrome в контейнере
-                chrome_options = webdriver.ChromeOptions()
-                chrome_options.binary_location = '/usr/bin/chromium-browser'  # Путь к бинарному файлу Chrome внутри контейнера
-                chrome_driver_path = '/usr/bin/chromedriver'  # Путь к ChromeDriver внутри контейнера
-
-                # Создание экземпляра драйвера Chrome
-                self.wd = webdriver.Chrome(executable_path=chrome_driver_path, options=chrome_options)
-            else:
-                # Если код запускается локально, то используем стандартный путь к ChromeDriver
-                self.wd = webdriver.Chrome()
+            # Создание экземпляра драйвера Chrome с использованием WebDriverManager и передача опций
+            options = Options()
+            options.add_argument("--headless")
+            options.add_argument("--no-sandbox")
+            options.add_argument("--disable-dev-shm-usage")
+            options.add_argument("--window-size=1920,1080")
+            self.wd = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         elif browser == "safari":
+            # Создание экземпляра драйвера Safari
             self.wd = webdriver.Safari()
         else:
             raise ValueError(f"Неправильно указан браузер: {browser}")
@@ -29,11 +26,6 @@ class Application():
         self.room_second_part = room_second_part
         self.roomA = roomA
         self.roomB = roomB
-
-        options = Options()
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
 
     def is_valid(self):
         try:
