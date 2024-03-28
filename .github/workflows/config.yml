@@ -1,6 +1,7 @@
 name: UI/API Tests of CHAT
 
-on: workflow_dispatch
+on:
+  workflow_dispatch
 
 jobs:
   ui-tests:
@@ -44,10 +45,12 @@ jobs:
           echo "LOGIN_ADMIN: $LOGIN_ADMIN"
           echo "PASSWORD_ADMIN: $PASSWORD_ADMIN"
 
+      - name: Create allure-results directory
+        run: mkdir -p allure-results/history
+
       - name: Copy history from gh-pages to allure-results
         run: |
           if [ -d "./.github/gh-pages/history" ]; then
-            mkdir -p allure-results/history 
             cp -R ./.github/gh-pages/history/* allure-results/history/
           else
             echo "Directory ./.github/gh-pages/history does not exist. Skipping copying."
@@ -71,6 +74,3 @@ jobs:
           branch: gh-pages
           folder: allure-report
           clean: true
-
-
-
