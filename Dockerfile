@@ -29,4 +29,8 @@ COPY ./requirements.txt /usr/workspace
 RUN pip3 install -r requirements.txt
 
 # Create directory for Allure results
-RUN mkdir -p allure-results/history && chown -R $(whoami):$(whoami) allure-results
+# Создание директории allure-results/history
+RUN mkdir -p allure-results/history
+
+# Изменение прав доступа к директории
+RUN chmod -R 777 allure-results
