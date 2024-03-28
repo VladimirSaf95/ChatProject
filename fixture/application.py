@@ -3,19 +3,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 
 class Application():
 
     def __init__(self, browser, base_url, roomA, room_second_part, roomB):
         if browser == "chrome":
-            # Создание экземпляра драйвера Chrome с использованием WebDriverManager и передача опций
+            # Создание экземпляра драйвера Chrome
             options = Options()
             options.add_argument("--headless")
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--window-size=1920,1080")
-            self.wd = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+            self.wd = webdriver.Chrome(options=options)
         elif browser == "safari":
             # Создание экземпляра драйвера Safari
             self.wd = webdriver.Safari()

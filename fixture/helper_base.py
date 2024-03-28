@@ -15,9 +15,9 @@ class HelperBase:
         self.logger = logging.getLogger(__name__)
         self.setup_browser_window_size()
 
-    def setup_browser_window_size(self):
-        # Устанавливаем размер окна браузера
-        self.app.wd.set_window_size(1920, 1280)
+    # def setup_browser_window_size(self):
+    #     # Устанавливаем размер окна браузера
+    #     self.app.wd.set_window_size(1920, 1280)
 
     def scroll_to_element(self, element):
         wd = self.app.wd
