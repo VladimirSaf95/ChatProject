@@ -6,6 +6,7 @@ RUN echo "https://dl-4.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositori
 # install chromedriver
 RUN apk update
 RUN apk add --no-cache chromium chromium-chromedriver tzdata
+RUN pip install --upgrade selenium
 
 # Get all the prereqs
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
