@@ -13,7 +13,7 @@ class HelperBase:
     def __init__(self, app):
         self.app = app
         self.logger = logging.getLogger(__name__)
-        self.setup_browser_window_size()
+        # self.setup_browser_window_size()
 
     # def setup_browser_window_size(self):
     #     # Устанавливаем размер окна браузера
