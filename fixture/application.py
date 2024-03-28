@@ -3,12 +3,23 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
+import os
 
 class Application():
 
     def __init__(self, browser, base_url, roomA, room_second_part, roomB):
         if browser == "chrome":
-            self.wd = webdriver.Chrome()
+            if os.getenv("DOCKER_CONTAINER"):
+                # Указание пути к ChromeDriver и бинарному файлу Chrome в контейнере
+                chrome_options = webdriver.ChromeOptions()
+                chrome_options.binary_location = '/usr/bin/chromium-browser'  # Путь к бинарному файлу Chrome внутри контейнера
+                chrome_driver_path = '/usr/bin/chromedriver'  # Путь к ChromeDriver внутри контейнера
+
+                # Создание экземпляра драйвера Chrome
+                self.wd = webdriver.Chrome(executable_path=chrome_driver_path, options=chrome_options)
+            else:
+                # Если код запускается локально, то используем стандартный путь к ChromeDriver
+                self.wd = webdriver.Chrome()
         elif browser == "safari":
             self.wd = webdriver.Safari()
         else:
