@@ -8,6 +8,7 @@ import json
 
 @pytest.fixture(scope="session", autouse=True)
 def config(request):
+
         return {
             "web": {
                 "baseUrl": os.getenv("BASE_URL")
@@ -22,7 +23,10 @@ def config(request):
                 "Password_admin": os.getenv("PASSWORD_ADMIN")
             }
         }
-
+        # # Если нет, загружаем данные из файла target.json
+        # config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
+        # with open(config_file) as f:
+        #     return json.load(f)
 
 # Определяем фикстуру для инициализации Authorization
 @pytest.fixture(scope="session", autouse=True)
