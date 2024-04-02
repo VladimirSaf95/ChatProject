@@ -1,36 +1,21 @@
 {
-  "uid" : "a60b677eeb94dd4a",
-  "name" : "test_get_chanel_matrix",
-  "fullName" : "test.test_get_chanel#test_get_chanel_matrix",
-  "historyId" : "81558e6b70736da3a13cca7374afbd2f",
+  "uid" : "77dddffffe860c57",
+  "name" : "test_send_url",
+  "fullName" : "test.test_messages_functionality#test_send_url",
+  "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
   "time" : {
-    "start" : 1712057026586,
-    "stop" : 1712057026746,
-    "duration" : 160
+    "start" : 1712062622721,
+    "stop" : 1712062623702,
+    "duration" : 981
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1712056960440,
-      "stop" : 1712056963288,
-      "duration" : 2848
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1712056963288,
-      "stop" : 1712056963288,
+      "start" : 1712062556842,
+      "stop" : 1712062556842,
       "duration" : 0
     },
     "status" : "passed",
@@ -39,13 +24,28 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1712062554138,
+      "stop" : 1712062556842,
+      "duration" : 2704
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712056960439,
-      "stop" : 1712056960439,
+      "start" : 1712062554138,
+      "stop" : 1712062554138,
       "duration" : 0
     },
     "status" : "passed",
@@ -54,24 +54,24 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Sending GET request for channels",
+      "name" : "Sending allowed URL",
       "time" : {
-        "start" : 1712057026586,
-        "stop" : 1712057026745,
-        "duration" : 159
+        "start" : 1712062622721,
+        "stop" : 1712062623513,
+        "duration" : 792
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "Asserting response status code",
+        "name" : "Asserting response for allowed URL",
         "time" : {
-          "start" : 1712057026744,
-          "stop" : 1712057026744,
+          "start" : 1712062623513,
+          "stop" : 1712062623513,
           "duration" : 0
         },
         "status" : "passed",
@@ -80,73 +80,58 @@
         "parameters" : [ ],
         "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      }, {
-        "name" : "Asserting response content",
-        "time" : {
-          "start" : 1712057026745,
-          "stop" : 1712057026745,
-          "duration" : 0
-        },
-        "status" : "passed",
-        "steps" : [ {
-          "name" : "Asserting minimum two rooms",
-          "time" : {
-            "start" : 1712057026745,
-            "stop" : 1712057026745,
-            "duration" : 0
-          },
-          "status" : "passed",
-          "steps" : [ ],
-          "attachments" : [ ],
-          "parameters" : [ ],
-          "attachmentsCount" : 0,
-          "shouldDisplayMessage" : false,
-          "stepsCount" : 0,
-          "hasContent" : false
-        }, {
-          "name" : "Asserting room details",
-          "time" : {
-            "start" : 1712057026745,
-            "stop" : 1712057026745,
-            "duration" : 0
-          },
-          "status" : "passed",
-          "steps" : [ ],
-          "attachments" : [ ],
-          "parameters" : [ ],
-          "attachmentsCount" : 0,
-          "shouldDisplayMessage" : false,
-          "stepsCount" : 0,
-          "hasContent" : false
-        } ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 2,
-        "hasContent" : true
+        "hasContent" : false,
+        "stepsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 4,
-      "hasContent" : true
+      "hasContent" : true,
+      "stepsCount" : 1
+    }, {
+      "name" : "Sending disallowed URL",
+      "time" : {
+        "start" : 1712062623513,
+        "stop" : 1712062623699,
+        "duration" : 186
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Asserting response for disallowed URL",
+        "time" : {
+          "start" : 1712062623699,
+          "stop" : 1712062623699,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 1
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 5,
-    "hasContent" : true
+    "hasContent" : true,
+    "stepsCount" : 4
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712057111295,
-      "stop" : 1712057111295,
+      "start" : 1712062701037,
+      "stop" : 1712062701037,
       "duration" : 0
     },
     "status" : "passed",
@@ -155,27 +140,27 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
   } ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Sending URLs"
+  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "story",
-    "value" : "Checking Matrix Channel Retrieval"
-  }, {
-    "name" : "feature",
-    "value" : "Channel Operations"
+    "value" : "Sending Allowed and Disallowed URLs"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_get_chanel"
+    "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "b867b78c5f60"
+    "value" : "9d6ecbb80526"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -187,7 +172,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_get_chanel"
+    "value" : "test.test_messages_functionality"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -205,82 +190,90 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 5,
+        "passed" : 6,
         "unknown" : 0,
-        "total" : 9
+        "total" : 10
       },
       "items" : [ {
-        "uid" : "f4b8c39251f4218d",
+        "uid" : "dcabbb7d7d6051",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712057032552,
+          "stop" : 1712057033201,
+          "duration" : 649
+        }
+      }, {
+        "uid" : "48349d5cc15fdb28",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717544,
-          "stop" : 1712056717544,
+          "start" : 1712056717708,
+          "stop" : 1712056717708,
           "duration" : 0
         }
       }, {
-        "uid" : "f7bbf51d085a4107",
+        "uid" : "292880dc8d71faba",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056500962,
-          "stop" : 1712056500962,
+          "start" : 1712056501130,
+          "stop" : 1712056501130,
           "duration" : 0
         }
       }, {
-        "uid" : "689c5f6a02e46a6e",
+        "uid" : "3ca6ee367fd55367",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502276,
-          "stop" : 1712055502276,
+          "start" : 1712055502443,
+          "stop" : 1712055502443,
           "duration" : 0
         }
       }, {
-        "uid" : "8778eaf9327bb4e8",
+        "uid" : "da3ac1cf93b2c5c0",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563150,
-          "stop" : 1712053563150,
+          "start" : 1712053563313,
+          "stop" : 1712053563313,
           "duration" : 0
         }
       }, {
-        "uid" : "b3ff93f108bb65db",
+        "uid" : "1cfe2498374e1d6c",
         "status" : "passed",
         "time" : {
-          "start" : 1712052146193,
-          "stop" : 1712052146393,
-          "duration" : 200
+          "start" : 1712052153295,
+          "stop" : 1712052154094,
+          "duration" : 799
         }
       }, {
-        "uid" : "f68a27b15f9c250a",
+        "uid" : "625c0241b85f4d57",
         "status" : "passed",
         "time" : {
-          "start" : 1712049656890,
-          "stop" : 1712049657015,
-          "duration" : 125
+          "start" : 1712049661528,
+          "stop" : 1712049662233,
+          "duration" : 705
         }
       }, {
-        "uid" : "a6accdbea63f4c9f",
+        "uid" : "604ecc363c9deacc",
         "status" : "passed",
         "time" : {
-          "start" : 1712042039724,
-          "stop" : 1712042039867,
-          "duration" : 143
+          "start" : 1712042044199,
+          "stop" : 1712042045459,
+          "duration" : 1260
         }
       }, {
-        "uid" : "dd258e2d801d92dd",
+        "uid" : "91e6232b5252b6a4",
         "status" : "passed",
         "time" : {
-          "start" : 1711621998828,
-          "stop" : 1711621998973,
-          "duration" : 145
+          "start" : 1711622003867,
+          "stop" : 1711622004902,
+          "duration" : 1035
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "a60b677eeb94dd4a.json",
+  "source" : "77dddffffe860c57.json",
   "parameterValues" : [ ]
 }
