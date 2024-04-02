@@ -1,28 +1,28 @@
 {
-  "uid" : "bd395ca919b8307a",
+  "uid" : "ca42e7517825b66e",
   "name" : "test_unblock_players",
   "fullName" : "test.test_block_and_unblock#test_unblock_players",
   "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
   "time" : {
-    "start" : 1712056500881,
-    "stop" : 1712056500881,
+    "start" : 1712056717468,
+    "stop" : 1712056717468,
     "duration" : 0
   },
   "status" : "broken",
-  "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
-  "statusTrace" : "request = <SubRequest 'config' for <Function test_get_user_ban>>\n\n    @pytest.fixture(scope=\"session\", autouse=True)\n    def config(request):\n    \n        # Проверяем, запущен ли тест на GitHub Actions\n        if \"GITHUB_ACTIONS\" in os.environ and os.environ[\"GITHUB_ACTIONS\"] == \"true\":\n            # Если да, загружаем данные из переменных окружения\n            return {\n                \"web\": {\n                    \"baseUrl\": os.getenv(\"BASE_URL\")\n                },\n                \"api\": {\n                    \"baseUrl\": os.getenv(\"API_BASE_URL\"),\n                    \"ssoUrl\": os.getenv(\"SSO_URL\"),\n                    \"X-Node-Id\": os.getenv(\"X_NODE_ID\"),\n                    \"Login_player\": os.getenv(\"LOGIN_PLAYER\"),\n                    \"Password_player\": os.getenv(\"PASSWORD_PLAYER\"),\n                    \"Login_admin\": os.getenv(\"LOGIN_ADMIN\"),\n                    \"Password_admin\": os.getenv(\"PASSWORD_ADMIN\")\n                }\n            }\n        else:\n            # Если нет, загружаем данные из файла target.json\n            config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption(\"--target\"))\n>           with open(config_file) as f:\nE           FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n\nconftest.py:32: FileNotFoundError",
+  "statusMessage" : "FileNotFoundError: File target.json not found",
+  "statusTrace" : "request = <SubRequest 'config' for <Function test_get_user_ban>>\n\n    @pytest.fixture(scope=\"session\", autouse=True)\n    def config(request):\n        if \"GITHUB_ACTIONS\" in os.environ and os.environ[\"GITHUB_ACTIONS\"] == \"true\":\n            # Возвращаем данные из переменных окружения\n            return {\n                \"web\": {\n                    \"baseUrl\": os.getenv(\"BASE_URL\")\n                },\n                \"api\": {\n                    \"baseUrl\": os.getenv(\"API_BASE_URL\"),\n                    \"ssoUrl\": os.getenv(\"SSO_URL\"),\n                    \"X-Node-Id\": os.getenv(\"X_NODE_ID\"),\n                    \"Login_player\": os.getenv(\"LOGIN_PLAYER\"),\n                    \"Password_player\": os.getenv(\"PASSWORD_PLAYER\"),\n                    \"Login_admin\": os.getenv(\"LOGIN_ADMIN\"),\n                    \"Password_admin\": os.getenv(\"PASSWORD_ADMIN\")\n                }\n            }\n        else:\n            # Проверяем наличие файла target.json\n            config_file = request.config.getoption(\"--target\")\n            if not os.path.exists(config_file):\n>               raise FileNotFoundError(f\"File {config_file} not found\")\nE               FileNotFoundError: File target.json not found\n\nconftest.py:31: FileNotFoundError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712056500832,
-      "stop" : 1712056500832,
+      "start" : 1712056717419,
+      "stop" : 1712056717419,
       "duration" : 0
     },
     "status" : "broken",
-    "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n",
-    "statusTrace" : "  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 166, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 102, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1132, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 913, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n  File \"/usr/workspace/conftest.py\", line 32, in config\n    with open(config_file) as f:\n",
+    "statusMessage" : "FileNotFoundError: File target.json not found\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 166, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 102, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1132, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 913, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n  File \"/usr/workspace/conftest.py\", line 31, in config\n    raise FileNotFoundError(f\"File {config_file} not found\")\n",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
@@ -49,7 +49,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "2fe970975e4b"
+    "value" : "43e0a1e0dd95"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -81,13 +81,22 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 3,
+        "broken" : 4,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 7
+        "total" : 8
       },
       "items" : [ {
+        "uid" : "bd395ca919b8307a",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
+        "time" : {
+          "start" : 1712056500881,
+          "stop" : 1712056500881,
+          "duration" : 0
+        }
+      }, {
         "uid" : "f5a741cf7590a952",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
@@ -141,6 +150,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "bd395ca919b8307a.json",
+  "source" : "ca42e7517825b66e.json",
   "parameterValues" : [ ]
 }
