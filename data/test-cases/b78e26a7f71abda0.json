@@ -1,22 +1,52 @@
 {
-  "uid" : "c2c81289260990f9",
-  "name" : "test_unpinned_msg",
-  "fullName" : "test.test_messages_functionality#test_unpinned_msg",
-  "historyId" : "e51d1fcd71fa2b661252b5536f450782",
+  "uid" : "b78e26a7f71abda0",
+  "name" : "test_guest_write_text",
+  "fullName" : "test.test_guest_write_text#test_guest_write_text",
+  "historyId" : "ce0cd46787e71938b1e1382945934dfe",
   "time" : {
-    "start" : 1712049664486,
-    "stop" : 1712049664821,
-    "duration" : 335
+    "start" : 1712052146395,
+    "stop" : 1712052148341,
+    "duration" : 1946
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "config",
+    "time" : {
+      "start" : 1712052077348,
+      "stop" : 1712052077348,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1712049593534,
-      "stop" : 1712049593534,
+      "start" : 1712052080935,
+      "stop" : 1712052080935,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1712052115489,
+      "stop" : 1712052116879,
+      "duration" : 1390
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,24 +59,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712049590995,
-      "stop" : 1712049593533,
-      "duration" : 2538
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1712049590995,
-      "stop" : 1712049590995,
-      "duration" : 0
+      "start" : 1712052077348,
+      "stop" : 1712052080935,
+      "duration" : 3587
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Getting pinned message ID",
+      "name" : "Clicking on the chat input field",
       "time" : {
-        "start" : 1712049664486,
-        "stop" : 1712049664486,
-        "duration" : 0
+        "start" : 1712052146504,
+        "stop" : 1712052148316,
+        "duration" : 1812
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,41 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Unpinning the message",
+      "name" : "Asserting redirection to login page",
       "time" : {
-        "start" : 1712049664486,
-        "stop" : 1712049664818,
-        "duration" : 332
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying response status code",
-      "time" : {
-        "start" : 1712049664818,
-        "stop" : 1712049664818,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying event_id in response JSON",
-      "time" : {
-        "start" : 1712049664818,
-        "stop" : 1712049664818,
-        "duration" : 0
+        "start" : 1712052148316,
+        "stop" : 1712052148341,
+        "duration" : 25
       },
       "status" : "passed",
       "steps" : [ ],
@@ -124,15 +109,30 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 4,
+    "stepsCount" : 2,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712049739847,
-      "stop" : 1712049739847,
+      "start" : 1712052231886,
+      "stop" : 1712052231886,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1712052231818,
+      "stop" : 1712052231885,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -145,10 +145,10 @@
   } ],
   "labels" : [ {
     "name" : "feature",
-    "value" : "Message Unpinning"
+    "value" : "Guest Chat Functionality"
   }, {
     "name" : "story",
-    "value" : "Message Unpinning by Moderator"
+    "value" : "Writing Text as Guest"
   }, {
     "name" : "severity",
     "value" : "normal"
@@ -157,10 +157,10 @@
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_guest_write_text"
   }, {
     "name" : "host",
-    "value" : "867d4f8c4716"
+    "value" : "8075d9294a99"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -172,7 +172,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_guest_write_text"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -187,33 +187,42 @@
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
+        "failed" : 1,
         "broken" : 0,
         "skipped" : 0,
         "passed" : 3,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "4c43125f52dcd4e9",
+        "uid" : "5ebc605a242697df",
         "status" : "passed",
         "time" : {
-          "start" : 1712042048484,
-          "stop" : 1712042048800,
-          "duration" : 316
+          "start" : 1712049657017,
+          "stop" : 1712049658707,
+          "duration" : 1690
         }
       }, {
-        "uid" : "d16ddc1140278152",
+        "uid" : "f6359eed4c8d3477",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++",
+        "time" : {
+          "start" : 1712042039870,
+          "stop" : 1712042041886,
+          "duration" : 2016
+        }
+      }, {
+        "uid" : "998556665ca31605",
         "status" : "passed",
         "time" : {
-          "start" : 1711622007707,
-          "stop" : 1711622008062,
-          "duration" : 355
+          "start" : 1711621998975,
+          "stop" : 1711622000554,
+          "duration" : 1579
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c2c81289260990f9.json",
+  "source" : "b78e26a7f71abda0.json",
   "parameterValues" : [ ]
 }

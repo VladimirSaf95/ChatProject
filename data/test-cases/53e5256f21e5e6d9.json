@@ -1,21 +1,36 @@
 {
-  "uid" : "7b2a58c71f4245",
-  "name" : "test_send_gif",
-  "fullName" : "test.test_messages_functionality#test_send_gif",
-  "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
+  "uid" : "53e5256f21e5e6d9",
+  "name" : "test_block_players",
+  "fullName" : "test.test_block_and_unblock#test_block_players",
+  "historyId" : "d38eeef11179490ead748d140d16f0e6",
   "time" : {
-    "start" : 1712049662688,
-    "stop" : 1712049663139,
-    "duration" : 451
+    "start" : 1712052081638,
+    "stop" : 1712052089766,
+    "duration" : 8128
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "config",
+    "time" : {
+      "start" : 1712052077348,
+      "stop" : 1712052077348,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1712049593534,
-      "stop" : 1712049593534,
+      "start" : 1712052080935,
+      "stop" : 1712052080935,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,24 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712049590995,
-      "stop" : 1712049593533,
-      "duration" : 2538
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1712049590995,
-      "stop" : 1712049590995,
-      "duration" : 0
+      "start" : 1712052077348,
+      "stop" : 1712052080935,
+      "duration" : 3587
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,11 +60,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Sending GIF message",
+      "name" : "Getting information about banned players before the test",
       "time" : {
-        "start" : 1712049662688,
-        "stop" : 1712049663137,
-        "duration" : 449
+        "start" : 1712052081638,
+        "stop" : 1712052082346,
+        "duration" : 708
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,10 +75,40 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting response status code",
+      "name" : "Sending message and blocking player",
       "time" : {
-        "start" : 1712049663137,
-        "stop" : 1712049663137,
+        "start" : 1712052082346,
+        "stop" : 1712052089464,
+        "duration" : 7118
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Getting information about banned players after the test",
+      "time" : {
+        "start" : 1712052089464,
+        "stop" : 1712052089761,
+        "duration" : 297
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verifying response status code",
+      "time" : {
+        "start" : 1712052089761,
+        "stop" : 1712052089761,
         "duration" : 0
       },
       "status" : "passed",
@@ -90,10 +120,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting response text",
+      "name" : "Verifying 'total' key in response JSON before and after",
       "time" : {
-        "start" : 1712049663137,
-        "stop" : 1712049663137,
+        "start" : 1712052089761,
+        "stop" : 1712052089761,
         "duration" : 0
       },
       "status" : "passed",
@@ -105,25 +135,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting 'event_id' key in JSON response",
+      "name" : "Verifying the increase in banned players count",
       "time" : {
-        "start" : 1712049663137,
-        "stop" : 1712049663137,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Asserting response time",
-      "time" : {
-        "start" : 1712049663138,
-        "stop" : 1712049663138,
+        "start" : 1712052089761,
+        "stop" : 1712052089761,
         "duration" : 0
       },
       "status" : "passed",
@@ -139,14 +154,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 5,
+    "stepsCount" : 6,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712049739847,
-      "stop" : 1712049739847,
+      "start" : 1712052231886,
+      "stop" : 1712052231886,
       "duration" : 0
     },
     "status" : "passed",
@@ -159,23 +174,23 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Player Blocking"
+  }, {
     "name" : "story",
-    "value" : "Sending GIF in Chat"
+    "value" : "Player Blocking Test"
   }, {
     "name" : "severity",
-    "value" : "normal"
-  }, {
-    "name" : "feature",
-    "value" : "Sending GIFs"
+    "value" : "blocker"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "867d4f8c4716"
+    "value" : "8075d9294a99"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -187,7 +202,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_block_and_unblock"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -197,38 +212,47 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "blocker",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
+        "failed" : 1,
         "broken" : 0,
         "skipped" : 0,
         "passed" : 3,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "ed9397223bed21b7",
+        "uid" : "45525e6ae775984f",
         "status" : "passed",
         "time" : {
-          "start" : 1712042045651,
-          "stop" : 1712042047210,
-          "duration" : 1559
+          "start" : 1712049594003,
+          "stop" : 1712049601390,
+          "duration" : 7387
         }
       }, {
-        "uid" : "afee5434625e4846",
+        "uid" : "f518aeba00293592",
         "status" : "passed",
         "time" : {
-          "start" : 1711622005099,
-          "stop" : 1711622006231,
-          "duration" : 1132
+          "start" : 1712041994679,
+          "stop" : 1712042001544,
+          "duration" : 6865
+        }
+      }, {
+        "uid" : "e0a9371d6a0656d9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1711621944257,
+          "stop" : 1711621959283,
+          "duration" : 15026
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "7b2a58c71f4245.json",
+  "source" : "53e5256f21e5e6d9.json",
   "parameterValues" : [ ]
 }
