@@ -1,12 +1,12 @@
 {
-  "uid" : "bc6232d3650e3740",
-  "name" : "test_click_chat_room",
-  "fullName" : "test.test_changeroom#test_click_chat_room",
-  "historyId" : "be97e1ba70b4c1a08c49976b38facb9c",
+  "uid" : "29f2943061d49a1d",
+  "name" : "test_guest_write_text",
+  "fullName" : "test.test_guest_write_text#test_guest_write_text",
+  "historyId" : "ce0cd46787e71938b1e1382945934dfe",
   "time" : {
-    "start" : 1712064201025,
-    "stop" : 1712064219598,
-    "duration" : 18573
+    "start" : 1712064688719,
+    "stop" : 1712064690281,
+    "duration" : 1562
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,23 +14,8 @@
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1712064167194,
-      "stop" : 1712064167194,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1712064164191,
-      "stop" : 1712064164191,
+      "start" : 1712064615367,
+      "stop" : 1712064615367,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +29,24 @@
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1712064200208,
-      "stop" : 1712064201024,
-      "duration" : 816
+      "start" : 1712064648387,
+      "stop" : 1712064649253,
+      "duration" : 866
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1712064611524,
+      "stop" : 1712064611524,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +59,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712064164191,
-      "stop" : 1712064167193,
-      "duration" : 3002
+      "start" : 1712064611525,
+      "stop" : 1712064615367,
+      "duration" : 3842
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Checking if chat button exists",
+      "name" : "Clicking on the chat input field",
       "time" : {
-        "start" : 1712064201025,
-        "stop" : 1712064213431,
-        "duration" : 12406
+        "start" : 1712064688829,
+        "stop" : 1712064690152,
+        "duration" : 1323
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,56 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Clicking on Room B",
+      "name" : "Asserting redirection to login page",
       "time" : {
-        "start" : 1712064213431,
-        "stop" : 1712064216515,
-        "duration" : 3084
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying Room B is selected",
-      "time" : {
-        "start" : 1712064216515,
-        "stop" : 1712064216527,
-        "duration" : 12
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Clicking on Room A",
-      "time" : {
-        "start" : 1712064216527,
-        "stop" : 1712064219586,
-        "duration" : 3059
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying Room A is selected",
-      "time" : {
-        "start" : 1712064219586,
-        "stop" : 1712064219597,
-        "duration" : 11
+        "start" : 1712064690152,
+        "stop" : 1712064690281,
+        "duration" : 129
       },
       "status" : "passed",
       "steps" : [ ],
@@ -150,24 +105,18 @@
       "stepsCount" : 0,
       "hasContent" : false
     } ],
-    "attachments" : [ {
-      "uid" : "a5f4af2bb3992f2e",
-      "name" : "log",
-      "source" : "a5f4af2bb3992f2e.txt",
-      "type" : "text/plain",
-      "size" : 561
-    } ],
+    "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 1,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 5,
+    "stepsCount" : 2,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712064314909,
-      "stop" : 1712064314909,
+      "start" : 1712064762872,
+      "stop" : 1712064762872,
       "duration" : 0
     },
     "status" : "passed",
@@ -181,9 +130,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1712064314841,
-      "stop" : 1712064314909,
-      "duration" : 68
+      "start" : 1712064762803,
+      "stop" : 1712064762872,
+      "duration" : 69
     },
     "status" : "passed",
     "steps" : [ ],
@@ -195,23 +144,23 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "critical"
+    "name" : "story",
+    "value" : "Writing Text as Guest"
   }, {
     "name" : "feature",
-    "value" : "Chat Rooms"
+    "value" : "Guest Chat Functionality"
   }, {
-    "name" : "story",
-    "value" : "Clicking Chat Room"
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_changeroom"
+    "value" : "test_guest_write_text"
   }, {
     "name" : "host",
-    "value" : "26f540db7fd8"
+    "value" : "bd9ff6b17b60"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -223,7 +172,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_changeroom"
+    "value" : "test.test_guest_write_text"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -233,116 +182,123 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "critical",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 2,
+        "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 6,
+        "passed" : 8,
         "unknown" : 0,
-        "total" : 12
+        "total" : 13
       },
       "items" : [ {
-        "uid" : "61b380ed60c5769d",
+        "uid" : "689572d3da9e9c07",
         "status" : "passed",
         "time" : {
-          "start" : 1712063453055,
-          "stop" : 1712063470955,
-          "duration" : 17900
+          "start" : 1712064232171,
+          "stop" : 1712064234122,
+          "duration" : 1951
         }
       }, {
-        "uid" : "8567fe46fb4a81d4",
+        "uid" : "64aa8f37e28fd9ad",
         "status" : "passed",
         "time" : {
-          "start" : 1712062591248,
-          "stop" : 1712062611224,
-          "duration" : 19976
+          "start" : 1712063484111,
+          "stop" : 1712063487268,
+          "duration" : 3157
         }
       }, {
-        "uid" : "db86a2bfd659bc0c",
+        "uid" : "7868ae9a0b6cf3b7",
         "status" : "passed",
         "time" : {
-          "start" : 1712056997437,
-          "stop" : 1712057014279,
-          "duration" : 16842
+          "start" : 1712062617426,
+          "stop" : 1712062619388,
+          "duration" : 1962
         }
       }, {
-        "uid" : "8f0cca9411c5c903",
+        "uid" : "8462ea5a40329edd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712057026748,
+          "stop" : 1712057028621,
+          "duration" : 1873
+        }
+      }, {
+        "uid" : "2adfb7bd185c1a67",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717479,
-          "stop" : 1712056717479,
+          "start" : 1712056717566,
+          "stop" : 1712056717566,
           "duration" : 0
         }
       }, {
-        "uid" : "c16e7716d39b86ae",
+        "uid" : "889590730d81480",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056500893,
-          "stop" : 1712056500893,
+          "start" : 1712056500985,
+          "stop" : 1712056500985,
           "duration" : 0
         }
       }, {
-        "uid" : "9c3a88516734cbd0",
+        "uid" : "abab6da957042ea6",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502209,
-          "stop" : 1712055502209,
+          "start" : 1712055502299,
+          "stop" : 1712055502299,
           "duration" : 0
         }
       }, {
-        "uid" : "69aa11eaebb441f5",
+        "uid" : "d507ec38e013d434",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563083,
-          "stop" : 1712053563083,
+          "start" : 1712053563172,
+          "stop" : 1712053563172,
           "duration" : 0
         }
       }, {
-        "uid" : "b6364a58e1c37a56",
+        "uid" : "b78e26a7f71abda0",
         "status" : "passed",
         "time" : {
-          "start" : 1712052116880,
-          "stop" : 1712052133837,
-          "duration" : 16957
+          "start" : 1712052146395,
+          "stop" : 1712052148341,
+          "duration" : 1946
         }
       }, {
-        "uid" : "5b7434c23e749213",
+        "uid" : "5ebc605a242697df",
         "status" : "passed",
         "time" : {
-          "start" : 1712049627958,
-          "stop" : 1712049644309,
-          "duration" : 16351
+          "start" : 1712049657017,
+          "stop" : 1712049658707,
+          "duration" : 1690
         }
       }, {
-        "uid" : "dc9869d2ec068055",
+        "uid" : "f6359eed4c8d3477",
         "status" : "failed",
-        "statusDetails" : "Failed: Room A items not found or empty",
+        "statusDetails" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++",
         "time" : {
-          "start" : 1712042022565,
-          "stop" : 1712042033703,
-          "duration" : 11138
+          "start" : 1712042039870,
+          "stop" : 1712042041886,
+          "duration" : 2016
         }
       }, {
-        "uid" : "d0cd811952508292",
-        "status" : "failed",
-        "statusDetails" : "Failed: Room A items not found or empty",
+        "uid" : "998556665ca31605",
+        "status" : "passed",
         "time" : {
-          "start" : 1711621981779,
-          "stop" : 1711621992590,
-          "duration" : 10811
+          "start" : 1711621998975,
+          "stop" : 1711622000554,
+          "duration" : 1579
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "bc6232d3650e3740.json",
+  "source" : "29f2943061d49a1d.json",
   "parameterValues" : [ ]
 }

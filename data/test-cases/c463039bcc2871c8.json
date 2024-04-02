@@ -1,12 +1,12 @@
 {
-  "uid" : "e839a885cfa8cb2",
-  "name" : "test_send_gif",
-  "fullName" : "test.test_messages_functionality#test_send_gif",
-  "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
+  "uid" : "c463039bcc2871c8",
+  "name" : "test_open_rules_in_different_locales",
+  "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
+  "historyId" : "407693a6fd5ff6488821603261c63665",
   "time" : {
-    "start" : 1712064238494,
-    "stop" : 1712064238913,
-    "duration" : 419
+    "start" : 1712064668616,
+    "stop" : 1712064681856,
+    "duration" : 13240
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,24 @@
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1712064167194,
-      "stop" : 1712064167194,
+      "start" : 1712064615367,
+      "stop" : 1712064615367,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1712064648387,
+      "stop" : 1712064649253,
+      "duration" : 866
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712064164191,
-      "stop" : 1712064164191,
+      "start" : 1712064611524,
+      "stop" : 1712064611524,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +59,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712064164191,
-      "stop" : 1712064167193,
-      "duration" : 3002
+      "start" : 1712064611525,
+      "stop" : 1712064615367,
+      "duration" : 3842
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Sending GIF message",
+      "name" : "Opening chat rules",
       "time" : {
-        "start" : 1712064238494,
-        "stop" : 1712064238911,
-        "duration" : 417
+        "start" : 1712064668719,
+        "stop" : 1712064669529,
+        "duration" : 810
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,11 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting response status code",
+      "name" : "Verifying chat rules in English locale",
       "time" : {
-        "start" : 1712064238911,
-        "stop" : 1712064238911,
-        "duration" : 0
+        "start" : 1712064669529,
+        "stop" : 1712064669571,
+        "duration" : 42
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,41 +105,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting response text",
+      "name" : "Switching to Russian locale and verifying chat rules",
       "time" : {
-        "start" : 1712064238911,
-        "stop" : 1712064238911,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Asserting 'event_id' key in JSON response",
-      "time" : {
-        "start" : 1712064238911,
-        "stop" : 1712064238911,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Asserting response time",
-      "time" : {
-        "start" : 1712064238911,
-        "stop" : 1712064238911,
-        "duration" : 0
+        "start" : 1712064669571,
+        "stop" : 1712064681854,
+        "duration" : 12283
       },
       "status" : "passed",
       "steps" : [ ],
@@ -139,15 +124,30 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 5,
+    "stepsCount" : 3,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712064314909,
-      "stop" : 1712064314909,
+      "start" : 1712064762872,
+      "stop" : 1712064762872,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1712064762803,
+      "stop" : 1712064762872,
+      "duration" : 69
     },
     "status" : "passed",
     "steps" : [ ],
@@ -159,23 +159,23 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "feature",
-    "value" : "Sending GIFs"
+    "value" : "Chat Rules"
   }, {
     "name" : "story",
-    "value" : "Sending GIF in Chat"
+    "value" : "Opening Chat Rules in Different Locales"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_clickable_button_rules"
   }, {
     "name" : "host",
-    "value" : "26f540db7fd8"
+    "value" : "bd9ff6b17b60"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -187,7 +187,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_clickable_button_rules"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -205,106 +205,114 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 8,
+        "passed" : 9,
         "unknown" : 0,
-        "total" : 12
+        "total" : 13
       },
       "items" : [ {
-        "uid" : "84b205287646dd4f",
+        "uid" : "6375adf4a74ca1a4",
         "status" : "passed",
         "time" : {
-          "start" : 1712063492561,
-          "stop" : 1712063493403,
-          "duration" : 842
+          "start" : 1712064219600,
+          "stop" : 1712064225546,
+          "duration" : 5946
         }
       }, {
-        "uid" : "41ea613beb139460",
+        "uid" : "88f129feb62941a5",
         "status" : "passed",
         "time" : {
-          "start" : 1712062624203,
-          "stop" : 1712062624738,
-          "duration" : 535
+          "start" : 1712063470958,
+          "stop" : 1712063477252,
+          "duration" : 6294
         }
       }, {
-        "uid" : "3dceab23ef5e677f",
+        "uid" : "e2ed1d488062f5f2",
         "status" : "passed",
         "time" : {
-          "start" : 1712057033632,
-          "stop" : 1712057034359,
-          "duration" : 727
+          "start" : 1712062611226,
+          "stop" : 1712062617067,
+          "duration" : 5841
         }
       }, {
-        "uid" : "9c67d4c599d1be75",
+        "uid" : "e35a962568fc64af",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712057014281,
+          "stop" : 1712057020161,
+          "duration" : 5880
+        }
+      }, {
+        "uid" : "100e8903e63651ca",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717779,
-          "stop" : 1712056717779,
+          "start" : 1712056717492,
+          "stop" : 1712056717492,
           "duration" : 0
         }
       }, {
-        "uid" : "5ea34adbdfc96366",
+        "uid" : "7ddcad2c3a59f570",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056501204,
-          "stop" : 1712056501204,
+          "start" : 1712056500906,
+          "stop" : 1712056500906,
           "duration" : 0
         }
       }, {
-        "uid" : "5862ec2212110991",
+        "uid" : "5c07be886bf1ab13",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502515,
-          "stop" : 1712055502515,
+          "start" : 1712055502222,
+          "stop" : 1712055502222,
           "duration" : 0
         }
       }, {
-        "uid" : "ea5405dc6f32a1c4",
+        "uid" : "c61ad3d94b84e436",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563385,
-          "stop" : 1712053563385,
+          "start" : 1712053563096,
+          "stop" : 1712053563096,
           "duration" : 0
         }
       }, {
-        "uid" : "51fdb8d59eb77f3",
+        "uid" : "dbfebec7d60b1c90",
         "status" : "passed",
         "time" : {
-          "start" : 1712052154771,
-          "stop" : 1712052155332,
-          "duration" : 561
+          "start" : 1712052133839,
+          "stop" : 1712052139696,
+          "duration" : 5857
         }
       }, {
-        "uid" : "7b2a58c71f4245",
+        "uid" : "3fe8898c93fde04f",
         "status" : "passed",
         "time" : {
-          "start" : 1712049662688,
-          "stop" : 1712049663139,
-          "duration" : 451
+          "start" : 1712049644311,
+          "stop" : 1712049650474,
+          "duration" : 6163
         }
       }, {
-        "uid" : "ed9397223bed21b7",
+        "uid" : "6515aa38e6fff4c2",
         "status" : "passed",
         "time" : {
-          "start" : 1712042045651,
-          "stop" : 1712042047210,
-          "duration" : 1559
+          "start" : 1712042033743,
+          "stop" : 1712042039522,
+          "duration" : 5779
         }
       }, {
-        "uid" : "afee5434625e4846",
+        "uid" : "28ce234b1a93cb50",
         "status" : "passed",
         "time" : {
-          "start" : 1711622005099,
-          "stop" : 1711622006231,
-          "duration" : 1132
+          "start" : 1711621992596,
+          "stop" : 1711621998634,
+          "duration" : 6038
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e839a885cfa8cb2.json",
+  "source" : "c463039bcc2871c8.json",
   "parameterValues" : [ ]
 }
