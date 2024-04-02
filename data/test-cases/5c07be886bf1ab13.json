@@ -1,11 +1,11 @@
 {
-  "uid" : "61b6ce05ed69b04",
-  "name" : "test_block_players",
-  "fullName" : "test.test_block_and_unblock#test_block_players",
-  "historyId" : "d38eeef11179490ead748d140d16f0e6",
+  "uid" : "5c07be886bf1ab13",
+  "name" : "test_open_rules_in_different_locales",
+  "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
+  "historyId" : "407693a6fd5ff6488821603261c63665",
   "time" : {
-    "start" : 1712053563062,
-    "stop" : 1712053563062,
+    "start" : 1712055502222,
+    "stop" : 1712055502222,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,23 +33,23 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Player Blocking Test"
-  }, {
     "name" : "severity",
-    "value" : "blocker"
+    "value" : "normal"
   }, {
     "name" : "feature",
-    "value" : "Player Blocking"
+    "value" : "Chat Rules"
+  }, {
+    "name" : "story",
+    "value" : "Opening Chat Rules in Different Locales"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_block_and_unblock"
+    "value" : "test_clickable_button_rules"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_block_and_unblock"
+    "value" : "test.test_clickable_button_rules"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "blocker",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -80,50 +80,58 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 1,
-        "broken" : 1,
+        "failed" : 0,
+        "broken" : 2,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "53e5256f21e5e6d9",
-        "status" : "passed",
+        "uid" : "c61ad3d94b84e436",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052081638,
-          "stop" : 1712052089766,
-          "duration" : 8128
+          "start" : 1712053563096,
+          "stop" : 1712053563096,
+          "duration" : 0
         }
       }, {
-        "uid" : "45525e6ae775984f",
+        "uid" : "dbfebec7d60b1c90",
         "status" : "passed",
         "time" : {
-          "start" : 1712049594003,
-          "stop" : 1712049601390,
-          "duration" : 7387
+          "start" : 1712052133839,
+          "stop" : 1712052139696,
+          "duration" : 5857
         }
       }, {
-        "uid" : "f518aeba00293592",
+        "uid" : "3fe8898c93fde04f",
         "status" : "passed",
         "time" : {
-          "start" : 1712041994679,
-          "stop" : 1712042001544,
-          "duration" : 6865
+          "start" : 1712049644311,
+          "stop" : 1712049650474,
+          "duration" : 6163
         }
       }, {
-        "uid" : "e0a9371d6a0656d9",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "uid" : "6515aa38e6fff4c2",
+        "status" : "passed",
         "time" : {
-          "start" : 1711621944257,
-          "stop" : 1711621959283,
-          "duration" : 15026
+          "start" : 1712042033743,
+          "stop" : 1712042039522,
+          "duration" : 5779
+        }
+      }, {
+        "uid" : "28ce234b1a93cb50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711621992596,
+          "stop" : 1711621998634,
+          "duration" : 6038
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "61b6ce05ed69b04.json",
+  "source" : "5c07be886bf1ab13.json",
   "parameterValues" : [ ]
 }

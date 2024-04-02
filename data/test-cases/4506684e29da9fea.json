@@ -1,11 +1,11 @@
 {
-  "uid" : "238d9733c2bdbe08",
-  "name" : "test_unblock_players",
-  "fullName" : "test.test_block_and_unblock#test_unblock_players",
-  "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
+  "uid" : "4506684e29da9fea",
+  "name" : "test_send_complaint",
+  "fullName" : "test.test_messages_functionality#test_send_complaint",
+  "historyId" : "31f8786fe3f6ff4b035b30b6ade7469c",
   "time" : {
-    "start" : 1712053563072,
-    "stop" : 1712053563072,
+    "start" : 1712055502553,
+    "stop" : 1712055502553,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -36,20 +36,20 @@
     "name" : "severity",
     "value" : "critical"
   }, {
-    "name" : "story",
-    "value" : "Unblocking Players"
-  }, {
     "name" : "feature",
-    "value" : "User Management"
+    "value" : "Sending Complaints"
+  }, {
+    "name" : "story",
+    "value" : "Filing Complaint on Message"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_block_and_unblock"
+    "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_block_and_unblock"
+    "value" : "test.test_messages_functionality"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -81,48 +81,57 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 1,
+        "broken" : 2,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "e85e0f8c608e90f0",
-        "status" : "passed",
+        "uid" : "d586297585d8b013",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052089768,
-          "stop" : 1712052115487,
-          "duration" : 25719
+          "start" : 1712053563423,
+          "stop" : 1712053563423,
+          "duration" : 0
         }
       }, {
-        "uid" : "5ff520e8666b9a5c",
+        "uid" : "1219018631b96850",
         "status" : "passed",
         "time" : {
-          "start" : 1712049601392,
-          "stop" : 1712049627143,
-          "duration" : 25751
+          "start" : 1712052155334,
+          "stop" : 1712052155956,
+          "duration" : 622
         }
       }, {
-        "uid" : "5db497f98f1430f7",
+        "uid" : "f34ea9478ad6b7be",
         "status" : "passed",
         "time" : {
-          "start" : 1712042001546,
-          "stop" : 1712042021278,
-          "duration" : 19732
+          "start" : 1712049663141,
+          "stop" : 1712049664136,
+          "duration" : 995
         }
       }, {
-        "uid" : "3d35ce22cfe30eac",
+        "uid" : "2ae589bb4d60a12c",
         "status" : "passed",
         "time" : {
-          "start" : 1711621959323,
-          "stop" : 1711621980695,
-          "duration" : 21372
+          "start" : 1712042047213,
+          "stop" : 1712042048083,
+          "duration" : 870
+        }
+      }, {
+        "uid" : "a3292f1e28ac054e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622006233,
+          "stop" : 1711622007061,
+          "duration" : 828
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "238d9733c2bdbe08.json",
+  "source" : "4506684e29da9fea.json",
   "parameterValues" : [ ]
 }

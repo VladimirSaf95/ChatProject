@@ -1,11 +1,11 @@
 {
-  "uid" : "20adc2c17823a492",
-  "name" : "test_delete_dmsg",
-  "fullName" : "test.test_messages_functionality#test_delete_dmsg",
-  "historyId" : "f19e9c8f1ee94d8815bdda0bfa138b0a",
+  "uid" : "479c58c552a27f1",
+  "name" : "test_send_not_allow_symbol",
+  "fullName" : "test.test_messages_functionality#test_send_not_allow_symbol",
+  "historyId" : "a7c8da64ecec62788bdb01ada3b6be57",
   "time" : {
-    "start" : 1712053563600,
-    "stop" : 1712053563600,
+    "start" : 1712055502478,
+    "stop" : 1712055502478,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,14 +33,14 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Message Operations"
-  }, {
     "name" : "story",
-    "value" : "Deleting Messages"
+    "value" : "Sending Disallowed Symbol"
   }, {
     "name" : "severity",
-    "value" : "critical"
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Sending Symbols"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -49,7 +49,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "critical",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -80,53 +80,58 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 4,
-        "broken" : 1,
+        "failed" : 0,
+        "broken" : 2,
         "skipped" : 0,
-        "passed" : 0,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "efa3b868e8f5d5dd",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+        "uid" : "81e85fd03a0deaa7",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052167631,
-          "stop" : 1712052227823,
-          "duration" : 60192
+          "start" : 1712053563348,
+          "stop" : 1712053563348,
+          "duration" : 0
         }
       }, {
-        "uid" : "c082b15ce9b0055b",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+        "uid" : "dbde1287fb9c3dd7",
+        "status" : "passed",
         "time" : {
-          "start" : 1712049675647,
-          "stop" : 1712049735770,
-          "duration" : 60123
+          "start" : 1712052154097,
+          "stop" : 1712052154769,
+          "duration" : 672
         }
       }, {
-        "uid" : "54390499faacf349",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+        "uid" : "20e2890d7ddd6536",
+        "status" : "passed",
         "time" : {
-          "start" : 1712042058529,
-          "stop" : 1712042118665,
-          "duration" : 60136
+          "start" : 1712049662234,
+          "stop" : 1712049662686,
+          "duration" : 452
         }
       }, {
-        "uid" : "e77292e55f23047f",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+        "uid" : "5065d6deb21ef40a",
+        "status" : "passed",
         "time" : {
-          "start" : 1711622017683,
-          "stop" : 1711622077825,
-          "duration" : 60142
+          "start" : 1712042045462,
+          "stop" : 1712042045649,
+          "duration" : 187
+        }
+      }, {
+        "uid" : "5f7d05bd41890003",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622004904,
+          "stop" : 1711622005097,
+          "duration" : 193
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "20adc2c17823a492.json",
+  "source" : "479c58c552a27f1.json",
   "parameterValues" : [ ]
 }

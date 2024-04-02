@@ -1,11 +1,11 @@
 {
-  "uid" : "8778eaf9327bb4e8",
-  "name" : "test_get_chanel_matrix",
-  "fullName" : "test.test_get_chanel#test_get_chanel_matrix",
-  "historyId" : "81558e6b70736da3a13cca7374afbd2f",
+  "uid" : "7ee83a77477f1761",
+  "name" : "test_checked_spam",
+  "fullName" : "test.test_messages_functionality#test_checked_spam",
+  "historyId" : "0d564746938bc52c664683bead1959ba",
   "time" : {
-    "start" : 1712053563150,
-    "stop" : 1712053563150,
+    "start" : 1712055502684,
+    "stop" : 1712055502684,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,23 +33,23 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
     "name" : "feature",
-    "value" : "Channel Operations"
+    "value" : "Spam Checking"
   }, {
     "name" : "story",
-    "value" : "Checking Matrix Channel Retrieval"
-  }, {
-    "name" : "severity",
-    "value" : "normal"
+    "value" : "Spam Checking Test"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_get_chanel"
+    "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_get_chanel"
+    "value" : "test.test_messages_functionality"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -81,48 +81,57 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 1,
+        "broken" : 2,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "b3ff93f108bb65db",
-        "status" : "passed",
+        "uid" : "905ce25150b5fab0",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052146193,
-          "stop" : 1712052146393,
-          "duration" : 200
+          "start" : 1712053563552,
+          "stop" : 1712053563552,
+          "duration" : 0
         }
       }, {
-        "uid" : "f68a27b15f9c250a",
+        "uid" : "af69faaaede9d348",
         "status" : "passed",
         "time" : {
-          "start" : 1712049656890,
-          "stop" : 1712049657015,
-          "duration" : 125
+          "start" : 1712052157405,
+          "stop" : 1712052167628,
+          "duration" : 10223
         }
       }, {
-        "uid" : "a6accdbea63f4c9f",
+        "uid" : "4cd6f2f17509cfab",
         "status" : "passed",
         "time" : {
-          "start" : 1712042039724,
-          "stop" : 1712042039867,
-          "duration" : 143
+          "start" : 1712049664825,
+          "stop" : 1712049675645,
+          "duration" : 10820
         }
       }, {
-        "uid" : "dd258e2d801d92dd",
+        "uid" : "35995e202e25dde9",
         "status" : "passed",
         "time" : {
-          "start" : 1711621998828,
-          "stop" : 1711621998973,
-          "duration" : 145
+          "start" : 1712042048802,
+          "stop" : 1712042058527,
+          "duration" : 9725
+        }
+      }, {
+        "uid" : "18aace116cbd4b96",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622008065,
+          "stop" : 1711622017681,
+          "duration" : 9616
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "8778eaf9327bb4e8.json",
+  "source" : "7ee83a77477f1761.json",
   "parameterValues" : [ ]
 }

@@ -1,11 +1,11 @@
 {
-  "uid" : "54e5c33295e7dc4a",
-  "name" : "test_pinned_msg",
-  "fullName" : "test.test_messages_functionality#test_pinned_msg",
-  "historyId" : "ecdfbf7aa572308243a68350daaed9a0",
+  "uid" : "9c3a88516734cbd0",
+  "name" : "test_click_chat_room",
+  "fullName" : "test.test_changeroom#test_click_chat_room",
+  "historyId" : "be97e1ba70b4c1a08c49976b38facb9c",
   "time" : {
-    "start" : 1712053563464,
-    "stop" : 1712053563464,
+    "start" : 1712055502209,
+    "stop" : 1712055502209,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -34,22 +34,22 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "story",
-    "value" : "Message Pinning by Moderator"
+    "value" : "Clicking Chat Room"
   }, {
     "name" : "severity",
-    "value" : "normal"
+    "value" : "critical"
   }, {
     "name" : "feature",
-    "value" : "Message Pinning"
+    "value" : "Chat Rooms"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_changeroom"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_changeroom"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -80,49 +80,60 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
-        "broken" : 1,
+        "failed" : 2,
+        "broken" : 2,
         "skipped" : 0,
-        "passed" : 4,
+        "passed" : 2,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "6ff90e857aff37a8",
-        "status" : "passed",
+        "uid" : "69aa11eaebb441f5",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052155958,
-          "stop" : 1712052156976,
-          "duration" : 1018
+          "start" : 1712053563083,
+          "stop" : 1712053563083,
+          "duration" : 0
         }
       }, {
-        "uid" : "bf9922a5f53f2a8c",
+        "uid" : "b6364a58e1c37a56",
         "status" : "passed",
         "time" : {
-          "start" : 1712049664138,
-          "stop" : 1712049664484,
-          "duration" : 346
+          "start" : 1712052116880,
+          "stop" : 1712052133837,
+          "duration" : 16957
         }
       }, {
-        "uid" : "488bda6779232759",
+        "uid" : "5b7434c23e749213",
         "status" : "passed",
         "time" : {
-          "start" : 1712042048085,
-          "stop" : 1712042048483,
-          "duration" : 398
+          "start" : 1712049627958,
+          "stop" : 1712049644309,
+          "duration" : 16351
         }
       }, {
-        "uid" : "936e615894806ae5",
-        "status" : "passed",
+        "uid" : "dc9869d2ec068055",
+        "status" : "failed",
+        "statusDetails" : "Failed: Room A items not found or empty",
         "time" : {
-          "start" : 1711622007063,
-          "stop" : 1711622007705,
-          "duration" : 642
+          "start" : 1712042022565,
+          "stop" : 1712042033703,
+          "duration" : 11138
+        }
+      }, {
+        "uid" : "d0cd811952508292",
+        "status" : "failed",
+        "statusDetails" : "Failed: Room A items not found or empty",
+        "time" : {
+          "start" : 1711621981779,
+          "stop" : 1711621992590,
+          "duration" : 10811
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "54e5c33295e7dc4a.json",
+  "source" : "9c3a88516734cbd0.json",
   "parameterValues" : [ ]
 }

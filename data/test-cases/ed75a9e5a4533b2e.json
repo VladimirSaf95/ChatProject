@@ -1,11 +1,11 @@
 {
-  "uid" : "905ce25150b5fab0",
-  "name" : "test_checked_spam",
-  "fullName" : "test.test_messages_functionality#test_checked_spam",
-  "historyId" : "0d564746938bc52c664683bead1959ba",
+  "uid" : "ed75a9e5a4533b2e",
+  "name" : "test_clickchatbutton",
+  "fullName" : "test.test_open_and_close_chat#test_clickchatbutton",
+  "historyId" : "336199c1d540adbc6dd3cdcb40af25fe",
   "time" : {
-    "start" : 1712053563552,
-    "stop" : 1712053563552,
+    "start" : 1712055502781,
+    "stop" : 1712055502781,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,23 +33,23 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Spam Checking Test"
+    "name" : "severity",
+    "value" : "blocker"
   }, {
     "name" : "feature",
-    "value" : "Spam Checking"
+    "value" : "Chat Functionality"
   }, {
-    "name" : "severity",
-    "value" : "critical"
+    "name" : "story",
+    "value" : "Clicking Chat Button"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_open_and_close_chat"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "critical",
+    "severity" : "blocker",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -81,48 +81,57 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 1,
+        "broken" : 2,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "af69faaaede9d348",
-        "status" : "passed",
+        "uid" : "e15282cd6db562cc",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052157405,
-          "stop" : 1712052167628,
-          "duration" : 10223
+          "start" : 1712053563650,
+          "stop" : 1712053563650,
+          "duration" : 0
         }
       }, {
-        "uid" : "4cd6f2f17509cfab",
+        "uid" : "b418561f79c1b726",
         "status" : "passed",
         "time" : {
-          "start" : 1712049664825,
-          "stop" : 1712049675645,
-          "duration" : 10820
+          "start" : 1712052227865,
+          "stop" : 1712052228119,
+          "duration" : 254
         }
       }, {
-        "uid" : "35995e202e25dde9",
+        "uid" : "a20192a4453f52d9",
         "status" : "passed",
         "time" : {
-          "start" : 1712042048802,
-          "stop" : 1712042058527,
-          "duration" : 9725
+          "start" : 1712049735810,
+          "stop" : 1712049736083,
+          "duration" : 273
         }
       }, {
-        "uid" : "18aace116cbd4b96",
+        "uid" : "b97a7e6782f9ec9f",
         "status" : "passed",
         "time" : {
-          "start" : 1711622008065,
-          "stop" : 1711622017681,
-          "duration" : 9616
+          "start" : 1712042118675,
+          "stop" : 1712042118837,
+          "duration" : 162
+        }
+      }, {
+        "uid" : "980d9827c2e67a79",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622077835,
+          "stop" : 1711622077989,
+          "duration" : 154
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "905ce25150b5fab0.json",
+  "source" : "ed75a9e5a4533b2e.json",
   "parameterValues" : [ ]
 }

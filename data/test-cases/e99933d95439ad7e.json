@@ -1,11 +1,11 @@
 {
-  "uid" : "d507ec38e013d434",
-  "name" : "test_guest_write_text",
-  "fullName" : "test.test_guest_write_text#test_guest_write_text",
-  "historyId" : "ce0cd46787e71938b1e1382945934dfe",
+  "uid" : "e99933d95439ad7e",
+  "name" : "test_click_chat_button_close",
+  "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
+  "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1712053563172,
-    "stop" : 1712053563172,
+    "start" : 1712055502887,
+    "stop" : 1712055502887,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,23 +33,23 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
     "name" : "feature",
-    "value" : "Guest Chat Functionality"
+    "value" : "Chat Functionality"
   }, {
     "name" : "story",
-    "value" : "Writing Text as Guest"
-  }, {
-    "name" : "severity",
-    "value" : "normal"
+    "value" : "Clicking Chat Button to Close"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_guest_write_text"
+    "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_guest_write_text"
+    "value" : "test.test_open_and_close_chat"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -80,50 +80,58 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 1,
-        "broken" : 1,
+        "failed" : 0,
+        "broken" : 2,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "b78e26a7f71abda0",
-        "status" : "passed",
+        "uid" : "8ea310587a390979",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052146395,
-          "stop" : 1712052148341,
-          "duration" : 1946
+          "start" : 1712053563755,
+          "stop" : 1712053563755,
+          "duration" : 0
         }
       }, {
-        "uid" : "5ebc605a242697df",
+        "uid" : "bc7a9f64edac8ee9",
         "status" : "passed",
         "time" : {
-          "start" : 1712049657017,
-          "stop" : 1712049658707,
-          "duration" : 1690
+          "start" : 1712052228344,
+          "stop" : 1712052228619,
+          "duration" : 275
         }
       }, {
-        "uid" : "f6359eed4c8d3477",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++",
-        "time" : {
-          "start" : 1712042039870,
-          "stop" : 1712042041886,
-          "duration" : 2016
-        }
-      }, {
-        "uid" : "998556665ca31605",
+        "uid" : "9572fa2cf405b77f",
         "status" : "passed",
         "time" : {
-          "start" : 1711621998975,
-          "stop" : 1711622000554,
-          "duration" : 1579
+          "start" : 1712049736317,
+          "stop" : 1712049736579,
+          "duration" : 262
+        }
+      }, {
+        "uid" : "25dba6f40ac7edba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712042119022,
+          "stop" : 1712042119185,
+          "duration" : 163
+        }
+      }, {
+        "uid" : "fbb37797f73f9cd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622078169,
+          "stop" : 1711622078336,
+          "duration" : 167
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "d507ec38e013d434.json",
+  "source" : "e99933d95439ad7e.json",
   "parameterValues" : [ ]
 }

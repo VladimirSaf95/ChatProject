@@ -1,11 +1,11 @@
 {
-  "uid" : "8ab290364ddd649",
-  "name" : "test_get_chanel",
-  "fullName" : "test.test_get_chanel#test_get_chanel",
-  "historyId" : "84e91ba442c690feffdfef2b3a65d80f",
+  "uid" : "74d646212ccc0d4d",
+  "name" : "test_pinned_msg",
+  "fullName" : "test.test_messages_functionality#test_pinned_msg",
+  "historyId" : "ecdfbf7aa572308243a68350daaed9a0",
   "time" : {
-    "start" : 1712053563130,
-    "stop" : 1712053563130,
+    "start" : 1712055502595,
+    "stop" : 1712055502595,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,23 +33,23 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
     "name" : "feature",
-    "value" : "Channel Operations"
+    "value" : "Message Pinning"
   }, {
     "name" : "story",
-    "value" : "Checking Channel Retrieval"
-  }, {
-    "name" : "severity",
-    "value" : "critical"
+    "value" : "Message Pinning by Moderator"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_get_chanel"
+    "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_get_chanel"
+    "value" : "test.test_messages_functionality"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "critical",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -81,48 +81,57 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 1,
+        "broken" : 2,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "84408d3e652ba38c",
-        "status" : "passed",
+        "uid" : "54e5c33295e7dc4a",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052145906,
-          "stop" : 1712052146191,
-          "duration" : 285
+          "start" : 1712053563464,
+          "stop" : 1712053563464,
+          "duration" : 0
         }
       }, {
-        "uid" : "dcdd9b1925f94609",
+        "uid" : "6ff90e857aff37a8",
         "status" : "passed",
         "time" : {
-          "start" : 1712049656682,
-          "stop" : 1712049656888,
-          "duration" : 206
+          "start" : 1712052155958,
+          "stop" : 1712052156976,
+          "duration" : 1018
         }
       }, {
-        "uid" : "522ff53f248ce05d",
+        "uid" : "bf9922a5f53f2a8c",
         "status" : "passed",
         "time" : {
-          "start" : 1712042039527,
-          "stop" : 1712042039722,
-          "duration" : 195
+          "start" : 1712049664138,
+          "stop" : 1712049664484,
+          "duration" : 346
         }
       }, {
-        "uid" : "d24c37b9bba334eb",
+        "uid" : "488bda6779232759",
         "status" : "passed",
         "time" : {
-          "start" : 1711621998639,
-          "stop" : 1711621998825,
-          "duration" : 186
+          "start" : 1712042048085,
+          "stop" : 1712042048483,
+          "duration" : 398
+        }
+      }, {
+        "uid" : "936e615894806ae5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622007063,
+          "stop" : 1711622007705,
+          "duration" : 642
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "8ab290364ddd649.json",
+  "source" : "74d646212ccc0d4d.json",
   "parameterValues" : [ ]
 }

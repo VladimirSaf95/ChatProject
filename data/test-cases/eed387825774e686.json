@@ -1,11 +1,11 @@
 {
-  "uid" : "ee9173166e4d22c9",
-  "name" : "test_send_emoji",
-  "fullName" : "test.test_messages_functionality#test_send_emoji",
-  "historyId" : "7bb320f962adcc3b1847931bf3d7efa9",
+  "uid" : "eed387825774e686",
+  "name" : "test_delete_dmsg",
+  "fullName" : "test.test_messages_functionality#test_delete_dmsg",
+  "historyId" : "f19e9c8f1ee94d8815bdda0bfa138b0a",
   "time" : {
-    "start" : 1712053563222,
-    "stop" : 1712053563222,
+    "start" : 1712055502731,
+    "stop" : 1712055502731,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,14 +33,14 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Message Operations"
+  }, {
     "name" : "severity",
-    "value" : "normal"
+    "value" : "critical"
   }, {
     "name" : "story",
-    "value" : "Sending Emoji"
-  }, {
-    "name" : "feature",
-    "value" : "Sending Messages"
+    "value" : "Deleting Messages"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -49,7 +49,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -80,49 +80,62 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
-        "broken" : 1,
+        "failed" : 4,
+        "broken" : 2,
         "skipped" : 0,
-        "passed" : 4,
+        "passed" : 0,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "1e7b727b809d1dc8",
-        "status" : "passed",
+        "uid" : "20adc2c17823a492",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052150526,
-          "stop" : 1712052151805,
-          "duration" : 1279
+          "start" : 1712053563600,
+          "stop" : 1712053563600,
+          "duration" : 0
         }
       }, {
-        "uid" : "b17c4507e26dde12",
-        "status" : "passed",
+        "uid" : "efa3b868e8f5d5dd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
         "time" : {
-          "start" : 1712049659916,
-          "stop" : 1712049660383,
-          "duration" : 467
+          "start" : 1712052167631,
+          "stop" : 1712052227823,
+          "duration" : 60192
         }
       }, {
-        "uid" : "8831ffe2863cef78",
-        "status" : "passed",
+        "uid" : "c082b15ce9b0055b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
         "time" : {
-          "start" : 1712042042882,
-          "stop" : 1712042043391,
-          "duration" : 509
+          "start" : 1712049675647,
+          "stop" : 1712049735770,
+          "duration" : 60123
         }
       }, {
-        "uid" : "2afd05df36c9ce07",
-        "status" : "passed",
+        "uid" : "54390499faacf349",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
         "time" : {
-          "start" : 1711622001625,
-          "stop" : 1711622002425,
-          "duration" : 800
+          "start" : 1712042058529,
+          "stop" : 1712042118665,
+          "duration" : 60136
+        }
+      }, {
+        "uid" : "e77292e55f23047f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+        "time" : {
+          "start" : 1711622017683,
+          "stop" : 1711622077825,
+          "duration" : 60142
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "ee9173166e4d22c9.json",
+  "source" : "eed387825774e686.json",
   "parameterValues" : [ ]
 }

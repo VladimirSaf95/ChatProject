@@ -1,11 +1,11 @@
 {
-  "uid" : "ecf15b58fcac5511",
-  "name" : "test_unpinned_msg",
-  "fullName" : "test.test_messages_functionality#test_unpinned_msg",
-  "historyId" : "e51d1fcd71fa2b661252b5536f450782",
+  "uid" : "f5a741cf7590a952",
+  "name" : "test_unblock_players",
+  "fullName" : "test.test_block_and_unblock#test_unblock_players",
+  "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
   "time" : {
-    "start" : 1712053563507,
-    "stop" : 1712053563507,
+    "start" : 1712055502197,
+    "stop" : 1712055502197,
     "duration" : 0
   },
   "status" : "broken",
@@ -16,8 +16,8 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712053563024,
-      "stop" : 1712053563024,
+      "start" : 1712055502149,
+      "stop" : 1712055502149,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,23 +33,23 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "User Management"
+  }, {
     "name" : "severity",
-    "value" : "normal"
+    "value" : "critical"
   }, {
     "name" : "story",
-    "value" : "Message Unpinning by Moderator"
-  }, {
-    "name" : "feature",
-    "value" : "Message Unpinning"
+    "value" : "Unblocking Players"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "8657c44cbc28"
+    "value" : "c8f5d2c4d2fd"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -61,7 +61,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_block_and_unblock"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -71,7 +71,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ {
       "name" : "Test defects",
@@ -81,48 +81,57 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 1,
+        "broken" : 2,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 5
+        "total" : 6
       },
       "items" : [ {
-        "uid" : "80c5338acdd19911",
-        "status" : "passed",
+        "uid" : "238d9733c2bdbe08",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052156978,
-          "stop" : 1712052157403,
-          "duration" : 425
+          "start" : 1712053563072,
+          "stop" : 1712053563072,
+          "duration" : 0
         }
       }, {
-        "uid" : "c2c81289260990f9",
+        "uid" : "e85e0f8c608e90f0",
         "status" : "passed",
         "time" : {
-          "start" : 1712049664486,
-          "stop" : 1712049664821,
-          "duration" : 335
+          "start" : 1712052089768,
+          "stop" : 1712052115487,
+          "duration" : 25719
         }
       }, {
-        "uid" : "4c43125f52dcd4e9",
+        "uid" : "5ff520e8666b9a5c",
         "status" : "passed",
         "time" : {
-          "start" : 1712042048484,
-          "stop" : 1712042048800,
-          "duration" : 316
+          "start" : 1712049601392,
+          "stop" : 1712049627143,
+          "duration" : 25751
         }
       }, {
-        "uid" : "d16ddc1140278152",
+        "uid" : "5db497f98f1430f7",
         "status" : "passed",
         "time" : {
-          "start" : 1711622007707,
-          "stop" : 1711622008062,
-          "duration" : 355
+          "start" : 1712042001546,
+          "stop" : 1712042021278,
+          "duration" : 19732
+        }
+      }, {
+        "uid" : "3d35ce22cfe30eac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711621959323,
+          "stop" : 1711621980695,
+          "duration" : 21372
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "ecf15b58fcac5511.json",
+  "source" : "f5a741cf7590a952.json",
   "parameterValues" : [ ]
 }
