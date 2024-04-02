@@ -15,6 +15,13 @@ jobs:
           ref: gh-pages
           path: ./.github/gh-pages
 
+      - name: Check if GITHUB_ACTIONS is set
+        run: echo $GITHUB_ACTIONS
+
+        # Добавление переменной окружения GITHUB_ACTIONS
+      - name: Set GITHUB_ACTIONS environment variable
+        run: echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
+
       - name: Run UI/API-tests via docker-compose
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
