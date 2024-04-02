@@ -1,0 +1,221 @@
+{
+  "uid" : "f6359eed4c8d3477",
+  "name" : "test_guest_write_text",
+  "fullName" : "test.test_guest_write_text#test_guest_write_text",
+  "historyId" : "ce0cd46787e71938b1e1382945934dfe",
+  "time" : {
+    "start" : 1712042039870,
+    "stop" : 1712042041886,
+    "duration" : 2016
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7fbdd73d1610>\n\n    @allure.feature(\"Guest Chat Functionality\")\n    @allure.story(\"Writing Text as Guest\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_guest_write_text(app):\n        helper_base = HelperBase(app)\n        # Если чат не был открыт, открываем его\n        if not helper_base.check_chatbutton_existence():\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Clicking on the chat input field\"):\n            # Определяем селектор для нажатия по полю ввода сообщения\n            selector = \".sc-hknOHE\"\n            helper_base.click_element_by_css_selector(selector)\n    \n        with allure.step(\"Asserting redirection to login page\"):\n            # Производим проверку, что открылась страница авторизации\n>           assert app.is_valid_s() == app.checkurl(\"/user/login\")\nE           AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\nE             \nE             - https://qamain.kit.casino/user/login\nE             + https://qamain.kit.casino/ru/user/login\nE             ?                           +++\n\ntest/test_guest_write_text.py:22: AssertionError",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "config",
+    "time" : {
+      "start" : 1712041990879,
+      "stop" : 1712041990880,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1712041993863,
+      "stop" : 1712041993863,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1712042021280,
+      "stop" : 1712042022564,
+      "duration" : 1284
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1712041990880,
+      "stop" : 1712041993863,
+      "duration" : 2983
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7fbdd73d1610>\n\n    @allure.feature(\"Guest Chat Functionality\")\n    @allure.story(\"Writing Text as Guest\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_guest_write_text(app):\n        helper_base = HelperBase(app)\n        # Если чат не был открыт, открываем его\n        if not helper_base.check_chatbutton_existence():\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Clicking on the chat input field\"):\n            # Определяем селектор для нажатия по полю ввода сообщения\n            selector = \".sc-hknOHE\"\n            helper_base.click_element_by_css_selector(selector)\n    \n        with allure.step(\"Asserting redirection to login page\"):\n            # Производим проверку, что открылась страница авторизации\n>           assert app.is_valid_s() == app.checkurl(\"/user/login\")\nE           AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\nE             \nE             - https://qamain.kit.casino/user/login\nE             + https://qamain.kit.casino/ru/user/login\nE             ?                           +++\n\ntest/test_guest_write_text.py:22: AssertionError",
+    "steps" : [ {
+      "name" : "Clicking on the chat input field",
+      "time" : {
+        "start" : 1712042039880,
+        "stop" : 1712042041853,
+        "duration" : 1973
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Asserting redirection to login page",
+      "time" : {
+        "start" : 1712042041853,
+        "stop" : 1712042041886,
+        "duration" : 33
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++\n",
+      "statusTrace" : "  File \"/usr/workspace/test/test_guest_write_text.py\", line 22, in test_guest_write_text\n    assert app.is_valid_s() == app.checkurl(\"/user/login\")\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 2,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1712042122370,
+      "stop" : 1712042122370,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1712042122302,
+      "stop" : 1712042122369,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Guest Chat Functionality"
+  }, {
+    "name" : "story",
+    "value" : "Writing Text as Guest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_guest_write_text"
+  }, {
+    "name" : "host",
+    "value" : "f7f4f24520c1"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_guest_write_text"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "998556665ca31605",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711621998975,
+          "stop" : 1711622000554,
+          "duration" : 1579
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f6359eed4c8d3477.json",
+  "parameterValues" : [ ]
+}
