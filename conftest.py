@@ -8,8 +8,6 @@ import json
 
 @pytest.fixture(scope="session", autouse=True)
 def config(request):
-    if "GITHUB_ACTIONS" in os.environ and os.environ["GITHUB_ACTIONS"] == "true":
-        # Возвращаем данные из переменных окружения
         return {
             "web": {
                 "baseUrl": os.getenv("BASE_URL")
@@ -24,16 +22,8 @@ def config(request):
                 "Password_admin": os.getenv("PASSWORD_ADMIN")
             }
         }
-    else:
-        # Проверяем наличие файла target.json
-        config_file = request.config.getoption("--target")
-        if not os.path.exists(config_file):
-            raise FileNotFoundError(f"File {config_file} not found")
 
-        # Загружаем данные из файла target.json
-        with open(config_file) as f:
-            return json.load(f)
-        
+
 # Определяем фикстуру для инициализации Authorization
 @pytest.fixture(scope="session", autouse=True)
 def init_authorization(request, config):
