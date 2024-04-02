@@ -1,23 +1,23 @@
 {
-  "uid" : "9b5fa4505d719daf",
-  "name" : "test_showdetailschat",
-  "fullName" : "test.test_open_and_close_chat#test_showdetailschat",
-  "historyId" : "7695f6dd6468ddddf82ea1b95cf71f99",
+  "uid" : "8f2bded473130e56",
+  "name" : "test_click_chat_button_close",
+  "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
+  "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1712055502833,
-    "stop" : 1712055502833,
+    "start" : 1712056501581,
+    "stop" : 1712056501581,
     "duration" : 0
   },
   "status" : "broken",
   "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
-  "statusTrace" : "request = <SubRequest 'config' for <Function test_get_user_ban>>\n\n    @pytest.fixture(scope=\"session\", autouse=True)\n    def config(request):\n    \n        # Проверяем, запущен ли тест на GitHub Actions\n        if os.getenv(\"GITHUB_ACTIONS\"):\n            # Если да, загружаем данные из переменных окружения\n            return {\n                \"web\": {\n                    \"baseUrl\": os.getenv(\"BASE_URL\")\n                },\n                \"api\": {\n                    \"baseUrl\": os.getenv(\"API_BASE_URL\"),\n                    \"ssoUrl\": os.getenv(\"SSO_URL\"),\n                    \"X-Node-Id\": os.getenv(\"X_NODE_ID\"),\n                    \"Login_player\": os.getenv(\"LOGIN_PLAYER\"),\n                    \"Password_player\": os.getenv(\"PASSWORD_PLAYER\"),\n                    \"Login_admin\": os.getenv(\"LOGIN_ADMIN\"),\n                    \"Password_admin\": os.getenv(\"PASSWORD_ADMIN\")\n                }\n            }\n        else:\n            # Если нет, загружаем данные из файла target.json\n            config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption(\"--target\"))\n>           with open(config_file) as f:\nE           FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n\nconftest.py:32: FileNotFoundError",
+  "statusTrace" : "request = <SubRequest 'config' for <Function test_get_user_ban>>\n\n    @pytest.fixture(scope=\"session\", autouse=True)\n    def config(request):\n    \n        # Проверяем, запущен ли тест на GitHub Actions\n        if \"GITHUB_ACTIONS\" in os.environ and os.environ[\"GITHUB_ACTIONS\"] == \"true\":\n            # Если да, загружаем данные из переменных окружения\n            return {\n                \"web\": {\n                    \"baseUrl\": os.getenv(\"BASE_URL\")\n                },\n                \"api\": {\n                    \"baseUrl\": os.getenv(\"API_BASE_URL\"),\n                    \"ssoUrl\": os.getenv(\"SSO_URL\"),\n                    \"X-Node-Id\": os.getenv(\"X_NODE_ID\"),\n                    \"Login_player\": os.getenv(\"LOGIN_PLAYER\"),\n                    \"Password_player\": os.getenv(\"PASSWORD_PLAYER\"),\n                    \"Login_admin\": os.getenv(\"LOGIN_ADMIN\"),\n                    \"Password_admin\": os.getenv(\"PASSWORD_ADMIN\")\n                }\n            }\n        else:\n            # Если нет, загружаем данные из файла target.json\n            config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption(\"--target\"))\n>           with open(config_file) as f:\nE           FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n\nconftest.py:32: FileNotFoundError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712055502149,
-      "stop" : 1712055502149,
+      "start" : 1712056500832,
+      "stop" : 1712056500832,
       "duration" : 0
     },
     "status" : "broken",
@@ -33,11 +33,11 @@
   } ],
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Showing Chat Details"
-  }, {
     "name" : "severity",
     "value" : "critical"
+  }, {
+    "name" : "story",
+    "value" : "Clicking Chat Button to Close"
   }, {
     "name" : "feature",
     "value" : "Chat Functionality"
@@ -49,7 +49,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "c8f5d2c4d2fd"
+    "value" : "2fe970975e4b"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -81,57 +81,66 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 2,
+        "broken" : 3,
         "skipped" : 0,
         "passed" : 4,
         "unknown" : 0,
-        "total" : 6
+        "total" : 7
       },
       "items" : [ {
-        "uid" : "e228d1b04eb76ed0",
+        "uid" : "e99933d95439ad7e",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563701,
-          "stop" : 1712053563701,
+          "start" : 1712055502887,
+          "stop" : 1712055502887,
           "duration" : 0
         }
       }, {
-        "uid" : "80d1b5fb44c302a5",
-        "status" : "passed",
+        "uid" : "8ea310587a390979",
+        "status" : "broken",
+        "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712052228121,
-          "stop" : 1712052228342,
-          "duration" : 221
+          "start" : 1712053563755,
+          "stop" : 1712053563755,
+          "duration" : 0
         }
       }, {
-        "uid" : "37fadd2ddf332c3c",
+        "uid" : "bc7a9f64edac8ee9",
         "status" : "passed",
         "time" : {
-          "start" : 1712049736087,
-          "stop" : 1712049736315,
-          "duration" : 228
+          "start" : 1712052228344,
+          "stop" : 1712052228619,
+          "duration" : 275
         }
       }, {
-        "uid" : "c918c6021bb21b7d",
+        "uid" : "9572fa2cf405b77f",
         "status" : "passed",
         "time" : {
-          "start" : 1712042118839,
-          "stop" : 1712042119020,
-          "duration" : 181
+          "start" : 1712049736317,
+          "stop" : 1712049736579,
+          "duration" : 262
         }
       }, {
-        "uid" : "915e3147ef24a85",
+        "uid" : "25dba6f40ac7edba",
         "status" : "passed",
         "time" : {
-          "start" : 1711622077991,
-          "stop" : 1711622078166,
-          "duration" : 175
+          "start" : 1712042119022,
+          "stop" : 1712042119185,
+          "duration" : 163
+        }
+      }, {
+        "uid" : "fbb37797f73f9cd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622078169,
+          "stop" : 1711622078336,
+          "duration" : 167
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "9b5fa4505d719daf.json",
+  "source" : "8f2bded473130e56.json",
   "parameterValues" : [ ]
 }
