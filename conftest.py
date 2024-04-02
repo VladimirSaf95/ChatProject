@@ -18,6 +18,7 @@ def config(request):
             },
             "api": {
                 "baseUrl": os.getenv("API_BASE_URL"),
+                "ssoUrl": os.getenv("SSO_URL"),
                 "X-Node-Id": os.getenv("X_NODE_ID"),
                 "Login_player": os.getenv("LOGIN_PLAYER"),
                 "Password_player": os.getenv("PASSWORD_PLAYER"),
@@ -39,7 +40,7 @@ def init_authorization(request, config):
     web_config = config["web"]
 
     # Создаем экземпляр класса Authorization
-    auth = Authorization(base_url=web_config['baseUrl'], api_base_url=api_config['baseUrl'], xnodeid=api_config['X-Node-Id'])
+    auth = Authorization(base_url=web_config['baseUrl'], api_base_url=api_config['baseUrl'], xnodeid=api_config['X-Node-Id'], sso_url=api_config['ssoUrl'])
 
     # Получение токена API и Matrix для игрока
     player_api_token = auth.get_api_token(api_config['Login_player'], api_config['Password_player'])

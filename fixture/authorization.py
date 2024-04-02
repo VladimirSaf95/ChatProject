@@ -3,10 +3,11 @@ import os
 
 class Authorization:
 
-    def __init__(self, base_url, xnodeid, api_base_url):
+    def __init__(self, base_url, xnodeid, api_base_url, sso_url):
         self.base_url = base_url
         self.xnodeid = xnodeid
         self.api_base_url = api_base_url
+        self.sso_url = sso_url
 
     def get_api_token(self, login, password):
 
@@ -16,7 +17,7 @@ class Authorization:
         if self.base_url.endswith("/"):
             self.base_url = self.base_url[:-1]  # Удаляем последний символ "/"
 
-        url = 'https://sso-api.slotegrator.tech/account/user/login'
+
         headers = {
             'accept': 'application/json',
             'x-Node-Id': self.xnodeid,
@@ -86,7 +87,7 @@ class Authorization:
                 "deviceType": "Desktop"
             }
         }
-        response = requests.post(url, json=data, headers=headers)
+        response = requests.post(self.sso_url, json=data, headers=headers)
         if response.status_code == 201:
             response_json = response.json()
             token = response_json.get('token', '')
