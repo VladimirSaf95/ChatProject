@@ -1,0 +1,128 @@
+{
+  "uid" : "be3b6fd69f3a47bb",
+  "name" : "test_show_chat_messages",
+  "fullName" : "test.test_show_messages#test_show_chat_messages",
+  "historyId" : "bf95ccec49a675867305b09ce0026f13",
+  "time" : {
+    "start" : 1712053563811,
+    "stop" : 1712053563811,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
+  "statusTrace" : "request = <SubRequest 'config' for <Function test_get_user_ban>>\n\n    @pytest.fixture(scope=\"session\", autouse=True)\n    def config(request):\n    \n        # Проверяем, запущен ли тест на GitHub Actions\n        if os.getenv(\"GITHUB_ACTIONS\"):\n            # Если да, загружаем данные из переменных окружения\n            return {\n                \"web\": {\n                    \"baseUrl\": os.getenv(\"BASE_URL\")\n                },\n                \"api\": {\n                    \"baseUrl\": os.getenv(\"API_BASE_URL\"),\n                    \"ssoUrl\": os.getenv(\"SSO_URL\"),\n                    \"X-Node-Id\": os.getenv(\"X_NODE_ID\"),\n                    \"Login_player\": os.getenv(\"LOGIN_PLAYER\"),\n                    \"Password_player\": os.getenv(\"PASSWORD_PLAYER\"),\n                    \"Login_admin\": os.getenv(\"LOGIN_ADMIN\"),\n                    \"Password_admin\": os.getenv(\"PASSWORD_ADMIN\")\n                }\n            }\n        else:\n            # Если нет, загружаем данные из файла target.json\n            config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption(\"--target\"))\n>           with open(config_file) as f:\nE           FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n\nconftest.py:32: FileNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "config",
+    "time" : {
+      "start" : 1712053563024,
+      "stop" : 1712053563024,
+      "duration" : 0
+    },
+    "status" : "broken",
+    "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 166, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 102, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1132, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 913, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n  File \"/usr/workspace/conftest.py\", line 32, in config\n    with open(config_file) as f:\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Showing Chat Messages"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Chat Functionality"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_show_messages"
+  }, {
+    "name" : "host",
+    "value" : "8657c44cbc28"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_show_messages"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "1500ea6d32623f37",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712052228622,
+          "stop" : 1712052231817,
+          "duration" : 3195
+        }
+      }, {
+        "uid" : "4e13eb483fe91dbf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712049736581,
+          "stop" : 1712049739777,
+          "duration" : 3196
+        }
+      }, {
+        "uid" : "220c139042062975",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712042119187,
+          "stop" : 1712042122301,
+          "duration" : 3114
+        }
+      }, {
+        "uid" : "b41a20b4b0cf415a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711622078338,
+          "stop" : 1711622081452,
+          "duration" : 3114
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "be3b6fd69f3a47bb.json",
+  "parameterValues" : [ ]
+}

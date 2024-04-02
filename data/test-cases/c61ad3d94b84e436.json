@@ -1,0 +1,128 @@
+{
+  "uid" : "c61ad3d94b84e436",
+  "name" : "test_open_rules_in_different_locales",
+  "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
+  "historyId" : "407693a6fd5ff6488821603261c63665",
+  "time" : {
+    "start" : 1712053563096,
+    "stop" : 1712053563096,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
+  "statusTrace" : "request = <SubRequest 'config' for <Function test_get_user_ban>>\n\n    @pytest.fixture(scope=\"session\", autouse=True)\n    def config(request):\n    \n        # Проверяем, запущен ли тест на GitHub Actions\n        if os.getenv(\"GITHUB_ACTIONS\"):\n            # Если да, загружаем данные из переменных окружения\n            return {\n                \"web\": {\n                    \"baseUrl\": os.getenv(\"BASE_URL\")\n                },\n                \"api\": {\n                    \"baseUrl\": os.getenv(\"API_BASE_URL\"),\n                    \"ssoUrl\": os.getenv(\"SSO_URL\"),\n                    \"X-Node-Id\": os.getenv(\"X_NODE_ID\"),\n                    \"Login_player\": os.getenv(\"LOGIN_PLAYER\"),\n                    \"Password_player\": os.getenv(\"PASSWORD_PLAYER\"),\n                    \"Login_admin\": os.getenv(\"LOGIN_ADMIN\"),\n                    \"Password_admin\": os.getenv(\"PASSWORD_ADMIN\")\n                }\n            }\n        else:\n            # Если нет, загружаем данные из файла target.json\n            config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption(\"--target\"))\n>           with open(config_file) as f:\nE           FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n\nconftest.py:32: FileNotFoundError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "config",
+    "time" : {
+      "start" : 1712053563024,
+      "stop" : 1712053563024,
+      "duration" : 0
+    },
+    "status" : "broken",
+    "statusMessage" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 166, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 102, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1132, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 913, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n  File \"/usr/workspace/conftest.py\", line 32, in config\n    with open(config_file) as f:\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Chat Rules"
+  }, {
+    "name" : "story",
+    "value" : "Opening Chat Rules in Different Locales"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_clickable_button_rules"
+  }, {
+    "name" : "host",
+    "value" : "8657c44cbc28"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_clickable_button_rules"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "dbfebec7d60b1c90",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712052133839,
+          "stop" : 1712052139696,
+          "duration" : 5857
+        }
+      }, {
+        "uid" : "3fe8898c93fde04f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712049644311,
+          "stop" : 1712049650474,
+          "duration" : 6163
+        }
+      }, {
+        "uid" : "6515aa38e6fff4c2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712042033743,
+          "stop" : 1712042039522,
+          "duration" : 5779
+        }
+      }, {
+        "uid" : "28ce234b1a93cb50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1711621992596,
+          "stop" : 1711621998634,
+          "duration" : 6038
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c61ad3d94b84e436.json",
+  "parameterValues" : [ ]
+}
