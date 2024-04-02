@@ -10,7 +10,7 @@ import json
 def config(request):
 
     # Проверяем, запущен ли тест на GitHub Actions
-    if os.getenv("GITHUB_ACTIONS"):
+    if "GITHUB_ACTIONS" in os.environ and os.environ["GITHUB_ACTIONS"] == "true":
         # Если да, загружаем данные из переменных окружения
         return {
             "web": {
