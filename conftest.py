@@ -8,10 +8,8 @@ import json
 
 @pytest.fixture(scope="session", autouse=True)
 def config(request):
-
-    # Проверяем, запущен ли тест на GitHub Actions
     if "GITHUB_ACTIONS" in os.environ and os.environ["GITHUB_ACTIONS"] == "true":
-        # Если да, загружаем данные из переменных окружения
+        # Возвращаем данные из переменных окружения
         return {
             "web": {
                 "baseUrl": os.getenv("BASE_URL")
@@ -27,11 +25,15 @@ def config(request):
             }
         }
     else:
-        # Если нет, загружаем данные из файла target.json
-        config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
+        # Проверяем наличие файла target.json
+        config_file = request.config.getoption("--target")
+        if not os.path.exists(config_file):
+            raise FileNotFoundError(f"File {config_file} not found")
+
+        # Загружаем данные из файла target.json
         with open(config_file) as f:
             return json.load(f)
-
+        
 # Определяем фикстуру для инициализации Authorization
 @pytest.fixture(scope="session", autouse=True)
 def init_authorization(request, config):
