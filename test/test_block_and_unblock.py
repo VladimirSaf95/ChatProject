@@ -101,7 +101,7 @@ def test_block_players(api_client):
 def test_unblock_players(api_client):
     with allure.step("Waiting for previous operations to complete"):
         # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока
-        time.sleep(15)
+        time.sleep(20)
 
     with allure.step("Fetching information about blocked players before unblocking"):
         # Получаем информацию о том, сколько было забанненых игроков ДО

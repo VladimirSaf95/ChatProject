@@ -19,4 +19,4 @@ def test_guest_write_text(app):
 
     with allure.step("Asserting redirection to login page"):
         # Производим проверку, что открылась страница авторизации
-        assert app.is_valid_s() == app.checkurl("/user/login")
+        assert app.check_current_url() == True

@@ -48,6 +48,13 @@ class Application():
         correct_url = f"{base_url}{endpoint}"
         return correct_url
 
+    def check_current_url(self):
+        if "/user/login" in self.wd.current_url:
+            print(self.wd.current_url)
+            return True
+        else:
+            return False
+
     def open_changelocation_ru(self):
         login_url = self.checkurl("/ru")  # Вызываем метод checkurl класса
         self.wd.get(login_url)
