@@ -1,6 +1,8 @@
 name: UI/API Tests
 
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Запуск раз в 10 минут
 
 jobs:
   ui-tests:
