@@ -1,22 +1,22 @@
 {
-  "uid" : "4c43125f52dcd4e9",
-  "name" : "test_unpinned_msg",
-  "fullName" : "test.test_messages_functionality#test_unpinned_msg",
-  "historyId" : "e51d1fcd71fa2b661252b5536f450782",
+  "uid" : "5b7434c23e749213",
+  "name" : "test_click_chat_room",
+  "fullName" : "test.test_changeroom#test_click_chat_room",
+  "historyId" : "be97e1ba70b4c1a08c49976b38facb9c",
   "time" : {
-    "start" : 1712042048484,
-    "stop" : 1712042048800,
-    "duration" : 316
+    "start" : 1712049627958,
+    "stop" : 1712049644309,
+    "duration" : 16351
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "config",
+    "name" : "app",
     "time" : {
-      "start" : 1712041990879,
-      "stop" : 1712041990880,
-      "duration" : 1
+      "start" : 1712049627145,
+      "stop" : 1712049627957,
+      "duration" : 812
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1712041993863,
-      "stop" : 1712041993863,
+      "start" : 1712049593534,
+      "stop" : 1712049593534,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +44,24 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712041990880,
-      "stop" : 1712041993863,
-      "duration" : 2983
+      "start" : 1712049590995,
+      "stop" : 1712049593533,
+      "duration" : 2538
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1712049590995,
+      "stop" : 1712049590995,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Getting pinned message ID",
+      "name" : "Checking if chat button exists",
       "time" : {
-        "start" : 1712042048485,
-        "stop" : 1712042048485,
-        "duration" : 0
+        "start" : 1712049627958,
+        "stop" : 1712049638078,
+        "duration" : 10120
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,11 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Unpinning the message",
+      "name" : "Clicking on Room B",
       "time" : {
-        "start" : 1712042048485,
-        "stop" : 1712042048798,
-        "duration" : 313
+        "start" : 1712049638078,
+        "stop" : 1712049641191,
+        "duration" : 3113
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,11 +105,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying response status code",
+      "name" : "Verifying Room B is selected",
       "time" : {
-        "start" : 1712042048798,
-        "stop" : 1712042048798,
-        "duration" : 0
+        "start" : 1712049641191,
+        "stop" : 1712049641209,
+        "duration" : 18
       },
       "status" : "passed",
       "steps" : [ ],
@@ -105,11 +120,26 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying event_id in response JSON",
+      "name" : "Clicking on Room A",
       "time" : {
-        "start" : 1712042048798,
-        "stop" : 1712042048798,
-        "duration" : 0
+        "start" : 1712049641209,
+        "stop" : 1712049644297,
+        "duration" : 3088
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verifying Room A is selected",
+      "time" : {
+        "start" : 1712049644297,
+        "stop" : 1712049644309,
+        "duration" : 12
       },
       "status" : "passed",
       "steps" : [ ],
@@ -120,18 +150,39 @@
       "stepsCount" : 0,
       "hasContent" : false
     } ],
+    "attachments" : [ {
+      "uid" : "abfb08e5dbdad2ca",
+      "name" : "log",
+      "source" : "abfb08e5dbdad2ca.txt",
+      "type" : "text/plain",
+      "size" : 561
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1712049739777,
+      "stop" : 1712049739846,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 4,
-    "hasContent" : true
-  },
-  "afterStages" : [ {
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712042122370,
-      "stop" : 1712042122370,
+      "start" : 1712049739847,
+      "stop" : 1712049739847,
       "duration" : 0
     },
     "status" : "passed",
@@ -145,22 +196,22 @@
   } ],
   "labels" : [ {
     "name" : "severity",
-    "value" : "normal"
+    "value" : "critical"
   }, {
     "name" : "story",
-    "value" : "Message Unpinning by Moderator"
+    "value" : "Clicking Chat Room"
   }, {
     "name" : "feature",
-    "value" : "Message Unpinning"
+    "value" : "Chat Rooms"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_changeroom"
   }, {
     "name" : "host",
-    "value" : "f7f4f24520c1"
+    "value" : "867d4f8c4716"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -172,7 +223,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_changeroom"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -182,30 +233,40 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
+        "failed" : 2,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 1,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
-        "uid" : "d16ddc1140278152",
-        "status" : "passed",
+        "uid" : "dc9869d2ec068055",
+        "status" : "failed",
+        "statusDetails" : "Failed: Room A items not found or empty",
         "time" : {
-          "start" : 1711622007707,
-          "stop" : 1711622008062,
-          "duration" : 355
+          "start" : 1712042022565,
+          "stop" : 1712042033703,
+          "duration" : 11138
+        }
+      }, {
+        "uid" : "d0cd811952508292",
+        "status" : "failed",
+        "statusDetails" : "Failed: Room A items not found or empty",
+        "time" : {
+          "start" : 1711621981779,
+          "stop" : 1711621992590,
+          "duration" : 10811
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "4c43125f52dcd4e9.json",
+  "source" : "5b7434c23e749213.json",
   "parameterValues" : [ ]
 }
