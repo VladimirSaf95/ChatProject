@@ -1,37 +1,22 @@
 {
-  "uid" : "db8305ebfe969817",
-  "name" : "test_open_rules_in_different_locales",
-  "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
-  "historyId" : "407693a6fd5ff6488821603261c63665",
+  "uid" : "decf8bedc1f89086",
+  "name" : "test_click_chat_button_close",
+  "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
+  "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1712139035207,
-    "stop" : 1712139041070,
-    "duration" : 5863
+    "start" : 1712139564711,
+    "stop" : 1712139564992,
+    "duration" : 281
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1712138981806,
-      "stop" : 1712138984617,
-      "duration" : 2811
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "app",
-    "time" : {
-      "start" : 1712139018225,
-      "stop" : 1712139019067,
-      "duration" : 842
+      "start" : 1712139429418,
+      "stop" : 1712139429418,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712138981806,
-      "stop" : 1712138981806,
+      "start" : 1712139426661,
+      "stop" : 1712139426661,
       "duration" : 0
     },
     "status" : "passed",
@@ -57,11 +42,26 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "app",
     "time" : {
-      "start" : 1712138984617,
-      "stop" : 1712138984618,
-      "duration" : 1
+      "start" : 1712139462430,
+      "stop" : 1712139463401,
+      "duration" : 971
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1712139426661,
+      "stop" : 1712139429418,
+      "duration" : 2757
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Opening chat rules",
+      "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1712139035310,
-        "stop" : 1712139036103,
-        "duration" : 793
+        "start" : 1712139564815,
+        "stop" : 1712139564821,
+        "duration" : 6
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,11 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying chat rules in English locale",
+      "name" : "Clicking on the chat close button",
       "time" : {
-        "start" : 1712139036103,
-        "stop" : 1712139036140,
-        "duration" : 37
+        "start" : 1712139564821,
+        "stop" : 1712139564955,
+        "duration" : 134
       },
       "status" : "passed",
       "steps" : [ ],
@@ -105,11 +105,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Switching to Russian locale and verifying chat rules",
+      "name" : "Verifying that the chat is closed",
       "time" : {
-        "start" : 1712139036140,
-        "stop" : 1712139041068,
-        "duration" : 4928
+        "start" : 1712139564955,
+        "stop" : 1712139564991,
+        "duration" : 36
       },
       "status" : "passed",
       "steps" : [ ],
@@ -128,11 +128,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "app::0",
+    "name" : "api_client::0",
     "time" : {
-      "start" : 1712139131008,
-      "stop" : 1712139131076,
-      "duration" : 68
+      "start" : 1712139568256,
+      "stop" : 1712139568256,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -143,11 +143,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client::0",
+    "name" : "app::0",
     "time" : {
-      "start" : 1712139131077,
-      "stop" : 1712139131077,
-      "duration" : 0
+      "start" : 1712139568188,
+      "stop" : 1712139568255,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -160,22 +160,22 @@
   } ],
   "labels" : [ {
     "name" : "feature",
-    "value" : "Chat Rules"
+    "value" : "Chat Functionality"
   }, {
     "name" : "story",
-    "value" : "Opening Chat Rules in Different Locales"
+    "value" : "Clicking Chat Button to Close"
   }, {
     "name" : "severity",
-    "value" : "normal"
+    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_clickable_button_rules"
+    "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "3813eaa623f0"
+    "value" : "fd5d323ed4f4"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -187,7 +187,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_clickable_button_rules"
+    "value" : "test.test_open_and_close_chat"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -197,171 +197,178 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 1,
+        "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 14,
+        "passed" : 16,
         "unknown" : 0,
-        "total" : 19
+        "total" : 20
       },
       "items" : [ {
-        "uid" : "de59a560ce29f57",
+        "uid" : "65e01f2df01fb9a0",
         "status" : "passed",
         "time" : {
-          "start" : 1712138765691,
-          "stop" : 1712138775190,
-          "duration" : 9499
+          "start" : 1712139127549,
+          "stop" : 1712139127804,
+          "duration" : 255
         }
       }, {
-        "uid" : "2d515bbb0ff7a626",
+        "uid" : "b75881a9edadc784",
         "status" : "passed",
         "time" : {
-          "start" : 1712138258242,
-          "stop" : 1712138264454,
-          "duration" : 6212
+          "start" : 1712138846386,
+          "stop" : 1712138846670,
+          "duration" : 284
         }
       }, {
-        "uid" : "d7eadb5b177eea4c",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: assert False\n +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7f23dc78efd0>>('ReactModal__Content')\n +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7f23dc78efd0>> = <fixture.helper_base.HelperBase object at 0x7f23dc78efd0>.is_modal_displayed",
-        "time" : {
-          "start" : 1712132113076,
-          "stop" : 1712132122337,
-          "duration" : 9261
-        }
-      }, {
-        "uid" : "e33507725134d0b8",
+        "uid" : "7b715d4339f1020a",
         "status" : "passed",
         "time" : {
-          "start" : 1712105251816,
-          "stop" : 1712105258153,
-          "duration" : 6337
+          "start" : 1712138343557,
+          "stop" : 1712138343853,
+          "duration" : 296
         }
       }, {
-        "uid" : "d881e3aa5008edc5",
+        "uid" : "449d402a9e7298b2",
         "status" : "passed",
         "time" : {
-          "start" : 1712065109844,
-          "stop" : 1712065115627,
-          "duration" : 5783
+          "start" : 1712132207881,
+          "stop" : 1712132208174,
+          "duration" : 293
         }
       }, {
-        "uid" : "c463039bcc2871c8",
+        "uid" : "2735bf5f5ba30970",
         "status" : "passed",
         "time" : {
-          "start" : 1712064668616,
-          "stop" : 1712064681856,
-          "duration" : 13240
+          "start" : 1712105345476,
+          "stop" : 1712105345736,
+          "duration" : 260
         }
       }, {
-        "uid" : "6375adf4a74ca1a4",
+        "uid" : "6691951ee5421a46",
         "status" : "passed",
         "time" : {
-          "start" : 1712064219600,
-          "stop" : 1712064225546,
-          "duration" : 5946
+          "start" : 1712065202393,
+          "stop" : 1712065202644,
+          "duration" : 251
         }
       }, {
-        "uid" : "88f129feb62941a5",
+        "uid" : "9eaac5329c671f4d",
         "status" : "passed",
         "time" : {
-          "start" : 1712063470958,
-          "stop" : 1712063477252,
-          "duration" : 6294
+          "start" : 1712064759345,
+          "stop" : 1712064759605,
+          "duration" : 260
         }
       }, {
-        "uid" : "e2ed1d488062f5f2",
+        "uid" : "930dad546abb956",
         "status" : "passed",
         "time" : {
-          "start" : 1712062611226,
-          "stop" : 1712062617067,
-          "duration" : 5841
+          "start" : 1712064311371,
+          "stop" : 1712064311628,
+          "duration" : 257
         }
       }, {
-        "uid" : "e35a962568fc64af",
+        "uid" : "de636d3c15d721d",
         "status" : "passed",
         "time" : {
-          "start" : 1712057014281,
-          "stop" : 1712057020161,
-          "duration" : 5880
+          "start" : 1712063566911,
+          "stop" : 1712063567183,
+          "duration" : 272
         }
       }, {
-        "uid" : "100e8903e63651ca",
+        "uid" : "7aadef59a7e8be4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712062697494,
+          "stop" : 1712062697761,
+          "duration" : 267
+        }
+      }, {
+        "uid" : "ca84dd23c9afbd20",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712057107759,
+          "stop" : 1712057108027,
+          "duration" : 268
+        }
+      }, {
+        "uid" : "91ef13cccda700b1",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717492,
-          "stop" : 1712056717492,
+          "start" : 1712056718146,
+          "stop" : 1712056718146,
           "duration" : 0
         }
       }, {
-        "uid" : "7ddcad2c3a59f570",
+        "uid" : "8f2bded473130e56",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056500906,
-          "stop" : 1712056500906,
+          "start" : 1712056501581,
+          "stop" : 1712056501581,
           "duration" : 0
         }
       }, {
-        "uid" : "5c07be886bf1ab13",
+        "uid" : "e99933d95439ad7e",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502222,
-          "stop" : 1712055502222,
+          "start" : 1712055502887,
+          "stop" : 1712055502887,
           "duration" : 0
         }
       }, {
-        "uid" : "c61ad3d94b84e436",
+        "uid" : "8ea310587a390979",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563096,
-          "stop" : 1712053563096,
+          "start" : 1712053563755,
+          "stop" : 1712053563755,
           "duration" : 0
         }
       }, {
-        "uid" : "dbfebec7d60b1c90",
+        "uid" : "bc7a9f64edac8ee9",
         "status" : "passed",
         "time" : {
-          "start" : 1712052133839,
-          "stop" : 1712052139696,
-          "duration" : 5857
+          "start" : 1712052228344,
+          "stop" : 1712052228619,
+          "duration" : 275
         }
       }, {
-        "uid" : "3fe8898c93fde04f",
+        "uid" : "9572fa2cf405b77f",
         "status" : "passed",
         "time" : {
-          "start" : 1712049644311,
-          "stop" : 1712049650474,
-          "duration" : 6163
+          "start" : 1712049736317,
+          "stop" : 1712049736579,
+          "duration" : 262
         }
       }, {
-        "uid" : "6515aa38e6fff4c2",
+        "uid" : "25dba6f40ac7edba",
         "status" : "passed",
         "time" : {
-          "start" : 1712042033743,
-          "stop" : 1712042039522,
-          "duration" : 5779
+          "start" : 1712042119022,
+          "stop" : 1712042119185,
+          "duration" : 163
         }
       }, {
-        "uid" : "28ce234b1a93cb50",
+        "uid" : "fbb37797f73f9cd4",
         "status" : "passed",
         "time" : {
-          "start" : 1711621992596,
-          "stop" : 1711621998634,
-          "duration" : 6038
+          "start" : 1711622078169,
+          "stop" : 1711622078336,
+          "duration" : 167
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "db8305ebfe969817.json",
+  "source" : "decf8bedc1f89086.json",
   "parameterValues" : [ ]
 }

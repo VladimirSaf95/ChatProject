@@ -1,22 +1,22 @@
 {
-  "uid" : "c06a2f207ed750bd",
-  "name" : "test_block_players",
-  "fullName" : "test.test_block_and_unblock#test_block_players",
-  "historyId" : "d38eeef11179490ead748d140d16f0e6",
+  "uid" : "e2c238f90e671489",
+  "name" : "test_unblock_players",
+  "fullName" : "test.test_block_and_unblock#test_unblock_players",
+  "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
   "time" : {
-    "start" : 1712138985106,
-    "stop" : 1712138992352,
-    "duration" : 7246
+    "start" : 1712139436935,
+    "stop" : 1712139462428,
+    "duration" : 25493
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1712138981806,
-      "stop" : 1712138984617,
-      "duration" : 2811
+      "start" : 1712139429418,
+      "stop" : 1712139429418,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712138981806,
-      "stop" : 1712138981806,
+      "start" : 1712139426661,
+      "stop" : 1712139426661,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1712138984617,
-      "stop" : 1712138984618,
-      "duration" : 1
+      "start" : 1712139426661,
+      "stop" : 1712139429418,
+      "duration" : 2757
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,11 +60,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Getting information about banned players before the test",
+      "name" : "Waiting for previous operations to complete",
       "time" : {
-        "start" : 1712138985106,
-        "stop" : 1712138985792,
-        "duration" : 686
+        "start" : 1712139436935,
+        "stop" : 1712139456955,
+        "duration" : 20020
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,11 +75,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Sending message and blocking player",
+      "name" : "Fetching information about blocked players before unblocking",
       "time" : {
-        "start" : 1712138985792,
-        "stop" : 1712138992115,
-        "duration" : 6323
+        "start" : 1712139456955,
+        "stop" : 1712139457180,
+        "duration" : 225
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,25 +90,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Getting information about banned players after the test",
+      "name" : "Preparing data for unblocking user",
       "time" : {
-        "start" : 1712138992115,
-        "stop" : 1712138992348,
-        "duration" : 233
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying response status code",
-      "time" : {
-        "start" : 1712138992348,
-        "stop" : 1712138992348,
+        "start" : 1712139457180,
+        "stop" : 1712139457180,
         "duration" : 0
       },
       "status" : "passed",
@@ -120,10 +105,25 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying 'total' key in response JSON before and after",
+      "name" : "Sending request to unblock user",
       "time" : {
-        "start" : 1712138992348,
-        "stop" : 1712138992348,
+        "start" : 1712139457180,
+        "stop" : 1712139460413,
+        "duration" : 3233
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Asserting response status code",
+      "time" : {
+        "start" : 1712139460413,
+        "stop" : 1712139460413,
         "duration" : 0
       },
       "status" : "passed",
@@ -135,11 +135,41 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying the increase in banned players count",
+      "name" : "Fetching information about blocked players after unblocking",
       "time" : {
-        "start" : 1712138992348,
-        "stop" : 1712138992348,
+        "start" : 1712139460413,
+        "stop" : 1712139460664,
+        "duration" : 251
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Asserting response content",
+      "time" : {
+        "start" : 1712139460664,
+        "stop" : 1712139460664,
         "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Sending message to verify unblocked player can write in chat",
+      "time" : {
+        "start" : 1712139460664,
+        "stop" : 1712139462423,
+        "duration" : 1759
       },
       "status" : "passed",
       "steps" : [ ],
@@ -154,14 +184,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 6,
+    "stepsCount" : 8,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712139131077,
-      "stop" : 1712139131077,
+      "start" : 1712139568256,
+      "stop" : 1712139568256,
       "duration" : 0
     },
     "status" : "passed",
@@ -175,13 +205,13 @@
   } ],
   "labels" : [ {
     "name" : "feature",
-    "value" : "Player Blocking"
+    "value" : "User Management"
   }, {
     "name" : "story",
-    "value" : "Player Blocking Test"
+    "value" : "Unblocking Players"
   }, {
     "name" : "severity",
-    "value" : "blocker"
+    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -190,7 +220,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "3813eaa623f0"
+    "value" : "fd5d323ed4f4"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -212,174 +242,178 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "blocker",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 4,
+        "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 11,
+        "passed" : 16,
         "unknown" : 0,
-        "total" : 19
+        "total" : 20
       },
       "items" : [ {
-        "uid" : "3cfac87a3c0d8e0b",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: The 'total' value did not increase by one\nassert 1 == (1 + 1)",
-        "time" : {
-          "start" : 1712138715922,
-          "stop" : 1712138722971,
-          "duration" : 7049
-        }
-      }, {
-        "uid" : "613008581def4c56",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: The 'total' value did not increase by one\nassert 1 == (1 + 1)",
-        "time" : {
-          "start" : 1712138204935,
-          "stop" : 1712138212598,
-          "duration" : 7663
-        }
-      }, {
-        "uid" : "5754b7da746e6120",
+        "uid" : "510d0ea368cfd638",
         "status" : "passed",
         "time" : {
-          "start" : 1712132039485,
-          "stop" : 1712132047425,
-          "duration" : 7940
+          "start" : 1712138992354,
+          "stop" : 1712139018223,
+          "duration" : 25869
         }
       }, {
-        "uid" : "1962dc001c5a69d7",
+        "uid" : "72cd01ca090080af",
         "status" : "passed",
         "time" : {
-          "start" : 1712105199878,
-          "stop" : 1712105207577,
-          "duration" : 7699
+          "start" : 1712138723011,
+          "stop" : 1712138748400,
+          "duration" : 25389
         }
       }, {
-        "uid" : "186be7c96dbe504f",
+        "uid" : "16fa3da42e3b6949",
         "status" : "passed",
         "time" : {
-          "start" : 1712065057471,
-          "stop" : 1712065064068,
-          "duration" : 6597
+          "start" : 1712138212635,
+          "stop" : 1712138237721,
+          "duration" : 25086
         }
       }, {
-        "uid" : "19fff32fe735c922",
+        "uid" : "617fe0fd0ffc6d38",
         "status" : "passed",
         "time" : {
-          "start" : 1712064615872,
-          "stop" : 1712064622887,
-          "duration" : 7015
+          "start" : 1712132047427,
+          "stop" : 1712132072384,
+          "duration" : 24957
         }
       }, {
-        "uid" : "ae03954a924dee33",
+        "uid" : "cfd92661868a58d4",
         "status" : "passed",
         "time" : {
-          "start" : 1712064167726,
-          "stop" : 1712064174978,
-          "duration" : 7252
+          "start" : 1712105207579,
+          "stop" : 1712105233429,
+          "duration" : 25850
         }
       }, {
-        "uid" : "6728f7057b88172b",
+        "uid" : "6f4577ad66410f1",
         "status" : "passed",
         "time" : {
-          "start" : 1712063418060,
-          "stop" : 1712063425802,
-          "duration" : 7742
+          "start" : 1712065064069,
+          "stop" : 1712065090007,
+          "duration" : 25938
         }
       }, {
-        "uid" : "370dda33690df6cd",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: The 'total' value did not increase by one\nassert 1 == (1 + 1)",
-        "time" : {
-          "start" : 1712062557325,
-          "stop" : 1712062563988,
-          "duration" : 6663
-        }
-      }, {
-        "uid" : "f72d658fe2df80da",
+        "uid" : "c3220e3e12a0eab",
         "status" : "passed",
         "time" : {
-          "start" : 1712056963759,
-          "stop" : 1712056971280,
-          "duration" : 7521
+          "start" : 1712064622889,
+          "stop" : 1712064648385,
+          "duration" : 25496
         }
       }, {
-        "uid" : "f800a6d80faecf60",
+        "uid" : "edad5bc1254917a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712064174979,
+          "stop" : 1712064200206,
+          "duration" : 25227
+        }
+      }, {
+        "uid" : "7973c82cc7f81e24",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712063425804,
+          "stop" : 1712063451886,
+          "duration" : 26082
+        }
+      }, {
+        "uid" : "ac5df4ed321d55fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712062564027,
+          "stop" : 1712062590096,
+          "duration" : 26069
+        }
+      }, {
+        "uid" : "fcc0eee2f71f955f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712056971282,
+          "stop" : 1712056996255,
+          "duration" : 24973
+        }
+      }, {
+        "uid" : "ca42e7517825b66e",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717459,
-          "stop" : 1712056717459,
+          "start" : 1712056717468,
+          "stop" : 1712056717468,
           "duration" : 0
         }
       }, {
-        "uid" : "8154430b60d875d2",
+        "uid" : "bd395ca919b8307a",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056500870,
-          "stop" : 1712056500870,
+          "start" : 1712056500881,
+          "stop" : 1712056500881,
           "duration" : 0
         }
       }, {
-        "uid" : "788e2e73df3f52d9",
+        "uid" : "f5a741cf7590a952",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502187,
-          "stop" : 1712055502187,
+          "start" : 1712055502197,
+          "stop" : 1712055502197,
           "duration" : 0
         }
       }, {
-        "uid" : "61b6ce05ed69b04",
+        "uid" : "238d9733c2bdbe08",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563062,
-          "stop" : 1712053563062,
+          "start" : 1712053563072,
+          "stop" : 1712053563072,
           "duration" : 0
         }
       }, {
-        "uid" : "53e5256f21e5e6d9",
+        "uid" : "e85e0f8c608e90f0",
         "status" : "passed",
         "time" : {
-          "start" : 1712052081638,
-          "stop" : 1712052089766,
-          "duration" : 8128
+          "start" : 1712052089768,
+          "stop" : 1712052115487,
+          "duration" : 25719
         }
       }, {
-        "uid" : "45525e6ae775984f",
+        "uid" : "5ff520e8666b9a5c",
         "status" : "passed",
         "time" : {
-          "start" : 1712049594003,
-          "stop" : 1712049601390,
-          "duration" : 7387
+          "start" : 1712049601392,
+          "stop" : 1712049627143,
+          "duration" : 25751
         }
       }, {
-        "uid" : "f518aeba00293592",
+        "uid" : "5db497f98f1430f7",
         "status" : "passed",
         "time" : {
-          "start" : 1712041994679,
-          "stop" : 1712042001544,
-          "duration" : 6865
+          "start" : 1712042001546,
+          "stop" : 1712042021278,
+          "duration" : 19732
         }
       }, {
-        "uid" : "e0a9371d6a0656d9",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "uid" : "3d35ce22cfe30eac",
+        "status" : "passed",
         "time" : {
-          "start" : 1711621944257,
-          "stop" : 1711621959283,
-          "duration" : 15026
+          "start" : 1711621959323,
+          "stop" : 1711621980695,
+          "duration" : 21372
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c06a2f207ed750bd.json",
+  "source" : "e2c238f90e671489.json",
   "parameterValues" : [ ]
 }

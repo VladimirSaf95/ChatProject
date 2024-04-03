@@ -1,37 +1,22 @@
 {
-  "uid" : "a21a6d660915a800",
-  "name" : "test_clickchatbutton",
-  "fullName" : "test.test_open_and_close_chat#test_clickchatbutton",
-  "historyId" : "336199c1d540adbc6dd3cdcb40af25fe",
+  "uid" : "c0bb9348381f9001",
+  "name" : "test_guest_write_text",
+  "fullName" : "test.test_guest_write_text#test_guest_write_text",
+  "historyId" : "ce0cd46787e71938b1e1382945934dfe",
   "time" : {
-    "start" : 1712139127020,
-    "stop" : 1712139127278,
-    "duration" : 258
+    "start" : 1712139493885,
+    "stop" : 1712139495838,
+    "duration" : 1953
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1712138981806,
-      "stop" : 1712138984617,
-      "duration" : 2811
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "app",
-    "time" : {
-      "start" : 1712139018225,
-      "stop" : 1712139019067,
-      "duration" : 842
+      "start" : 1712139429418,
+      "stop" : 1712139429418,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712138981806,
-      "stop" : 1712138981806,
+      "start" : 1712139426661,
+      "stop" : 1712139426661,
       "duration" : 0
     },
     "status" : "passed",
@@ -57,11 +42,26 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "app",
     "time" : {
-      "start" : 1712138984617,
-      "stop" : 1712138984618,
-      "duration" : 1
+      "start" : 1712139462430,
+      "stop" : 1712139463401,
+      "duration" : 971
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1712139426661,
+      "stop" : 1712139429418,
+      "duration" : 2757
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Clicking on the chat button",
+      "name" : "Clicking on the chat input field",
       "time" : {
-        "start" : 1712139127126,
-        "stop" : 1712139127268,
-        "duration" : 142
+        "start" : 1712139493995,
+        "stop" : 1712139495812,
+        "duration" : 1817
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,11 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting chat button existence",
+      "name" : "Asserting redirection to login page",
       "time" : {
-        "start" : 1712139127268,
-        "stop" : 1712139127278,
-        "duration" : 10
+        "start" : 1712139495812,
+        "stop" : 1712139495838,
+        "duration" : 26
       },
       "status" : "passed",
       "steps" : [ ],
@@ -113,11 +113,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "app::0",
+    "name" : "api_client::0",
     "time" : {
-      "start" : 1712139131008,
-      "stop" : 1712139131076,
-      "duration" : 68
+      "start" : 1712139568256,
+      "stop" : 1712139568256,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -128,11 +128,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client::0",
+    "name" : "app::0",
     "time" : {
-      "start" : 1712139131077,
-      "stop" : 1712139131077,
-      "duration" : 0
+      "start" : 1712139568188,
+      "stop" : 1712139568255,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -144,23 +144,23 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Clicking Chat Button"
-  }, {
     "name" : "feature",
-    "value" : "Chat Functionality"
+    "value" : "Guest Chat Functionality"
   }, {
     "name" : "severity",
-    "value" : "blocker"
+    "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "Writing Text as Guest"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_open_and_close_chat"
+    "value" : "test_guest_write_text"
   }, {
     "name" : "host",
-    "value" : "3813eaa623f0"
+    "value" : "fd5d323ed4f4"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -172,7 +172,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_open_and_close_chat"
+    "value" : "test.test_guest_write_text"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -182,170 +182,180 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "blocker",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
+        "failed" : 2,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 15,
+        "passed" : 14,
         "unknown" : 0,
-        "total" : 19
+        "total" : 20
       },
       "items" : [ {
-        "uid" : "a1fef39a4868bd1",
+        "uid" : "402b7a15b9da0602",
         "status" : "passed",
         "time" : {
-          "start" : 1712138845901,
-          "stop" : 1712138846156,
-          "duration" : 255
+          "start" : 1712139047737,
+          "stop" : 1712139049156,
+          "duration" : 1419
         }
       }, {
-        "uid" : "5a7cee8580755f54",
+        "uid" : "df9fb24560d39fa",
         "status" : "passed",
         "time" : {
-          "start" : 1712138343086,
-          "stop" : 1712138343335,
-          "duration" : 249
+          "start" : 1712138775857,
+          "stop" : 1712138777301,
+          "duration" : 1444
         }
       }, {
-        "uid" : "13a1d291bfba74a1",
+        "uid" : "deb7ad48c6f896ec",
         "status" : "passed",
         "time" : {
-          "start" : 1712132207383,
-          "stop" : 1712132207640,
-          "duration" : 257
+          "start" : 1712138264796,
+          "stop" : 1712138266703,
+          "duration" : 1907
         }
       }, {
-        "uid" : "a6b8775338032e4d",
+        "uid" : "1d343486c322a0a9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False == True\n +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7f23dc750040>>()\n +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7f23dc750040>> = <fixture.application.Application object at 0x7f23dc750040>.check_current_url",
+        "time" : {
+          "start" : 1712132123192,
+          "stop" : 1712132129400,
+          "duration" : 6208
+        }
+      }, {
+        "uid" : "f8b4eb5482fa24eb",
         "status" : "passed",
         "time" : {
-          "start" : 1712105345006,
-          "stop" : 1712105345257,
-          "duration" : 251
+          "start" : 1712105265265,
+          "stop" : 1712105267580,
+          "duration" : 2315
         }
       }, {
-        "uid" : "ada7e33063d5a50e",
+        "uid" : "82246f0346e71ea4",
         "status" : "passed",
         "time" : {
-          "start" : 1712065201910,
-          "stop" : 1712065202167,
-          "duration" : 257
+          "start" : 1712065122262,
+          "stop" : 1712065124161,
+          "duration" : 1899
         }
       }, {
-        "uid" : "4a55f0e726a93dfb",
+        "uid" : "29f2943061d49a1d",
         "status" : "passed",
         "time" : {
-          "start" : 1712064758826,
-          "stop" : 1712064759093,
-          "duration" : 267
+          "start" : 1712064688719,
+          "stop" : 1712064690281,
+          "duration" : 1562
         }
       }, {
-        "uid" : "54e1cc6f7e47085b",
+        "uid" : "689572d3da9e9c07",
         "status" : "passed",
         "time" : {
-          "start" : 1712064310872,
-          "stop" : 1712064311140,
-          "duration" : 268
+          "start" : 1712064232171,
+          "stop" : 1712064234122,
+          "duration" : 1951
         }
       }, {
-        "uid" : "7b6cdf2b29485371",
+        "uid" : "64aa8f37e28fd9ad",
         "status" : "passed",
         "time" : {
-          "start" : 1712063566405,
-          "stop" : 1712063566667,
-          "duration" : 262
+          "start" : 1712063484111,
+          "stop" : 1712063487268,
+          "duration" : 3157
         }
       }, {
-        "uid" : "7e37a67654ae5658",
+        "uid" : "7868ae9a0b6cf3b7",
         "status" : "passed",
         "time" : {
-          "start" : 1712062696998,
-          "stop" : 1712062697258,
-          "duration" : 260
+          "start" : 1712062617426,
+          "stop" : 1712062619388,
+          "duration" : 1962
         }
       }, {
-        "uid" : "ade0960b4775e02b",
+        "uid" : "8462ea5a40329edd",
         "status" : "passed",
         "time" : {
-          "start" : 1712057107260,
-          "stop" : 1712057107518,
-          "duration" : 258
+          "start" : 1712057026748,
+          "stop" : 1712057028621,
+          "duration" : 1873
         }
       }, {
-        "uid" : "ee88c0f66f9c0ca2",
+        "uid" : "2adfb7bd185c1a67",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056718042,
-          "stop" : 1712056718042,
+          "start" : 1712056717566,
+          "stop" : 1712056717566,
           "duration" : 0
         }
       }, {
-        "uid" : "bb7a8496fee4d1ce",
+        "uid" : "889590730d81480",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056501474,
-          "stop" : 1712056501474,
+          "start" : 1712056500985,
+          "stop" : 1712056500985,
           "duration" : 0
         }
       }, {
-        "uid" : "ed75a9e5a4533b2e",
+        "uid" : "abab6da957042ea6",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502781,
-          "stop" : 1712055502781,
+          "start" : 1712055502299,
+          "stop" : 1712055502299,
           "duration" : 0
         }
       }, {
-        "uid" : "e15282cd6db562cc",
+        "uid" : "d507ec38e013d434",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563650,
-          "stop" : 1712053563650,
+          "start" : 1712053563172,
+          "stop" : 1712053563172,
           "duration" : 0
         }
       }, {
-        "uid" : "b418561f79c1b726",
+        "uid" : "b78e26a7f71abda0",
         "status" : "passed",
         "time" : {
-          "start" : 1712052227865,
-          "stop" : 1712052228119,
-          "duration" : 254
+          "start" : 1712052146395,
+          "stop" : 1712052148341,
+          "duration" : 1946
         }
       }, {
-        "uid" : "a20192a4453f52d9",
+        "uid" : "5ebc605a242697df",
         "status" : "passed",
         "time" : {
-          "start" : 1712049735810,
-          "stop" : 1712049736083,
-          "duration" : 273
+          "start" : 1712049657017,
+          "stop" : 1712049658707,
+          "duration" : 1690
         }
       }, {
-        "uid" : "b97a7e6782f9ec9f",
-        "status" : "passed",
+        "uid" : "f6359eed4c8d3477",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 'https://qama...ru/user/login' == 'https://qama...no/user/login'\n  \n  - https://qamain.kit.casino/user/login\n  + https://qamain.kit.casino/ru/user/login\n  ?                           +++",
         "time" : {
-          "start" : 1712042118675,
-          "stop" : 1712042118837,
-          "duration" : 162
+          "start" : 1712042039870,
+          "stop" : 1712042041886,
+          "duration" : 2016
         }
       }, {
-        "uid" : "980d9827c2e67a79",
+        "uid" : "998556665ca31605",
         "status" : "passed",
         "time" : {
-          "start" : 1711622077835,
-          "stop" : 1711622077989,
-          "duration" : 154
+          "start" : 1711621998975,
+          "stop" : 1711622000554,
+          "duration" : 1579
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "a21a6d660915a800.json",
+  "source" : "c0bb9348381f9001.json",
   "parameterValues" : [ ]
 }
