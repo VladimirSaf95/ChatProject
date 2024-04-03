@@ -9,20 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Шаг для кэширования зависимостей Python
+      - name: Cache Python dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Checkout (copy) gh-pages repository to GitHub runner
         uses: actions/checkout@v2
         with:
           ref: gh-pages
           path: ./.github/gh-pages
-
-      - name: Check if GITHUB_ACTIONS is set
-        run: echo $GITHUB_ACTIONS
-
-        # Добавление переменной окружения GITHUB_ACTIONS
-      - name: Set GITHUB_ACTIONS environment variable
-        run: echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
 
       - name: Run UI/API-tests via docker-compose
         env:
@@ -39,7 +42,7 @@ jobs:
 
       - name: Copy history from gh-pages to allure-results
         run: |
-          sudo mkdir -p allure-results/history  # Создает директорию для истории Allure
+          sudo mkdir -p allure-results/history
           sudo cp -R ./.github/gh-pages/history/* allure-results/history/
 
       - name: Generate Allure report
@@ -57,3 +60,4 @@ jobs:
           branch: gh-pages
           folder: allure-report
           clean: true
+

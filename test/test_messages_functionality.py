@@ -108,7 +108,7 @@ def test_send_reaction(api_client):
 @allure.severity(allure.severity_level.NORMAL)
 def test_tag_user(api_client):
     with allure.step("Tagging player in chat"):
-        data = {"body": "@test96 fff", "msgtype": "m.text",
+        data = {"body": "@testchat100 text tag player", "mention": [api_client.senderid_adm], "msgtype": "m.text",
                 "senderId": f"@{api_client.senderid}:{api_client.room_second_part}"}
 
         response = api_client.post_token1(f"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message",
@@ -313,7 +313,7 @@ def test_delete_dmsg(api_client):
 
         # Проверка, что event_id был получен в предыдущем тесте
         if event_id is None:
-            responseB = api_client.sendmessages(response_a=False)
+            api_client.sendmessages(response_a=False)
             event_id = os.environ.get("EVENT_ID_B")
 
     with allure.step("Sending DELETE request to delete message"):

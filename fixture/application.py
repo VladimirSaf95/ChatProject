@@ -50,7 +50,6 @@ class Application():
 
     def check_current_url(self):
         if "/user/login" in self.wd.current_url:
-            print(self.wd.current_url)
             return True
         else:
             return False

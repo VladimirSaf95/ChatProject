@@ -43,7 +43,7 @@ def test_block_players(api_client):
     with allure.step("Sending message and blocking player"):
         event_id = os.environ.get("EVENT_ID_B")
         if event_id is None:
-            responseB = api_client.sendmessages(response_a=False)
+            api_client.sendmessages(response_a=False)
             event_id = os.environ.get("EVENT_ID_B")
 
         data = {
@@ -51,7 +51,7 @@ def test_block_players(api_client):
             "nodeUid": api_client.xnodeid,
             "roomUid": api_client.roomB,
             "userUid": f"@{api_client.senderid}",
-            "blockedBy": f"@a524d297-b434-4957-85fc-ff6afff99e9b:{api_client.room_second_part}",
+            "blockedBy": f"@{api_client.senderid_adm}:{api_client.room_second_part}",
             "message": "Text Test",
             "duration": 3600,
             "messageId": event_id,
@@ -107,14 +107,6 @@ def test_unblock_players(api_client):
         # Получаем информацию о том, сколько было забанненых игроков ДО
         getuserbanbefore = api_client.getuserban()
         total_before = getuserbanbefore.json()["pagination"]["total"]
-
-    with allure.step("Checking if event_id is available"):
-        event_id = os.environ.get("EVENT_ID_B")
-
-        # Проверка, что event_id был получен в предыдущем тесте
-        if event_id is None:
-            responseB = api_client.sendmessages(response_a=False)
-            event_id = os.environ.get("EVENT_ID_B")
 
     with allure.step("Preparing data for unblocking user"):
         # Подготовка данных для POST-запроса

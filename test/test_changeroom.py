@@ -8,10 +8,6 @@ import os
 @allure.story("Clicking Chat Room")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_click_chat_room(app):
-    #Получаем данные переменные из перменных окружения
-    roomA = os.environ.get("EVENT_ID_A")
-    roomB = os.environ.get("EVENT_ID_B")
-
     with allure.step("Checking if chat button exists"):
         helper_base = HelperBase(app)
         # Проверяем, если чат открыт, если нет, то открываем
@@ -22,7 +18,7 @@ def test_click_chat_room(app):
 
     with allure.step("Clicking on Room B"):
         # Определяем селекторы для двух каналов, по которым будем кликать
-        selectorB = f'[data-test-id-roomitem="chat-carouselRooms-room{roomB}:{app.room_second_part}"]'
+        selectorB = f'[data-test-id-roomitem="chat-carouselRooms-room{app.roomB}:{app.room_second_part}"]'
         helper_base.click_element_by_css_selector(selectorB)
 
     with allure.step("Verifying Room B is selected"):
@@ -36,7 +32,7 @@ def test_click_chat_room(app):
 
     with allure.step("Clicking on Room A"):
         # Выполняем аналогичные действия для канала A
-        selectorA = f'[data-test-id-roomitem="chat-carouselRooms-room{roomA}:{app.room_second_part}"]'
+        selectorA = f'[data-test-id-roomitem="chat-carouselRooms-room{app.roomA}:{app.room_second_part}"]'
         helper_base.click_element_by_css_selector(selectorA)
 
     with allure.step("Verifying Room A is selected"):

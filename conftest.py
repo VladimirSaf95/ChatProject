@@ -23,7 +23,7 @@ def config(request):
                 "Password_admin": os.getenv("PASSWORD_ADMIN")
             }
         }
-        # # Если нет, загружаем данные из файла target.json
+        # загружаем данные из файла target.json для локальных запусков
         # config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
         # with open(config_file) as f:
         #     return json.load(f)

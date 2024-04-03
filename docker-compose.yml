@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # Добавление кэширования для ускорения сборки образа
+      cache_from:
+        - python:3.9.13-alpine3.16
     volumes:
       - ./:/usr/workspace
     command: /bin/sh -c "ls -la && pytest -sv --alluredir=allure-results"
