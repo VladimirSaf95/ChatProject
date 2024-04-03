@@ -32,6 +32,7 @@ def test_get_user_ban(api_client):
 
 # ROOM B
 # Проверка блокировки игрока
+@pytest.mark.dependency(name="block_players")
 @allure.feature("Player Blocking")
 @allure.story("Player Blocking Test")
 @allure.severity(allure.severity_level.BLOCKER)
@@ -94,7 +95,7 @@ def test_block_players(api_client):
     # response_blockplayer = api_client.sendmessages(response_b=False)
     # assert "event_id" not in response_blockplayer.json(), "The key 'event_id' is found in the JSON response"
 
-
+@pytest.mark.dependency(depends=["block_players"])
 @allure.feature("User Management")
 @allure.story("Unblocking Players")
 @allure.severity(allure.severity_level.CRITICAL)

@@ -6,6 +6,7 @@ import allure
 
 
 #Проверка отображение правил чата на локали RU и EN
+@pytest.mark.dependency(name="open_rules")
 @allure.feature("Chat Rules")
 @allure.story("Opening Chat Rules in Different Locales")
 @allure.severity(allure.severity_level.NORMAL)
@@ -62,22 +63,21 @@ def test_open_rules_in_different_locales(app):
                 print("Page not found or unreachable")
 
 #Закрытие модального окна с правилами чата
+@pytest.mark.dependency(depends=["open_rules"])
 @allure.feature("Chat Rules")
 @allure.story("Closing Chat Rules Modal")
 @allure.severity(allure.severity_level.NORMAL)
-def test_close_rules_modal(app, request):
-    # Получаем статус теста test_open_rules_in_different_locales
-    result_open_rules = request.node.get_closest_marker('test_open_rules_in_different_locales').args[0].outcome.result
-
+def test_close_rules_modal(app):
+    helper_base = HelperBase(app)
+    selector = ".sc-bypJrT path"
     with allure.step("Checking if test open rules in different locales passed"):
-        if result_open_rules == "passed":
-            helper_base = HelperBase(app)
+        if helper_base.check_css_selector_existence(selector):
             with allure.step("Click on the selector to close the modal window with chat rules"):
                  # Кликаем по селектору закрытия модального окна с правилами чата
-                helper_base.click_element_by_css_selector(".sc-bypJrT path")
+                helper_base.click_element_by_css_selector(selector)
 
             with allure.step("Asserting modal window is closed"):
                 # Проверяем, если не отображается модальное окно с правилами чата
                 assert not helper_base.is_modal_displayed("ReactModal__Content")
         else:
-            pytest.skip("The test_open_rules_in_different_locales test did not pass, skipping this test")
+            pytest.skip("The rules of chat did not open, skipping this test")
