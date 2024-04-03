@@ -1,127 +1,127 @@
 {
-  "uid" : "c4fc8e93adaaa25f",
-  "name" : "test_checked_spam",
-  "fullName" : "test.test_messages_functionality#test_checked_spam",
-  "historyId" : "0d564746938bc52c664683bead1959ba",
+  "uid" : "5077ccd85d611fed",
+  "name" : "test_send_complaint",
+  "fullName" : "test.test_messages_functionality#test_send_complaint",
+  "historyId" : "31f8786fe3f6ff4b035b30b6ade7469c",
   "time" : {
-    "start" : 1712105275064,
-    "stop" : 1712105284781,
-    "duration" : 9717
+    "start" : 1712132134507,
+    "stop" : 1712132135390,
+    "duration" : 883
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "config",
+    "name" : "api_client",
     "time" : {
-      "start" : 1712105195051,
-      "stop" : 1712105195051,
+      "start" : 1712132038892,
+      "stop" : 1712132038892,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1712132035769,
+      "stop" : 1712132035769,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712105195051,
-      "stop" : 1712105199110,
-      "duration" : 4059
+      "start" : 1712132035770,
+      "stop" : 1712132038892,
+      "duration" : 3122
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
-  }, {
-    "name" : "api_client",
-    "time" : {
-      "start" : 1712105199110,
-      "stop" : 1712105199110,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Sending spam messages",
+      "name" : "Filing complaint on message",
       "time" : {
-        "start" : 1712105275064,
-        "stop" : 1712105284779,
-        "duration" : 9715
+        "start" : 1712132134507,
+        "stop" : 1712132135388,
+        "duration" : 881
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
-      "name" : "Verifying response status code",
+      "name" : "Asserting response status code",
       "time" : {
-        "start" : 1712105284779,
-        "stop" : 1712105284779,
+        "start" : 1712132135388,
+        "stop" : 1712132135388,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 2,
-    "hasContent" : true,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712105349007,
-      "stop" : 1712105349007,
+      "start" : 1712132211453,
+      "stop" : 1712132211453,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Spam Checking Test"
-  }, {
-    "name" : "feature",
-    "value" : "Spam Checking"
-  }, {
     "name" : "severity",
     "value" : "critical"
+  }, {
+    "name" : "story",
+    "value" : "Filing Complaint on Message"
+  }, {
+    "name" : "feature",
+    "value" : "Sending Complaints"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -130,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "77c623c50898"
+    "value" : "ff95e11233e5"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,130 +160,138 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 11,
+        "passed" : 12,
         "unknown" : 0,
-        "total" : 15
+        "total" : 16
       },
       "items" : [ {
-        "uid" : "bdf2a5858c6101f4",
+        "uid" : "171ea144cb0437ad",
         "status" : "passed",
         "time" : {
-          "start" : 1712065131980,
-          "stop" : 1712065141736,
-          "duration" : 9756
+          "start" : 1712105273268,
+          "stop" : 1712105274298,
+          "duration" : 1030
         }
       }, {
-        "uid" : "fe3a9db453112292",
+        "uid" : "3fc2a16e951cb30c",
         "status" : "passed",
         "time" : {
-          "start" : 1712064697809,
-          "stop" : 1712064698653,
-          "duration" : 844
+          "start" : 1712065129549,
+          "stop" : 1712065130716,
+          "duration" : 1167
         }
       }, {
-        "uid" : "bff7b6dfeb848b49",
+        "uid" : "dc26b90c40d070f9",
         "status" : "passed",
         "time" : {
-          "start" : 1712064240849,
-          "stop" : 1712064250692,
-          "duration" : 9843
+          "start" : 1712064696036,
+          "stop" : 1712064696821,
+          "duration" : 785
         }
       }, {
-        "uid" : "f7a22562eb11fbed",
+        "uid" : "817b1f650462708e",
         "status" : "passed",
         "time" : {
-          "start" : 1712063496077,
-          "stop" : 1712063506225,
-          "duration" : 10148
+          "start" : 1712064238915,
+          "stop" : 1712064239620,
+          "duration" : 705
         }
       }, {
-        "uid" : "6aca814cbb49923b",
+        "uid" : "6fd6f9d688e2a6cb",
         "status" : "passed",
         "time" : {
-          "start" : 1712062627265,
-          "stop" : 1712062636839,
-          "duration" : 9574
+          "start" : 1712063493405,
+          "stop" : 1712063494234,
+          "duration" : 829
         }
       }, {
-        "uid" : "ba682558e1f98337",
+        "uid" : "92839f681759f6cb",
         "status" : "passed",
         "time" : {
-          "start" : 1712057036672,
-          "stop" : 1712057047107,
-          "duration" : 10435
+          "start" : 1712062624740,
+          "stop" : 1712062626185,
+          "duration" : 1445
         }
       }, {
-        "uid" : "ae4c9e6df6c30744",
+        "uid" : "8022dc031b0b126",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712057034363,
+          "stop" : 1712057035197,
+          "duration" : 834
+        }
+      }, {
+        "uid" : "19cd1f15f9240fb9",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717945,
-          "stop" : 1712056717945,
+          "start" : 1712056717817,
+          "stop" : 1712056717817,
           "duration" : 0
         }
       }, {
-        "uid" : "c6bd93ab3f8f970a",
+        "uid" : "90ca246305cbe016",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056501375,
-          "stop" : 1712056501375,
+          "start" : 1712056501243,
+          "stop" : 1712056501243,
           "duration" : 0
         }
       }, {
-        "uid" : "7ee83a77477f1761",
+        "uid" : "4506684e29da9fea",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502684,
-          "stop" : 1712055502684,
+          "start" : 1712055502553,
+          "stop" : 1712055502553,
           "duration" : 0
         }
       }, {
-        "uid" : "905ce25150b5fab0",
+        "uid" : "d586297585d8b013",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563552,
-          "stop" : 1712053563552,
+          "start" : 1712053563423,
+          "stop" : 1712053563423,
           "duration" : 0
         }
       }, {
-        "uid" : "af69faaaede9d348",
+        "uid" : "1219018631b96850",
         "status" : "passed",
         "time" : {
-          "start" : 1712052157405,
-          "stop" : 1712052167628,
-          "duration" : 10223
+          "start" : 1712052155334,
+          "stop" : 1712052155956,
+          "duration" : 622
         }
       }, {
-        "uid" : "4cd6f2f17509cfab",
+        "uid" : "f34ea9478ad6b7be",
         "status" : "passed",
         "time" : {
-          "start" : 1712049664825,
-          "stop" : 1712049675645,
-          "duration" : 10820
+          "start" : 1712049663141,
+          "stop" : 1712049664136,
+          "duration" : 995
         }
       }, {
-        "uid" : "35995e202e25dde9",
+        "uid" : "2ae589bb4d60a12c",
         "status" : "passed",
         "time" : {
-          "start" : 1712042048802,
-          "stop" : 1712042058527,
-          "duration" : 9725
+          "start" : 1712042047213,
+          "stop" : 1712042048083,
+          "duration" : 870
         }
       }, {
-        "uid" : "18aace116cbd4b96",
+        "uid" : "a3292f1e28ac054e",
         "status" : "passed",
         "time" : {
-          "start" : 1711622008065,
-          "stop" : 1711622017681,
-          "duration" : 9616
+          "start" : 1711622006233,
+          "stop" : 1711622007061,
+          "duration" : 828
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c4fc8e93adaaa25f.json",
+  "source" : "5077ccd85d611fed.json",
   "parameterValues" : [ ]
 }
