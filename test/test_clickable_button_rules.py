@@ -66,11 +66,11 @@ def test_open_rules_in_different_locales(app):
 @allure.story("Closing Chat Rules Modal")
 @allure.severity(allure.severity_level.NORMAL)
 def test_close_rules_modal(app, request):
-    # Проверяем результат выполнения test_open_rules_in_different_locales
-    result_open_rules = request.session.testsfailed == 0
+    # Получаем статус теста test_open_rules_in_different_locales
+    result_open_rules = request.node.get_closest_marker('test_open_rules_in_different_locales').args[0].outcome.result
 
     with allure.step("Checking if test open rules in different locales passed"):
-        if result_open_rules:
+        if result_open_rules == "passed":
             helper_base = HelperBase(app)
             with allure.step("Click on the selector to close the modal window with chat rules"):
                  # Кликаем по селектору закрытия модального окна с правилами чата
