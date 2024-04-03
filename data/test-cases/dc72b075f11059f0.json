@@ -1,21 +1,23 @@
 {
-  "uid" : "b91e1db96b5b21a",
+  "uid" : "dc72b075f11059f0",
   "name" : "test_close_rules_modal",
   "fullName" : "test.test_clickable_button_rules#test_close_rules_modal",
   "historyId" : "bb949eee6ec3189213ba299c4dc9ddbe",
   "time" : {
-    "start" : 1712139487335,
-    "stop" : 1712139493555,
-    "duration" : 6220
+    "start" : 1712140295995,
+    "stop" : 1712140295995,
+    "duration" : 0
   },
-  "status" : "passed",
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'args'",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7f06e45ecd00>\nrequest = <FixtureRequest for <Function test_close_rules_modal>>\n\n    @allure.feature(\"Chat Rules\")\n    @allure.story(\"Closing Chat Rules Modal\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_close_rules_modal(app, request):\n        # Получаем статус теста test_open_rules_in_different_locales\n>       result_open_rules = request.node.get_closest_marker('test_open_rules_in_different_locales').args[0].outcome.result\nE       AttributeError: 'NoneType' object has no attribute 'args'\n\ntest/test_clickable_button_rules.py:70: AttributeError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1712139429418,
-      "stop" : 1712139429418,
+      "start" : 1712140239229,
+      "stop" : 1712140239229,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,24 +31,9 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712139426661,
-      "stop" : 1712139426661,
+      "start" : 1712140236423,
+      "stop" : 1712140236423,
       "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "app",
-    "time" : {
-      "start" : 1712139462430,
-      "stop" : 1712139463401,
-      "duration" : 971
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +46,24 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712139426661,
-      "stop" : 1712139429418,
-      "duration" : 2757
+      "start" : 1712140236423,
+      "stop" : 1712140239228,
+      "duration" : 2805
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1712140273324,
+      "stop" : 1712140274276,
+      "duration" : 952
     },
     "status" : "passed",
     "steps" : [ ],
@@ -72,72 +74,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   } ],
-  "testStage" : {
-    "status" : "passed",
-    "steps" : [ {
-      "name" : "Checking if test open rules in different locales passed",
-      "time" : {
-        "start" : 1712139487335,
-        "stop" : 1712139493554,
-        "duration" : 6219
-      },
-      "status" : "passed",
-      "steps" : [ {
-        "name" : "Click on the selector to close the modal window with chat rules",
-        "time" : {
-          "start" : 1712139487439,
-          "stop" : 1712139490491,
-          "duration" : 3052
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      }, {
-        "name" : "Asserting modal window is closed",
-        "time" : {
-          "start" : 1712139490491,
-          "stop" : 1712139493554,
-          "duration" : 3063
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      } ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 2,
-      "hasContent" : true
-    } ],
-    "attachments" : [ {
-      "uid" : "d642e9b30cc07b62",
-      "name" : "log",
-      "source" : "d642e9b30cc07b62.txt",
-      "type" : "text/plain",
-      "size" : 106
-    } ],
-    "parameters" : [ ],
-    "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 3,
-    "hasContent" : true
-  },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712139568256,
-      "stop" : 1712139568256,
+      "start" : 1712140378679,
+      "stop" : 1712140378679,
       "duration" : 0
     },
     "status" : "passed",
@@ -151,9 +92,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1712139568188,
-      "stop" : 1712139568255,
-      "duration" : 67
+      "start" : 1712140378610,
+      "stop" : 1712140378678,
+      "duration" : 68
     },
     "status" : "passed",
     "steps" : [ ],
@@ -165,11 +106,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "story",
     "value" : "Closing Chat Rules Modal"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "feature",
     "value" : "Chat Rules"
@@ -181,7 +122,7 @@
     "value" : "test_clickable_button_rules"
   }, {
     "name" : "host",
-    "value" : "fd5d323ed4f4"
+    "value" : "149c81c7ae62"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,17 +146,29 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 4,
+        "broken" : 5,
         "skipped" : 6,
         "passed" : 10,
         "unknown" : 0,
-        "total" : 20
+        "total" : 21
       },
       "items" : [ {
+        "uid" : "b91e1db96b5b21a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712139487335,
+          "stop" : 1712139493555,
+          "duration" : 6220
+        }
+      }, {
         "uid" : "6b8ed75a45ee34c4",
         "status" : "passed",
         "time" : {
@@ -381,6 +334,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "b91e1db96b5b21a.json",
+  "source" : "dc72b075f11059f0.json",
   "parameterValues" : [ ]
 }
