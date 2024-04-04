@@ -1,12 +1,12 @@
 {
-  "uid" : "bf07d530b9f98e0e",
-  "name" : "test_pinned_msg",
-  "fullName" : "test.test_messages_functionality#test_pinned_msg",
-  "historyId" : "ecdfbf7aa572308243a68350daaed9a0",
+  "uid" : "555cde94e20fbe2e",
+  "name" : "test_click_chat_button_close",
+  "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
+  "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1712193300063,
-    "stop" : 1712193300467,
-    "duration" : 404
+    "start" : 1712219061350,
+    "stop" : 1712219061600,
+    "duration" : 250
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,23 @@
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1712193208434,
-      "stop" : 1712193208434,
+      "start" : 1712218915652,
+      "stop" : 1712218915652,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1712218919475,
+      "stop" : 1712218919475,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1712193208434,
-      "stop" : 1712193212173,
-      "duration" : 3739
+      "start" : 1712218915652,
+      "stop" : 1712218919475,
+      "duration" : 3823
     },
     "status" : "passed",
     "steps" : [ ],
@@ -42,11 +57,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "app",
     "time" : {
-      "start" : 1712193212173,
-      "stop" : 1712193212173,
-      "duration" : 0
+      "start" : 1712218954001,
+      "stop" : 1712218955533,
+      "duration" : 1532
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Sending message",
+      "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1712193300063,
-        "stop" : 1712193300063,
-        "duration" : 0
+        "start" : 1712219061454,
+        "stop" : 1712219061460,
+        "duration" : 6
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,11 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Pinning message",
+      "name" : "Clicking on the chat close button",
       "time" : {
-        "start" : 1712193300063,
-        "stop" : 1712193300466,
-        "duration" : 403
+        "start" : 1712219061460,
+        "stop" : 1712219061589,
+        "duration" : 129
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,26 +105,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying response status code",
+      "name" : "Verifying that the chat is closed",
       "time" : {
-        "start" : 1712193300466,
-        "stop" : 1712193300466,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying event_id in response JSON",
-      "time" : {
-        "start" : 1712193300466,
-        "stop" : 1712193300466,
-        "duration" : 0
+        "start" : 1712219061589,
+        "stop" : 1712219061600,
+        "duration" : 11
       },
       "status" : "passed",
       "steps" : [ ],
@@ -124,15 +124,30 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 4,
+    "stepsCount" : 3,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712193374931,
-      "stop" : 1712193374931,
+      "start" : 1712219064876,
+      "stop" : 1712219064876,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1712219064808,
+      "stop" : 1712219064876,
+      "duration" : 68
     },
     "status" : "passed",
     "steps" : [ ],
@@ -144,23 +159,23 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
     "name" : "story",
-    "value" : "Message Pinning by Moderator"
+    "value" : "Clicking Chat Button to Close"
   }, {
     "name" : "feature",
-    "value" : "Message Pinning"
-  }, {
-    "name" : "severity",
-    "value" : "normal"
+    "value" : "Chat Functionality"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_messages_functionality"
+    "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "6374a6bc854f"
+    "value" : "617a1b985e42"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -172,7 +187,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_messages_functionality"
+    "value" : "test.test_open_and_close_chat"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -182,7 +197,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
@@ -190,178 +205,178 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 19,
+        "passed" : 20,
         "unknown" : 0,
-        "total" : 23
+        "total" : 24
       },
       "items" : [ {
-        "uid" : "9b68bcf9d50c509d",
+        "uid" : "ff74c87a4c5fe9f2",
         "status" : "passed",
         "time" : {
-          "start" : 1712161285355,
-          "stop" : 1712161286282,
-          "duration" : 927
+          "start" : 1712193371408,
+          "stop" : 1712193371668,
+          "duration" : 260
         }
       }, {
-        "uid" : "559f9eb9c21709b5",
+        "uid" : "4adcd17103450e87",
         "status" : "passed",
         "time" : {
-          "start" : 1712140303195,
-          "stop" : 1712140304076,
-          "duration" : 881
+          "start" : 1712161357217,
+          "stop" : 1712161357488,
+          "duration" : 271
         }
       }, {
-        "uid" : "d69ba7336189a5e9",
+        "uid" : "5b13a024b2724b30",
         "status" : "passed",
         "time" : {
-          "start" : 1712139502014,
-          "stop" : 1712139502621,
-          "duration" : 607
+          "start" : 1712140375125,
+          "stop" : 1712140375404,
+          "duration" : 279
         }
       }, {
-        "uid" : "c51c7d3b9587180c",
+        "uid" : "decf8bedc1f89086",
         "status" : "passed",
         "time" : {
-          "start" : 1712139055468,
-          "stop" : 1712139056112,
-          "duration" : 644
+          "start" : 1712139564711,
+          "stop" : 1712139564992,
+          "duration" : 281
         }
       }, {
-        "uid" : "9f1b810a95e08d0f",
+        "uid" : "65e01f2df01fb9a0",
         "status" : "passed",
         "time" : {
-          "start" : 1712138784003,
-          "stop" : 1712138784581,
-          "duration" : 578
+          "start" : 1712139127549,
+          "stop" : 1712139127804,
+          "duration" : 255
         }
       }, {
-        "uid" : "922e9f90bc0baa2b",
+        "uid" : "b75881a9edadc784",
         "status" : "passed",
         "time" : {
-          "start" : 1712138272037,
-          "stop" : 1712138272667,
-          "duration" : 630
+          "start" : 1712138846386,
+          "stop" : 1712138846670,
+          "duration" : 284
         }
       }, {
-        "uid" : "d72f5b7b9ec0c4a4",
+        "uid" : "7b715d4339f1020a",
         "status" : "passed",
         "time" : {
-          "start" : 1712132135392,
-          "stop" : 1712132136855,
-          "duration" : 1463
+          "start" : 1712138343557,
+          "stop" : 1712138343853,
+          "duration" : 296
         }
       }, {
-        "uid" : "c36f1628dd93f3c7",
+        "uid" : "449d402a9e7298b2",
         "status" : "passed",
         "time" : {
-          "start" : 1712105274299,
-          "stop" : 1712105274673,
-          "duration" : 374
+          "start" : 1712132207881,
+          "stop" : 1712132208174,
+          "duration" : 293
         }
       }, {
-        "uid" : "ed1f999ed1981970",
+        "uid" : "2735bf5f5ba30970",
         "status" : "passed",
         "time" : {
-          "start" : 1712065130718,
-          "stop" : 1712065131394,
-          "duration" : 676
+          "start" : 1712105345476,
+          "stop" : 1712105345736,
+          "duration" : 260
         }
       }, {
-        "uid" : "9818c949d09564cf",
+        "uid" : "6691951ee5421a46",
         "status" : "passed",
         "time" : {
-          "start" : 1712064696823,
-          "stop" : 1712064697191,
-          "duration" : 368
+          "start" : 1712065202393,
+          "stop" : 1712065202644,
+          "duration" : 251
         }
       }, {
-        "uid" : "331cb778beff3b7",
+        "uid" : "9eaac5329c671f4d",
         "status" : "passed",
         "time" : {
-          "start" : 1712064239622,
-          "stop" : 1712064240240,
-          "duration" : 618
+          "start" : 1712064759345,
+          "stop" : 1712064759605,
+          "duration" : 260
         }
       }, {
-        "uid" : "507862a5f49a32e4",
+        "uid" : "930dad546abb956",
         "status" : "passed",
         "time" : {
-          "start" : 1712063494236,
-          "stop" : 1712063495632,
-          "duration" : 1396
+          "start" : 1712064311371,
+          "stop" : 1712064311628,
+          "duration" : 257
         }
       }, {
-        "uid" : "516ba41d38bea55a",
+        "uid" : "de636d3c15d721d",
         "status" : "passed",
         "time" : {
-          "start" : 1712062626187,
-          "stop" : 1712062626852,
-          "duration" : 665
+          "start" : 1712063566911,
+          "stop" : 1712063567183,
+          "duration" : 272
         }
       }, {
-        "uid" : "25d05d719a73dbb3",
+        "uid" : "7aadef59a7e8be4a",
         "status" : "passed",
         "time" : {
-          "start" : 1712057035199,
-          "stop" : 1712057035799,
-          "duration" : 600
+          "start" : 1712062697494,
+          "stop" : 1712062697761,
+          "duration" : 267
         }
       }, {
-        "uid" : "726fec388c7e04db",
+        "uid" : "ca84dd23c9afbd20",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712057107759,
+          "stop" : 1712057108027,
+          "duration" : 268
+        }
+      }, {
+        "uid" : "91ef13cccda700b1",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: File target.json not found",
         "time" : {
-          "start" : 1712056717857,
-          "stop" : 1712056717857,
+          "start" : 1712056718146,
+          "stop" : 1712056718146,
           "duration" : 0
         }
       }, {
-        "uid" : "3b0a322625b589e4",
+        "uid" : "8f2bded473130e56",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712056501285,
-          "stop" : 1712056501285,
+          "start" : 1712056501581,
+          "stop" : 1712056501581,
           "duration" : 0
         }
       }, {
-        "uid" : "74d646212ccc0d4d",
+        "uid" : "e99933d95439ad7e",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712055502595,
-          "stop" : 1712055502595,
+          "start" : 1712055502887,
+          "stop" : 1712055502887,
           "duration" : 0
         }
       }, {
-        "uid" : "54e5c33295e7dc4a",
+        "uid" : "8ea310587a390979",
         "status" : "broken",
         "statusDetails" : "FileNotFoundError: [Errno 2] No such file or directory: '/usr/workspace/target.json'",
         "time" : {
-          "start" : 1712053563464,
-          "stop" : 1712053563464,
+          "start" : 1712053563755,
+          "stop" : 1712053563755,
           "duration" : 0
         }
       }, {
-        "uid" : "6ff90e857aff37a8",
+        "uid" : "bc7a9f64edac8ee9",
         "status" : "passed",
         "time" : {
-          "start" : 1712052155958,
-          "stop" : 1712052156976,
-          "duration" : 1018
-        }
-      }, {
-        "uid" : "bf9922a5f53f2a8c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1712049664138,
-          "stop" : 1712049664484,
-          "duration" : 346
+          "start" : 1712052228344,
+          "stop" : 1712052228619,
+          "duration" : 275
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "bf07d530b9f98e0e.json",
+  "source" : "555cde94e20fbe2e.json",
   "parameterValues" : [ ]
 }
