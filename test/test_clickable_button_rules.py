@@ -6,7 +6,6 @@ import allure
 
 
 #Проверка отображение правил чата на локали RU и EN
-@pytest.mark.dependency(name="open_rules")
 @allure.feature("Chat Rules")
 @allure.story("Opening Chat Rules in Different Locales")
 @allure.severity(allure.severity_level.NORMAL)
@@ -63,7 +62,6 @@ def test_open_rules_in_different_locales(app):
                 print("Page not found or unreachable")
 
 #Закрытие модального окна с правилами чата
-@pytest.mark.dependency(depends=["open_rules"])
 @allure.feature("Chat Rules")
 @allure.story("Closing Chat Rules Modal")
 @allure.severity(allure.severity_level.NORMAL)
