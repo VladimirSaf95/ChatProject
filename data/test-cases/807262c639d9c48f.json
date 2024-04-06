@@ -1,22 +1,22 @@
 {
-  "uid" : "5b786b9d7dbab117",
+  "uid" : "807262c639d9c48f",
   "name" : "test_send_url",
   "fullName" : "test.test_messages_functionality#test_send_url",
   "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
   "time" : {
-    "start" : 1712334235709,
-    "stop" : 1712334236777,
-    "duration" : 1068
+    "start" : 1712365931558,
+    "stop" : 1712365932895,
+    "duration" : 1337
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1712334158882,
-      "stop" : 1712334158883,
-      "duration" : 1
+      "start" : 1712365855381,
+      "stop" : 1712365860102,
+      "duration" : 4721
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1712334154860,
-      "stop" : 1712334158882,
-      "duration" : 4022
+      "start" : 1712365860102,
+      "stop" : 1712365860102,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712334154860,
-      "stop" : 1712334154860,
+      "start" : 1712365855380,
+      "stop" : 1712365855380,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending allowed URL",
       "time" : {
-        "start" : 1712334235710,
-        "stop" : 1712334236288,
-        "duration" : 578
+        "start" : 1712365931558,
+        "stop" : 1712365932173,
+        "duration" : 615
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for allowed URL",
         "time" : {
-          "start" : 1712334236288,
-          "stop" : 1712334236288,
+          "start" : 1712365932173,
+          "stop" : 1712365932173,
           "duration" : 0
         },
         "status" : "passed",
@@ -92,16 +92,16 @@
     }, {
       "name" : "Sending disallowed URL",
       "time" : {
-        "start" : 1712334236288,
-        "stop" : 1712334236774,
-        "duration" : 486
+        "start" : 1712365932173,
+        "stop" : 1712365932890,
+        "duration" : 717
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for disallowed URL",
         "time" : {
-          "start" : 1712334236774,
-          "stop" : 1712334236774,
+          "start" : 1712365932890,
+          "stop" : 1712365932890,
           "duration" : 0
         },
         "status" : "passed",
@@ -130,8 +130,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712334314052,
-      "stop" : 1712334314052,
+      "start" : 1712366010540,
+      "stop" : 1712366010540,
       "duration" : 0
     },
     "status" : "passed",
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "df7a311df95d"
+    "value" : "613c2579d189"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 24,
+        "passed" : 25,
         "unknown" : 0,
-        "total" : 28
+        "total" : 29
       },
       "items" : [ {
+        "uid" : "5b786b9d7dbab117",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712334235709,
+          "stop" : 1712334236777,
+          "duration" : 1068
+        }
+      }, {
         "uid" : "198a38db94d04a48",
         "status" : "passed",
         "time" : {
@@ -346,19 +354,10 @@
           "stop" : 1712057033201,
           "duration" : 649
         }
-      }, {
-        "uid" : "48349d5cc15fdb28",
-        "status" : "broken",
-        "statusDetails" : "FileNotFoundError: File target.json not found",
-        "time" : {
-          "start" : 1712056717708,
-          "stop" : 1712056717708,
-          "duration" : 0
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "5b786b9d7dbab117.json",
+  "source" : "807262c639d9c48f.json",
   "parameterValues" : [ ]
 }

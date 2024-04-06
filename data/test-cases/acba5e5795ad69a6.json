@@ -1,22 +1,22 @@
 {
-  "uid" : "eadd379572c20675",
+  "uid" : "acba5e5795ad69a6",
   "name" : "test_unpinned_msg",
   "fullName" : "test.test_messages_functionality#test_unpinned_msg",
   "historyId" : "e51d1fcd71fa2b661252b5536f450782",
   "time" : {
-    "start" : 1712334239076,
-    "stop" : 1712334239650,
-    "duration" : 574
+    "start" : 1712365936071,
+    "stop" : 1712365936413,
+    "duration" : 342
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1712334158882,
-      "stop" : 1712334158883,
-      "duration" : 1
+      "start" : 1712365855381,
+      "stop" : 1712365860102,
+      "duration" : 4721
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1712334154860,
-      "stop" : 1712334158882,
-      "duration" : 4022
+      "start" : 1712365860102,
+      "stop" : 1712365860102,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1712334154860,
-      "stop" : 1712334154860,
+      "start" : 1712365855380,
+      "stop" : 1712365855380,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,8 +62,8 @@
     "steps" : [ {
       "name" : "Getting pinned message ID",
       "time" : {
-        "start" : 1712334239076,
-        "stop" : 1712334239076,
+        "start" : 1712365936071,
+        "stop" : 1712365936071,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,9 +77,9 @@
     }, {
       "name" : "Unpinning the message",
       "time" : {
-        "start" : 1712334239076,
-        "stop" : 1712334239649,
-        "duration" : 573
+        "start" : 1712365936071,
+        "stop" : 1712365936411,
+        "duration" : 340
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,8 +92,8 @@
     }, {
       "name" : "Verifying response status code",
       "time" : {
-        "start" : 1712334239649,
-        "stop" : 1712334239649,
+        "start" : 1712365936411,
+        "stop" : 1712365936411,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,9 +107,9 @@
     }, {
       "name" : "Verifying event_id in response JSON",
       "time" : {
-        "start" : 1712334239649,
-        "stop" : 1712334239649,
-        "duration" : 0
+        "start" : 1712365936411,
+        "stop" : 1712365936412,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -130,8 +130,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1712334314052,
-      "stop" : 1712334314052,
+      "start" : 1712366010540,
+      "stop" : 1712366010540,
       "duration" : 0
     },
     "status" : "passed",
@@ -147,11 +147,11 @@
     "name" : "feature",
     "value" : "Message Unpinning"
   }, {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "story",
     "value" : "Message Unpinning by Moderator"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "df7a311df95d"
+    "value" : "613c2579d189"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 24,
+        "passed" : 25,
         "unknown" : 0,
-        "total" : 28
+        "total" : 29
       },
       "items" : [ {
+        "uid" : "eadd379572c20675",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712334239076,
+          "stop" : 1712334239650,
+          "duration" : 574
+        }
+      }, {
         "uid" : "721f89a7fec91182",
         "status" : "passed",
         "time" : {
@@ -346,19 +354,10 @@
           "stop" : 1712057036669,
           "duration" : 868
         }
-      }, {
-        "uid" : "b692a429dddb4c22",
-        "status" : "broken",
-        "statusDetails" : "FileNotFoundError: File target.json not found",
-        "time" : {
-          "start" : 1712056717900,
-          "stop" : 1712056717900,
-          "duration" : 0
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "eadd379572c20675.json",
+  "source" : "acba5e5795ad69a6.json",
   "parameterValues" : [ ]
 }
