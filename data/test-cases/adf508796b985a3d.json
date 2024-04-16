@@ -1,52 +1,24 @@
 {
-  "uid" : "53162b2a5659ad1d",
+  "uid" : "adf508796b985a3d",
   "name" : "test_guest_write_text",
   "fullName" : "test.test_guest_write_text#test_guest_write_text",
   "historyId" : "ce0cd46787e71938b1e1382945934dfe",
   "time" : {
-    "start" : 1713230035547,
-    "stop" : 1713230036757,
-    "duration" : 1210
+    "start" : 1713255752056,
+    "stop" : 1713255758273,
+    "duration" : 6217
   },
-  "status" : "passed",
-  "flaky" : false,
-  "newFailed" : false,
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False == True\n +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>>()\n +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>> = <fixture.application.Application object at 0x7fd640f91250>.check_current_url",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7fd640f91250>\n\n    @allure.feature(\"Guest Chat Functionality\")\n    @allure.story(\"Writing Text as Guest\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_guest_write_text(app):\n        helper_base = HelperBase(app)\n        # Если чат не был открыт, открываем его\n        if not helper_base.check_chatbutton_existence():\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Clicking on the chat input field\"):\n            # Определяем селектор для нажатия по полю ввода сообщения\n            selector = \".sc-hknOHE\"\n            helper_base.click_element_by_css_selector(selector)\n    \n        with allure.step(\"Asserting redirection to login page\"):\n            # Производим проверку, что открылась страница авторизации\n>           assert app.check_current_url() == True\nE           assert False == True\nE            +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>>()\nE            +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>> = <fixture.application.Application object at 0x7fd640f91250>.check_current_url\n\ntest/test_guest_write_text.py:22: AssertionError",
+  "flaky" : true,
+  "newFailed" : true,
   "beforeStages" : [ {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1713229971705,
-      "stop" : 1713229975564,
-      "duration" : 3859
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1713229975564,
-      "stop" : 1713229975564,
+      "start" : 1713255691314,
+      "stop" : 1713255691314,
       "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "app",
-    "time" : {
-      "start" : 1713230010237,
-      "stop" : 1713230011345,
-      "duration" : 1108
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +31,39 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1713229971705,
-      "stop" : 1713229971705,
+      "start" : 1713255686811,
+      "stop" : 1713255686811,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1713255686811,
+      "stop" : 1713255691314,
+      "duration" : 4503
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1713255726662,
+      "stop" : 1713255727893,
+      "duration" : 1231
     },
     "status" : "passed",
     "steps" : [ ],
@@ -73,13 +75,15 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "status" : "passed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False == True\n +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>>()\n +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>> = <fixture.application.Application object at 0x7fd640f91250>.check_current_url",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7fd640f91250>\n\n    @allure.feature(\"Guest Chat Functionality\")\n    @allure.story(\"Writing Text as Guest\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_guest_write_text(app):\n        helper_base = HelperBase(app)\n        # Если чат не был открыт, открываем его\n        if not helper_base.check_chatbutton_existence():\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Clicking on the chat input field\"):\n            # Определяем селектор для нажатия по полю ввода сообщения\n            selector = \".sc-hknOHE\"\n            helper_base.click_element_by_css_selector(selector)\n    \n        with allure.step(\"Asserting redirection to login page\"):\n            # Производим проверку, что открылась страница авторизации\n>           assert app.check_current_url() == True\nE           assert False == True\nE            +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>>()\nE            +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>> = <fixture.application.Application object at 0x7fd640f91250>.check_current_url\n\ntest/test_guest_write_text.py:22: AssertionError",
     "steps" : [ {
       "name" : "Clicking on the chat input field",
       "time" : {
-        "start" : 1713230035655,
-        "stop" : 1713230036656,
-        "duration" : 1001
+        "start" : 1713255755214,
+        "stop" : 1713255758267,
+        "duration" : 3053
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,31 +96,39 @@
     }, {
       "name" : "Asserting redirection to login page",
       "time" : {
-        "start" : 1713230036656,
-        "stop" : 1713230036757,
-        "duration" : 101
+        "start" : 1713255758267,
+        "stop" : 1713255758273,
+        "duration" : 6
       },
-      "status" : "passed",
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert False == True\n +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>>()\n +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7fd640f91250>> = <fixture.application.Application object at 0x7fd640f91250>.check_current_url\n",
+      "statusTrace" : "  File \"/usr/workspace/test/test_guest_write_text.py\", line 22, in test_guest_write_text\n    assert app.check_current_url() == True\n",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
+      "shouldDisplayMessage" : true,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : true
     } ],
-    "attachments" : [ ],
+    "attachments" : [ {
+      "uid" : "a41603887604b86b",
+      "name" : "log",
+      "source" : "a41603887604b86b.txt",
+      "type" : "text/plain",
+      "size" : 235
+    } ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
     "stepsCount" : 2,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1713230117427,
-      "stop" : 1713230117427,
+      "start" : 1713255851627,
+      "stop" : 1713255851627,
       "duration" : 0
     },
     "status" : "passed",
@@ -130,9 +142,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1713230117361,
-      "stop" : 1713230117426,
-      "duration" : 65
+      "start" : 1713255851572,
+      "stop" : 1713255851627,
+      "duration" : 55
     },
     "status" : "passed",
     "steps" : [ ],
@@ -144,11 +156,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Guest Chat Functionality"
-  }, {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Guest Chat Functionality"
   }, {
     "name" : "story",
     "value" : "Writing Text as Guest"
@@ -160,7 +172,7 @@
     "value" : "test_guest_write_text"
   }, {
     "name" : "host",
-    "value" : "5bfbbb46592c"
+    "value" : "34b5d1160dc7"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -184,17 +196,29 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
     "history" : {
       "statistic" : {
-        "failed" : 3,
+        "failed" : 4,
         "broken" : 7,
         "skipped" : 0,
         "passed" : 49,
         "unknown" : 0,
-        "total" : 59
+        "total" : 60
       },
       "items" : [ {
+        "uid" : "53162b2a5659ad1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713230035547,
+          "stop" : 1713230036757,
+          "duration" : 1210
+        }
+      }, {
         "uid" : "f325e7b06c4c3d6d",
         "status" : "passed",
         "time" : {
@@ -350,18 +374,10 @@
           "stop" : 1712680265664,
           "duration" : 0
         }
-      }, {
-        "uid" : "8720c425e99ab0bc",
-        "status" : "passed",
-        "time" : {
-          "start" : 1712650927758,
-          "stop" : 1712650931261,
-          "duration" : 3503
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "53162b2a5659ad1d.json",
+  "source" : "adf508796b985a3d.json",
   "parameterValues" : [ ]
 }

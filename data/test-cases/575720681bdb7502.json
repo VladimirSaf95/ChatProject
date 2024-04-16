@@ -1,52 +1,24 @@
 {
-  "uid" : "593f1bb3d4c28807",
+  "uid" : "575720681bdb7502",
   "name" : "test_open_rules_in_different_locales",
   "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
   "historyId" : "407693a6fd5ff6488821603261c63665",
   "time" : {
-    "start" : 1713230028485,
-    "stop" : 1713230034979,
-    "duration" : 6494
+    "start" : 1713255742199,
+    "stop" : 1713255751460,
+    "duration" : 9261
   },
-  "status" : "passed",
-  "flaky" : false,
-  "newFailed" : false,
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert False\n +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>>('ReactModal__Content')\n +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>> = <fixture.helper_base.HelperBase object at 0x7fd640f5c070>.is_modal_displayed",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7fd640f91250>\n\n    @allure.feature(\"Chat Rules\")\n    @allure.story(\"Opening Chat Rules in Different Locales\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_open_rules_in_different_locales(app):\n        helper_base = HelperBase(app)\n        test_id = \"chat-header-rulesButton\"\n        selector = f'[data-testid=\"{test_id}\"]'\n    \n        with allure.step(\"Opening chat rules\"):\n            # Проверяем, если чат открыт, если нет, то открываем\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n            # Кликаем по селектору иконки правил чата\n            helper_base.click_element_by_css_selector(selector)\n            # Проверяем, если отображается модальное окно с правилами\n>           assert helper_base.is_modal_displayed(\"ReactModal__Content\")\nE           AssertionError: assert False\nE            +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>>('ReactModal__Content')\nE            +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>> = <fixture.helper_base.HelperBase object at 0x7fd640f5c070>.is_modal_displayed\n\ntest/test_clickable_button_rules.py:24: AssertionError",
+  "flaky" : true,
+  "newFailed" : true,
   "beforeStages" : [ {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1713229971705,
-      "stop" : 1713229975564,
-      "duration" : 3859
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1713229975564,
-      "stop" : 1713229975564,
+      "start" : 1713255691314,
+      "stop" : 1713255691314,
       "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "app",
-    "time" : {
-      "start" : 1713230010237,
-      "stop" : 1713230011345,
-      "duration" : 1108
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +31,39 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1713229971705,
-      "stop" : 1713229971705,
+      "start" : 1713255686811,
+      "stop" : 1713255686811,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1713255686811,
+      "stop" : 1713255691314,
+      "duration" : 4503
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1713255726662,
+      "stop" : 1713255727893,
+      "duration" : 1231
     },
     "status" : "passed",
     "steps" : [ ],
@@ -73,65 +75,45 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "status" : "passed",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert False\n +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>>('ReactModal__Content')\n +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>> = <fixture.helper_base.HelperBase object at 0x7fd640f5c070>.is_modal_displayed",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7fd640f91250>\n\n    @allure.feature(\"Chat Rules\")\n    @allure.story(\"Opening Chat Rules in Different Locales\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_open_rules_in_different_locales(app):\n        helper_base = HelperBase(app)\n        test_id = \"chat-header-rulesButton\"\n        selector = f'[data-testid=\"{test_id}\"]'\n    \n        with allure.step(\"Opening chat rules\"):\n            # Проверяем, если чат открыт, если нет, то открываем\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n            # Кликаем по селектору иконки правил чата\n            helper_base.click_element_by_css_selector(selector)\n            # Проверяем, если отображается модальное окно с правилами\n>           assert helper_base.is_modal_displayed(\"ReactModal__Content\")\nE           AssertionError: assert False\nE            +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>>('ReactModal__Content')\nE            +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>> = <fixture.helper_base.HelperBase object at 0x7fd640f5c070>.is_modal_displayed\n\ntest/test_clickable_button_rules.py:24: AssertionError",
     "steps" : [ {
       "name" : "Opening chat rules",
       "time" : {
-        "start" : 1713230028588,
-        "stop" : 1713230029349,
-        "duration" : 761
+        "start" : 1713255742303,
+        "stop" : 1713255751459,
+        "duration" : 9156
       },
-      "status" : "passed",
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert False\n +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>>('ReactModal__Content')\n +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fd640f5c070>> = <fixture.helper_base.HelperBase object at 0x7fd640f5c070>.is_modal_displayed\n",
+      "statusTrace" : "  File \"/usr/workspace/test/test_clickable_button_rules.py\", line 24, in test_open_rules_in_different_locales\n    assert helper_base.is_modal_displayed(\"ReactModal__Content\")\n",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
+      "shouldDisplayMessage" : true,
       "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Verifying chat rules in English locale",
-      "time" : {
-        "start" : 1713230029349,
-        "stop" : 1713230029353,
-        "duration" : 4
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Switching to Russian locale and verifying chat rules",
-      "time" : {
-        "start" : 1713230029353,
-        "stop" : 1713230034977,
-        "duration" : 5624
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : true
     } ],
-    "attachments" : [ ],
+    "attachments" : [ {
+      "uid" : "adaacaf7d6d5f10b",
+      "name" : "log",
+      "source" : "adaacaf7d6d5f10b.txt",
+      "type" : "text/plain",
+      "size" : 264
+    } ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 1,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1713230117427,
-      "stop" : 1713230117427,
+      "start" : 1713255851627,
+      "stop" : 1713255851627,
       "duration" : 0
     },
     "status" : "passed",
@@ -145,9 +127,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1713230117361,
-      "stop" : 1713230117426,
-      "duration" : 65
+      "start" : 1713255851572,
+      "stop" : 1713255851627,
+      "duration" : 55
     },
     "status" : "passed",
     "steps" : [ ],
@@ -159,11 +141,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Opening Chat Rules in Different Locales"
-  }, {
     "name" : "feature",
     "value" : "Chat Rules"
+  }, {
+    "name" : "story",
+    "value" : "Opening Chat Rules in Different Locales"
   }, {
     "name" : "severity",
     "value" : "normal"
@@ -175,7 +157,7 @@
     "value" : "test_clickable_button_rules"
   }, {
     "name" : "host",
-    "value" : "5bfbbb46592c"
+    "value" : "34b5d1160dc7"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -199,17 +181,29 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
     "history" : {
       "statistic" : {
-        "failed" : 2,
+        "failed" : 3,
         "broken" : 7,
         "skipped" : 0,
         "passed" : 50,
         "unknown" : 0,
-        "total" : 59
+        "total" : 60
       },
       "items" : [ {
+        "uid" : "593f1bb3d4c28807",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713230028485,
+          "stop" : 1713230034979,
+          "duration" : 6494
+        }
+      }, {
         "uid" : "7f69fd68f92080d3",
         "status" : "passed",
         "time" : {
@@ -365,18 +359,10 @@
           "stop" : 1712680264718,
           "duration" : 0
         }
-      }, {
-        "uid" : "d17ac40def37ff30",
-        "status" : "passed",
-        "time" : {
-          "start" : 1712650920246,
-          "stop" : 1712650927259,
-          "duration" : 7013
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "593f1bb3d4c28807.json",
+  "source" : "575720681bdb7502.json",
   "parameterValues" : [ ]
 }
