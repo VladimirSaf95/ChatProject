@@ -1,0 +1,321 @@
+{
+  "uid" : "ada648f308836e01",
+  "name" : "test_showdetailschat",
+  "fullName" : "test.test_open_and_close_chat#test_showdetailschat",
+  "historyId" : "7695f6dd6468ddddf82ea1b95cf71f99",
+  "time" : {
+    "start" : 1713342793414,
+    "stop" : 1713342793414,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+  "statusTrace" : "request = <SubRequest 'app' for <Function test_click_chat_room>>\nconfig = {'api': {'Login_admin': 'testchat100', 'Login_player': 'testchat101', 'Password_admin': 'Qwert123}', 'Password_player': 'Qwert123}', ...}, 'web': {'baseUrl': 'https://qamain.kit.casino/'}}\ninit_authorization = (<fixture.authorization.Authorization object at 0x7fc8af97afa0>, 'syt_NjM0MGQ4MWUtZjIyMC00OTMxLTg4ZWItZjNhZTU2OTJjYTdi...yNGMtMjg0ODRhN2QwY2Yz_RDKcXEpNJSBZrQggQGHx_3TdWkS', '4ea5b488-733b-4566-924c-28484a7d0cf3', '!qQtVtblQXsAHkkuYCN', ...)\n\n    @pytest.fixture(scope=\"session\", autouse=False)\n    def app(request, config, init_authorization):\n        # Фикстура для инициализации приложения (открытия браузера).\n        web_config = config[\"web\"]\n        browser = request.config.getoption(\"--browser\")\n        auth, player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, room_second_part, roomB, admin_api_token = init_authorization\n    \n>       app_fixture = Application(browser=browser, base_url=web_config['baseUrl'], roomA=roomA, room_second_part=room_second_part, roomB=roomB)\n\nconftest.py:92: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nfixture/application.py:17: in __init__\n    self.wd = webdriver.Chrome(options=options)\n../local/lib/python3.9/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__\n    super().__init__(\n../local/lib/python3.9/site-packages/selenium/webdriver/chromium/webdriver.py:61: in __init__\n    super().__init__(command_executor=executor, options=options)\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:208: in __init__\n    self.start_session(capabilities)\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:292: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fc8af90b310>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created\\\\nfrom timeout: Timed out receiving message from renderer: 600.000\\\\n  (Session info: headless chrome=102.0.5005.182)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nE       from timeout: Timed out receiving message from renderer: 600.000\nE         (Session info: headless chrome=102.0.5005.182)\n\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:229: SessionNotCreatedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1713342076318,
+      "stop" : 1713342076318,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1713342072222,
+      "stop" : 1713342076317,
+      "duration" : 4095
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1713342072222,
+      "stop" : 1713342072222,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1713342111211,
+      "stop" : 1713342711683,
+      "duration" : 600472
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)\n\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 166, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 102, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1132, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 906, in call_fixture_func\n    fixture_result = next(generator)\n  File \"/usr/workspace/conftest.py\", line 92, in app\n    app_fixture = Application(browser=browser, base_url=web_config['baseUrl'], roomA=roomA, room_second_part=room_second_part, roomB=roomB)\n  File \"/usr/workspace/fixture/application.py\", line 17, in __init__\n    self.wd = webdriver.Chrome(options=options)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/chrome/webdriver.py\", line 45, in __init__\n    super().__init__(\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/chromium/webdriver.py\", line 61, in __init__\n    super().__init__(command_executor=executor, options=options)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py\", line 208, in __init__\n    self.start_session(capabilities)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py\", line 292, in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py\", line 347, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1713342793571,
+      "stop" : 1713342793571,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "feature",
+    "value" : "Chat Functionality"
+  }, {
+    "name" : "story",
+    "value" : "Showing Chat Details"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_open_and_close_chat"
+  }, {
+    "name" : "host",
+    "value" : "cc5ac03e5444"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_open_and_close_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 9,
+        "skipped" : 0,
+        "passed" : 52,
+        "unknown" : 0,
+        "total" : 63
+      },
+      "items" : [ {
+        "uid" : "cde4ab0700728456",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713316556070,
+          "stop" : 1713316556321,
+          "duration" : 251
+        }
+      }, {
+        "uid" : "cd60de514958b331",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1713285245469,
+          "stop" : 1713285245469,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "3a7f69771c671510",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7fd640e346a0>>(\"[data-testid='chat-header-closeButton']\")\n +    where <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7fd640e346a0>> = <fixture.helper_base.HelperBase object at 0x7fd640e346a0>.check_css_selector_existence",
+        "time" : {
+          "start" : 1713255842105,
+          "stop" : 1713255845273,
+          "duration" : 3168
+        }
+      }, {
+        "uid" : "202c1b3a76006eee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713230113693,
+          "stop" : 1713230113913,
+          "duration" : 220
+        }
+      }, {
+        "uid" : "460ffaad03a74bb9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713198230316,
+          "stop" : 1713198230580,
+          "duration" : 264
+        }
+      }, {
+        "uid" : "75c0633e8ba48a1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713169207694,
+          "stop" : 1713169207957,
+          "duration" : 263
+        }
+      }, {
+        "uid" : "3840c40caa01c024",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713152003920,
+          "stop" : 1713152004141,
+          "duration" : 221
+        }
+      }, {
+        "uid" : "93561886c4eb658f",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1713134257437,
+          "stop" : 1713134257437,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "2c37690c9a081cb9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713091504155,
+          "stop" : 1713091504406,
+          "duration" : 251
+        }
+      }, {
+        "uid" : "23ef11440b2d0f53",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713059284024,
+          "stop" : 1713059284269,
+          "duration" : 245
+        }
+      }, {
+        "uid" : "5d908026c3269f25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713025355487,
+          "stop" : 1713025355724,
+          "duration" : 237
+        }
+      }, {
+        "uid" : "1c96d2efa6782095",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1712996906305,
+          "stop" : 1712996906305,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f88275e3db847880",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712970182324,
+          "stop" : 1712970182552,
+          "duration" : 228
+        }
+      }, {
+        "uid" : "ea16cc4bd518013",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712939013886,
+          "stop" : 1712939014140,
+          "duration" : 254
+        }
+      }, {
+        "uid" : "7d7d79ebd64e1f79",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712910257768,
+          "stop" : 1712910258002,
+          "duration" : 234
+        }
+      }, {
+        "uid" : "6100e60b85233655",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712884554011,
+          "stop" : 1712884554243,
+          "duration" : 232
+        }
+      }, {
+        "uid" : "c5406389fcf538b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712852542644,
+          "stop" : 1712852542865,
+          "duration" : 221
+        }
+      }, {
+        "uid" : "2032d3d2b906f287",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7fcf58d03130>>(\"[data-testid='chat-header-closeButton']\")\n +    where <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7fcf58d03130>> = <fixture.helper_base.HelperBase object at 0x7fcf58d03130>.check_css_selector_existence",
+        "time" : {
+          "start" : 1712823963896,
+          "stop" : 1712823967062,
+          "duration" : 3166
+        }
+      }, {
+        "uid" : "dadcc081e4165636",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712798204940,
+          "stop" : 1712798205150,
+          "duration" : 210
+        }
+      }, {
+        "uid" : "4cbbe5fc8dd45648",
+        "status" : "passed",
+        "time" : {
+          "start" : 1712766378232,
+          "stop" : 1712766378472,
+          "duration" : 240
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ada648f308836e01.json",
+  "parameterValues" : [ ]
+}
