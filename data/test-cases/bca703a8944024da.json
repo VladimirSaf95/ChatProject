@@ -1,21 +1,21 @@
 {
-  "uid" : "8ac5caee04f55288",
-  "name" : "test_tag_user",
-  "fullName" : "test.test_messages_functionality#test_tag_user",
-  "historyId" : "585b036b510637bc4e1227ec18f2d0bf",
+  "uid" : "bca703a8944024da",
+  "name" : "test_send_reaction",
+  "fullName" : "test.test_messages_functionality#test_send_reaction",
+  "historyId" : "c97f0dca0399de29e1f93fc1150eb31b",
   "time" : {
-    "start" : 1713342718295,
-    "stop" : 1713342719301,
-    "duration" : 1006
+    "start" : 1713371071379,
+    "stop" : 1713371071793,
+    "duration" : 414
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1713342076318,
-      "stop" : 1713342076318,
+      "start" : 1713370997802,
+      "stop" : 1713370997802,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +29,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1713342072222,
-      "stop" : 1713342076317,
-      "duration" : 4095
+      "start" : 1713370997802,
+      "stop" : 1713371003152,
+      "duration" : 5350
     },
     "status" : "passed",
     "steps" : [ ],
@@ -42,10 +42,10 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "api_client",
     "time" : {
-      "start" : 1713342072222,
-      "stop" : 1713342072222,
+      "start" : 1713371003152,
+      "stop" : 1713371003152,
       "duration" : 0
     },
     "status" : "passed",
@@ -60,18 +60,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Tagging player in chat",
+      "name" : "Setting reaction on message",
       "time" : {
-        "start" : 1713342718295,
-        "stop" : 1713342719299,
-        "duration" : 1004
+        "start" : 1713371071380,
+        "stop" : 1713371071792,
+        "duration" : 412
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Check response code",
         "time" : {
-          "start" : 1713342719299,
-          "stop" : 1713342719299,
+          "start" : 1713371071792,
+          "stop" : 1713371071792,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Check for invalid message in response",
         "time" : {
-          "start" : 1713342719299,
-          "stop" : 1713342719299,
+          "start" : 1713371071792,
+          "stop" : 1713371071792,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,8 +100,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response",
         "time" : {
-          "start" : 1713342719299,
-          "stop" : 1713342719299,
+          "start" : 1713371071792,
+          "stop" : 1713371071792,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
       }, {
         "name" : "Check response time",
         "time" : {
-          "start" : 1713342719299,
-          "stop" : 1713342719299,
+          "start" : 1713371071792,
+          "stop" : 1713371071792,
           "duration" : 0
         },
         "status" : "passed",
@@ -145,8 +145,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1713342793571,
-      "stop" : 1713342793571,
+      "start" : 1713371153398,
+      "stop" : 1713371153398,
       "duration" : 0
     },
     "status" : "passed",
@@ -159,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "story",
+    "value" : "Setting reaction"
+  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "feature",
-    "value" : "Tagging Players"
-  }, {
-    "name" : "story",
-    "value" : "Tagging player in chat"
+    "value" : "Reaction to Message"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -175,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "cc5ac03e5444"
+    "value" : "2e14968c3396"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,174 +205,174 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 59,
+        "passed" : 60,
         "unknown" : 0,
-        "total" : 63
+        "total" : 64
       },
       "items" : [ {
-        "uid" : "f0fafc9a634c02fb",
+        "uid" : "99d7701e529e1f4c",
         "status" : "passed",
         "time" : {
-          "start" : 1713316481119,
-          "stop" : 1713316482046,
+          "start" : 1713342717918,
+          "stop" : 1713342718293,
+          "duration" : 375
+        }
+      }, {
+        "uid" : "1b733cee0ed25968",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713316480431,
+          "stop" : 1713316481117,
+          "duration" : 686
+        }
+      }, {
+        "uid" : "81bab8a62e925e46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713285169501,
+          "stop" : 1713285170085,
+          "duration" : 584
+        }
+      }, {
+        "uid" : "b035a340f57df76a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713255760918,
+          "stop" : 1713255761845,
           "duration" : 927
         }
       }, {
-        "uid" : "8021611bcb47db67",
+        "uid" : "b41625ddae1079de",
         "status" : "passed",
         "time" : {
-          "start" : 1713285170087,
-          "stop" : 1713285170952,
-          "duration" : 865
+          "start" : 1713230038398,
+          "stop" : 1713230038772,
+          "duration" : 374
         }
       }, {
-        "uid" : "65f13e1f1d8db2b",
+        "uid" : "e5730e10224f21e9",
         "status" : "passed",
         "time" : {
-          "start" : 1713255761848,
-          "stop" : 1713255762500,
-          "duration" : 652
+          "start" : 1713198152944,
+          "stop" : 1713198153624,
+          "duration" : 680
         }
       }, {
-        "uid" : "f5c189e293abd503",
+        "uid" : "e22f54e67de61713",
         "status" : "passed",
         "time" : {
-          "start" : 1713230038774,
-          "stop" : 1713230039275,
-          "duration" : 501
+          "start" : 1713169132537,
+          "stop" : 1713169132893,
+          "duration" : 356
         }
       }, {
-        "uid" : "ab545ba319b9c30f",
+        "uid" : "9874bb24b81c5a87",
         "status" : "passed",
         "time" : {
-          "start" : 1713198153626,
-          "stop" : 1713198154281,
-          "duration" : 655
+          "start" : 1713151927886,
+          "stop" : 1713151928671,
+          "duration" : 785
         }
       }, {
-        "uid" : "7181f0d6c8a6de70",
+        "uid" : "1778700ca24df8b5",
         "status" : "passed",
         "time" : {
-          "start" : 1713169132895,
-          "stop" : 1713169133618,
-          "duration" : 723
+          "start" : 1713134182440,
+          "stop" : 1713134183017,
+          "duration" : 577
         }
       }, {
-        "uid" : "402bf19b3f48ec7d",
+        "uid" : "a8613bad1acc9cec",
         "status" : "passed",
         "time" : {
-          "start" : 1713151928674,
-          "stop" : 1713151929583,
-          "duration" : 909
+          "start" : 1713091430139,
+          "stop" : 1713091430471,
+          "duration" : 332
         }
       }, {
-        "uid" : "33d80af6201f76d3",
+        "uid" : "a06ca0a826262fe3",
         "status" : "passed",
         "time" : {
-          "start" : 1713134183018,
-          "stop" : 1713134183846,
-          "duration" : 828
+          "start" : 1713059210521,
+          "stop" : 1713059210832,
+          "duration" : 311
         }
       }, {
-        "uid" : "3f9f411710ad476a",
+        "uid" : "4eafc42d2beea806",
         "status" : "passed",
         "time" : {
-          "start" : 1713091430474,
-          "stop" : 1713091431189,
-          "duration" : 715
+          "start" : 1713025279074,
+          "stop" : 1713025280752,
+          "duration" : 1678
         }
       }, {
-        "uid" : "d6550c932403e0ea",
+        "uid" : "2c39fbcafdf7c426",
         "status" : "passed",
         "time" : {
-          "start" : 1713059210834,
-          "stop" : 1713059211302,
-          "duration" : 468
+          "start" : 1712996829603,
+          "stop" : 1712996830436,
+          "duration" : 833
         }
       }, {
-        "uid" : "e1e00b8350af7fd4",
+        "uid" : "c08081dc40947789",
         "status" : "passed",
         "time" : {
-          "start" : 1713025280754,
-          "stop" : 1713025281315,
-          "duration" : 561
+          "start" : 1712970108395,
+          "stop" : 1712970108734,
+          "duration" : 339
         }
       }, {
-        "uid" : "ef80e4a7e97e457a",
+        "uid" : "ffad1d3c7c5c4ca",
         "status" : "passed",
         "time" : {
-          "start" : 1712996830438,
-          "stop" : 1712996831387,
-          "duration" : 949
+          "start" : 1712938936199,
+          "stop" : 1712938936703,
+          "duration" : 504
         }
       }, {
-        "uid" : "10e5d8c677d9d7a9",
+        "uid" : "3c731486bd5b0626",
         "status" : "passed",
         "time" : {
-          "start" : 1712970108737,
-          "stop" : 1712970109197,
-          "duration" : 460
+          "start" : 1712910182513,
+          "stop" : 1712910182868,
+          "duration" : 355
         }
       }, {
-        "uid" : "3dcfd05823f11899",
+        "uid" : "7e8a214f235eb806",
         "status" : "passed",
         "time" : {
-          "start" : 1712938936705,
-          "stop" : 1712938938111,
-          "duration" : 1406
+          "start" : 1712884474638,
+          "stop" : 1712884476817,
+          "duration" : 2179
         }
       }, {
-        "uid" : "1937294d715b0c14",
+        "uid" : "ebb92e7a38812b1e",
         "status" : "passed",
         "time" : {
-          "start" : 1712910182870,
-          "stop" : 1712910183448,
-          "duration" : 578
+          "start" : 1712852466889,
+          "stop" : 1712852467224,
+          "duration" : 335
         }
       }, {
-        "uid" : "68e29730f96b5f9c",
+        "uid" : "98a06f0d13fffe28",
         "status" : "passed",
         "time" : {
-          "start" : 1712884476820,
-          "stop" : 1712884478300,
-          "duration" : 1480
+          "start" : 1712823885358,
+          "stop" : 1712823885694,
+          "duration" : 336
         }
       }, {
-        "uid" : "c88749cb07664eee",
+        "uid" : "6f4f399269ce50d4",
         "status" : "passed",
         "time" : {
-          "start" : 1712852467226,
-          "stop" : 1712852467830,
-          "duration" : 604
-        }
-      }, {
-        "uid" : "9857bc4900739c88",
-        "status" : "passed",
-        "time" : {
-          "start" : 1712823885695,
-          "stop" : 1712823886276,
-          "duration" : 581
-        }
-      }, {
-        "uid" : "58559efa49a5835e",
-        "status" : "passed",
-        "time" : {
-          "start" : 1712798124225,
-          "stop" : 1712798125817,
-          "duration" : 1592
-        }
-      }, {
-        "uid" : "71cfc3770523abd9",
-        "status" : "passed",
-        "time" : {
-          "start" : 1712766302934,
-          "stop" : 1712766303578,
-          "duration" : 644
+          "start" : 1712798123857,
+          "stop" : 1712798124222,
+          "duration" : 365
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "8ac5caee04f55288.json",
+  "source" : "bca703a8944024da.json",
   "parameterValues" : [ ]
 }
