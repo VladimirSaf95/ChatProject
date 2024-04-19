@@ -3,6 +3,13 @@ version: '3.7'
 services:
   regression:
     image: python:3.9.13-alpine3.16
+    jenkins:
+      image: jenkins/jenkins:lts
+      ports:
+        - "8080:8080"
+        - "50000:50000"
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
     build:
       context: .
       dockerfile: Dockerfile
