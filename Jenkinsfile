@@ -28,20 +28,5 @@ pipeline {
                 }
             }
         }
-
-        // Другие этапы пайплайна, если есть
-    }
-
-    post {
-        success {
-            // Публикация отчетов Allure в случае успешного завершения сборки
-            allure([
-                includeProperties: false,
-                jdk: '',
-                properties: [],
-                reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'allure-results']]
-            ])
-        }
     }
 }
