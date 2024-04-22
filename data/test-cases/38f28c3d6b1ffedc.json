@@ -1,0 +1,346 @@
+{
+  "uid" : "38f28c3d6b1ffedc",
+  "name" : "test_unblock_players",
+  "fullName" : "test.test_block_and_unblock#test_unblock_players",
+  "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
+  "time" : {
+    "start" : 1713774220437,
+    "stop" : 1713774240691,
+    "duration" : 20254
+  },
+  "status" : "broken",
+  "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "statusTrace" : "self = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n../local/lib/python3.9/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../local/lib/python3.9/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n../local/lib/python3.9/json/decoder.py:337: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7fae15522f10>\ns = '<!DOCTYPE html>\\n<html>\\n<head>\\n    <meta charset=\"UTF-8\" />\\n    <meta name=\"robots\" content=\"noindex,nofollow,noar....\\n        We will fix it as soon as possible. Sorry for any inconvenience caused.\\n    </p>\\n</div>\\n</body>\\n</html>'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\napi_client = <fixture.api_client.APIClient object at 0x7fae154b7550>\n\n    @pytest.mark.dependency(depends=[\"block_players\"])\n    @allure.feature(\"User Management\")\n    @allure.story(\"Unblocking Players\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_unblock_players(api_client):\n        with allure.step(\"Waiting for previous operations to complete\"):\n            # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока\n            time.sleep(20)\n    \n        with allure.step(\"Fetching information about blocked players before unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ДО\n            getuserbanbefore = api_client.getuserban()\n>           total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n\ntest/test_block_and_unblock.py:110: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/site-packages/requests/models.py:975: JSONDecodeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1713774219266,
+      "stop" : 1713774219266,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1713774208317,
+      "stop" : 1713774219266,
+      "duration" : 10949
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1713774208317,
+      "stop" : 1713774208317,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "statusTrace" : "self = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n../local/lib/python3.9/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../local/lib/python3.9/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n../local/lib/python3.9/json/decoder.py:337: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7fae15522f10>\ns = '<!DOCTYPE html>\\n<html>\\n<head>\\n    <meta charset=\"UTF-8\" />\\n    <meta name=\"robots\" content=\"noindex,nofollow,noar....\\n        We will fix it as soon as possible. Sorry for any inconvenience caused.\\n    </p>\\n</div>\\n</body>\\n</html>'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\napi_client = <fixture.api_client.APIClient object at 0x7fae154b7550>\n\n    @pytest.mark.dependency(depends=[\"block_players\"])\n    @allure.feature(\"User Management\")\n    @allure.story(\"Unblocking Players\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_unblock_players(api_client):\n        with allure.step(\"Waiting for previous operations to complete\"):\n            # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока\n            time.sleep(20)\n    \n        with allure.step(\"Fetching information about blocked players before unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ДО\n            getuserbanbefore = api_client.getuserban()\n>           total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n\ntest/test_block_and_unblock.py:110: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/site-packages/requests/models.py:975: JSONDecodeError",
+    "steps" : [ {
+      "name" : "Waiting for previous operations to complete",
+      "time" : {
+        "start" : 1713774220437,
+        "stop" : 1713774240457,
+        "duration" : 20020
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Fetching information about blocked players before unblocking",
+      "time" : {
+        "start" : 1713774240457,
+        "stop" : 1713774240691,
+        "duration" : 234
+      },
+      "status" : "broken",
+      "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+      "statusTrace" : "  File \"/usr/workspace/test/test_block_and_unblock.py\", line 110, in test_unblock_players\n    total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n  File \"/usr/local/lib/python3.9/site-packages/requests/models.py\", line 975, in json\n    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 2,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1713774374062,
+      "stop" : 1713774374062,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Unblocking Players"
+  }, {
+    "name" : "feature",
+    "value" : "User Management"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "tag",
+    "value" : "dependency(depends=['block_players'])"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_block_and_unblock"
+  }, {
+    "name" : "host",
+    "value" : "41e1a3701343"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_block_and_unblock"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 5,
+        "skipped" : 0,
+        "passed" : 72,
+        "unknown" : 0,
+        "total" : 77
+      },
+      "items" : [ {
+        "uid" : "f6729b9742f5e276",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713748557568,
+          "stop" : 1713748582826,
+          "duration" : 25258
+        }
+      }, {
+        "uid" : "49e173be7a386397",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713716489735,
+          "stop" : 1713716515070,
+          "duration" : 25335
+        }
+      }, {
+        "uid" : "74e1492acb46fe46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713687618824,
+          "stop" : 1713687644590,
+          "duration" : 25766
+        }
+      }, {
+        "uid" : "df187635e69e9cd9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713662346200,
+          "stop" : 1713662372133,
+          "duration" : 25933
+        }
+      }, {
+        "uid" : "1dbc0f851b13343",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713630073868,
+          "stop" : 1713630100654,
+          "duration" : 26786
+        }
+      }, {
+        "uid" : "66e143c762c867de",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713575603096,
+          "stop" : 1713575628555,
+          "duration" : 25459
+        }
+      }, {
+        "uid" : "9a8f663289eb2ebf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713543805741,
+          "stop" : 1713543832921,
+          "duration" : 27180
+        }
+      }, {
+        "uid" : "86ffba6eb990a7e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713514905505,
+          "stop" : 1713514931010,
+          "duration" : 25505
+        }
+      }, {
+        "uid" : "e3da218c0abbd57f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713489248978,
+          "stop" : 1713489274466,
+          "duration" : 25488
+        }
+      }, {
+        "uid" : "67b3c7560894bc62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713457344573,
+          "stop" : 1713457371877,
+          "duration" : 27304
+        }
+      }, {
+        "uid" : "38e850042bad136d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713428533235,
+          "stop" : 1713428558859,
+          "duration" : 25624
+        }
+      }, {
+        "uid" : "a268499d972c4878",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713402780461,
+          "stop" : 1713402805708,
+          "duration" : 25247
+        }
+      }, {
+        "uid" : "40766ddb3be6b2cd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713371013170,
+          "stop" : 1713371039416,
+          "duration" : 26246
+        }
+      }, {
+        "uid" : "ae1079dc00b5d8c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713342085055,
+          "stop" : 1713342111209,
+          "duration" : 26154
+        }
+      }, {
+        "uid" : "1f96f540d26a950",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713316411913,
+          "stop" : 1713316437318,
+          "duration" : 25405
+        }
+      }, {
+        "uid" : "710285d2e291b86",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713284537381,
+          "stop" : 1713284564107,
+          "duration" : 26726
+        }
+      }, {
+        "uid" : "9e04345f83bc44cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713255699978,
+          "stop" : 1713255726660,
+          "duration" : 26682
+        }
+      }, {
+        "uid" : "cf63af225243c51a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713229985095,
+          "stop" : 1713230010235,
+          "duration" : 25140
+        }
+      }, {
+        "uid" : "8cd9705dc900ac02",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713198098534,
+          "stop" : 1713198125358,
+          "duration" : 26824
+        }
+      }, {
+        "uid" : "b68d8ecd3b6ad64",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713169077344,
+          "stop" : 1713169102977,
+          "duration" : 25633
+        }
+      } ]
+    },
+    "tags" : [ "dependency(depends=['block_players'])" ]
+  },
+  "source" : "38f28c3d6b1ffedc.json",
+  "parameterValues" : [ ]
+}
