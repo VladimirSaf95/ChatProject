@@ -1,22 +1,22 @@
 {
-  "uid" : "1604ab9164ad0d60",
+  "uid" : "d4b657400e808341",
   "name" : "test_get_chanel",
   "fullName" : "test.test_get_chanel#test_get_chanel",
   "historyId" : "84e91ba442c690feffdfef2b3a65d80f",
   "time" : {
-    "start" : 1713975754449,
-    "stop" : 1713975754677,
-    "duration" : 228
+    "start" : 1714007831956,
+    "stop" : 1714007832142,
+    "duration" : 186
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1713975689403,
-      "stop" : 1713975689403,
-      "duration" : 0
+      "start" : 1714007768653,
+      "stop" : 1714007771465,
+      "duration" : 2812
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1713975685104,
-      "stop" : 1713975689403,
-      "duration" : 4299
+      "start" : 1714007771465,
+      "stop" : 1714007771466,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1713975685104,
-      "stop" : 1713975685104,
+      "start" : 1714007768653,
+      "stop" : 1714007768653,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending GET request for channels",
       "time" : {
-        "start" : 1713975754449,
-        "stop" : 1713975754675,
-        "duration" : 226
+        "start" : 1714007831957,
+        "stop" : 1714007832141,
+        "duration" : 184
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1713975754675,
-          "stop" : 1713975754675,
+          "start" : 1714007832141,
+          "stop" : 1714007832141,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Asserting response content",
         "time" : {
-          "start" : 1713975754675,
-          "stop" : 1713975754675,
+          "start" : 1714007832141,
+          "stop" : 1714007832141,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,9 +115,9 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1713975839328,
-      "stop" : 1713975839328,
-      "duration" : 0
+      "start" : 1714007914026,
+      "stop" : 1714007914027,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -132,11 +132,11 @@
     "name" : "feature",
     "value" : "Channel Operations"
   }, {
-    "name" : "severity",
-    "value" : "critical"
-  }, {
     "name" : "story",
     "value" : "Checking Channel Retrieval"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -145,7 +145,7 @@
     "value" : "test_get_chanel"
   }, {
     "name" : "host",
-    "value" : "46c081eed341"
+    "value" : "736735b50ba0"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 79,
+        "passed" : 80,
         "unknown" : 0,
-        "total" : 84
+        "total" : 85
       },
       "items" : [ {
+        "uid" : "1604ab9164ad0d60",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713975754449,
+          "stop" : 1713975754677,
+          "duration" : 228
+        }
+      }, {
         "uid" : "d043d8ea23b517b8",
         "status" : "passed",
         "time" : {
@@ -332,18 +340,10 @@
           "stop" : 1713402833964,
           "duration" : 189
         }
-      }, {
-        "uid" : "6a1629bfe4eac22b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713371063442,
-          "stop" : 1713371063702,
-          "duration" : 260
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "1604ab9164ad0d60.json",
+  "source" : "d4b657400e808341.json",
   "parameterValues" : [ ]
 }

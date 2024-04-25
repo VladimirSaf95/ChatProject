@@ -1,22 +1,22 @@
 {
-  "uid" : "bf9045e24acb5605",
+  "uid" : "28e13492eb779553",
   "name" : "test_send_url",
   "fullName" : "test.test_messages_functionality#test_send_url",
   "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
   "time" : {
-    "start" : 1713975761347,
-    "stop" : 1713975762090,
-    "duration" : 743
+    "start" : 1714007837606,
+    "stop" : 1714007838208,
+    "duration" : 602
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1713975689403,
-      "stop" : 1713975689403,
-      "duration" : 0
+      "start" : 1714007768653,
+      "stop" : 1714007771465,
+      "duration" : 2812
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1713975685104,
-      "stop" : 1713975689403,
-      "duration" : 4299
+      "start" : 1714007771465,
+      "stop" : 1714007771466,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1713975685104,
-      "stop" : 1713975685104,
+      "start" : 1714007768653,
+      "stop" : 1714007768653,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending allowed URL",
       "time" : {
-        "start" : 1713975761347,
-        "stop" : 1713975761904,
-        "duration" : 557
+        "start" : 1714007837606,
+        "stop" : 1714007838030,
+        "duration" : 424
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for allowed URL",
         "time" : {
-          "start" : 1713975761904,
-          "stop" : 1713975761904,
+          "start" : 1714007838030,
+          "stop" : 1714007838030,
           "duration" : 0
         },
         "status" : "passed",
@@ -92,16 +92,16 @@
     }, {
       "name" : "Sending disallowed URL",
       "time" : {
-        "start" : 1713975761904,
-        "stop" : 1713975762087,
-        "duration" : 183
+        "start" : 1714007838030,
+        "stop" : 1714007838205,
+        "duration" : 175
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for disallowed URL",
         "time" : {
-          "start" : 1713975762087,
-          "stop" : 1713975762087,
+          "start" : 1714007838205,
+          "stop" : 1714007838205,
           "duration" : 0
         },
         "status" : "passed",
@@ -130,9 +130,9 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1713975839328,
-      "stop" : 1713975839328,
-      "duration" : 0
+      "start" : 1714007914026,
+      "stop" : 1714007914027,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -144,14 +144,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Sending Allowed and Disallowed URLs"
-  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "feature",
     "value" : "Sending URLs"
+  }, {
+    "name" : "story",
+    "value" : "Sending Allowed and Disallowed URLs"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "46c081eed341"
+    "value" : "736735b50ba0"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 79,
+        "passed" : 80,
         "unknown" : 0,
-        "total" : 84
+        "total" : 85
       },
       "items" : [ {
+        "uid" : "bf9045e24acb5605",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713975761347,
+          "stop" : 1713975762090,
+          "duration" : 743
+        }
+      }, {
         "uid" : "3956ccdba257b7ed",
         "status" : "passed",
         "time" : {
@@ -347,18 +355,10 @@
           "stop" : 1713402839594,
           "duration" : 950
         }
-      }, {
-        "uid" : "e1b7845e01a17d1c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713371072505,
-          "stop" : 1713371073946,
-          "duration" : 1441
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "bf9045e24acb5605.json",
+  "source" : "28e13492eb779553.json",
   "parameterValues" : [ ]
 }
