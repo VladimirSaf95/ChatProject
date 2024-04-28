@@ -1,37 +1,22 @@
 {
-  "uid" : "6a90f129a03985b0",
+  "uid" : "f18d2c43ad55da77",
   "name" : "test_open_rules_in_different_locales",
   "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
   "historyId" : "407693a6fd5ff6488821603261c63665",
   "time" : {
-    "start" : 1714292558786,
-    "stop" : 1714292563832,
-    "duration" : 5046
+    "start" : 1714321267013,
+    "stop" : 1714321272577,
+    "duration" : 5564
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "app",
+    "name" : "api_client",
     "time" : {
-      "start" : 1714292540670,
-      "stop" : 1714292541963,
-      "duration" : 1293
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1714292503751,
-      "stop" : 1714292503751,
-      "duration" : 0
+      "start" : 1714321212113,
+      "stop" : 1714321212114,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,9 +29,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1714292503751,
-      "stop" : 1714292507517,
-      "duration" : 3766
+      "start" : 1714321209176,
+      "stop" : 1714321212113,
+      "duration" : 2937
     },
     "status" : "passed",
     "steps" : [ ],
@@ -57,11 +42,26 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1714292507517,
-      "stop" : 1714292507517,
+      "start" : 1714321209176,
+      "stop" : 1714321209176,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1714321246527,
+      "stop" : 1714321247360,
+      "duration" : 833
     },
     "status" : "passed",
     "steps" : [ ],
@@ -77,9 +77,9 @@
     "steps" : [ {
       "name" : "Opening chat rules",
       "time" : {
-        "start" : 1714292558888,
-        "stop" : 1714292559654,
-        "duration" : 766
+        "start" : 1714321267116,
+        "stop" : 1714321267883,
+        "duration" : 767
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "Verifying chat rules in English locale",
       "time" : {
-        "start" : 1714292559654,
-        "stop" : 1714292559687,
-        "duration" : 33
+        "start" : 1714321267883,
+        "stop" : 1714321267924,
+        "duration" : 41
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,9 +107,9 @@
     }, {
       "name" : "Switching to Russian locale and verifying chat rules",
       "time" : {
-        "start" : 1714292559687,
-        "stop" : 1714292563831,
-        "duration" : 4144
+        "start" : 1714321267924,
+        "stop" : 1714321272577,
+        "duration" : 4653
       },
       "status" : "passed",
       "steps" : [ ],
@@ -128,11 +128,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "app::0",
+    "name" : "api_client::0",
     "time" : {
-      "start" : 1714292648167,
-      "stop" : 1714292648234,
-      "duration" : 67
+      "start" : 1714321356045,
+      "stop" : 1714321356045,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -143,11 +143,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client::0",
+    "name" : "app::0",
     "time" : {
-      "start" : 1714292648234,
-      "stop" : 1714292648234,
-      "duration" : 0
+      "start" : 1714321355978,
+      "stop" : 1714321356045,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -159,11 +159,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "story",
     "value" : "Opening Chat Rules in Different Locales"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "feature",
     "value" : "Chat Rules"
@@ -175,7 +175,7 @@
     "value" : "test_clickable_button_rules"
   }, {
     "name" : "host",
-    "value" : "56c9c479b733"
+    "value" : "5772ce9f663d"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 4,
         "broken" : 12,
         "skipped" : 0,
-        "passed" : 78,
+        "passed" : 79,
         "unknown" : 0,
-        "total" : 94
+        "total" : 95
       },
       "items" : [ {
+        "uid" : "6a90f129a03985b0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714292558786,
+          "stop" : 1714292563832,
+          "duration" : 5046
+        }
+      }, {
         "uid" : "77a51af4db306d9d",
         "status" : "passed",
         "time" : {
@@ -364,18 +372,10 @@
           "stop" : 1713716537352,
           "duration" : 5269
         }
-      }, {
-        "uid" : "5089f413545582f0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713687662390,
-          "stop" : 1713687670721,
-          "duration" : 8331
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "6a90f129a03985b0.json",
+  "source" : "f18d2c43ad55da77.json",
   "parameterValues" : [ ]
 }
