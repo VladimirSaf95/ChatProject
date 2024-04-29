@@ -1,22 +1,22 @@
 {
-  "uid" : "db9fd980daa761e3",
+  "uid" : "79e935eda148c728",
   "name" : "test_send_emoji",
   "fullName" : "test.test_messages_functionality#test_send_emoji",
   "historyId" : "7bb320f962adcc3b1847931bf3d7efa9",
   "time" : {
-    "start" : 1714353413934,
-    "stop" : 1714353414361,
-    "duration" : 427
+    "start" : 1714379082332,
+    "stop" : 1714379083048,
+    "duration" : 716
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1714353348903,
-      "stop" : 1714353352087,
-      "duration" : 3184
+      "start" : 1714379011477,
+      "stop" : 1714379011477,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1714353348902,
-      "stop" : 1714353348902,
+      "start" : 1714379005213,
+      "stop" : 1714379005213,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1714353352087,
-      "stop" : 1714353352088,
-      "duration" : 1
+      "start" : 1714379005213,
+      "stop" : 1714379011476,
+      "duration" : 6263
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending emoji and checking response",
       "time" : {
-        "start" : 1714353413935,
-        "stop" : 1714353414360,
-        "duration" : 425
+        "start" : 1714379082332,
+        "stop" : 1714379083047,
+        "duration" : 715
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Check response code",
         "time" : {
-          "start" : 1714353414359,
-          "stop" : 1714353414359,
+          "start" : 1714379083047,
+          "stop" : 1714379083047,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Check for invalid message in response",
         "time" : {
-          "start" : 1714353414359,
-          "stop" : 1714353414359,
+          "start" : 1714379083047,
+          "stop" : 1714379083047,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,8 +100,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response",
         "time" : {
-          "start" : 1714353414359,
-          "stop" : 1714353414359,
+          "start" : 1714379083047,
+          "stop" : 1714379083047,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,9 +115,9 @@
       }, {
         "name" : "Check response time",
         "time" : {
-          "start" : 1714353414359,
-          "stop" : 1714353414360,
-          "duration" : 1
+          "start" : 1714379083047,
+          "stop" : 1714379083047,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ ],
@@ -145,8 +145,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1714353492289,
-      "stop" : 1714353492289,
+      "start" : 1714379163510,
+      "stop" : 1714379163510,
       "duration" : 0
     },
     "status" : "passed",
@@ -159,11 +159,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Sending Emoji"
-  }, {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "Sending Emoji"
   }, {
     "name" : "feature",
     "value" : "Sending Messages"
@@ -175,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "80e69d98c272"
+    "value" : "25115622060c"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 91,
+        "passed" : 92,
         "unknown" : 0,
-        "total" : 96
+        "total" : 97
       },
       "items" : [ {
+        "uid" : "db9fd980daa761e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714353413934,
+          "stop" : 1714353414361,
+          "duration" : 427
+        }
+      }, {
         "uid" : "16ff3f1222b3abc8",
         "status" : "passed",
         "time" : {
@@ -362,18 +370,10 @@
           "stop" : 1713774292391,
           "duration" : 557
         }
-      }, {
-        "uid" : "62aece9985e442ad",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713748608706,
-          "stop" : 1713748609193,
-          "duration" : 487
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "db9fd980daa761e3.json",
+  "source" : "79e935eda148c728.json",
   "parameterValues" : [ ]
 }
