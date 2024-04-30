@@ -1,21 +1,21 @@
 {
-  "uid" : "c39aca4bc7abaf",
+  "uid" : "242ced97dc0bf0a4",
   "name" : "test_get_user_ban",
   "fullName" : "test.test_block_and_unblock#test_get_user_ban",
   "historyId" : "f5b3dfaebdee0a0aef475549ad00aaa4",
   "time" : {
-    "start" : 1714407707974,
-    "stop" : 1714407708741,
-    "duration" : 767
+    "start" : 1714439663049,
+    "stop" : 1714439663522,
+    "duration" : 473
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1714407707973,
-      "stop" : 1714407707973,
+      "start" : 1714439660337,
+      "stop" : 1714439660337,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +29,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1714407698773,
-      "stop" : 1714407707973,
-      "duration" : 9200
+      "start" : 1714439660338,
+      "stop" : 1714439663048,
+      "duration" : 2710
     },
     "status" : "passed",
     "steps" : [ ],
@@ -42,10 +42,10 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "api_client",
     "time" : {
-      "start" : 1714407698772,
-      "stop" : 1714407698772,
+      "start" : 1714439663048,
+      "stop" : 1714439663048,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending GET request for blocked players",
       "time" : {
-        "start" : 1714407707974,
-        "stop" : 1714407708739,
-        "duration" : 765
+        "start" : 1714439663049,
+        "stop" : 1714439663521,
+        "duration" : 472
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1714407708739,
-          "stop" : 1714407708739,
+          "start" : 1714439663521,
+          "stop" : 1714439663521,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Asserting JSON content",
         "time" : {
-          "start" : 1714407708739,
-          "stop" : 1714407708739,
+          "start" : 1714439663521,
+          "stop" : 1714439663521,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1714407867402,
-      "stop" : 1714407867402,
+      "start" : 1714439804367,
+      "stop" : 1714439804367,
       "duration" : 0
     },
     "status" : "passed",
@@ -129,14 +129,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Player Management"
+  }, {
     "name" : "story",
     "value" : "Checking Blocked Players Retrieval"
   }, {
     "name" : "severity",
     "value" : "critical"
-  }, {
-    "name" : "feature",
-    "value" : "Player Management"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -145,7 +145,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "ca17d237233b"
+    "value" : "e952c0cbe7f8"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 93,
+        "passed" : 94,
         "unknown" : 0,
-        "total" : 98
+        "total" : 99
       },
       "items" : [ {
+        "uid" : "c39aca4bc7abaf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714407707974,
+          "stop" : 1714407708741,
+          "duration" : 767
+        }
+      }, {
         "uid" : "979968f78162b952",
         "status" : "passed",
         "time" : {
@@ -331,18 +339,10 @@
           "stop" : 1713834880057,
           "duration" : 468
         }
-      }, {
-        "uid" : "f6460f783bcb970b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713802915715,
-          "stop" : 1713802915973,
-          "duration" : 258
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c39aca4bc7abaf.json",
+  "source" : "242ced97dc0bf0a4.json",
   "parameterValues" : [ ]
 }
