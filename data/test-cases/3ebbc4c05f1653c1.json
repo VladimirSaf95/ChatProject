@@ -1,21 +1,36 @@
 {
-  "uid" : "dabfcf427b3a9b98",
+  "uid" : "3ebbc4c05f1653c1",
   "name" : "test_send_complaint",
   "fullName" : "test.test_messages_functionality#test_send_complaint",
   "historyId" : "31f8786fe3f6ff4b035b30b6ade7469c",
   "time" : {
-    "start" : 1714465979846,
-    "stop" : 1714465980465,
-    "duration" : 619
+    "start" : 1714494224444,
+    "stop" : 1714494225566,
+    "duration" : 1122
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1714494145636,
+      "stop" : 1714494149592,
+      "duration" : 3956
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "config",
     "time" : {
-      "start" : 1714465332990,
-      "stop" : 1714465332990,
+      "start" : 1714494145636,
+      "stop" : 1714494145636,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,24 +44,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1714465336551,
-      "stop" : 1714465336551,
+      "start" : 1714494149592,
+      "stop" : 1714494149592,
       "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1714465332990,
-      "stop" : 1714465336551,
-      "duration" : 3561
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Filing complaint on message",
       "time" : {
-        "start" : 1714465979846,
-        "stop" : 1714465980463,
-        "duration" : 617
+        "start" : 1714494224444,
+        "stop" : 1714494225565,
+        "duration" : 1121
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1714465980463,
-        "stop" : 1714465980463,
+        "start" : 1714494225565,
+        "stop" : 1714494225565,
         "duration" : 0
       },
       "status" : "passed",
@@ -100,8 +100,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1714466051869,
-      "stop" : 1714466051869,
+      "start" : 1714494303660,
+      "stop" : 1714494303660,
       "duration" : 0
     },
     "status" : "passed",
@@ -114,11 +114,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "critical"
-  }, {
     "name" : "feature",
     "value" : "Sending Complaints"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "story",
     "value" : "Filing Complaint on Message"
@@ -130,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "5c48d0f5e83f"
+    "value" : "53d002236daa"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,11 +160,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 95,
+        "passed" : 96,
         "unknown" : 0,
-        "total" : 100
+        "total" : 101
       },
       "items" : [ {
+        "uid" : "dabfcf427b3a9b98",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714465979846,
+          "stop" : 1714465980465,
+          "duration" : 619
+        }
+      }, {
         "uid" : "4ae26ca0d2725428",
         "status" : "passed",
         "time" : {
@@ -316,18 +324,10 @@
           "stop" : 1713889398566,
           "duration" : 1042
         }
-      }, {
-        "uid" : "6b70daf7e9e82490",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713860560303,
-          "stop" : 1713860561104,
-          "duration" : 801
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "dabfcf427b3a9b98.json",
+  "source" : "3ebbc4c05f1653c1.json",
   "parameterValues" : [ ]
 }

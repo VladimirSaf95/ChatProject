@@ -1,21 +1,36 @@
 {
-  "uid" : "ce1820a486496463",
+  "uid" : "7a4f1cb2ef7c0bc8",
   "name" : "test_send_gif",
   "fullName" : "test.test_messages_functionality#test_send_gif",
   "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
   "time" : {
-    "start" : 1714465979137,
-    "stop" : 1714465979844,
-    "duration" : 707
+    "start" : 1714494222748,
+    "stop" : 1714494224442,
+    "duration" : 1694
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1714494145636,
+      "stop" : 1714494149592,
+      "duration" : 3956
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "config",
     "time" : {
-      "start" : 1714465332990,
-      "stop" : 1714465332990,
+      "start" : 1714494145636,
+      "stop" : 1714494145636,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,24 +44,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1714465336551,
-      "stop" : 1714465336551,
+      "start" : 1714494149592,
+      "stop" : 1714494149592,
       "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1714465332990,
-      "stop" : 1714465336551,
-      "duration" : 3561
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Sending GIF message",
       "time" : {
-        "start" : 1714465979137,
-        "stop" : 1714465979842,
-        "duration" : 705
+        "start" : 1714494222748,
+        "stop" : 1714494224441,
+        "duration" : 1693
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1714465979842,
-        "stop" : 1714465979842,
+        "start" : 1714494224441,
+        "stop" : 1714494224441,
         "duration" : 0
       },
       "status" : "passed",
@@ -92,8 +92,8 @@
     }, {
       "name" : "Asserting response text",
       "time" : {
-        "start" : 1714465979842,
-        "stop" : 1714465979842,
+        "start" : 1714494224441,
+        "stop" : 1714494224441,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,8 +107,8 @@
     }, {
       "name" : "Asserting 'event_id' key in JSON response",
       "time" : {
-        "start" : 1714465979842,
-        "stop" : 1714465979842,
+        "start" : 1714494224441,
+        "stop" : 1714494224441,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,8 +122,8 @@
     }, {
       "name" : "Asserting response time",
       "time" : {
-        "start" : 1714465979842,
-        "stop" : 1714465979842,
+        "start" : 1714494224441,
+        "stop" : 1714494224441,
         "duration" : 0
       },
       "status" : "passed",
@@ -145,8 +145,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1714466051869,
-      "stop" : 1714466051869,
+      "start" : 1714494303660,
+      "stop" : 1714494303660,
       "duration" : 0
     },
     "status" : "passed",
@@ -159,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Sending GIF in Chat"
-  }, {
     "name" : "feature",
     "value" : "Sending GIFs"
   }, {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "Sending GIF in Chat"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -175,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "5c48d0f5e83f"
+    "value" : "53d002236daa"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 95,
+        "passed" : 96,
         "unknown" : 0,
-        "total" : 100
+        "total" : 101
       },
       "items" : [ {
+        "uid" : "ce1820a486496463",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714465979137,
+          "stop" : 1714465979844,
+          "duration" : 707
+        }
+      }, {
         "uid" : "c7d85f1f37714fb3",
         "status" : "passed",
         "time" : {
@@ -361,18 +369,10 @@
           "stop" : 1713889397522,
           "duration" : 549
         }
-      }, {
-        "uid" : "16091fd51d937a6e",
-        "status" : "passed",
-        "time" : {
-          "start" : 1713860559760,
-          "stop" : 1713860560300,
-          "duration" : 540
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "ce1820a486496463.json",
+  "source" : "7a4f1cb2ef7c0bc8.json",
   "parameterValues" : [ ]
 }
