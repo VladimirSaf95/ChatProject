@@ -1,12 +1,12 @@
 {
-  "uid" : "cf16a6aaad9e23bc",
+  "uid" : "3881a9988ff6ad4c",
   "name" : "test_block_players",
   "fullName" : "test.test_block_and_unblock#test_block_players",
   "historyId" : "d38eeef11179490ead748d140d16f0e6",
   "time" : {
-    "start" : 1714666897993,
-    "stop" : 1714666905190,
-    "duration" : 7197
+    "start" : 1714699056857,
+    "stop" : 1714699063601,
+    "duration" : 6744
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1714666897502,
-      "stop" : 1714666897502,
+      "start" : 1714699056652,
+      "stop" : 1714699056652,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1714666894456,
-      "stop" : 1714666894456,
+      "start" : 1714699054054,
+      "stop" : 1714699054054,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1714666894456,
-      "stop" : 1714666897502,
-      "duration" : 3046
+      "start" : 1714699054054,
+      "stop" : 1714699056651,
+      "duration" : 2597
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Getting information about banned players before the test",
       "time" : {
-        "start" : 1714666897993,
-        "stop" : 1714666898506,
-        "duration" : 513
+        "start" : 1714699056857,
+        "stop" : 1714699057343,
+        "duration" : 486
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,9 +77,9 @@
     }, {
       "name" : "Sending message and blocking player",
       "time" : {
-        "start" : 1714666898506,
-        "stop" : 1714666904707,
-        "duration" : 6201
+        "start" : 1714699057343,
+        "stop" : 1714699063386,
+        "duration" : 6043
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "Getting information about banned players after the test",
       "time" : {
-        "start" : 1714666904707,
-        "stop" : 1714666905186,
-        "duration" : 479
+        "start" : 1714699063386,
+        "stop" : 1714699063597,
+        "duration" : 211
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,8 +107,8 @@
     }, {
       "name" : "Verifying response status code",
       "time" : {
-        "start" : 1714666905187,
-        "stop" : 1714666905187,
+        "start" : 1714699063597,
+        "stop" : 1714699063597,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,8 +122,8 @@
     }, {
       "name" : "Verifying 'total' key in response JSON before and after",
       "time" : {
-        "start" : 1714666905187,
-        "stop" : 1714666905187,
+        "start" : 1714699063597,
+        "stop" : 1714699063597,
         "duration" : 0
       },
       "status" : "passed",
@@ -137,8 +137,8 @@
     }, {
       "name" : "Verifying the increase in banned players count",
       "time" : {
-        "start" : 1714666905187,
-        "stop" : 1714666905187,
+        "start" : 1714699063597,
+        "stop" : 1714699063597,
         "duration" : 0
       },
       "status" : "passed",
@@ -160,8 +160,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1714667037246,
-      "stop" : 1714667037246,
+      "start" : 1714699195016,
+      "stop" : 1714699195016,
       "duration" : 0
     },
     "status" : "passed",
@@ -174,14 +174,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "blocker"
+    "name" : "story",
+    "value" : "Player Blocking Test"
   }, {
     "name" : "feature",
     "value" : "Player Blocking"
   }, {
-    "name" : "story",
-    "value" : "Player Blocking Test"
+    "name" : "severity",
+    "value" : "blocker"
   }, {
     "name" : "tag",
     "value" : "dependency(name='block_players')"
@@ -193,7 +193,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "9f309c1c9016"
+    "value" : "a53b75f86161"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -223,11 +223,19 @@
         "failed" : 5,
         "broken" : 5,
         "skipped" : 0,
-        "passed" : 97,
+        "passed" : 98,
         "unknown" : 0,
-        "total" : 107
+        "total" : 108
       },
       "items" : [ {
+        "uid" : "cf16a6aaad9e23bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714666897993,
+          "stop" : 1714666905190,
+          "duration" : 7197
+        }
+      }, {
         "uid" : "2fe9aa99e926339b",
         "status" : "passed",
         "time" : {
@@ -379,18 +387,10 @@
           "stop" : 1714094092337,
           "duration" : 7892
         }
-      }, {
-        "uid" : "1cde0d35ab5dfb34",
-        "status" : "passed",
-        "time" : {
-          "start" : 1714062102103,
-          "stop" : 1714062109910,
-          "duration" : 7807
-        }
       } ]
     },
     "tags" : [ "dependency(name='block_players')" ]
   },
-  "source" : "cf16a6aaad9e23bc.json",
+  "source" : "3881a9988ff6ad4c.json",
   "parameterValues" : [ ]
 }
