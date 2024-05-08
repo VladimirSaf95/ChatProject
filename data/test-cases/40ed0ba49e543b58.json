@@ -1,0 +1,319 @@
+{
+  "uid" : "40ed0ba49e543b58",
+  "name" : "test_click_chat_button_close",
+  "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
+  "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
+  "time" : {
+    "start" : 1715186064349,
+    "stop" : 1715186064349,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+  "statusTrace" : "request = <SubRequest 'app' for <Function test_click_chat_room>>\nconfig = {'api': {'Login_admin': 'testchat100', 'Login_player': 'testchat101', 'Password_admin': 'Qwert123}', 'Password_player': 'Qwert123}', ...}, 'web': {'baseUrl': 'https://qamain.kit.casino/'}}\ninit_authorization = (<fixture.authorization.Authorization object at 0x7f26acd29190>, 'syt_NjM0MGQ4MWUtZjIyMC00OTMxLTg4ZWItZjNhZTU2OTJjYTdi...yNGMtMjg0ODRhN2QwY2Yz_srQeTqvMYHdVNIetmnSM_2oMImG', '4ea5b488-733b-4566-924c-28484a7d0cf3', '!qQtVtblQXsAHkkuYCN', ...)\n\n    @pytest.fixture(scope=\"session\", autouse=False)\n    def app(request, config, init_authorization):\n        # Фикстура для инициализации приложения (открытия браузера).\n        web_config = config[\"web\"]\n        browser = request.config.getoption(\"--browser\")\n        auth, player_access_token, player_user_id, admin_access_token, admin_user_id, roomA, room_second_part, roomB, admin_api_token = init_authorization\n    \n>       app_fixture = Application(browser=browser, base_url=web_config['baseUrl'], roomA=roomA, room_second_part=room_second_part, roomB=roomB)\n\nconftest.py:92: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nfixture/application.py:17: in __init__\n    self.wd = webdriver.Chrome(options=options)\n../local/lib/python3.9/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__\n    super().__init__(\n../local/lib/python3.9/site-packages/selenium/webdriver/chromium/webdriver.py:61: in __init__\n    super().__init__(command_executor=executor, options=options)\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:208: in __init__\n    self.start_session(capabilities)\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:292: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f26acd29d00>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created\\\\nfrom timeout: Timed out receiving message from renderer: 600.000\\\\n  (Session info: headless chrome=102.0.5005.182)\",\"stacktrace\":\"\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nE       from timeout: Timed out receiving message from renderer: 600.000\nE         (Session info: headless chrome=102.0.5005.182)\n\n../local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py:229: SessionNotCreatedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1715185351849,
+      "stop" : 1715185351849,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1715185385077,
+      "stop" : 1715185985466,
+      "duration" : 600389
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)\n\n",
+    "statusTrace" : "  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 166, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/usr/local/lib/python3.9/site-packages/pluggy/_callers.py\", line 102, in _multicall\n    res = hook_impl.function(*args)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1132, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/usr/local/lib/python3.9/site-packages/_pytest/fixtures.py\", line 906, in call_fixture_func\n    fixture_result = next(generator)\n  File \"/usr/workspace/conftest.py\", line 92, in app\n    app_fixture = Application(browser=browser, base_url=web_config['baseUrl'], roomA=roomA, room_second_part=room_second_part, roomB=roomB)\n  File \"/usr/workspace/fixture/application.py\", line 17, in __init__\n    self.wd = webdriver.Chrome(options=options)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/chrome/webdriver.py\", line 45, in __init__\n    super().__init__(\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/chromium/webdriver.py\", line 61, in __init__\n    super().__init__(command_executor=executor, options=options)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py\", line 208, in __init__\n    self.start_session(capabilities)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py\", line 292, in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py\", line 347, in execute\n    self.error_handler.check_response(response)\n  File \"/usr/local/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 0,
+    "hasContent" : true
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1715185349007,
+      "stop" : 1715185351849,
+      "duration" : 2842
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1715185349007,
+      "stop" : 1715185349007,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1715186064451,
+      "stop" : 1715186064451,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Clicking Chat Button to Close"
+  }, {
+    "name" : "feature",
+    "value" : "Chat Functionality"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_open_and_close_chat"
+  }, {
+    "name" : "host",
+    "value" : "e5a824ccc100"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_open_and_close_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 20,
+        "skipped" : 0,
+        "passed" : 102,
+        "unknown" : 0,
+        "total" : 125
+      },
+      "items" : [ {
+        "uid" : "5201f6f6746a3bf4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715156549677,
+          "stop" : 1715156549934,
+          "duration" : 257
+        }
+      }, {
+        "uid" : "d9c70fd7f78c43d7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715130322611,
+          "stop" : 1715130322883,
+          "duration" : 272
+        }
+      }, {
+        "uid" : "d913ba8aa0de6fb1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715098995679,
+          "stop" : 1715098995941,
+          "duration" : 262
+        }
+      }, {
+        "uid" : "65fb115818ce56be",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715070816570,
+          "stop" : 1715070816570,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "6d3665e747a6479d",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715045293452,
+          "stop" : 1715045293452,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "464951c015aa712b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715012832224,
+          "stop" : 1715012832530,
+          "duration" : 306
+        }
+      }, {
+        "uid" : "54ca40b2da9a5aac",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1714983870381,
+          "stop" : 1714983870381,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ef0149f10677897d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714958329181,
+          "stop" : 1714958329444,
+          "duration" : 263
+        }
+      }, {
+        "uid" : "ded0623cf87561df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714926274092,
+          "stop" : 1714926274374,
+          "duration" : 282
+        }
+      }, {
+        "uid" : "755478175f2b6fe4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714897373423,
+          "stop" : 1714897373674,
+          "duration" : 251
+        }
+      }, {
+        "uid" : "d5f6b16a62f356a8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714872122235,
+          "stop" : 1714872122474,
+          "duration" : 239
+        }
+      }, {
+        "uid" : "c34f2ba891767733",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714839827861,
+          "stop" : 1714839828143,
+          "duration" : 282
+        }
+      }, {
+        "uid" : "352424c3af4d1a4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714810973629,
+          "stop" : 1714810973881,
+          "duration" : 252
+        }
+      }, {
+        "uid" : "5070e7a819c7165a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714785389514,
+          "stop" : 1714785389762,
+          "duration" : 248
+        }
+      }, {
+        "uid" : "a002bc7d05b06472",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714753559126,
+          "stop" : 1714753559382,
+          "duration" : 256
+        }
+      }, {
+        "uid" : "eaf7d0402692aefa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714724598065,
+          "stop" : 1714724598352,
+          "duration" : 287
+        }
+      }, {
+        "uid" : "80658d4cbc7f191c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714699191440,
+          "stop" : 1714699191749,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "d837ad7b5f948d8e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714667033724,
+          "stop" : 1714667033985,
+          "duration" : 261
+        }
+      }, {
+        "uid" : "f02307d468e7fc97",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714638258391,
+          "stop" : 1714638258690,
+          "duration" : 299
+        }
+      }, {
+        "uid" : "7619ed2b9f801934",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714612594740,
+          "stop" : 1714612595013,
+          "duration" : 273
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "40ed0ba49e543b58.json",
+  "parameterValues" : [ ]
+}
