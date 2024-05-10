@@ -1,23 +1,23 @@
 {
-  "uid" : "7f021abf11881fa3",
+  "uid" : "beb1f2b05a349fcd",
   "name" : "test_delete_dmsg",
   "fullName" : "test.test_messages_functionality#test_delete_dmsg",
   "historyId" : "f19e9c8f1ee94d8815bdda0bfa138b0a",
   "time" : {
-    "start" : 1715303872823,
-    "stop" : 1715303932940,
-    "duration" : 60117
+    "start" : 1715329397769,
+    "stop" : 1715329457899,
+    "duration" : 60130
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7fae01d2b340>\n\n    @allure.feature(\"Message Operations\")\n    @allure.story(\"Deleting Messages\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_delete_dmsg(api_client):\n        with allure.step(\"Checking if event_id is available\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            # Проверка, что event_id был получен в предыдущем тесте\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n        with allure.step(\"Sending DELETE request to delete message\"):\n            response = api_client.delete_token_s(f\"api/v1/synapse/message/{api_client.roomB}%3A{api_client.room_second_part}/{event_id}\")\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 504 == 200\nE                +  where 504 = <Response [504]>.status_code\n\ntest/test_messages_functionality.py:323: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7fa962c4da60>\n\n    @allure.feature(\"Message Operations\")\n    @allure.story(\"Deleting Messages\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_delete_dmsg(api_client):\n        with allure.step(\"Checking if event_id is available\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            # Проверка, что event_id был получен в предыдущем тесте\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n        with allure.step(\"Sending DELETE request to delete message\"):\n            response = api_client.delete_token_s(f\"api/v1/synapse/message/{api_client.roomB}%3A{api_client.room_second_part}/{event_id}\")\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 504 == 200\nE                +  where 504 = <Response [504]>.status_code\n\ntest/test_messages_functionality.py:323: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1715303801185,
-      "stop" : 1715303801185,
+      "start" : 1715329324121,
+      "stop" : 1715329324121,
       "duration" : 0
     },
     "status" : "passed",
@@ -31,9 +31,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1715303798660,
-      "stop" : 1715303801185,
-      "duration" : 2525
+      "start" : 1715329321079,
+      "stop" : 1715329324121,
+      "duration" : 3042
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,8 +46,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1715303798660,
-      "stop" : 1715303798660,
+      "start" : 1715329321079,
+      "stop" : 1715329321079,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,12 +62,12 @@
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7fae01d2b340>\n\n    @allure.feature(\"Message Operations\")\n    @allure.story(\"Deleting Messages\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_delete_dmsg(api_client):\n        with allure.step(\"Checking if event_id is available\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            # Проверка, что event_id был получен в предыдущем тесте\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n        with allure.step(\"Sending DELETE request to delete message\"):\n            response = api_client.delete_token_s(f\"api/v1/synapse/message/{api_client.roomB}%3A{api_client.room_second_part}/{event_id}\")\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 504 == 200\nE                +  where 504 = <Response [504]>.status_code\n\ntest/test_messages_functionality.py:323: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7fa962c4da60>\n\n    @allure.feature(\"Message Operations\")\n    @allure.story(\"Deleting Messages\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_delete_dmsg(api_client):\n        with allure.step(\"Checking if event_id is available\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            # Проверка, что event_id был получен в предыдущем тесте\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n        with allure.step(\"Sending DELETE request to delete message\"):\n            response = api_client.delete_token_s(f\"api/v1/synapse/message/{api_client.roomB}%3A{api_client.room_second_part}/{event_id}\")\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 504 == 200\nE                +  where 504 = <Response [504]>.status_code\n\ntest/test_messages_functionality.py:323: AssertionError",
     "steps" : [ {
       "name" : "Checking if event_id is available",
       "time" : {
-        "start" : 1715303872823,
-        "stop" : 1715303872823,
+        "start" : 1715329397769,
+        "stop" : 1715329397769,
         "duration" : 0
       },
       "status" : "passed",
@@ -81,9 +81,9 @@
     }, {
       "name" : "Sending DELETE request to delete message",
       "time" : {
-        "start" : 1715303872823,
-        "stop" : 1715303932940,
-        "duration" : 60117
+        "start" : 1715329397769,
+        "stop" : 1715329457899,
+        "duration" : 60130
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code\n",
@@ -91,9 +91,9 @@
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1715303932939,
-          "stop" : 1715303932940,
-          "duration" : 1
+          "start" : 1715329457898,
+          "stop" : 1715329457898,
+          "duration" : 0
         },
         "status" : "failed",
         "statusMessage" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code\n",
@@ -123,8 +123,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715303936908,
-      "stop" : 1715303936908,
+      "start" : 1715329462010,
+      "stop" : 1715329462010,
       "duration" : 0
     },
     "status" : "passed",
@@ -137,14 +137,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Message Operations"
+  }, {
     "name" : "story",
     "value" : "Deleting Messages"
   }, {
     "name" : "severity",
     "value" : "critical"
-  }, {
-    "name" : "feature",
-    "value" : "Message Operations"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -153,7 +153,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "a0cde32cd3e0"
+    "value" : "03244302b279"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -184,14 +184,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 125,
+        "failed" : 126,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 0,
         "unknown" : 0,
-        "total" : 129
+        "total" : 130
       },
       "items" : [ {
+        "uid" : "7f021abf11881fa3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+        "time" : {
+          "start" : 1715303872823,
+          "stop" : 1715303932940,
+          "duration" : 60117
+        }
+      }, {
         "uid" : "34f87fde3a231a0a",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
@@ -362,19 +371,10 @@
           "stop" : 1714753558581,
           "duration" : 60158
         }
-      }, {
-        "uid" : "b1c614c75861ca63",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
-        "time" : {
-          "start" : 1714724537419,
-          "stop" : 1714724597545,
-          "duration" : 60126
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "7f021abf11881fa3.json",
+  "source" : "beb1f2b05a349fcd.json",
   "parameterValues" : [ ]
 }
