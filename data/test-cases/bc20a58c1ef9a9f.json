@@ -1,36 +1,21 @@
 {
-  "uid" : "58169ae9fe08f6b9",
+  "uid" : "bc20a58c1ef9a9f",
   "name" : "test_send_url",
   "fullName" : "test.test_messages_functionality#test_send_url",
   "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
   "time" : {
-    "start" : 1715358261155,
-    "stop" : 1715358262109,
-    "duration" : 954
+    "start" : 1715390198858,
+    "stop" : 1715390199854,
+    "duration" : 996
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
-    "time" : {
-      "start" : 1715358199987,
-      "stop" : 1715358199988,
-      "duration" : 1
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "config",
     "time" : {
-      "start" : 1715358196381,
-      "stop" : 1715358196381,
+      "start" : 1715390132224,
+      "stop" : 1715390132224,
       "duration" : 0
     },
     "status" : "passed",
@@ -39,14 +24,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1715358196382,
-      "stop" : 1715358199987,
-      "duration" : 3605
+      "start" : 1715390132224,
+      "stop" : 1715390135210,
+      "duration" : 2986
     },
     "status" : "passed",
     "steps" : [ ],
@@ -54,84 +39,13 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  } ],
-  "testStage" : {
-    "status" : "passed",
-    "steps" : [ {
-      "name" : "Sending allowed URL",
-      "time" : {
-        "start" : 1715358261155,
-        "stop" : 1715358261658,
-        "duration" : 503
-      },
-      "status" : "passed",
-      "steps" : [ {
-        "name" : "Asserting response for allowed URL",
-        "time" : {
-          "start" : 1715358261658,
-          "stop" : 1715358261658,
-          "duration" : 0
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      } ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 1,
-      "hasContent" : true
-    }, {
-      "name" : "Sending disallowed URL",
-      "time" : {
-        "start" : 1715358261658,
-        "stop" : 1715358262106,
-        "duration" : 448
-      },
-      "status" : "passed",
-      "steps" : [ {
-        "name" : "Asserting response for disallowed URL",
-        "time" : {
-          "start" : 1715358262106,
-          "stop" : 1715358262106,
-          "duration" : 0
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      } ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 1,
-      "hasContent" : true
-    } ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 4,
-    "hasContent" : true
-  },
-  "afterStages" : [ {
-    "name" : "api_client::0",
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "api_client",
     "time" : {
-      "start" : 1715358338326,
-      "stop" : 1715358338327,
+      "start" : 1715390135210,
+      "stop" : 1715390135211,
       "duration" : 1
     },
     "status" : "passed",
@@ -140,8 +54,94 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Sending allowed URL",
+      "time" : {
+        "start" : 1715390198858,
+        "stop" : 1715390199664,
+        "duration" : 806
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Asserting response for allowed URL",
+        "time" : {
+          "start" : 1715390199664,
+          "stop" : 1715390199664,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 1
+    }, {
+      "name" : "Sending disallowed URL",
+      "time" : {
+        "start" : 1715390199664,
+        "stop" : 1715390199851,
+        "duration" : 187
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Asserting response for disallowed URL",
+        "time" : {
+          "start" : 1715390199851,
+          "stop" : 1715390199851,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 1
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 4
+  },
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1715390275516,
+      "stop" : 1715390275516,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
   } ],
   "labels" : [ {
     "name" : "story",
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "52a8386ef1a5"
+    "value" : "d886b80ea746"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 126,
+        "passed" : 127,
         "unknown" : 0,
-        "total" : 131
+        "total" : 132
       },
       "items" : [ {
+        "uid" : "58169ae9fe08f6b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715358261155,
+          "stop" : 1715358262109,
+          "duration" : 954
+        }
+      }, {
         "uid" : "56d20ec62838f007",
         "status" : "passed",
         "time" : {
@@ -346,18 +354,10 @@
           "stop" : 1714810895723,
           "duration" : 2022
         }
-      }, {
-        "uid" : "597530183f5017af",
-        "status" : "passed",
-        "time" : {
-          "start" : 1714785316013,
-          "stop" : 1714785316716,
-          "duration" : 703
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "58169ae9fe08f6b9.json",
+  "source" : "bc20a58c1ef9a9f.json",
   "parameterValues" : [ ]
 }
