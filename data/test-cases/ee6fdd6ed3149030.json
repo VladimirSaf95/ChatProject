@@ -1,23 +1,21 @@
 {
-  "uid" : "23393a3778248056",
+  "uid" : "ee6fdd6ed3149030",
   "name" : "test_show_chat_messages",
   "fullName" : "test.test_show_messages#test_show_chat_messages",
   "historyId" : "bf95ccec49a675867305b09ce0026f13",
   "time" : {
-    "start" : 1715390272273,
-    "stop" : 1715390275444,
-    "duration" : 3171
+    "start" : 1715415822287,
+    "stop" : 1715415825495,
+    "duration" : 3208
   },
-  "status" : "failed",
-  "statusMessage" : "AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nassert []",
-  "statusTrace" : "app = <fixture.application.Application object at 0x7f7fc30f0160>\napi_client = <fixture.api_client.APIClient object at 0x7f7fc30a6340>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
-  "flaky" : true,
-  "newFailed" : true,
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1715390132224,
-      "stop" : 1715390132224,
+      "start" : 1715415686053,
+      "stop" : 1715415686053,
       "duration" : 0
     },
     "status" : "passed",
@@ -26,29 +24,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
-  }, {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1715390132224,
-      "stop" : 1715390135210,
-      "duration" : 2986
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1715390135210,
-      "stop" : 1715390135211,
-      "duration" : 1
+      "start" : 1715415688579,
+      "stop" : 1715415688579,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -56,14 +39,29 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1715415686054,
+      "stop" : 1715415688579,
+      "duration" : 2525
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1715390167857,
-      "stop" : 1715390168785,
-      "duration" : 928
+      "start" : 1715415721099,
+      "stop" : 1715415722046,
+      "duration" : 947
     },
     "status" : "passed",
     "steps" : [ ],
@@ -71,19 +69,17 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
-    "status" : "failed",
-    "statusMessage" : "AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nassert []",
-    "statusTrace" : "app = <fixture.application.Application object at 0x7f7fc30f0160>\napi_client = <fixture.api_client.APIClient object at 0x7f7fc30a6340>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
+    "status" : "passed",
     "steps" : [ {
       "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1715390272379,
-        "stop" : 1715390272430,
-        "duration" : 51
+        "start" : 1715415822395,
+        "stop" : 1715415822480,
+        "duration" : 85
       },
       "status" : "passed",
       "steps" : [ ],
@@ -91,38 +87,36 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Verifying presence of chat message",
       "time" : {
-        "start" : 1715390275433,
-        "stop" : 1715390275443,
-        "duration" : 10
+        "start" : 1715415825483,
+        "stop" : 1715415825495,
+        "duration" : 12
       },
-      "status" : "failed",
-      "statusMessage" : "AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nassert []\n",
-      "statusTrace" : "  File \"/usr/workspace/test/test_show_messages.py\", line 32, in test_show_chat_messages\n    assert elements, f\"Сообщение с ID {event_id} не найдено.\"\n",
+      "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
-      "hasContent" : true,
-      "stepsCount" : 0
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true,
-    "hasContent" : true,
-    "stepsCount" : 2
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 2,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715390275516,
-      "stop" : 1715390275516,
+      "start" : 1715415825564,
+      "stop" : 1715415825564,
       "duration" : 0
     },
     "status" : "passed",
@@ -131,13 +125,13 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1715390275449,
-      "stop" : 1715390275516,
+      "start" : 1715415825496,
+      "stop" : 1715415825563,
       "duration" : 67
     },
     "status" : "passed",
@@ -146,15 +140,15 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "feature",
     "value" : "Chat Functionality"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "story",
     "value" : "Showing Chat Messages"
@@ -166,7 +160,7 @@
     "value" : "test_show_messages"
   }, {
     "name" : "host",
-    "value" : "d886b80ea746"
+    "value" : "c3af1ea92947"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,21 +184,26 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ {
-      "name" : "Product defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "history" : {
       "statistic" : {
         "failed" : 5,
         "broken" : 20,
         "skipped" : 0,
-        "passed" : 107,
+        "passed" : 108,
         "unknown" : 0,
-        "total" : 132
+        "total" : 133
       },
       "items" : [ {
+        "uid" : "23393a3778248056",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nassert []",
+        "time" : {
+          "start" : 1715390272273,
+          "stop" : 1715390275444,
+          "duration" : 3171
+        }
+      }, {
         "uid" : "7b85d6e5f3f01e66",
         "status" : "passed",
         "time" : {
@@ -361,18 +360,10 @@
           "stop" : 1714839831333,
           "duration" : 3188
         }
-      }, {
-        "uid" : "6f0c223554c0da97",
-        "status" : "passed",
-        "time" : {
-          "start" : 1714810973883,
-          "stop" : 1714810977082,
-          "duration" : 3199
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "23393a3778248056.json",
+  "source" : "ee6fdd6ed3149030.json",
   "parameterValues" : [ ]
 }
