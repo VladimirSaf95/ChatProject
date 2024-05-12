@@ -1,12 +1,12 @@
 {
-  "uid" : "c9d48fdd3b26d404",
+  "uid" : "7bd71dc21897b263",
   "name" : "test_get_user_ban",
   "fullName" : "test.test_block_and_unblock#test_get_user_ban",
   "historyId" : "f5b3dfaebdee0a0aef475549ad00aaa4",
   "time" : {
-    "start" : 1715476936527,
-    "stop" : 1715476937003,
-    "duration" : 476
+    "start" : 1715502093131,
+    "stop" : 1715502093653,
+    "duration" : 522
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,23 @@
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1715476936526,
-      "stop" : 1715476936526,
+      "start" : 1715502093131,
+      "stop" : 1715502093131,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1715502090568,
+      "stop" : 1715502090568,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,24 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1715476933751,
-      "stop" : 1715476936526,
-      "duration" : 2775
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1715476933750,
-      "stop" : 1715476933750,
-      "duration" : 0
+      "start" : 1715502090568,
+      "stop" : 1715502093131,
+      "duration" : 2563
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending GET request for blocked players",
       "time" : {
-        "start" : 1715476936527,
-        "stop" : 1715476937001,
-        "duration" : 474
+        "start" : 1715502093131,
+        "stop" : 1715502093652,
+        "duration" : 521
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1715476937001,
-          "stop" : 1715476937001,
+          "start" : 1715502093652,
+          "stop" : 1715502093652,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Asserting JSON content",
         "time" : {
-          "start" : 1715476937001,
-          "stop" : 1715476937001,
+          "start" : 1715502093652,
+          "stop" : 1715502093652,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715477081233,
-      "stop" : 1715477081233,
+      "start" : 1715502234305,
+      "stop" : 1715502234305,
       "duration" : 0
     },
     "status" : "passed",
@@ -129,14 +129,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Player Management"
-  }, {
     "name" : "story",
     "value" : "Checking Blocked Players Retrieval"
   }, {
     "name" : "severity",
     "value" : "critical"
+  }, {
+    "name" : "feature",
+    "value" : "Player Management"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -145,7 +145,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "cd334055444b"
+    "value" : "812eb4df2529"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 130,
+        "passed" : 131,
         "unknown" : 0,
-        "total" : 135
+        "total" : 136
       },
       "items" : [ {
+        "uid" : "c9d48fdd3b26d404",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715476936527,
+          "stop" : 1715476937003,
+          "duration" : 476
+        }
+      }, {
         "uid" : "c7ad9832bd2e343b",
         "status" : "passed",
         "time" : {
@@ -331,18 +339,10 @@
           "stop" : 1714926129776,
           "duration" : 1061
         }
-      }, {
-        "uid" : "a592c9125304e3c1",
-        "status" : "passed",
-        "time" : {
-          "start" : 1714897237997,
-          "stop" : 1714897238523,
-          "duration" : 526
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c9d48fdd3b26d404.json",
+  "source" : "7bd71dc21897b263.json",
   "parameterValues" : [ ]
 }
