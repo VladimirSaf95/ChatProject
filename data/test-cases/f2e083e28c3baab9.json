@@ -1,0 +1,381 @@
+{
+  "uid" : "f2e083e28c3baab9",
+  "name" : "test_show_chat_messages",
+  "fullName" : "test.test_show_messages#test_show_chat_messages",
+  "historyId" : "bf95ccec49a675867305b09ce0026f13",
+  "time" : {
+    "start" : 1715703978578,
+    "stop" : 1715703981757,
+    "duration" : 3179
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nassert []",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7fbd7c803f40>\napi_client = <fixture.api_client.APIClient object at 0x7fbd7c8398b0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1715703838859,
+      "stop" : 1715703838859,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1715703834517,
+      "stop" : 1715703838858,
+      "duration" : 4341
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1715703834517,
+      "stop" : 1715703834517,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1715703873183,
+      "stop" : 1715703874576,
+      "duration" : 1393
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nassert []",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7fbd7c803f40>\napi_client = <fixture.api_client.APIClient object at 0x7fbd7c8398b0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
+    "steps" : [ {
+      "name" : "Checking if chat is open",
+      "time" : {
+        "start" : 1715703978681,
+        "stop" : 1715703978743,
+        "duration" : 62
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verifying presence of chat message",
+      "time" : {
+        "start" : 1715703981745,
+        "stop" : 1715703981757,
+        "duration" : 12
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nassert []\n",
+      "statusTrace" : "  File \"/usr/workspace/test/test_show_messages.py\", line 32, in test_show_chat_messages\n    assert elements, f\"Сообщение с ID {event_id} не найдено.\"\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 2,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1715703981830,
+      "stop" : 1715703981830,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1715703981763,
+      "stop" : 1715703981830,
+      "duration" : 67
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Showing Chat Messages"
+  }, {
+    "name" : "feature",
+    "value" : "Chat Functionality"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_show_messages"
+  }, {
+    "name" : "host",
+    "value" : "a5a57a9b58a3"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_show_messages"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 25,
+        "skipped" : 0,
+        "passed" : 112,
+        "unknown" : 0,
+        "total" : 143
+      },
+      "items" : [ {
+        "uid" : "8e1c6141a8f5f6a",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715675759959,
+          "stop" : 1715675759959,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e1a4a727e9eea9d6",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715650109001,
+          "stop" : 1715650109001,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "cae09b31581146f",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715618193512,
+          "stop" : 1715618193512,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e6c223c4c5ab4357",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715589335329,
+          "stop" : 1715589335329,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "861583eb3030cb41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715563255826,
+          "stop" : 1715563259015,
+          "duration" : 3189
+        }
+      }, {
+        "uid" : "8dcf1575a44c5116",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715530995605,
+          "stop" : 1715530998795,
+          "duration" : 3190
+        }
+      }, {
+        "uid" : "ee4b053a8e49a9a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715502231030,
+          "stop" : 1715502234237,
+          "duration" : 3207
+        }
+      }, {
+        "uid" : "3be8baf4f8aecd0c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715477077975,
+          "stop" : 1715477081164,
+          "duration" : 3189
+        }
+      }, {
+        "uid" : "9a44809ef32dcc62",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715445169450,
+          "stop" : 1715445169450,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ee6fdd6ed3149030",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715415822287,
+          "stop" : 1715415825495,
+          "duration" : 3208
+        }
+      }, {
+        "uid" : "23393a3778248056",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Сообщение с ID $CPtUW-NDlt4A2BAYAyS-GiPCoQarlab7AnGWFX-50Dg не найдено.\nassert []",
+        "time" : {
+          "start" : 1715390272273,
+          "stop" : 1715390275444,
+          "duration" : 3171
+        }
+      }, {
+        "uid" : "7b85d6e5f3f01e66",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715358335056,
+          "stop" : 1715358338258,
+          "duration" : 3202
+        }
+      }, {
+        "uid" : "32c6642ed2884f8e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715329458745,
+          "stop" : 1715329461941,
+          "duration" : 3196
+        }
+      }, {
+        "uid" : "7fe95c2d9e1b80cd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Сообщение с ID $X0a_CIIafuVob9EuvNSVVIuaU5caQ2QFiY2SMjqwGh4 не найдено.\nassert []",
+        "time" : {
+          "start" : 1715303933667,
+          "stop" : 1715303936834,
+          "duration" : 3167
+        }
+      }, {
+        "uid" : "8f92983196292809",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715271900444,
+          "stop" : 1715271903643,
+          "duration" : 3199
+        }
+      }, {
+        "uid" : "c6552d31813795f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715243082991,
+          "stop" : 1715243086180,
+          "duration" : 3189
+        }
+      }, {
+        "uid" : "e4f80e1d5480794f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715217491285,
+          "stop" : 1715217494481,
+          "duration" : 3196
+        }
+      }, {
+        "uid" : "d45e8d5ac1b5ef71",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+        "time" : {
+          "start" : 1715186064399,
+          "stop" : 1715186064399,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "758215b1f45c2bd1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715156549936,
+          "stop" : 1715156553126,
+          "duration" : 3190
+        }
+      }, {
+        "uid" : "df2454a29b3e86ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715130322886,
+          "stop" : 1715130326088,
+          "duration" : 3202
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f2e083e28c3baab9.json",
+  "parameterValues" : [ ]
+}

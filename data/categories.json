@@ -1,136 +1,41 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
-      "children" : [ {
-        "name" : "test_click_chat_room",
-        "uid" : "6b1f875adb0510ab",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675076280,
-          "stop" : 1715675076280,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_open_rules_in_different_locales",
-        "uid" : "525f34da8409985",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675676749,
-          "stop" : 1715675676749,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_close_rules_modal",
-        "uid" : "9493abd7013539a5",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675676788,
-          "stop" : 1715675676788,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_guest_write_text",
-        "uid" : "2ac5ba1966985eb2",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675678449,
-          "stop" : 1715675678449,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_clickchatbutton",
-        "uid" : "8e8f1d82ee66426",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675759806,
-          "stop" : 1715675759806,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_showdetailschat",
-        "uid" : "b234565270e589e9",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675759851,
-          "stop" : 1715675759851,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_click_chat_button_close",
-        "uid" : "f6fd7a1b57ec3e2d",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675759909,
-          "stop" : 1715675759909,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_show_chat_messages",
-        "uid" : "8e1c6141a8f5f6a",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715675759959,
-          "stop" : 1715675759959,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e1a39ba4773ebab3aba289f96557618f"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  }, {
     "name" : "Product defects",
     "children" : [ {
       "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
       "children" : [ {
         "name" : "test_delete_dmsg",
-        "uid" : "d4b5af9211b59eb",
+        "uid" : "17536d351c2ef8b3",
         "parentUid" : "6b6a70086243924495b8afdaf625d52d",
         "status" : "failed",
         "time" : {
-          "start" : 1715675699611,
-          "stop" : 1715675759797,
-          "duration" : 60186
+          "start" : 1715703917659,
+          "stop" : 1715703977871,
+          "duration" : 60212
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "6b6a70086243924495b8afdaf625d52d"
+    }, {
+      "name" : "AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nassert []",
+      "children" : [ {
+        "name" : "test_show_chat_messages",
+        "uid" : "f2e083e28c3baab9",
+        "parentUid" : "636e5f6d83e3a3c74f60f1ba267a7246",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715703978578,
+          "stop" : 1715703981757,
+          "duration" : 3179
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "636e5f6d83e3a3c74f60f1ba267a7246"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
