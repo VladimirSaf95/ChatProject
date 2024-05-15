@@ -6,13 +6,13 @@
       "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
       "children" : [ {
         "name" : "test_delete_dmsg",
-        "uid" : "17536d351c2ef8b3",
+        "uid" : "f4c38a81370eb5bb",
         "parentUid" : "6b6a70086243924495b8afdaf625d52d",
         "status" : "failed",
         "time" : {
-          "start" : 1715703917659,
-          "stop" : 1715703977871,
-          "duration" : 60212
+          "start" : 1715735929074,
+          "stop" : 1715735989261,
+          "duration" : 60187
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,22 +20,73 @@
       } ],
       "uid" : "6b6a70086243924495b8afdaf625d52d"
     }, {
-      "name" : "AssertionError: Сообщение с ID $kVKUslPwNvarUa6O03yCi-QCBvwfAeijrlTS-AESQKY не найдено.\nassert []",
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7ff123eed070>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7ff123eed070>> = <fixture.helper_base.HelperBase object at 0x7ff123eed070>.check_chatbutton_existence",
       "children" : [ {
-        "name" : "test_show_chat_messages",
-        "uid" : "f2e083e28c3baab9",
-        "parentUid" : "636e5f6d83e3a3c74f60f1ba267a7246",
+        "name" : "test_clickchatbutton",
+        "uid" : "a12c918fc042093d",
+        "parentUid" : "294ab67d14a7e22c6aebe794ec1d415f",
         "status" : "failed",
         "time" : {
-          "start" : 1715703978578,
-          "stop" : 1715703981757,
-          "duration" : 3179
+          "start" : 1715735989301,
+          "stop" : 1715735992470,
+          "duration" : 3169
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "294ab67d14a7e22c6aebe794ec1d415f"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7ff123e92910>>(\"[data-testid='chat-header-closeButton']\")\n +    where <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7ff123e92910>> = <fixture.helper_base.HelperBase object at 0x7ff123e92910>.check_css_selector_existence",
+      "children" : [ {
+        "name" : "test_showdetailschat",
+        "uid" : "59bbeff6125b537f",
+        "parentUid" : "0ea9c9084633337896ede51f31665654",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715735992478,
+          "stop" : 1715735995644,
+          "duration" : 3166
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0ea9c9084633337896ede51f31665654"
+    }, {
+      "name" : "AssertionError: Chat is not open\nassert False is True",
+      "children" : [ {
+        "name" : "test_click_chat_button_close",
+        "uid" : "942388c93f7971ed",
+        "parentUid" : "0a484730dfef78ed9d7c6ae1c6291d38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715735995649,
+          "stop" : 1715735995759,
+          "duration" : 110
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0a484730dfef78ed9d7c6ae1c6291d38"
+    }, {
+      "name" : "AssertionError: Сообщение с ID $wn5vVyHuSU6P9PzlDGTv_rUWEm4Mlp4linewW_zlkk0 не найдено.\nassert []",
+      "children" : [ {
+        "name" : "test_show_chat_messages",
+        "uid" : "df77aaf967ab3ded",
+        "parentUid" : "4b5e41e7991afc006f8490d036cd3132",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715735995763,
+          "stop" : 1715736001934,
+          "duration" : 6171
         },
         "flaky" : true,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "636e5f6d83e3a3c74f60f1ba267a7246"
+      "uid" : "4b5e41e7991afc006f8490d036cd3132"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
