@@ -1,88 +1,88 @@
 {
-  "uid" : "942388c93f7971ed",
+  "uid" : "da3a33b2e5b6ae4f",
   "name" : "test_click_chat_button_close",
   "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
   "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1715735995649,
-    "stop" : 1715735995759,
-    "duration" : 110
+    "start" : 1715761544274,
+    "stop" : 1715761544383,
+    "duration" : 109
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Chat is not open\nassert False is True",
-  "statusTrace" : "app = <fixture.application.Application object at 0x7ff125142520>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button to Close\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_click_chat_button_close(app):\n        helper_base = HelperBase(app)\n        test_id = \"chat-header-closeButton\"\n        selector = f'[data-testid=\"{test_id}\"]'\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            chat_open = helper_base.check_chatbutton_existence()\n>           assert chat_open is True, \"Chat is not open\"\nE           AssertionError: Chat is not open\nE           assert False is True\n\ntest/test_open_and_close_chat.py:54: AssertionError",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7efc26cbbf70>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button to Close\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_click_chat_button_close(app):\n        helper_base = HelperBase(app)\n        test_id = \"chat-header-closeButton\"\n        selector = f'[data-testid=\"{test_id}\"]'\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            chat_open = helper_base.check_chatbutton_existence()\n>           assert chat_open is True, \"Chat is not open\"\nE           AssertionError: Chat is not open\nE           assert False is True\n\ntest/test_open_and_close_chat.py:54: AssertionError",
   "flaky" : false,
-  "newFailed" : true,
+  "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1715735849837,
-      "stop" : 1715735849837,
-      "duration" : 0
+      "start" : 1715761393688,
+      "stop" : 1715761397620,
+      "duration" : 3932
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1715735845055,
-      "stop" : 1715735845055,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
+    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1715735884730,
-      "stop" : 1715735886322,
-      "duration" : 1592
+      "start" : 1715761435112,
+      "stop" : 1715761436224,
+      "duration" : 1112
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1715735845055,
-      "stop" : 1715735849836,
-      "duration" : 4781
+      "start" : 1715761393687,
+      "stop" : 1715761393687,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1715761397620,
+      "stop" : 1715761397620,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Chat is not open\nassert False is True",
-    "statusTrace" : "app = <fixture.application.Application object at 0x7ff125142520>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button to Close\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_click_chat_button_close(app):\n        helper_base = HelperBase(app)\n        test_id = \"chat-header-closeButton\"\n        selector = f'[data-testid=\"{test_id}\"]'\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            chat_open = helper_base.check_chatbutton_existence()\n>           assert chat_open is True, \"Chat is not open\"\nE           AssertionError: Chat is not open\nE           assert False is True\n\ntest/test_open_and_close_chat.py:54: AssertionError",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7efc26cbbf70>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button to Close\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_click_chat_button_close(app):\n        helper_base = HelperBase(app)\n        test_id = \"chat-header-closeButton\"\n        selector = f'[data-testid=\"{test_id}\"]'\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            chat_open = helper_base.check_chatbutton_existence()\n>           assert chat_open is True, \"Chat is not open\"\nE           AssertionError: Chat is not open\nE           assert False is True\n\ntest/test_open_and_close_chat.py:54: AssertionError",
     "steps" : [ {
       "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1715735995752,
-        "stop" : 1715735995758,
+        "start" : 1715761544377,
+        "stop" : 1715761544383,
         "duration" : 6
       },
       "status" : "failed",
@@ -91,55 +91,55 @@
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true,
     "stepsCount" : 1,
-    "hasContent" : true
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
   },
   "afterStages" : [ {
-    "name" : "api_client::0",
-    "time" : {
-      "start" : 1715736002003,
-      "stop" : 1715736002003,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1715736001937,
-      "stop" : 1715736002003,
+      "start" : 1715761550558,
+      "stop" : 1715761550624,
       "duration" : 66
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1715761550624,
+      "stop" : 1715761550624,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "critical"
-  }, {
     "name" : "feature",
     "value" : "Chat Functionality"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "story",
     "value" : "Clicking Chat Button to Close"
@@ -151,7 +151,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "083ce909eba0"
+    "value" : "38a301d1bec6"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -182,14 +182,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 4,
+        "failed" : 5,
         "broken" : 25,
         "skipped" : 0,
         "passed" : 115,
         "unknown" : 0,
-        "total" : 144
+        "total" : 145
       },
       "items" : [ {
+        "uid" : "942388c93f7971ed",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Chat is not open\nassert False is True",
+        "time" : {
+          "start" : 1715735995649,
+          "stop" : 1715735995759,
+          "duration" : 110
+        }
+      }, {
         "uid" : "c0f7a6c81a897daa",
         "status" : "passed",
         "time" : {
@@ -347,18 +356,10 @@
           "stop" : 1715186064349,
           "duration" : 0
         }
-      }, {
-        "uid" : "5201f6f6746a3bf4",
-        "status" : "passed",
-        "time" : {
-          "start" : 1715156549677,
-          "stop" : 1715156549934,
-          "duration" : 257
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "942388c93f7971ed.json",
+  "source" : "da3a33b2e5b6ae4f.json",
   "parameterValues" : [ ]
 }
