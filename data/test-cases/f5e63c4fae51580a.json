@@ -1,22 +1,22 @@
 {
-  "uid" : "d56e5d8e13a984c8",
+  "uid" : "f5e63c4fae51580a",
   "name" : "test_send_url",
   "fullName" : "test.test_messages_functionality#test_send_url",
   "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
   "time" : {
-    "start" : 1715761463676,
-    "stop" : 1715761464887,
-    "duration" : 1211
+    "start" : 1715790224574,
+    "stop" : 1715790225413,
+    "duration" : 839
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1715761393688,
-      "stop" : 1715761397620,
-      "duration" : 3932
+      "start" : 1715790152609,
+      "stop" : 1715790152609,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false
   }, {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1715761393687,
-      "stop" : 1715761393687,
-      "duration" : 0
+      "start" : 1715790152609,
+      "stop" : 1715790155961,
+      "duration" : 3352
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1715761397620,
-      "stop" : 1715761397620,
+      "start" : 1715790155961,
+      "stop" : 1715790155961,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending allowed URL",
       "time" : {
-        "start" : 1715761463676,
-        "stop" : 1715761464221,
-        "duration" : 545
+        "start" : 1715790224574,
+        "stop" : 1715790225141,
+        "duration" : 567
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for allowed URL",
         "time" : {
-          "start" : 1715761464221,
-          "stop" : 1715761464221,
+          "start" : 1715790225141,
+          "stop" : 1715790225141,
           "duration" : 0
         },
         "status" : "passed",
@@ -92,16 +92,16 @@
     }, {
       "name" : "Sending disallowed URL",
       "time" : {
-        "start" : 1715761464221,
-        "stop" : 1715761464884,
-        "duration" : 663
+        "start" : 1715790225141,
+        "stop" : 1715790225410,
+        "duration" : 269
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for disallowed URL",
         "time" : {
-          "start" : 1715761464884,
-          "stop" : 1715761464884,
+          "start" : 1715790225410,
+          "stop" : 1715790225410,
           "duration" : 0
         },
         "status" : "passed",
@@ -130,8 +130,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715761550624,
-      "stop" : 1715761550624,
+      "start" : 1715790312539,
+      "stop" : 1715790312539,
       "duration" : 0
     },
     "status" : "passed",
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "38a301d1bec6"
+    "value" : "c288b2bee588"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 140,
+        "passed" : 141,
         "unknown" : 0,
-        "total" : 145
+        "total" : 146
       },
       "items" : [ {
+        "uid" : "d56e5d8e13a984c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715761463676,
+          "stop" : 1715761464887,
+          "duration" : 1211
+        }
+      }, {
         "uid" : "66d62fa498f6348e",
         "status" : "passed",
         "time" : {
@@ -346,18 +354,10 @@
           "stop" : 1715217418675,
           "duration" : 640
         }
-      }, {
-        "uid" : "c97b81eb9f39acb3",
-        "status" : "passed",
-        "time" : {
-          "start" : 1715185990760,
-          "stop" : 1715185992013,
-          "duration" : 1253
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "d56e5d8e13a984c8.json",
+  "source" : "f5e63c4fae51580a.json",
   "parameterValues" : [ ]
 }
