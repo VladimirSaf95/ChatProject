@@ -1,136 +1,92 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
-      "children" : [ {
-        "name" : "test_click_chat_room",
-        "uid" : "74396bb1b8c13b64",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822263908,
-          "stop" : 1715822263908,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_open_rules_in_different_locales",
-        "uid" : "c2526d160539fa5f",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822864348,
-          "stop" : 1715822864348,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_close_rules_modal",
-        "uid" : "dd6b8be759e0120f",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822864387,
-          "stop" : 1715822864387,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_guest_write_text",
-        "uid" : "fb708f3032af725b",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822865019,
-          "stop" : 1715822865019,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_clickchatbutton",
-        "uid" : "57c9d80046f6af14",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822941880,
-          "stop" : 1715822941880,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_showdetailschat",
-        "uid" : "9963eec94ea211bf",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822941924,
-          "stop" : 1715822941924,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_click_chat_button_close",
-        "uid" : "bf27b77d9c70acd3",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822941982,
-          "stop" : 1715822941982,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "test_show_chat_messages",
-        "uid" : "b12799109d73d71d",
-        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
-        "status" : "broken",
-        "time" : {
-          "start" : 1715822942031,
-          "stop" : 1715822942031,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "e1a39ba4773ebab3aba289f96557618f"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  }, {
     "name" : "Product defects",
     "children" : [ {
       "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
       "children" : [ {
         "name" : "test_delete_dmsg",
-        "uid" : "674d5d2d46d28f21",
+        "uid" : "43beb1b06d5f60cf",
         "parentUid" : "6b6a70086243924495b8afdaf625d52d",
         "status" : "failed",
         "time" : {
-          "start" : 1715822881741,
-          "stop" : 1715822941871,
-          "duration" : 60130
+          "start" : 1715847590135,
+          "stop" : 1715847650262,
+          "duration" : 60127
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "6b6a70086243924495b8afdaf625d52d"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence",
+      "children" : [ {
+        "name" : "test_clickchatbutton",
+        "uid" : "27eb46e401a152ba",
+        "parentUid" : "e2a69d3d868492b6261609c2020d34d2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715847650301,
+          "stop" : 1715847653464,
+          "duration" : 3163
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e2a69d3d868492b6261609c2020d34d2"
+    }, {
+      "name" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7fd64d56e0a0>>(\"[data-testid='chat-header-closeButton']\")\n +    where <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7fd64d56e0a0>> = <fixture.helper_base.HelperBase object at 0x7fd64d56e0a0>.check_css_selector_existence",
+      "children" : [ {
+        "name" : "test_showdetailschat",
+        "uid" : "277837a2ac9432e5",
+        "parentUid" : "78a1ecde76ead0fce9c40f92c0e925f7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715847653471,
+          "stop" : 1715847656633,
+          "duration" : 3162
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "78a1ecde76ead0fce9c40f92c0e925f7"
+    }, {
+      "name" : "AssertionError: Chat is not open\nassert False is True",
+      "children" : [ {
+        "name" : "test_click_chat_button_close",
+        "uid" : "321d96414f3910c1",
+        "parentUid" : "0a484730dfef78ed9d7c6ae1c6291d38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715847656637,
+          "stop" : 1715847656746,
+          "duration" : 109
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0a484730dfef78ed9d7c6ae1c6291d38"
+    }, {
+      "name" : "AssertionError: Сообщение с ID $imjAcQJLIOtad9S6l3H95KDgyfvNCzs6NwwgM752ADc не найдено.\nassert []",
+      "children" : [ {
+        "name" : "test_show_chat_messages",
+        "uid" : "3a696f943d791107",
+        "parentUid" : "bba4a4547e347b45c85ba7f13e90b6c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1715847656750,
+          "stop" : 1715847662915,
+          "duration" : 6165
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bba4a4547e347b45c85ba7f13e90b6c7"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
