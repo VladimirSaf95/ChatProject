@@ -1,22 +1,22 @@
 {
-  "uid" : "e27c85acf47af92",
+  "uid" : "d4f09e364356c1f5",
   "name" : "test_send_gif",
   "fullName" : "test.test_messages_functionality#test_send_gif",
   "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
   "time" : {
-    "start" : 1715847577085,
-    "stop" : 1715847577728,
-    "duration" : 643
+    "start" : 1715876609332,
+    "stop" : 1715876610069,
+    "duration" : 737
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1715847512730,
-      "stop" : 1715847512730,
-      "duration" : 0
+      "start" : 1715876539676,
+      "stop" : 1715876542943,
+      "duration" : 3267
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1715847509618,
-      "stop" : 1715847509618,
+      "start" : 1715876539676,
+      "stop" : 1715876539676,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1715847509618,
-      "stop" : 1715847512730,
-      "duration" : 3112
+      "start" : 1715876542944,
+      "stop" : 1715876542944,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Sending GIF message",
       "time" : {
-        "start" : 1715847577085,
-        "stop" : 1715847577727,
-        "duration" : 642
+        "start" : 1715876609332,
+        "stop" : 1715876610067,
+        "duration" : 735
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1715847577727,
-        "stop" : 1715847577727,
+        "start" : 1715876610067,
+        "stop" : 1715876610067,
         "duration" : 0
       },
       "status" : "passed",
@@ -92,8 +92,8 @@
     }, {
       "name" : "Asserting response text",
       "time" : {
-        "start" : 1715847577727,
-        "stop" : 1715847577727,
+        "start" : 1715876610067,
+        "stop" : 1715876610067,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,8 +107,8 @@
     }, {
       "name" : "Asserting 'event_id' key in JSON response",
       "time" : {
-        "start" : 1715847577727,
-        "stop" : 1715847577727,
+        "start" : 1715876610067,
+        "stop" : 1715876610067,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,8 +122,8 @@
     }, {
       "name" : "Asserting response time",
       "time" : {
-        "start" : 1715847577727,
-        "stop" : 1715847577727,
+        "start" : 1715876610067,
+        "stop" : 1715876610067,
         "duration" : 0
       },
       "status" : "passed",
@@ -145,8 +145,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715847662983,
-      "stop" : 1715847662983,
+      "start" : 1715876693742,
+      "stop" : 1715876693742,
       "duration" : 0
     },
     "status" : "passed",
@@ -175,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "141893bd7efd"
+    "value" : "072a21db1021"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 1,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 143,
+        "passed" : 144,
         "unknown" : 0,
-        "total" : 148
+        "total" : 149
       },
       "items" : [ {
+        "uid" : "e27c85acf47af92",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715847577085,
+          "stop" : 1715847577728,
+          "duration" : 643
+        }
+      }, {
         "uid" : "a03f8189264f5b7e",
         "status" : "passed",
         "time" : {
@@ -361,18 +369,10 @@
           "stop" : 1715303861870,
           "duration" : 663
         }
-      }, {
-        "uid" : "367407c566e926ab",
-        "status" : "passed",
-        "time" : {
-          "start" : 1715271827062,
-          "stop" : 1715271827613,
-          "duration" : 551
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e27c85acf47af92.json",
+  "source" : "d4f09e364356c1f5.json",
   "parameterValues" : [ ]
 }

@@ -1,39 +1,24 @@
 {
-  "uid" : "27eb46e401a152ba",
+  "uid" : "3134ba9914e78694",
   "name" : "test_clickchatbutton",
   "fullName" : "test.test_open_and_close_chat#test_clickchatbutton",
   "historyId" : "336199c1d540adbc6dd3cdcb40af25fe",
   "time" : {
-    "start" : 1715847650301,
-    "stop" : 1715847653464,
-    "duration" : 3163
+    "start" : 1715876681049,
+    "stop" : 1715876684214,
+    "duration" : 3165
   },
   "status" : "failed",
-  "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence",
-  "statusTrace" : "app = <fixture.application.Application object at 0x7fd64d5a9250>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_clickchatbutton(app):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Clicking on the chat button\"):\n            # Кликаем по кнопке чата\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Asserting chat button existence\"):\n            # Делаем проверку если чат был открыт\n>           assert helper_base.check_chatbutton_existence() is True\nE           assert False is True\nE            +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\nE            +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence\n\ntest/test_open_and_close_chat.py:18: AssertionError",
+  "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>> = <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>.check_chatbutton_existence",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7f78d574f1c0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_clickchatbutton(app):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Clicking on the chat button\"):\n            # Кликаем по кнопке чата\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Asserting chat button existence\"):\n            # Делаем проверку если чат был открыт\n>           assert helper_base.check_chatbutton_existence() is True\nE           assert False is True\nE            +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>>()\nE            +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>> = <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>.check_chatbutton_existence\n\ntest/test_open_and_close_chat.py:18: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "app",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1715847546570,
-      "stop" : 1715847547667,
-      "duration" : 1097
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "api_client",
-    "time" : {
-      "start" : 1715847512730,
-      "stop" : 1715847512730,
-      "duration" : 0
+      "start" : 1715876539676,
+      "stop" : 1715876542943,
+      "duration" : 3267
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,8 +31,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1715847509618,
-      "stop" : 1715847509618,
+      "start" : 1715876539676,
+      "stop" : 1715876539676,
       "duration" : 0
     },
     "status" : "passed",
@@ -59,11 +44,26 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1715847509618,
-      "stop" : 1715847512730,
-      "duration" : 3112
+      "start" : 1715876542944,
+      "stop" : 1715876542944,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1715876576732,
+      "stop" : 1715876577590,
+      "duration" : 858
     },
     "status" : "passed",
     "steps" : [ ],
@@ -76,14 +76,14 @@
   } ],
   "testStage" : {
     "status" : "failed",
-    "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence",
-    "statusTrace" : "app = <fixture.application.Application object at 0x7fd64d5a9250>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_clickchatbutton(app):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Clicking on the chat button\"):\n            # Кликаем по кнопке чата\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Asserting chat button existence\"):\n            # Делаем проверку если чат был открыт\n>           assert helper_base.check_chatbutton_existence() is True\nE           assert False is True\nE            +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\nE            +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence\n\ntest/test_open_and_close_chat.py:18: AssertionError",
+    "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>> = <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>.check_chatbutton_existence",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7f78d574f1c0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Clicking Chat Button\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_clickchatbutton(app):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Clicking on the chat button\"):\n            # Кликаем по кнопке чата\n            helper_base.clickchatbutton()\n    \n        with allure.step(\"Asserting chat button existence\"):\n            # Делаем проверку если чат был открыт\n>           assert helper_base.check_chatbutton_existence() is True\nE           assert False is True\nE            +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>>()\nE            +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>> = <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>.check_chatbutton_existence\n\ntest/test_open_and_close_chat.py:18: AssertionError",
     "steps" : [ {
       "name" : "Clicking on the chat button",
       "time" : {
-        "start" : 1715847650405,
-        "stop" : 1715847653452,
-        "duration" : 3047
+        "start" : 1715876681154,
+        "stop" : 1715876684203,
+        "duration" : 3049
       },
       "status" : "passed",
       "steps" : [ ],
@@ -96,12 +96,12 @@
     }, {
       "name" : "Asserting chat button existence",
       "time" : {
-        "start" : 1715847653452,
-        "stop" : 1715847653463,
+        "start" : 1715876684203,
+        "stop" : 1715876684214,
         "duration" : 11
       },
       "status" : "failed",
-      "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence\n",
+      "statusMessage" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>> = <fixture.helper_base.HelperBase object at 0x7f78d54cbd60>.check_chatbutton_existence\n",
       "statusTrace" : "  File \"/usr/workspace/test/test_open_and_close_chat.py\", line 18, in test_clickchatbutton\n    assert helper_base.check_chatbutton_existence() is True\n",
       "steps" : [ ],
       "attachments" : [ ],
@@ -112,9 +112,9 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "d0d1b52578b3fab3",
+      "uid" : "38506460a6d8b463",
       "name" : "log",
-      "source" : "d0d1b52578b3fab3.txt",
+      "source" : "38506460a6d8b463.txt",
       "type" : "text/plain",
       "size" : 133
     } ],
@@ -125,11 +125,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "app::0",
+    "name" : "api_client::0",
     "time" : {
-      "start" : 1715847662917,
-      "stop" : 1715847662983,
-      "duration" : 66
+      "start" : 1715876693742,
+      "stop" : 1715876693742,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -140,11 +140,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client::0",
+    "name" : "app::0",
     "time" : {
-      "start" : 1715847662983,
-      "stop" : 1715847662983,
-      "duration" : 0
+      "start" : 1715876693676,
+      "stop" : 1715876693742,
+      "duration" : 66
     },
     "status" : "passed",
     "steps" : [ ],
@@ -172,7 +172,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "141893bd7efd"
+    "value" : "072a21db1021"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -203,14 +203,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 7,
+        "failed" : 8,
         "broken" : 26,
         "skipped" : 0,
         "passed" : 115,
         "unknown" : 0,
-        "total" : 148
+        "total" : 149
       },
       "items" : [ {
+        "uid" : "27eb46e401a152ba",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7fd64d525a60>> = <fixture.helper_base.HelperBase object at 0x7fd64d525a60>.check_chatbutton_existence",
+        "time" : {
+          "start" : 1715847650301,
+          "stop" : 1715847653464,
+          "duration" : 3163
+        }
+      }, {
         "uid" : "57c9d80046f6af14",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
@@ -371,18 +380,10 @@
           "stop" : 1715303933232,
           "duration" : 252
         }
-      }, {
-        "uid" : "108431b4b6687734",
-        "status" : "passed",
-        "time" : {
-          "start" : 1715271899648,
-          "stop" : 1715271899924,
-          "duration" : 276
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "27eb46e401a152ba.json",
+  "source" : "3134ba9914e78694.json",
   "parameterValues" : [ ]
 }
