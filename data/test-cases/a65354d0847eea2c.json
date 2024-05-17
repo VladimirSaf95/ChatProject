@@ -1,22 +1,22 @@
 {
-  "uid" : "e4776979c28acbe0",
+  "uid" : "a65354d0847eea2c",
   "name" : "test_get_chanel_matrix",
   "fullName" : "test.test_get_chanel#test_get_chanel_matrix",
   "historyId" : "81558e6b70736da3a13cca7374afbd2f",
   "time" : {
-    "start" : 1715908706716,
-    "stop" : 1715908706913,
-    "duration" : 197
+    "start" : 1715934204081,
+    "stop" : 1715934204228,
+    "duration" : 147
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1715908644369,
-      "stop" : 1715908649072,
-      "duration" : 4703
+      "start" : 1715934145267,
+      "stop" : 1715934145267,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1715908649073,
-      "stop" : 1715908649073,
-      "duration" : 0
+      "start" : 1715934142503,
+      "stop" : 1715934145267,
+      "duration" : 2764
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1715908644369,
-      "stop" : 1715908644369,
+      "start" : 1715934142503,
+      "stop" : 1715934142503,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending GET request for channels",
       "time" : {
-        "start" : 1715908706716,
-        "stop" : 1715908706911,
-        "duration" : 195
+        "start" : 1715934204082,
+        "stop" : 1715934204226,
+        "duration" : 144
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1715908706911,
-          "stop" : 1715908706911,
+          "start" : 1715934204226,
+          "stop" : 1715934204226,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,16 +85,16 @@
       }, {
         "name" : "Asserting response content",
         "time" : {
-          "start" : 1715908706911,
-          "stop" : 1715908706911,
+          "start" : 1715934204226,
+          "stop" : 1715934204226,
           "duration" : 0
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Asserting minimum two rooms",
           "time" : {
-            "start" : 1715908706911,
-            "stop" : 1715908706911,
+            "start" : 1715934204226,
+            "stop" : 1715934204226,
             "duration" : 0
           },
           "status" : "passed",
@@ -108,8 +108,8 @@
         }, {
           "name" : "Asserting room details",
           "time" : {
-            "start" : 1715908706911,
-            "stop" : 1715908706911,
+            "start" : 1715934204226,
+            "stop" : 1715934204226,
             "duration" : 0
           },
           "status" : "passed",
@@ -145,8 +145,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715908789140,
-      "stop" : 1715908789140,
+      "start" : 1715934285996,
+      "stop" : 1715934285996,
       "duration" : 0
     },
     "status" : "passed",
@@ -159,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Channel Operations"
+  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "story",
     "value" : "Checking Matrix Channel Retrieval"
-  }, {
-    "name" : "feature",
-    "value" : "Channel Operations"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -175,7 +175,7 @@
     "value" : "test_get_chanel"
   }, {
     "name" : "host",
-    "value" : "50a244808d6a"
+    "value" : "c4e67305cc7d"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 146,
+        "passed" : 147,
         "unknown" : 0,
-        "total" : 150
+        "total" : 151
       },
       "items" : [ {
+        "uid" : "e4776979c28acbe0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715908706716,
+          "stop" : 1715908706913,
+          "duration" : 197
+        }
+      }, {
         "uid" : "63e80cf6b53d6c2e",
         "status" : "passed",
         "time" : {
@@ -361,18 +369,10 @@
           "stop" : 1715358256603,
           "duration" : 161
         }
-      }, {
-        "uid" : "3f0541496293fa09",
-        "status" : "passed",
-        "time" : {
-          "start" : 1715329379716,
-          "stop" : 1715329379869,
-          "duration" : 153
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e4776979c28acbe0.json",
+  "source" : "a65354d0847eea2c.json",
   "parameterValues" : [ ]
 }
