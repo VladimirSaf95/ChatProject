@@ -1,39 +1,24 @@
 {
-  "uid" : "a118f6d0c2ddeb9f",
+  "uid" : "1b964a54a0375fa0",
   "name" : "test_show_chat_messages",
   "fullName" : "test.test_show_messages#test_show_chat_messages",
   "historyId" : "bf95ccec49a675867305b09ce0026f13",
   "time" : {
-    "start" : 1715876687505,
-    "stop" : 1715876693673,
-    "duration" : 6168
+    "start" : 1715908785891,
+    "stop" : 1715908789066,
+    "duration" : 3175
   },
   "status" : "failed",
-  "statusMessage" : "AssertionError: Сообщение с ID $VkIoYfKLC-MqpJil3smPV_vm9CWfOsmXWKZzCfWh3aY не найдено.\nassert []",
-  "statusTrace" : "app = <fixture.application.Application object at 0x7f78d574f1c0>\napi_client = <fixture.api_client.APIClient object at 0x7f78d5467ac0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $VkIoYfKLC-MqpJil3smPV_vm9CWfOsmXWKZzCfWh3aY не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
+  "statusMessage" : "AssertionError: Сообщение с ID $nDw6HsUSG20UUx18YBx0il3iICutRLo0nZCx4Gg9j3A не найдено.\nassert []",
+  "statusTrace" : "app = <fixture.application.Application object at 0x7f003bf6dc10>\napi_client = <fixture.api_client.APIClient object at 0x7f003bfa9eb0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $nDw6HsUSG20UUx18YBx0il3iICutRLo0nZCx4Gg9j3A не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
   "flaky" : true,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1715876539676,
-      "stop" : 1715876542943,
-      "duration" : 3267
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1715876539676,
-      "stop" : 1715876539676,
-      "duration" : 0
+      "start" : 1715908644369,
+      "stop" : 1715908649072,
+      "duration" : 4703
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,8 +31,23 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1715876542944,
-      "stop" : 1715876542944,
+      "start" : 1715908649073,
+      "stop" : 1715908649073,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1715908644369,
+      "stop" : 1715908644369,
       "duration" : 0
     },
     "status" : "passed",
@@ -61,9 +61,9 @@
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1715876576732,
-      "stop" : 1715876577590,
-      "duration" : 858
+      "start" : 1715908683333,
+      "stop" : 1715908684628,
+      "duration" : 1295
     },
     "status" : "passed",
     "steps" : [ ],
@@ -76,14 +76,14 @@
   } ],
   "testStage" : {
     "status" : "failed",
-    "statusMessage" : "AssertionError: Сообщение с ID $VkIoYfKLC-MqpJil3smPV_vm9CWfOsmXWKZzCfWh3aY не найдено.\nassert []",
-    "statusTrace" : "app = <fixture.application.Application object at 0x7f78d574f1c0>\napi_client = <fixture.api_client.APIClient object at 0x7f78d5467ac0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $VkIoYfKLC-MqpJil3smPV_vm9CWfOsmXWKZzCfWh3aY не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
+    "statusMessage" : "AssertionError: Сообщение с ID $nDw6HsUSG20UUx18YBx0il3iICutRLo0nZCx4Gg9j3A не найдено.\nassert []",
+    "statusTrace" : "app = <fixture.application.Application object at 0x7f003bf6dc10>\napi_client = <fixture.api_client.APIClient object at 0x7f003bfa9eb0>\n\n    @allure.feature(\"Chat Functionality\")\n    @allure.story(\"Showing Chat Messages\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_show_chat_messages(app, api_client):\n        helper_base = HelperBase(app)\n    \n        with allure.step(\"Checking if chat is open\"):\n            # Проверка, если чат открыт\n            if not helper_base.check_chatbutton_existence():\n                helper_base.clickchatbutton()\n    \n        # Получаем айди сообщения отправленного ранее\n        event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        # Проверка, что event_id был получен в предыдущем тесте\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        time.sleep(3)\n    \n        with allure.step(\"Verifying presence of chat message\"):\n            # Проверить наличие элемента с соответствующим id\n            elements = helper_base.find_elements_by_id(f\"message_{event_id}\")\n>           assert elements, f\"Сообщение с ID {event_id} не найдено.\"\nE           AssertionError: Сообщение с ID $nDw6HsUSG20UUx18YBx0il3iICutRLo0nZCx4Gg9j3A не найдено.\nE           assert []\n\ntest/test_show_messages.py:32: AssertionError",
     "steps" : [ {
       "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1715876687608,
-        "stop" : 1715876690659,
-        "duration" : 3051
+        "start" : 1715908785994,
+        "stop" : 1715908786052,
+        "duration" : 58
       },
       "status" : "passed",
       "steps" : [ ],
@@ -96,12 +96,12 @@
     }, {
       "name" : "Verifying presence of chat message",
       "time" : {
-        "start" : 1715876693662,
-        "stop" : 1715876693673,
-        "duration" : 11
+        "start" : 1715908789054,
+        "stop" : 1715908789066,
+        "duration" : 12
       },
       "status" : "failed",
-      "statusMessage" : "AssertionError: Сообщение с ID $VkIoYfKLC-MqpJil3smPV_vm9CWfOsmXWKZzCfWh3aY не найдено.\nassert []\n",
+      "statusMessage" : "AssertionError: Сообщение с ID $nDw6HsUSG20UUx18YBx0il3iICutRLo0nZCx4Gg9j3A не найдено.\nassert []\n",
       "statusTrace" : "  File \"/usr/workspace/test/test_show_messages.py\", line 32, in test_show_chat_messages\n    assert elements, f\"Сообщение с ID {event_id} не найдено.\"\n",
       "steps" : [ ],
       "attachments" : [ ],
@@ -111,15 +111,9 @@
       "stepsCount" : 0,
       "hasContent" : true
     } ],
-    "attachments" : [ {
-      "uid" : "5e091220145fd117",
-      "name" : "log",
-      "source" : "5e091220145fd117.txt",
-      "type" : "text/plain",
-      "size" : 133
-    } ],
+    "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 1,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : true,
     "stepsCount" : 2,
     "hasContent" : true
@@ -127,8 +121,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1715876693742,
-      "stop" : 1715876693742,
+      "start" : 1715908789140,
+      "stop" : 1715908789140,
       "duration" : 0
     },
     "status" : "passed",
@@ -142,9 +136,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1715876693676,
-      "stop" : 1715876693742,
-      "duration" : 66
+      "start" : 1715908789072,
+      "stop" : 1715908789139,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -156,14 +150,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "Chat Functionality"
+  }, {
     "name" : "story",
     "value" : "Showing Chat Messages"
   }, {
     "name" : "severity",
     "value" : "normal"
-  }, {
-    "name" : "feature",
-    "value" : "Chat Functionality"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -172,7 +166,7 @@
     "value" : "test_show_messages"
   }, {
     "name" : "host",
-    "value" : "072a21db1021"
+    "value" : "50a244808d6a"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -203,14 +197,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 11,
+        "failed" : 12,
         "broken" : 26,
         "skipped" : 0,
         "passed" : 112,
         "unknown" : 0,
-        "total" : 149
+        "total" : 150
       },
       "items" : [ {
+        "uid" : "a118f6d0c2ddeb9f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Сообщение с ID $VkIoYfKLC-MqpJil3smPV_vm9CWfOsmXWKZzCfWh3aY не найдено.\nassert []",
+        "time" : {
+          "start" : 1715876687505,
+          "stop" : 1715876693673,
+          "duration" : 6168
+        }
+      }, {
         "uid" : "3a696f943d791107",
         "status" : "failed",
         "statusDetails" : "AssertionError: Сообщение с ID $imjAcQJLIOtad9S6l3H95KDgyfvNCzs6NwwgM752ADc не найдено.\nassert []",
@@ -374,19 +377,10 @@
           "stop" : 1715329461941,
           "duration" : 3196
         }
-      }, {
-        "uid" : "7fe95c2d9e1b80cd",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Сообщение с ID $X0a_CIIafuVob9EuvNSVVIuaU5caQ2QFiY2SMjqwGh4 не найдено.\nassert []",
-        "time" : {
-          "start" : 1715303933667,
-          "stop" : 1715303936834,
-          "duration" : 3167
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "a118f6d0c2ddeb9f.json",
+  "source" : "1b964a54a0375fa0.json",
   "parameterValues" : [ ]
 }
