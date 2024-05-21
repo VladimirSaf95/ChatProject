@@ -1,21 +1,36 @@
 {
-  "uid" : "7ee2c15ec9a50ced",
+  "uid" : "c4d9bda2333b20bc",
   "name" : "test_unblock_players",
   "fullName" : "test.test_block_and_unblock#test_unblock_players",
   "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
   "time" : {
-    "start" : 1716222209950,
-    "stop" : 1716222235420,
-    "duration" : 25470
+    "start" : 1716254238956,
+    "stop" : 1716254265878,
+    "duration" : 26922
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "config",
+    "time" : {
+      "start" : 1716254226200,
+      "stop" : 1716254226201,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1716222200398,
-      "stop" : 1716222200398,
+      "start" : 1716254230142,
+      "stop" : 1716254230142,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,24 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1716222196658,
-      "stop" : 1716222200398,
-      "duration" : 3740
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1716222196658,
-      "stop" : 1716222196658,
-      "duration" : 0
+      "start" : 1716254226201,
+      "stop" : 1716254230142,
+      "duration" : 3941
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,8 +62,8 @@
     "steps" : [ {
       "name" : "Waiting for previous operations to complete",
       "time" : {
-        "start" : 1716222209951,
-        "stop" : 1716222229971,
+        "start" : 1716254238956,
+        "stop" : 1716254258976,
         "duration" : 20020
       },
       "status" : "passed",
@@ -77,9 +77,9 @@
     }, {
       "name" : "Fetching information about blocked players before unblocking",
       "time" : {
-        "start" : 1716222229971,
-        "stop" : 1716222230457,
-        "duration" : 486
+        "start" : 1716254258977,
+        "stop" : 1716254261189,
+        "duration" : 2212
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,8 +92,8 @@
     }, {
       "name" : "Preparing data for unblocking user",
       "time" : {
-        "start" : 1716222230457,
-        "stop" : 1716222230457,
+        "start" : 1716254261189,
+        "stop" : 1716254261189,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,9 +107,9 @@
     }, {
       "name" : "Sending request to unblock user",
       "time" : {
-        "start" : 1716222230457,
-        "stop" : 1716222233693,
-        "duration" : 3236
+        "start" : 1716254261189,
+        "stop" : 1716254264452,
+        "duration" : 3263
       },
       "status" : "passed",
       "steps" : [ ],
@@ -122,8 +122,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1716222233693,
-        "stop" : 1716222233693,
+        "start" : 1716254264452,
+        "stop" : 1716254264452,
         "duration" : 0
       },
       "status" : "passed",
@@ -137,9 +137,9 @@
     }, {
       "name" : "Fetching information about blocked players after unblocking",
       "time" : {
-        "start" : 1716222233693,
-        "stop" : 1716222233918,
-        "duration" : 225
+        "start" : 1716254264452,
+        "stop" : 1716254264714,
+        "duration" : 262
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,8 +152,8 @@
     }, {
       "name" : "Asserting response content",
       "time" : {
-        "start" : 1716222233918,
-        "stop" : 1716222233918,
+        "start" : 1716254264714,
+        "stop" : 1716254264714,
         "duration" : 0
       },
       "status" : "passed",
@@ -167,9 +167,9 @@
     }, {
       "name" : "Sending message to verify unblocked player can write in chat",
       "time" : {
-        "start" : 1716222233918,
-        "stop" : 1716222235414,
-        "duration" : 1496
+        "start" : 1716254264714,
+        "stop" : 1716254265873,
+        "duration" : 1159
       },
       "status" : "passed",
       "steps" : [ ],
@@ -190,8 +190,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716222342208,
-      "stop" : 1716222342208,
+      "start" : 1716254374166,
+      "stop" : 1716254374166,
       "duration" : 0
     },
     "status" : "passed",
@@ -204,14 +204,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "critical"
-  }, {
     "name" : "story",
     "value" : "Unblocking Players"
   }, {
     "name" : "feature",
     "value" : "User Management"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "tag",
     "value" : "dependency(depends=['block_players'])"
@@ -223,7 +223,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "db3e14fb0f8b"
+    "value" : "a79a2c7e68fa"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -253,11 +253,19 @@
         "failed" : 2,
         "broken" : 5,
         "skipped" : 0,
-        "passed" : 154,
+        "passed" : 155,
         "unknown" : 0,
-        "total" : 161
+        "total" : 162
       },
       "items" : [ {
+        "uid" : "7ee2c15ec9a50ced",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716222209950,
+          "stop" : 1716222235420,
+          "duration" : 25470
+        }
+      }, {
         "uid" : "ede84bbdc3695861",
         "status" : "passed",
         "time" : {
@@ -409,18 +417,10 @@
           "stop" : 1715675076279,
           "duration" : 25298
         }
-      }, {
-        "uid" : "58b33290b4eccedf",
-        "status" : "passed",
-        "time" : {
-          "start" : 1715649405524,
-          "stop" : 1715649430542,
-          "duration" : 25018
-        }
       } ]
     },
     "tags" : [ "dependency(depends=['block_players'])" ]
   },
-  "source" : "7ee2c15ec9a50ced.json",
+  "source" : "c4d9bda2333b20bc.json",
   "parameterValues" : [ ]
 }
