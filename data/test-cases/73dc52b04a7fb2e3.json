@@ -1,22 +1,22 @@
 {
-  "uid" : "e083c9a8073ecb9c",
+  "uid" : "73dc52b04a7fb2e3",
   "name" : "test_showdetailschat",
   "fullName" : "test.test_open_and_close_chat#test_showdetailschat",
   "historyId" : "7695f6dd6468ddddf82ea1b95cf71f99",
   "time" : {
-    "start" : 1716308668510,
-    "stop" : 1716308668715,
-    "duration" : 205
+    "start" : 1716340801429,
+    "stop" : 1716340801678,
+    "duration" : 249
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1716308532884,
-      "stop" : 1716308532885,
-      "duration" : 1
+      "start" : 1716340668873,
+      "stop" : 1716340668873,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,10 +27,10 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "api_client",
     "time" : {
-      "start" : 1716308528887,
-      "stop" : 1716308528887,
+      "start" : 1716340671289,
+      "stop" : 1716340671289,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1716308528887,
-      "stop" : 1716308532884,
-      "duration" : 3997
+      "start" : 1716340668874,
+      "stop" : 1716340671289,
+      "duration" : 2415
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +59,9 @@
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1716308566309,
-      "stop" : 1716308567171,
-      "duration" : 862
+      "start" : 1716340702839,
+      "stop" : 1716340703664,
+      "duration" : 825
     },
     "status" : "passed",
     "steps" : [ ],
@@ -77,9 +77,9 @@
     "steps" : [ {
       "name" : "Checking existence of chat details",
       "time" : {
-        "start" : 1716308668618,
-        "stop" : 1716308668714,
-        "duration" : 96
+        "start" : 1716340801540,
+        "stop" : 1716340801678,
+        "duration" : 138
       },
       "status" : "passed",
       "steps" : [ ],
@@ -100,8 +100,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716308672160,
-      "stop" : 1716308672160,
+      "start" : 1716340805133,
+      "stop" : 1716340805133,
       "duration" : 0
     },
     "status" : "passed",
@@ -115,9 +115,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1716308672094,
-      "stop" : 1716308672160,
-      "duration" : 66
+      "start" : 1716340805068,
+      "stop" : 1716340805133,
+      "duration" : 65
     },
     "status" : "passed",
     "steps" : [ ],
@@ -132,11 +132,11 @@
     "name" : "severity",
     "value" : "critical"
   }, {
-    "name" : "feature",
-    "value" : "Chat Functionality"
-  }, {
     "name" : "story",
     "value" : "Showing Chat Details"
+  }, {
+    "name" : "feature",
+    "value" : "Chat Functionality"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -145,7 +145,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "a8769ce4608a"
+    "value" : "4e8107a15ba4"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 8,
         "broken" : 29,
         "skipped" : 0,
-        "passed" : 127,
+        "passed" : 128,
         "unknown" : 0,
-        "total" : 164
+        "total" : 165
       },
       "items" : [ {
+        "uid" : "e083c9a8073ecb9c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716308668510,
+          "stop" : 1716308668715,
+          "duration" : 205
+        }
+      }, {
         "uid" : "4d0f4bcde12b5dfa",
         "status" : "passed",
         "time" : {
@@ -339,19 +347,10 @@
           "stop" : 1715761544269,
           "duration" : 3165
         }
-      }, {
-        "uid" : "59bbeff6125b537f",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7ff123e92910>>(\"[data-testid='chat-header-closeButton']\")\n +    where <bound method HelperBase.check_css_selector_existence of <fixture.helper_base.HelperBase object at 0x7ff123e92910>> = <fixture.helper_base.HelperBase object at 0x7ff123e92910>.check_css_selector_existence",
-        "time" : {
-          "start" : 1715735992478,
-          "stop" : 1715735995644,
-          "duration" : 3166
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e083c9a8073ecb9c.json",
+  "source" : "73dc52b04a7fb2e3.json",
   "parameterValues" : [ ]
 }
