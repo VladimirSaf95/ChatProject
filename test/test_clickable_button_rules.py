@@ -67,7 +67,8 @@ def test_open_rules_in_different_locales(app):
 @allure.severity(allure.severity_level.NORMAL)
 def test_close_rules_modal(app):
     helper_base = HelperBase(app)
-    selector = ".sc-bypJrT"
+    test_id = "chat-rulesModal-closeButton"
+    selector = f'[data-testid="{test_id}"]'
     with allure.step("Checking if test open rules in different locales passed"):
         if helper_base.check_css_selector_existence(selector):
             with allure.step("Click on the selector to close the modal window with chat rules"):
