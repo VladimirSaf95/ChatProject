@@ -6,25 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Cache Dependencies') {
-            steps {
-                script {
-                    // Загрузка кеша зависимостей, если он есть
-                    def cachedDeps = cache(steps: [
-                        // Копирование кеша зависимостей в рабочую директорию
-                        load('/path/to/cache/key')
-                    ])
-                    // Если кеш был найден, используем его, иначе устанавливаем зависимости заново
-                    if (cachedDeps != null) {
-                        echo 'Using cached dependencies'
-                    } else {
-                        echo 'Installing dependencies'
-                        sh 'pip install -r requirements.txt'
-                    }
-                }
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
@@ -46,15 +27,6 @@ pipeline {
                     }
                 }
             }
-        }
-
-        // Другие этапы пайплайна, если есть
-    }
-
-    post {
-        always {
-            // Сохранение кеша зависимостей для будущих сборок
-            cache(save: '/path/to/cache/key', paths: ['~/.cache/pip'])
         }
     }
 }
