@@ -3,41 +3,227 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+      "name" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
       "children" : [ {
-        "name" : "test_delete_dmsg",
-        "uid" : "ba16e529493da8ce",
-        "parentUid" : "6b6a70086243924495b8afdaf625d52d",
+        "name" : "test_get_user_ban",
+        "uid" : "b904124da2d9b604",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
         "status" : "failed",
         "time" : {
-          "start" : 1716481533568,
-          "stop" : 1716481593751,
-          "duration" : 60183
+          "start" : 1716513469786,
+          "stop" : 1716513470252,
+          "duration" : 466
         },
         "flaky" : false,
-        "newFailed" : false,
+        "newFailed" : true,
         "parameters" : [ ]
-      } ],
-      "uid" : "6b6a70086243924495b8afdaf625d52d"
-    }, {
-      "name" : "AssertionError: Сообщение с ID $fO-0zeFGFxWYI0rfQdjYtbL3SV3zXn82kyznmou0kvk не найдено.\nassert []",
-      "children" : [ {
-        "name" : "test_show_chat_messages",
-        "uid" : "3b3e8a80c3781f93",
-        "parentUid" : "7cc83abd1afd44e17ba21a39a0c97dce",
+      }, {
+        "name" : "test_get_chanel",
+        "uid" : "5d3682bebad2d5d",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
         "status" : "failed",
         "time" : {
-          "start" : 1716481594488,
-          "stop" : 1716481597676,
-          "duration" : 3188
+          "start" : 1716513515922,
+          "stop" : 1716513516127,
+          "duration" : 205
         },
         "flaky" : false,
-        "newFailed" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_get_chanel_matrix",
+        "uid" : "e75abd27b0c7f5c6",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716513516132,
+          "stop" : 1716513516598,
+          "duration" : 466
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_emoji",
+        "uid" : "dce9af84cd18983",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716513518676,
+          "stop" : 1716513519130,
+          "duration" : 454
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_tag_user",
+        "uid" : "8c0ec2c8754bc189",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716513520102,
+          "stop" : 1716513521582,
+          "duration" : 1480
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_url",
+        "uid" : "dba7b9f2280a2b5b",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716513521591,
+          "stop" : 1716513522065,
+          "duration" : 474
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_not_allow_symbol",
+        "uid" : "ac55758ffd38855e",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716513522074,
+          "stop" : 1716513522532,
+          "duration" : 458
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_gif",
+        "uid" : "8c0109224a068404",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1716513522564,
+          "stop" : 1716513523083,
+          "duration" : 519
+        },
+        "flaky" : false,
+        "newFailed" : true,
         "parameters" : [ ]
       } ],
-      "uid" : "7cc83abd1afd44e17ba21a39a0c97dce"
+      "uid" : "1f66ec44f1e731f40db4c1815d77405e"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "children" : [ {
+        "name" : "test_block_players",
+        "uid" : "19b0e4859cf9c4a2",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513470290,
+          "stop" : 1716513470445,
+          "duration" : 155
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_unblock_players",
+        "uid" : "f97d1d8ffba1118b",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513470476,
+          "stop" : 1716513490834,
+          "duration" : 20358
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_messages",
+        "uid" : "3962d6dc637e1591",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513517689,
+          "stop" : 1716513518623,
+          "duration" : 934
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_reaction",
+        "uid" : "4141c903f38c217e",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513519140,
+          "stop" : 1716513520065,
+          "duration" : 925
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_complaint",
+        "uid" : "84047e9b12686a27",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513523092,
+          "stop" : 1716513524018,
+          "duration" : 926
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_pinned_msg",
+        "uid" : "4edaa3d590e4cee2",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513524056,
+          "stop" : 1716513525002,
+          "duration" : 946
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_dmsg",
+        "uid" : "903e2064a6a51e0b",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513525496,
+          "stop" : 1716513525793,
+          "duration" : 297
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_show_chat_messages",
+        "uid" : "6fc25a40a092e243",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1716513526412,
+          "stop" : 1716513527460,
+          "duration" : 1048
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0deff55915d4c9ebc746eac29285817c"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
