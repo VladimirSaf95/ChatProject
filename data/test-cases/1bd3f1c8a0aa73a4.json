@@ -1,24 +1,24 @@
 {
-  "uid" : "380fa4d36b188013",
+  "uid" : "1bd3f1c8a0aa73a4",
   "name" : "test_get_user_ban",
   "fullName" : "test.test_block_and_unblock#test_get_user_ban",
   "historyId" : "f5b3dfaebdee0a0aef475549ad00aaa4",
   "time" : {
-    "start" : 1716625339261,
-    "stop" : 1716625339914,
-    "duration" : 653
+    "start" : 1716654046660,
+    "stop" : 1716654047283,
+    "duration" : 623
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f7ceef3df40>\n\n    @allure.feature(\"Player Management\")\n    @allure.story(\"Checking Blocked Players Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_user_ban(api_client):\n        with allure.step(\"Sending GET request for blocked players\"):\n            response = api_client.getuserban()\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_block_and_unblock.py:18: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1510761fd0>\n\n    @allure.feature(\"Player Management\")\n    @allure.story(\"Checking Blocked Players Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_user_ban(api_client):\n        with allure.step(\"Sending GET request for blocked players\"):\n            response = api_client.getuserban()\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_block_and_unblock.py:18: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1716625336113,
-      "stop" : 1716625336113,
-      "duration" : 0
+      "start" : 1716654043826,
+      "stop" : 1716654043827,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +31,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1716625336113,
-      "stop" : 1716625339260,
-      "duration" : 3147
+      "start" : 1716654043827,
+      "stop" : 1716654046659,
+      "duration" : 2832
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,9 +46,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1716625339260,
-      "stop" : 1716625339260,
-      "duration" : 0
+      "start" : 1716654046659,
+      "stop" : 1716654046660,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,13 +62,13 @@
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f7ceef3df40>\n\n    @allure.feature(\"Player Management\")\n    @allure.story(\"Checking Blocked Players Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_user_ban(api_client):\n        with allure.step(\"Sending GET request for blocked players\"):\n            response = api_client.getuserban()\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_block_and_unblock.py:18: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1510761fd0>\n\n    @allure.feature(\"Player Management\")\n    @allure.story(\"Checking Blocked Players Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_user_ban(api_client):\n        with allure.step(\"Sending GET request for blocked players\"):\n            response = api_client.getuserban()\n    \n            with allure.step(\"Asserting response status code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_block_and_unblock.py:18: AssertionError",
     "steps" : [ {
       "name" : "Sending GET request for blocked players",
       "time" : {
-        "start" : 1716625339261,
-        "stop" : 1716625339913,
-        "duration" : 652
+        "start" : 1716654046660,
+        "stop" : 1716654047282,
+        "duration" : 622
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -76,8 +76,8 @@
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1716625339913,
-          "stop" : 1716625339913,
+          "start" : 1716654047282,
+          "stop" : 1716654047282,
           "duration" : 0
         },
         "status" : "failed",
@@ -108,8 +108,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716625395750,
-      "stop" : 1716625395750,
+      "start" : 1716654105882,
+      "stop" : 1716654105882,
       "duration" : 0
     },
     "status" : "passed",
@@ -122,11 +122,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Checking Blocked Players Retrieval"
-  }, {
     "name" : "feature",
     "value" : "Player Management"
+  }, {
+    "name" : "story",
+    "value" : "Checking Blocked Players Retrieval"
   }, {
     "name" : "severity",
     "value" : "critical"
@@ -138,7 +138,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "d34fcdb105da"
+    "value" : "0d157fdcece6"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -169,14 +169,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 6,
+        "failed" : 7,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 165,
         "unknown" : 0,
-        "total" : 175
+        "total" : 176
       },
       "items" : [ {
+        "uid" : "380fa4d36b188013",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716625339261,
+          "stop" : 1716625339914,
+          "duration" : 653
+        }
+      }, {
         "uid" : "7546f5d1b7d0e68",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -332,18 +341,10 @@
           "stop" : 1716081721839,
           "duration" : 485
         }
-      }, {
-        "uid" : "3be366baec0485bc",
-        "status" : "passed",
-        "time" : {
-          "start" : 1716049267884,
-          "stop" : 1716049268622,
-          "duration" : 738
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "380fa4d36b188013.json",
+  "source" : "1bd3f1c8a0aa73a4.json",
   "parameterValues" : [ ]
 }

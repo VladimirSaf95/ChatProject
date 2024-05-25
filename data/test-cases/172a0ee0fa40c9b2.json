@@ -1,24 +1,24 @@
 {
-  "uid" : "1ef32df18a67d4a6",
+  "uid" : "172a0ee0fa40c9b2",
   "name" : "test_tag_user",
   "fullName" : "test.test_messages_functionality#test_tag_user",
   "historyId" : "585b036b510637bc4e1227ec18f2d0bf",
   "time" : {
-    "start" : 1716625388256,
-    "stop" : 1716625388915,
-    "duration" : 659
+    "start" : 1716654098692,
+    "stop" : 1716654099350,
+    "duration" : 658
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f7ceef3df40>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1510761fd0>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1716625336113,
-      "stop" : 1716625336113,
-      "duration" : 0
+      "start" : 1716654043826,
+      "stop" : 1716654043827,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +31,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1716625336113,
-      "stop" : 1716625339260,
-      "duration" : 3147
+      "start" : 1716654043827,
+      "stop" : 1716654046659,
+      "duration" : 2832
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,9 +46,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1716625339260,
-      "stop" : 1716625339260,
-      "duration" : 0
+      "start" : 1716654046659,
+      "stop" : 1716654046660,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,12 +62,12 @@
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f7ceef3df40>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1510761fd0>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
     "steps" : [ {
       "name" : "Tagging player in chat",
       "time" : {
-        "start" : 1716625388257,
-        "stop" : 1716625388915,
+        "start" : 1716654098692,
+        "stop" : 1716654099350,
         "duration" : 658
       },
       "status" : "failed",
@@ -76,9 +76,9 @@
       "steps" : [ {
         "name" : "Check response code",
         "time" : {
-          "start" : 1716625388915,
-          "stop" : 1716625388915,
-          "duration" : 0
+          "start" : 1716654099349,
+          "stop" : 1716654099350,
+          "duration" : 1
         },
         "status" : "failed",
         "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -108,8 +108,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716625395750,
-      "stop" : 1716625395750,
+      "start" : 1716654105882,
+      "stop" : 1716654105882,
       "duration" : 0
     },
     "status" : "passed",
@@ -122,14 +122,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Tagging Players"
-  }, {
     "name" : "story",
     "value" : "Tagging player in chat"
   }, {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Tagging Players"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -138,7 +138,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "d34fcdb105da"
+    "value" : "0d157fdcece6"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -169,14 +169,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 6,
+        "failed" : 7,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 165,
         "unknown" : 0,
-        "total" : 175
+        "total" : 176
       },
       "items" : [ {
+        "uid" : "1ef32df18a67d4a6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716625388256,
+          "stop" : 1716625388915,
+          "duration" : 659
+        }
+      }, {
         "uid" : "bf0fa1d711042137",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -332,18 +341,10 @@
           "stop" : 1716082359450,
           "duration" : 680
         }
-      }, {
-        "uid" : "3b4e4e465acfcd21",
-        "status" : "passed",
-        "time" : {
-          "start" : 1716049331561,
-          "stop" : 1716049332622,
-          "duration" : 1061
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "1ef32df18a67d4a6.json",
+  "source" : "172a0ee0fa40c9b2.json",
   "parameterValues" : [ ]
 }

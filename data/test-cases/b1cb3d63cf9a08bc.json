@@ -1,24 +1,24 @@
 {
-  "uid" : "2f48c1bbd9daf3fd",
+  "uid" : "b1cb3d63cf9a08bc",
   "name" : "test_send_complaint",
   "fullName" : "test.test_messages_functionality#test_send_complaint",
   "historyId" : "31f8786fe3f6ff4b035b30b6ade7469c",
   "time" : {
-    "start" : 1716625390475,
-    "stop" : 1716625391286,
-    "duration" : 811
+    "start" : 1716654100451,
+    "stop" : 1716654101304,
+    "duration" : 853
   },
   "status" : "broken",
   "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
-  "statusTrace" : "self = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n../local/lib/python3.9/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../local/lib/python3.9/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n../local/lib/python3.9/json/decoder.py:337: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7f7cf003df10>\ns = '<!DOCTYPE html>\\n<html>\\n<head>\\n    <meta charset=\"UTF-8\" />\\n    <meta name=\"robots\" content=\"noindex,nofollow,noar....\\n        We will fix it as soon as possible. Sorry for any inconvenience caused.\\n    </p>\\n</div>\\n</body>\\n</html>'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\napi_client = <fixture.api_client.APIClient object at 0x7f7ceef3df40>\n\n    @allure.feature(\"Sending Complaints\")\n    @allure.story(\"Filing Complaint on Message\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_send_complaint(api_client):\n        event_id = os.environ.get(\"EVENT_ID_A\")\n        if event_id is None:\n>           responseA = api_client.sendmessages(response_b=False)\n\ntest/test_messages_functionality.py:225: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nfixture/api_client.py:74: in sendmessages\n    responseA_json, responseB_json = responseA.json(), responseB.json()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/site-packages/requests/models.py:975: JSONDecodeError",
+  "statusTrace" : "self = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n../local/lib/python3.9/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n../local/lib/python3.9/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n../local/lib/python3.9/json/decoder.py:337: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7f1511861f10>\ns = '<!DOCTYPE html>\\n<html>\\n<head>\\n    <meta charset=\"UTF-8\" />\\n    <meta name=\"robots\" content=\"noindex,nofollow,noar....\\n        We will fix it as soon as possible. Sorry for any inconvenience caused.\\n    </p>\\n</div>\\n</body>\\n</html>'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\napi_client = <fixture.api_client.APIClient object at 0x7f1510761fd0>\n\n    @allure.feature(\"Sending Complaints\")\n    @allure.story(\"Filing Complaint on Message\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_send_complaint(api_client):\n        event_id = os.environ.get(\"EVENT_ID_A\")\n        if event_id is None:\n>           responseA = api_client.sendmessages(response_b=False)\n\ntest/test_messages_functionality.py:225: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nfixture/api_client.py:74: in sendmessages\n    responseA_json, responseB_json = responseA.json(), responseB.json()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <Response [500]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n../local/lib/python3.9/site-packages/requests/models.py:975: JSONDecodeError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1716625336113,
-      "stop" : 1716625336113,
-      "duration" : 0
+      "start" : 1716654043826,
+      "stop" : 1716654043827,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +31,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1716625336113,
-      "stop" : 1716625339260,
-      "duration" : 3147
+      "start" : 1716654043827,
+      "stop" : 1716654046659,
+      "duration" : 2832
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,9 +46,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1716625339260,
-      "stop" : 1716625339260,
-      "duration" : 0
+      "start" : 1716654046659,
+      "stop" : 1716654046660,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,8 +62,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716625395750,
-      "stop" : 1716625395750,
+      "start" : 1716654105882,
+      "stop" : 1716654105882,
       "duration" : 0
     },
     "status" : "passed",
@@ -92,7 +92,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "d34fcdb105da"
+    "value" : "0d157fdcece6"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -124,13 +124,22 @@
     "history" : {
       "statistic" : {
         "failed" : 1,
-        "broken" : 9,
+        "broken" : 10,
         "skipped" : 0,
         "passed" : 165,
         "unknown" : 0,
-        "total" : 175
+        "total" : 176
       },
       "items" : [ {
+        "uid" : "2f48c1bbd9daf3fd",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1716625390475,
+          "stop" : 1716625391286,
+          "duration" : 811
+        }
+      }, {
         "uid" : "5f54d1dbb9e532f5",
         "status" : "broken",
         "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
@@ -286,18 +295,10 @@
           "stop" : 1716082362180,
           "duration" : 522
         }
-      }, {
-        "uid" : "e378135db6802c6d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1716049334180,
-          "stop" : 1716049334733,
-          "duration" : 553
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "2f48c1bbd9daf3fd.json",
+  "source" : "b1cb3d63cf9a08bc.json",
   "parameterValues" : [ ]
 }
