@@ -1,11 +1,11 @@
 {
-  "uid" : "96cca3e2ac8e65b9",
+  "uid" : "fe88a075da33dba",
   "name" : "test_unpinned_msg",
   "fullName" : "test.test_messages_functionality#test_unpinned_msg",
   "historyId" : "e51d1fcd71fa2b661252b5536f450782",
   "time" : {
-    "start" : 1716741153250,
-    "stop" : 1716741153250,
+    "start" : 1716772786757,
+    "stop" : 1716772786757,
     "duration" : 0
   },
   "status" : "skipped",
@@ -14,50 +14,50 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1716740522125,
-      "stop" : 1716740524559,
-      "duration" : 2434
+      "start" : 1716772736492,
+      "stop" : 1716772736492,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1716740522125,
-      "stop" : 1716740522125,
+      "start" : 1716772733337,
+      "stop" : 1716772733337,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1716740524559,
-      "stop" : 1716740524559,
-      "duration" : 0
+      "start" : 1716772733337,
+      "stop" : 1716772736492,
+      "duration" : 3155
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "skipped",
@@ -66,8 +66,8 @@
     "steps" : [ {
       "name" : "Getting pinned message ID",
       "time" : {
-        "start" : 1716741153250,
-        "stop" : 1716741153250,
+        "start" : 1716772786757,
+        "stop" : 1716772786757,
         "duration" : 0
       },
       "status" : "skipped",
@@ -76,43 +76,43 @@
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
-      "hasContent" : true,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 1,
-    "hasContent" : true,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 1,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716741154577,
-      "stop" : 1716741154577,
+      "start" : 1716772788908,
+      "stop" : 1716772788908,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Message Unpinning by Moderator"
+    "name" : "feature",
+    "value" : "Message Unpinning"
   }, {
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "feature",
-    "value" : "Message Unpinning"
+    "name" : "story",
+    "value" : "Message Unpinning by Moderator"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -121,7 +121,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "70dcc47859d6"
+    "value" : "e79ba1cbadd0"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -150,12 +150,21 @@
       "statistic" : {
         "failed" : 0,
         "broken" : 4,
-        "skipped" : 10,
+        "skipped" : 11,
         "passed" : 165,
         "unknown" : 0,
-        "total" : 179
+        "total" : 180
       },
       "items" : [ {
+        "uid" : "96cca3e2ac8e65b9",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: event_id_pinmsg was not passed from the previous test",
+        "time" : {
+          "start" : 1716741153250,
+          "stop" : 1716741153250,
+          "duration" : 0
+        }
+      }, {
         "uid" : "16c3a9ae5f90e773",
         "status" : "skipped",
         "statusDetails" : "Skipped: event_id_pinmsg was not passed from the previous test",
@@ -315,18 +324,10 @@
           "stop" : 1716193446162,
           "duration" : 820
         }
-      }, {
-        "uid" : "dc1ff69489be77b0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1716167943789,
-          "stop" : 1716167944172,
-          "duration" : 383
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "96cca3e2ac8e65b9.json",
+  "source" : "fe88a075da33dba.json",
   "parameterValues" : [ ]
 }
