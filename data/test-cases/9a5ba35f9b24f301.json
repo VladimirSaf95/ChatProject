@@ -1,148 +1,148 @@
 {
-  "uid" : "20306c4db0c7bf7d",
+  "uid" : "9a5ba35f9b24f301",
   "name" : "test_block_players",
   "fullName" : "test.test_block_and_unblock#test_block_players",
   "historyId" : "d38eeef11179490ead748d140d16f0e6",
   "time" : {
-    "start" : 1716859082245,
-    "stop" : 1716859090224,
-    "duration" : 7979
+    "start" : 1716884667071,
+    "stop" : 1716884674408,
+    "duration" : 7337
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: The 'total' value did not increase by one\nassert 0 == (0 + 1)",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f5fe593bfd0>\n\n    @pytest.mark.dependency(name=\"block_players\")\n    @allure.feature(\"Player Blocking\")\n    @allure.story(\"Player Blocking Test\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_block_players(api_client):\n        with allure.step(\"Getting information about banned players before the test\"):\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Sending message and blocking player\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            data = {\n                \"autoBanned\": False,\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\",\n                \"blockedBy\": f\"@{api_client.senderid_adm}:{api_client.room_second_part}\",\n                \"message\": \"Text Test\",\n                \"duration\": 3600,\n                \"messageId\": event_id,\n                \"reason\": \"harassmentOffensiveLanguage\",\n                \"nodeId\": api_client.xnodeid\n            }\n    \n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"autoBanned=false&\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"blockedBy={quote(f'@{api_client.senderid_adm}')}%3A{api_client.room_second_part}&\"\n                f\"message=Text+Test&\"\n                f\"messageId={quote(event_id.encode())}&\"\n                f\"duration=3600&\"\n                f\"reason=harassmentOffensiveLanguage&\"\n                f\"nodeId={quote(api_client.xnodeid)}\"\n            )\n    \n            response = api_client.post_token_s(url, json=data)\n            time.sleep(3)\n    \n        with allure.step(\"Getting information about banned players after the test\"):\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Verifying response status code\"):\n            assert response.status_code == 200\n    \n        with allure.step(\"Verifying 'total' key in response JSON before and after\"):\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n        with allure.step(\"Verifying the increase in banned players count\"):\n>           assert total_after == total_before + 1, \"The 'total' value did not increase by one\"\nE           AssertionError: The 'total' value did not increase by one\nE           assert 0 == (0 + 1)\n\ntest/test_block_and_unblock.py:92: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f23d1b96820>\n\n    @pytest.mark.dependency(name=\"block_players\")\n    @allure.feature(\"Player Blocking\")\n    @allure.story(\"Player Blocking Test\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_block_players(api_client):\n        with allure.step(\"Getting information about banned players before the test\"):\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Sending message and blocking player\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            data = {\n                \"autoBanned\": False,\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\",\n                \"blockedBy\": f\"@{api_client.senderid_adm}:{api_client.room_second_part}\",\n                \"message\": \"Text Test\",\n                \"duration\": 3600,\n                \"messageId\": event_id,\n                \"reason\": \"harassmentOffensiveLanguage\",\n                \"nodeId\": api_client.xnodeid\n            }\n    \n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"autoBanned=false&\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"blockedBy={quote(f'@{api_client.senderid_adm}')}%3A{api_client.room_second_part}&\"\n                f\"message=Text+Test&\"\n                f\"messageId={quote(event_id.encode())}&\"\n                f\"duration=3600&\"\n                f\"reason=harassmentOffensiveLanguage&\"\n                f\"nodeId={quote(api_client.xnodeid)}\"\n            )\n    \n            response = api_client.post_token_s(url, json=data)\n            time.sleep(3)\n    \n        with allure.step(\"Getting information about banned players after the test\"):\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Verifying response status code\"):\n            assert response.status_code == 200\n    \n        with allure.step(\"Verifying 'total' key in response JSON before and after\"):\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n        with allure.step(\"Verifying the increase in banned players count\"):\n>           assert total_after == total_before + 1, \"The 'total' value did not increase by one\"\nE           AssertionError: The 'total' value did not increase by one\nE           assert 0 == (0 + 1)\n\ntest/test_block_and_unblock.py:92: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1716859081938,
-      "stop" : 1716859081938,
+      "start" : 1716884663124,
+      "stop" : 1716884666805,
+      "duration" : 3681
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1716884663124,
+      "stop" : 1716884663124,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   }, {
-    "name" : "config",
+    "name" : "api_client",
     "time" : {
-      "start" : 1716859078663,
-      "stop" : 1716859078664,
-      "duration" : 1
+      "start" : 1716884666806,
+      "stop" : 1716884666806,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1716859078664,
-      "stop" : 1716859081938,
-      "duration" : 3274
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
+    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: The 'total' value did not increase by one\nassert 0 == (0 + 1)",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f5fe593bfd0>\n\n    @pytest.mark.dependency(name=\"block_players\")\n    @allure.feature(\"Player Blocking\")\n    @allure.story(\"Player Blocking Test\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_block_players(api_client):\n        with allure.step(\"Getting information about banned players before the test\"):\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Sending message and blocking player\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            data = {\n                \"autoBanned\": False,\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\",\n                \"blockedBy\": f\"@{api_client.senderid_adm}:{api_client.room_second_part}\",\n                \"message\": \"Text Test\",\n                \"duration\": 3600,\n                \"messageId\": event_id,\n                \"reason\": \"harassmentOffensiveLanguage\",\n                \"nodeId\": api_client.xnodeid\n            }\n    \n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"autoBanned=false&\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"blockedBy={quote(f'@{api_client.senderid_adm}')}%3A{api_client.room_second_part}&\"\n                f\"message=Text+Test&\"\n                f\"messageId={quote(event_id.encode())}&\"\n                f\"duration=3600&\"\n                f\"reason=harassmentOffensiveLanguage&\"\n                f\"nodeId={quote(api_client.xnodeid)}\"\n            )\n    \n            response = api_client.post_token_s(url, json=data)\n            time.sleep(3)\n    \n        with allure.step(\"Getting information about banned players after the test\"):\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Verifying response status code\"):\n            assert response.status_code == 200\n    \n        with allure.step(\"Verifying 'total' key in response JSON before and after\"):\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n        with allure.step(\"Verifying the increase in banned players count\"):\n>           assert total_after == total_before + 1, \"The 'total' value did not increase by one\"\nE           AssertionError: The 'total' value did not increase by one\nE           assert 0 == (0 + 1)\n\ntest/test_block_and_unblock.py:92: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f23d1b96820>\n\n    @pytest.mark.dependency(name=\"block_players\")\n    @allure.feature(\"Player Blocking\")\n    @allure.story(\"Player Blocking Test\")\n    @allure.severity(allure.severity_level.BLOCKER)\n    def test_block_players(api_client):\n        with allure.step(\"Getting information about banned players before the test\"):\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Sending message and blocking player\"):\n            event_id = os.environ.get(\"EVENT_ID_B\")\n            if event_id is None:\n                api_client.sendmessages(response_a=False)\n                event_id = os.environ.get(\"EVENT_ID_B\")\n    \n            data = {\n                \"autoBanned\": False,\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\",\n                \"blockedBy\": f\"@{api_client.senderid_adm}:{api_client.room_second_part}\",\n                \"message\": \"Text Test\",\n                \"duration\": 3600,\n                \"messageId\": event_id,\n                \"reason\": \"harassmentOffensiveLanguage\",\n                \"nodeId\": api_client.xnodeid\n            }\n    \n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"autoBanned=false&\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"blockedBy={quote(f'@{api_client.senderid_adm}')}%3A{api_client.room_second_part}&\"\n                f\"message=Text+Test&\"\n                f\"messageId={quote(event_id.encode())}&\"\n                f\"duration=3600&\"\n                f\"reason=harassmentOffensiveLanguage&\"\n                f\"nodeId={quote(api_client.xnodeid)}\"\n            )\n    \n            response = api_client.post_token_s(url, json=data)\n            time.sleep(3)\n    \n        with allure.step(\"Getting information about banned players after the test\"):\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Verifying response status code\"):\n            assert response.status_code == 200\n    \n        with allure.step(\"Verifying 'total' key in response JSON before and after\"):\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n        with allure.step(\"Verifying the increase in banned players count\"):\n>           assert total_after == total_before + 1, \"The 'total' value did not increase by one\"\nE           AssertionError: The 'total' value did not increase by one\nE           assert 0 == (0 + 1)\n\ntest/test_block_and_unblock.py:92: AssertionError",
     "steps" : [ {
       "name" : "Getting information about banned players before the test",
       "time" : {
-        "start" : 1716859082246,
-        "stop" : 1716859082967,
-        "duration" : 721
+        "start" : 1716884667072,
+        "stop" : 1716884667746,
+        "duration" : 674
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Sending message and blocking player",
       "time" : {
-        "start" : 1716859082967,
-        "stop" : 1716859089973,
-        "duration" : 7006
+        "start" : 1716884667746,
+        "stop" : 1716884674151,
+        "duration" : 6405
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Getting information about banned players after the test",
       "time" : {
-        "start" : 1716859089973,
-        "stop" : 1716859090223,
-        "duration" : 250
+        "start" : 1716884674151,
+        "stop" : 1716884674407,
+        "duration" : 256
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Verifying response status code",
       "time" : {
-        "start" : 1716859090223,
-        "stop" : 1716859090223,
+        "start" : 1716884674407,
+        "stop" : 1716884674407,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Verifying 'total' key in response JSON before and after",
       "time" : {
-        "start" : 1716859090223,
-        "stop" : 1716859090223,
+        "start" : 1716884674407,
+        "stop" : 1716884674407,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Verifying the increase in banned players count",
       "time" : {
-        "start" : 1716859090223,
-        "stop" : 1716859090223,
+        "start" : 1716884674407,
+        "stop" : 1716884674407,
         "duration" : 0
       },
       "status" : "failed",
@@ -151,43 +151,43 @@
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true,
     "stepsCount" : 6,
-    "hasContent" : true
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1716859795246,
-      "stop" : 1716859795247,
-      "duration" : 1
+      "start" : 1716884805686,
+      "stop" : 1716884805686,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
     "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Player Blocking"
+    "name" : "story",
+    "value" : "Player Blocking Test"
   }, {
     "name" : "severity",
     "value" : "blocker"
   }, {
-    "name" : "story",
-    "value" : "Player Blocking Test"
+    "name" : "feature",
+    "value" : "Player Blocking"
   }, {
     "name" : "tag",
     "value" : "dependency(name='block_players')"
@@ -199,7 +199,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "03633974729f"
+    "value" : "1a00373ea40e"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -230,14 +230,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 7,
+        "failed" : 8,
         "broken" : 16,
         "skipped" : 0,
         "passed" : 160,
         "unknown" : 0,
-        "total" : 183
+        "total" : 184
       },
       "items" : [ {
+        "uid" : "20306c4db0c7bf7d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: The 'total' value did not increase by one\nassert 0 == (0 + 1)",
+        "time" : {
+          "start" : 1716859082245,
+          "stop" : 1716859090224,
+          "duration" : 7979
+        }
+      }, {
         "uid" : "d9f6457f2e9338b5",
         "status" : "failed",
         "statusDetails" : "AssertionError: The 'total' value did not increase by one\nassert 0 == (0 + 1)",
@@ -401,18 +410,10 @@
           "stop" : 1716308541046,
           "duration" : 7651
         }
-      }, {
-        "uid" : "d9813717dfada649",
-        "status" : "passed",
-        "time" : {
-          "start" : 1716279758364,
-          "stop" : 1716279765874,
-          "duration" : 7510
-        }
       } ]
     },
     "tags" : [ "dependency(name='block_players')" ]
   },
-  "source" : "20306c4db0c7bf7d.json",
+  "source" : "9a5ba35f9b24f301.json",
   "parameterValues" : [ ]
 }
