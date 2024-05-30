@@ -1,22 +1,22 @@
 {
-  "uid" : "f19ef0ed60574a5f",
+  "uid" : "d3e97a799bdce977",
   "name" : "test_send_messages",
   "fullName" : "test.test_messages_functionality#test_send_messages",
   "historyId" : "9b9ea771234bc682fdfb1cb249d672cb",
   "time" : {
-    "start" : 1717057475554,
-    "stop" : 1717057477207,
-    "duration" : 1653
+    "start" : 1717086248948,
+    "stop" : 1717086249985,
+    "duration" : 1037
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1717057417174,
-      "stop" : 1717057417174,
-      "duration" : 0
+      "start" : 1717086189495,
+      "stop" : 1717086192856,
+      "duration" : 3361
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1717057413710,
-      "stop" : 1717057413710,
+      "start" : 1717086189494,
+      "stop" : 1717086189494,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1717057413710,
-      "stop" : 1717057417174,
-      "duration" : 3464
+      "start" : 1717086192857,
+      "stop" : 1717086192857,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending messages and checking response",
       "time" : {
-        "start" : 1717057475554,
-        "stop" : 1717057477204,
-        "duration" : 1650
+        "start" : 1717086248948,
+        "stop" : 1717086249981,
+        "duration" : 1033
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Check response code for message A",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Check for invalid message in response A",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,8 +100,8 @@
       }, {
         "name" : "Check response code for message B",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
       }, {
         "name" : "Check for invalid message in response B",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -130,8 +130,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response A",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -145,8 +145,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response B",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -160,8 +160,8 @@
       }, {
         "name" : "Check response time for message A",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -175,8 +175,8 @@
       }, {
         "name" : "Check response time for message B",
         "time" : {
-          "start" : 1717057477204,
-          "stop" : 1717057477204,
+          "start" : 1717086249981,
+          "stop" : 1717086249981,
           "duration" : 0
         },
         "status" : "passed",
@@ -205,9 +205,9 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1717057558846,
-      "stop" : 1717057558846,
-      "duration" : 0
+      "start" : 1717086329051,
+      "stop" : 1717086329052,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -219,14 +219,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Sending Messages"
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "story",
     "value" : "Sending Text Messages"
   }, {
-    "name" : "severity",
-    "value" : "critical"
+    "name" : "feature",
+    "value" : "Sending Messages"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -235,7 +235,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "18a307631788"
+    "value" : "81cc72c660a1"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -265,11 +265,19 @@
         "failed" : 1,
         "broken" : 15,
         "skipped" : 0,
-        "passed" : 173,
+        "passed" : 174,
         "unknown" : 0,
-        "total" : 189
+        "total" : 190
       },
       "items" : [ {
+        "uid" : "f19ef0ed60574a5f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717057475554,
+          "stop" : 1717057477207,
+          "duration" : 1653
+        }
+      }, {
         "uid" : "970e63c5ead7c2b6",
         "status" : "passed",
         "time" : {
@@ -432,18 +440,10 @@
           "stop" : 1716481517793,
           "duration" : 2015
         }
-      }, {
-        "uid" : "90df571b681a3c0e",
-        "status" : "passed",
-        "time" : {
-          "start" : 1716452595506,
-          "stop" : 1716452596466,
-          "duration" : 960
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "f19ef0ed60574a5f.json",
+  "source" : "d3e97a799bdce977.json",
   "parameterValues" : [ ]
 }
