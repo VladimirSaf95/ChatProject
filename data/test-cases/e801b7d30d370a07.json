@@ -1,22 +1,22 @@
 {
-  "uid" : "e8f6aebfb74d037b",
-  "name" : "test_send_url",
-  "fullName" : "test.test_messages_functionality#test_send_url",
-  "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
+  "uid" : "e801b7d30d370a07",
+  "name" : "test_send_gif",
+  "fullName" : "test.test_messages_functionality#test_send_gif",
+  "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
   "time" : {
-    "start" : 1717032004049,
-    "stop" : 1717032005268,
-    "duration" : 1219
+    "start" : 1717057482009,
+    "stop" : 1717057482598,
+    "duration" : 589
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1717031911634,
-      "stop" : 1717031915191,
-      "duration" : 3557
+      "start" : 1717057417174,
+      "stop" : 1717057417174,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1717031911633,
-      "stop" : 1717031911633,
+      "start" : 1717057413710,
+      "stop" : 1717057413710,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1717031915191,
-      "stop" : 1717031915191,
-      "duration" : 0
+      "start" : 1717057413710,
+      "stop" : 1717057417174,
+      "duration" : 3464
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,78 +60,93 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Sending allowed URL",
+      "name" : "Sending GIF message",
       "time" : {
-        "start" : 1717032004049,
-        "stop" : 1717032005031,
-        "duration" : 982
+        "start" : 1717057482010,
+        "stop" : 1717057482596,
+        "duration" : 586
       },
       "status" : "passed",
-      "steps" : [ {
-        "name" : "Asserting response for allowed URL",
-        "time" : {
-          "start" : 1717032005031,
-          "stop" : 1717032005031,
-          "duration" : 0
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      } ],
+      "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 1,
-      "hasContent" : true
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
-      "name" : "Sending disallowed URL",
+      "name" : "Asserting response status code",
       "time" : {
-        "start" : 1717032005031,
-        "stop" : 1717032005264,
-        "duration" : 233
+        "start" : 1717057482596,
+        "stop" : 1717057482596,
+        "duration" : 0
       },
       "status" : "passed",
-      "steps" : [ {
-        "name" : "Asserting response for disallowed URL",
-        "time" : {
-          "start" : 1717032005264,
-          "stop" : 1717032005264,
-          "duration" : 0
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "stepsCount" : 0,
-        "hasContent" : false
-      } ],
+      "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 1,
-      "hasContent" : true
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Asserting response text",
+      "time" : {
+        "start" : 1717057482596,
+        "stop" : 1717057482596,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Asserting 'event_id' key in JSON response",
+      "time" : {
+        "start" : 1717057482596,
+        "stop" : 1717057482596,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Asserting response time",
+      "time" : {
+        "start" : 1717057482596,
+        "stop" : 1717057482596,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 4,
+    "stepsCount" : 5,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1717032082198,
-      "stop" : 1717032082198,
+      "start" : 1717057558846,
+      "stop" : 1717057558846,
       "duration" : 0
     },
     "status" : "passed",
@@ -144,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "normal"
+    "name" : "story",
+    "value" : "Sending GIF in Chat"
   }, {
     "name" : "feature",
-    "value" : "Sending URLs"
+    "value" : "Sending GIFs"
   }, {
-    "name" : "story",
-    "value" : "Sending Allowed and Disallowed URLs"
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "b2e7671bdb01"
+    "value" : "18a307631788"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,185 +205,185 @@
         "failed" : 12,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 172,
+        "passed" : 173,
         "unknown" : 0,
-        "total" : 188
+        "total" : 189
       },
       "items" : [ {
-        "uid" : "4532edacdf51ef4f",
+        "uid" : "2f8d954de9ac1b36",
         "status" : "passed",
         "time" : {
-          "start" : 1717000449852,
-          "stop" : 1717000451023,
-          "duration" : 1171
+          "start" : 1717032005925,
+          "stop" : 1717032006804,
+          "duration" : 879
         }
       }, {
-        "uid" : "608934f56ea4d47f",
+        "uid" : "f895e0045f3426f1",
         "status" : "passed",
         "time" : {
-          "start" : 1716971124002,
-          "stop" : 1716971125287,
-          "duration" : 1285
+          "start" : 1717000451268,
+          "stop" : 1717000451783,
+          "duration" : 515
         }
       }, {
-        "uid" : "a4305361c6eb827f",
+        "uid" : "d30f6d3fa9b3b0b5",
         "status" : "passed",
         "time" : {
-          "start" : 1716913399187,
-          "stop" : 1716913400202,
-          "duration" : 1015
+          "start" : 1716971125485,
+          "stop" : 1716971126241,
+          "duration" : 756
         }
       }, {
-        "uid" : "df20fa014eb45f8e",
+        "uid" : "c087330604a2ec7e",
         "status" : "passed",
         "time" : {
-          "start" : 1716884727763,
-          "stop" : 1716884728501,
-          "duration" : 738
+          "start" : 1716913400439,
+          "stop" : 1716913400868,
+          "duration" : 429
         }
       }, {
-        "uid" : "6a4e12ebb63ecdd9",
+        "uid" : "474e2e624935fa4a",
         "status" : "passed",
         "time" : {
-          "start" : 1716859720917,
-          "stop" : 1716859722468,
-          "duration" : 1551
+          "start" : 1716884729210,
+          "stop" : 1716884729678,
+          "duration" : 468
         }
       }, {
-        "uid" : "f4dd2838cf023797",
+        "uid" : "defc685442f2079f",
         "status" : "passed",
         "time" : {
-          "start" : 1716827576378,
-          "stop" : 1716827577326,
-          "duration" : 948
+          "start" : 1716859722715,
+          "stop" : 1716859723128,
+          "duration" : 413
         }
       }, {
-        "uid" : "a4d3e5e81b596605",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716798246173,
-          "stop" : 1716798246556,
-          "duration" : 383
-        }
-      }, {
-        "uid" : "9d3ca11ee0f3ba36",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716772783790,
-          "stop" : 1716772784178,
-          "duration" : 388
-        }
-      }, {
-        "uid" : "cdc7ae11997c3f9c",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716741149888,
-          "stop" : 1716741150335,
-          "duration" : 447
-        }
-      }, {
-        "uid" : "6d457c0be5bfc1d3",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716711753423,
-          "stop" : 1716711754070,
-          "duration" : 647
-        }
-      }, {
-        "uid" : "f52a1c2a2ec6df9",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716686648899,
-          "stop" : 1716686649567,
-          "duration" : 668
-        }
-      }, {
-        "uid" : "1c0e1d264c5b0b51",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716654099360,
-          "stop" : 1716654099980,
-          "duration" : 620
-        }
-      }, {
-        "uid" : "857d78b73b1b3062",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716625388924,
-          "stop" : 1716625389539,
-          "duration" : 615
-        }
-      }, {
-        "uid" : "bd79b4fdfa88ac14",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716599833774,
-          "stop" : 1716599834216,
-          "duration" : 442
-        }
-      }, {
-        "uid" : "ee86dbc5133a8cf9",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716567738516,
-          "stop" : 1716567738678,
-          "duration" : 162
-        }
-      }, {
-        "uid" : "9fb225e48fcf3d0a",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716539027005,
-          "stop" : 1716539027676,
-          "duration" : 671
-        }
-      }, {
-        "uid" : "dba7b9f2280a2b5b",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1716513521591,
-          "stop" : 1716513522065,
-          "duration" : 474
-        }
-      }, {
-        "uid" : "8f1321d270336edc",
+        "uid" : "5b89fc6272aa2f8d",
         "status" : "passed",
         "time" : {
-          "start" : 1716481519623,
-          "stop" : 1716481520385,
-          "duration" : 762
+          "start" : 1716827577827,
+          "stop" : 1716827578668,
+          "duration" : 841
         }
       }, {
-        "uid" : "6c86d9698ba33475",
-        "status" : "passed",
+        "uid" : "30668473bf801f4d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
         "time" : {
-          "start" : 1716452597669,
-          "stop" : 1716452598259,
-          "duration" : 590
+          "start" : 1716798246730,
+          "stop" : 1716798247174,
+          "duration" : 444
         }
       }, {
-        "uid" : "1a606ca1088f2b15",
+        "uid" : "141e6f0edbfd1d63",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716772784614,
+          "stop" : 1716772785044,
+          "duration" : 430
+        }
+      }, {
+        "uid" : "51d09a9837e2fa1c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716741150804,
+          "stop" : 1716741151324,
+          "duration" : 520
+        }
+      }, {
+        "uid" : "c14a215136b87e8b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716711754815,
+          "stop" : 1716711755493,
+          "duration" : 678
+        }
+      }, {
+        "uid" : "ad62380b8661652d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716686649801,
+          "stop" : 1716686650473,
+          "duration" : 672
+        }
+      }, {
+        "uid" : "54a996aa6322e0a0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716654100205,
+          "stop" : 1716654100442,
+          "duration" : 237
+        }
+      }, {
+        "uid" : "ade4c55885af299",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716625389769,
+          "stop" : 1716625390466,
+          "duration" : 697
+        }
+      }, {
+        "uid" : "ea7567c45900ded9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716599834740,
+          "stop" : 1716599835251,
+          "duration" : 511
+        }
+      }, {
+        "uid" : "c110ee95048d7919",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716567739193,
+          "stop" : 1716567739719,
+          "duration" : 526
+        }
+      }, {
+        "uid" : "7cd65688586961a8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716539027905,
+          "stop" : 1716539028133,
+          "duration" : 228
+        }
+      }, {
+        "uid" : "8c0109224a068404",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1716513522564,
+          "stop" : 1716513523083,
+          "duration" : 519
+        }
+      }, {
+        "uid" : "9c9f8fbd003bcf59",
         "status" : "passed",
         "time" : {
-          "start" : 1716427082895,
-          "stop" : 1716427084148,
-          "duration" : 1253
+          "start" : 1716481520647,
+          "stop" : 1716481521581,
+          "duration" : 934
+        }
+      }, {
+        "uid" : "373e17fceff844ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716452598816,
+          "stop" : 1716452599472,
+          "duration" : 656
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e8f6aebfb74d037b.json",
+  "source" : "e801b7d30d370a07.json",
   "parameterValues" : [ ]
 }
