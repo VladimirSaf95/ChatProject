@@ -1,12 +1,12 @@
 {
-  "uid" : "82ebeed3f5feb372",
-  "name" : "test_open_rules_in_different_locales",
-  "fullName" : "test.test_clickable_button_rules#test_open_rules_in_different_locales",
-  "historyId" : "407693a6fd5ff6488821603261c63665",
+  "uid" : "c2376c2ea4018718",
+  "name" : "test_guest_write_text",
+  "fullName" : "test.test_guest_write_text#test_guest_write_text",
+  "historyId" : "ce0cd46787e71938b1e1382945934dfe",
   "time" : {
-    "start" : 1717777420079,
-    "stop" : 1717777425085,
-    "duration" : 5006
+    "start" : 1717809605093,
+    "stop" : 1717809606769,
+    "duration" : 1676
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,23 +14,8 @@
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1717777368737,
-      "stop" : 1717777368738,
-      "duration" : 1
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1717777365521,
-      "stop" : 1717777365521,
+      "start" : 1717809550155,
+      "stop" : 1717809550155,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +29,9 @@
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1717777401406,
-      "stop" : 1717777402592,
-      "duration" : 1186
+      "start" : 1717809582259,
+      "stop" : 1717809583210,
+      "duration" : 951
     },
     "status" : "passed",
     "steps" : [ ],
@@ -59,9 +44,24 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1717777365522,
-      "stop" : 1717777368737,
-      "duration" : 3215
+      "start" : 1717809547420,
+      "stop" : 1717809550154,
+      "duration" : 2734
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1717809547419,
+      "stop" : 1717809547419,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Opening chat rules",
+      "name" : "Clicking on the chat input field",
       "time" : {
-        "start" : 1717777420183,
-        "stop" : 1717777420973,
-        "duration" : 790
+        "start" : 1717809605254,
+        "stop" : 1717809606618,
+        "duration" : 1364
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,26 +90,11 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Verifying chat rules in English locale",
+      "name" : "Asserting redirection to login page",
       "time" : {
-        "start" : 1717777420973,
-        "stop" : 1717777421007,
-        "duration" : 34
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Switching to Russian locale and verifying chat rules",
-      "time" : {
-        "start" : 1717777421007,
-        "stop" : 1717777425085,
-        "duration" : 4078
+        "start" : 1717809606618,
+        "stop" : 1717809606768,
+        "duration" : 150
       },
       "status" : "passed",
       "steps" : [ ],
@@ -124,14 +109,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 3,
+    "stepsCount" : 2,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1717777507722,
-      "stop" : 1717777507722,
+      "start" : 1717809686580,
+      "stop" : 1717809686580,
       "duration" : 0
     },
     "status" : "passed",
@@ -145,8 +130,8 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1717777507655,
-      "stop" : 1717777507721,
+      "start" : 1717809686513,
+      "stop" : 1717809686579,
       "duration" : 66
     },
     "status" : "passed",
@@ -159,23 +144,23 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Chat Rules"
+    "name" : "story",
+    "value" : "Writing Text as Guest"
   }, {
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "story",
-    "value" : "Opening Chat Rules in Different Locales"
+    "name" : "feature",
+    "value" : "Guest Chat Functionality"
   }, {
     "name" : "parentSuite",
     "value" : "test"
   }, {
     "name" : "suite",
-    "value" : "test_clickable_button_rules"
+    "value" : "test_guest_write_text"
   }, {
     "name" : "host",
-    "value" : "9fbe680d91e5"
+    "value" : "8b1a5b764b87"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -187,7 +172,7 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "test.test_clickable_button_rules"
+    "value" : "test.test_guest_write_text"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -202,183 +187,182 @@
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 5,
+        "failed" : 6,
         "broken" : 38,
         "skipped" : 0,
         "passed" : 171,
         "unknown" : 0,
-        "total" : 214
+        "total" : 215
       },
       "items" : [ {
-        "uid" : "76c7964251046cb0",
+        "uid" : "607795d60039fc0d",
         "status" : "passed",
         "time" : {
-          "start" : 1717748662525,
-          "stop" : 1717748668900,
-          "duration" : 6375
+          "start" : 1717777425662,
+          "stop" : 1717777426997,
+          "duration" : 1335
         }
       }, {
-        "uid" : "5db6bdecb5fc2c9e",
+        "uid" : "315477b643af6cb1",
         "status" : "passed",
         "time" : {
-          "start" : 1717723336768,
-          "stop" : 1717723341749,
-          "duration" : 4981
+          "start" : 1717748669374,
+          "stop" : 1717748671384,
+          "duration" : 2010
         }
       }, {
-        "uid" : "7dee3d95a162a5ce",
+        "uid" : "ecffaf71007e015",
         "status" : "passed",
         "time" : {
-          "start" : 1717691065014,
-          "stop" : 1717691070044,
-          "duration" : 5030
+          "start" : 1717723342234,
+          "stop" : 1717723343569,
+          "duration" : 1335
         }
       }, {
-        "uid" : "f4210a5d3f3601d4",
+        "uid" : "558f06bc9fbe956e",
         "status" : "passed",
         "time" : {
-          "start" : 1717662270265,
-          "stop" : 1717662275838,
-          "duration" : 5573
+          "start" : 1717691070563,
+          "stop" : 1717691072493,
+          "duration" : 1930
         }
       }, {
-        "uid" : "cb58f59f58eca34d",
+        "uid" : "45f4d2fd7456314f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717662276436,
+          "stop" : 1717662279335,
+          "duration" : 2899
+        }
+      }, {
+        "uid" : "933ca5471c3912a2",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
         "time" : {
-          "start" : 1717637381814,
-          "stop" : 1717637381814,
+          "start" : 1717637383274,
+          "stop" : 1717637383274,
           "duration" : 0
         }
       }, {
-        "uid" : "21ebb6a3483bc9de",
+        "uid" : "a5b37c8d180e49de",
         "status" : "passed",
         "time" : {
-          "start" : 1717604679339,
-          "stop" : 1717604684243,
-          "duration" : 4904
+          "start" : 1717604684799,
+          "stop" : 1717604685841,
+          "duration" : 1042
         }
       }, {
-        "uid" : "5aa5639aae75ee42",
+        "uid" : "1980b05cde14ba28",
         "status" : "passed",
         "time" : {
-          "start" : 1717575823417,
-          "stop" : 1717575828349,
-          "duration" : 4932
+          "start" : 1717575828826,
+          "stop" : 1717575830238,
+          "duration" : 1412
         }
       }, {
-        "uid" : "3f7ede480bcbd6c1",
+        "uid" : "6c11da514466e719",
         "status" : "passed",
         "time" : {
-          "start" : 1717550398784,
-          "stop" : 1717550404099,
-          "duration" : 5315
+          "start" : 1717550404581,
+          "stop" : 1717550405710,
+          "duration" : 1129
         }
       }, {
-        "uid" : "c9940b95c51a6f6d",
+        "uid" : "33f327eef511c33b",
         "status" : "failed",
-        "statusDetails" : "AssertionError: assert False\n +  where False = <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fcaee0f20d0>>('ReactModal__Content')\n +    where <bound method HelperBase.is_modal_displayed of <fixture.helper_base.HelperBase object at 0x7fcaee0f20d0>> = <fixture.helper_base.HelperBase object at 0x7fcaee0f20d0>.is_modal_displayed",
+        "statusDetails" : "AssertionError: assert False == True\n +  where False = <bound method Application.check_current_url of <fixture.application.Application object at 0x7fcaee0cbdf0>>()\n +    where <bound method Application.check_current_url of <fixture.application.Application object at 0x7fcaee0cbdf0>> = <fixture.application.Application object at 0x7fcaee0cbdf0>.check_current_url",
         "time" : {
-          "start" : 1717518467435,
-          "stop" : 1717518476690,
-          "duration" : 9255
+          "start" : 1717518477738,
+          "stop" : 1717518483942,
+          "duration" : 6204
         }
       }, {
-        "uid" : "6a77203151275ea9",
+        "uid" : "e60ddee63a2d636c",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
         "time" : {
-          "start" : 1717490018445,
-          "stop" : 1717490018445,
+          "start" : 1717490019385,
+          "stop" : 1717490019385,
           "duration" : 0
         }
       }, {
-        "uid" : "e972680d9287772",
+        "uid" : "ab4a7fb27253b102",
         "status" : "passed",
         "time" : {
-          "start" : 1717464035544,
-          "stop" : 1717464040560,
-          "duration" : 5016
+          "start" : 1717464041142,
+          "stop" : 1717464042375,
+          "duration" : 1233
         }
       }, {
-        "uid" : "5cd954c3c9614523",
+        "uid" : "107e690e37ca20",
         "status" : "passed",
         "time" : {
-          "start" : 1717431879458,
-          "stop" : 1717431884457,
-          "duration" : 4999
+          "start" : 1717431885020,
+          "stop" : 1717431886714,
+          "duration" : 1694
         }
       }, {
-        "uid" : "92b29ff93cc4b538",
+        "uid" : "592572fe1917f345",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
         "time" : {
-          "start" : 1717403674796,
-          "stop" : 1717403674796,
+          "start" : 1717403675896,
+          "stop" : 1717403675896,
           "duration" : 0
         }
       }, {
-        "uid" : "c994d0ebbed94398",
+        "uid" : "18286d16185e9dbf",
         "status" : "passed",
         "time" : {
-          "start" : 1717377671770,
-          "stop" : 1717377676724,
-          "duration" : 4954
+          "start" : 1717377677288,
+          "stop" : 1717377678580,
+          "duration" : 1292
         }
       }, {
-        "uid" : "3a874ee25dc52a74",
+        "uid" : "4636af464b702d7f",
         "status" : "passed",
         "time" : {
-          "start" : 1717345348423,
-          "stop" : 1717345353865,
-          "duration" : 5442
+          "start" : 1717345354354,
+          "stop" : 1717345356352,
+          "duration" : 1998
         }
       }, {
-        "uid" : "60f842d3fddcfcf8",
+        "uid" : "17c9e458e5320aab",
         "status" : "passed",
         "time" : {
-          "start" : 1717316513046,
-          "stop" : 1717316517922,
-          "duration" : 4876
+          "start" : 1717316518378,
+          "stop" : 1717316519765,
+          "duration" : 1387
         }
       }, {
-        "uid" : "71257cad194d3c94",
+        "uid" : "e8d752710401c835",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
         "time" : {
-          "start" : 1717292043200,
-          "stop" : 1717292043200,
+          "start" : 1717292044189,
+          "stop" : 1717292044189,
           "duration" : 0
         }
       }, {
-        "uid" : "9b615b177cb4ba22",
+        "uid" : "d425da7b4d747f0",
         "status" : "passed",
         "time" : {
-          "start" : 1717258899112,
-          "stop" : 1717258903959,
-          "duration" : 4847
+          "start" : 1717258904450,
+          "stop" : 1717258905500,
+          "duration" : 1050
         }
       }, {
-        "uid" : "a5bda608710ff528",
+        "uid" : "46287655c7d1a461",
         "status" : "passed",
         "time" : {
-          "start" : 1717230189757,
-          "stop" : 1717230194845,
-          "duration" : 5088
-        }
-      }, {
-        "uid" : "c1df115f3c05e056",
-        "status" : "broken",
-        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
-        "time" : {
-          "start" : 1717205624074,
-          "stop" : 1717205624074,
-          "duration" : 0
+          "start" : 1717230195401,
+          "stop" : 1717230196792,
+          "duration" : 1391
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "82ebeed3f5feb372.json",
+  "source" : "c2376c2ea4018718.json",
   "parameterValues" : [ ]
 }
