@@ -1,0 +1,375 @@
+{
+  "uid" : "e661c6d84b56bd21",
+  "name" : "test_send_url",
+  "fullName" : "test.test_messages_functionality#test_send_url",
+  "historyId" : "4b0586f5f54c42dea3d6cdc7b39df69c",
+  "time" : {
+    "start" : 1718180668583,
+    "stop" : 1718180669350,
+    "duration" : 767
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Response status code is not 200\nassert 520 == 200\n +  where 520 = <Response [520]>.status_code",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7efd8c373f40>\n\n    @allure.feature(\"Sending URLs\")\n    @allure.story(\"Sending Allowed and Disallowed URLs\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_url(api_client):\n        with allure.step(\"Sending allowed URL\"):\n            data_url1 = {\"body\": \"google.com\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response1 = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                               json=data_url1)\n    \n            with allure.step(\"Asserting response for allowed URL\"):\n                assert response1.status_code == 200, \"Response status code is not 200\"\n                assert \"The message is invalid\" not in response1.text, \"Invalid message found in response\"\n                assert \"event_id\" in response1.json(), \"The key 'event_id' is not found in the JSON response\"\n    \n                duration_threshold = 5\n                assert response1.elapsed.total_seconds() <= duration_threshold, \"Response time exceeds threshold\"\n    \n        with allure.step(\"Sending disallowed URL\"):\n            data_url2 = {\"body\": \"example.com\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response2 = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                               json=data_url2)\n    \n            with allure.step(\"Asserting response for disallowed URL\"):\n>               assert response2.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 520 == 200\nE                +  where 520 = <Response [520]>.status_code\n\ntest/test_messages_functionality.py:159: AssertionError",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1718180607970,
+      "stop" : 1718180607970,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1718180605804,
+      "stop" : 1718180605804,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1718180605804,
+      "stop" : 1718180607970,
+      "duration" : 2166
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Response status code is not 200\nassert 520 == 200\n +  where 520 = <Response [520]>.status_code",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7efd8c373f40>\n\n    @allure.feature(\"Sending URLs\")\n    @allure.story(\"Sending Allowed and Disallowed URLs\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_url(api_client):\n        with allure.step(\"Sending allowed URL\"):\n            data_url1 = {\"body\": \"google.com\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response1 = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                               json=data_url1)\n    \n            with allure.step(\"Asserting response for allowed URL\"):\n                assert response1.status_code == 200, \"Response status code is not 200\"\n                assert \"The message is invalid\" not in response1.text, \"Invalid message found in response\"\n                assert \"event_id\" in response1.json(), \"The key 'event_id' is not found in the JSON response\"\n    \n                duration_threshold = 5\n                assert response1.elapsed.total_seconds() <= duration_threshold, \"Response time exceeds threshold\"\n    \n        with allure.step(\"Sending disallowed URL\"):\n            data_url2 = {\"body\": \"example.com\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response2 = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                               json=data_url2)\n    \n            with allure.step(\"Asserting response for disallowed URL\"):\n>               assert response2.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 520 == 200\nE                +  where 520 = <Response [520]>.status_code\n\ntest/test_messages_functionality.py:159: AssertionError",
+    "steps" : [ {
+      "name" : "Sending allowed URL",
+      "time" : {
+        "start" : 1718180668583,
+        "stop" : 1718180669294,
+        "duration" : 711
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Asserting response for allowed URL",
+        "time" : {
+          "start" : 1718180669294,
+          "stop" : 1718180669294,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "Sending disallowed URL",
+      "time" : {
+        "start" : 1718180669294,
+        "stop" : 1718180669350,
+        "duration" : 56
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Response status code is not 200\nassert 520 == 200\n +  where 520 = <Response [520]>.status_code\n",
+      "statusTrace" : "  File \"/usr/workspace/test/test_messages_functionality.py\", line 159, in test_send_url\n    assert response2.status_code == 200, \"Response status code is not 200\"\n",
+      "steps" : [ {
+        "name" : "Asserting response for disallowed URL",
+        "time" : {
+          "start" : 1718180669349,
+          "stop" : 1718180669349,
+          "duration" : 0
+        },
+        "status" : "failed",
+        "statusMessage" : "AssertionError: Response status code is not 200\nassert 520 == 200\n +  where 520 = <Response [520]>.status_code\n",
+        "statusTrace" : "  File \"/usr/workspace/test/test_messages_functionality.py\", line 159, in test_send_url\n    assert response2.status_code == 200, \"Response status code is not 200\"\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1718180745535,
+      "stop" : 1718180745535,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Sending URLs"
+  }, {
+    "name" : "story",
+    "value" : "Sending Allowed and Disallowed URLs"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_messages_functionality"
+  }, {
+    "name" : "host",
+    "value" : "d25f2515bfef"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_messages_functionality"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 13,
+        "broken" : 4,
+        "skipped" : 0,
+        "passed" : 211,
+        "unknown" : 0,
+        "total" : 228
+      },
+      "items" : [ {
+        "uid" : "40615aafaf65c6a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718155308195,
+          "stop" : 1718155308804,
+          "duration" : 609
+        }
+      }, {
+        "uid" : "42a9a53e5c8505a9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718123692556,
+          "stop" : 1718123693763,
+          "duration" : 1207
+        }
+      }, {
+        "uid" : "a4fc70f6963c3f05",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718094321275,
+          "stop" : 1718094321896,
+          "duration" : 621
+        }
+      }, {
+        "uid" : "269d3fa021379483",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718068980830,
+          "stop" : 1718068982268,
+          "duration" : 1438
+        }
+      }, {
+        "uid" : "361d55e744f519d0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718037290804,
+          "stop" : 1718037291561,
+          "duration" : 757
+        }
+      }, {
+        "uid" : "50e38195b854420b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718007947208,
+          "stop" : 1718007948190,
+          "duration" : 982
+        }
+      }, {
+        "uid" : "d69ccbe4a2f4668c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717983190099,
+          "stop" : 1717983191698,
+          "duration" : 1599
+        }
+      }, {
+        "uid" : "62d351b1be62b214",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717950715323,
+          "stop" : 1717950716582,
+          "duration" : 1259
+        }
+      }, {
+        "uid" : "2a219e92ca53feb6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717921335042,
+          "stop" : 1717921335889,
+          "duration" : 847
+        }
+      }, {
+        "uid" : "74343048f30c88d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717896427730,
+          "stop" : 1717896428893,
+          "duration" : 1163
+        }
+      }, {
+        "uid" : "e49c3db34cb73d9c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717863857496,
+          "stop" : 1717863858639,
+          "duration" : 1143
+        }
+      }, {
+        "uid" : "c45483440339280b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717834915349,
+          "stop" : 1717834915999,
+          "duration" : 650
+        }
+      }, {
+        "uid" : "d881918f9e8b07c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717809609209,
+          "stop" : 1717809610493,
+          "duration" : 1284
+        }
+      }, {
+        "uid" : "ed746a928da94bcf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717777430090,
+          "stop" : 1717777430869,
+          "duration" : 779
+        }
+      }, {
+        "uid" : "68d98da6712a7d5d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717748673700,
+          "stop" : 1717748674638,
+          "duration" : 938
+        }
+      }, {
+        "uid" : "bedcaecad7d741fd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717723346366,
+          "stop" : 1717723346974,
+          "duration" : 608
+        }
+      }, {
+        "uid" : "bf3ae72653e6c314",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717691074885,
+          "stop" : 1717691076069,
+          "duration" : 1184
+        }
+      }, {
+        "uid" : "8b0a6609977c0d25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717662282132,
+          "stop" : 1717662282965,
+          "duration" : 833
+        }
+      }, {
+        "uid" : "7a8df53720933098",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717637387966,
+          "stop" : 1717637388640,
+          "duration" : 674
+        }
+      }, {
+        "uid" : "8ee3b714b89d1085",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717604688509,
+          "stop" : 1717604689438,
+          "duration" : 929
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e661c6d84b56bd21.json",
+  "parameterValues" : [ ]
+}
