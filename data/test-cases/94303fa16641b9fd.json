@@ -1,22 +1,22 @@
 {
-  "uid" : "20bd66f01a63bbb6",
+  "uid" : "94303fa16641b9fd",
   "name" : "test_checked_spam",
   "fullName" : "test.test_messages_functionality#test_checked_spam",
   "historyId" : "0d564746938bc52c664683bead1959ba",
   "time" : {
-    "start" : 1718587445050,
-    "stop" : 1718587454551,
-    "duration" : 9501
+    "start" : 1718612716680,
+    "stop" : 1718612726407,
+    "duration" : 9727
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1718587373922,
-      "stop" : 1718587373922,
-      "duration" : 0
+      "start" : 1718612649400,
+      "stop" : 1718612651919,
+      "duration" : 2519
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1718587377553,
-      "stop" : 1718587377553,
+      "start" : 1718612651919,
+      "stop" : 1718612651919,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1718587373922,
-      "stop" : 1718587377553,
-      "duration" : 3631
+      "start" : 1718612649400,
+      "stop" : 1718612649400,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Sending spam messages",
       "time" : {
-        "start" : 1718587445050,
-        "stop" : 1718587454549,
-        "duration" : 9499
+        "start" : 1718612716680,
+        "stop" : 1718612726405,
+        "duration" : 9725
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Verifying response status code",
       "time" : {
-        "start" : 1718587454549,
-        "stop" : 1718587454549,
+        "start" : 1718612726405,
+        "stop" : 1718612726405,
         "duration" : 0
       },
       "status" : "passed",
@@ -100,8 +100,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1718587518859,
-      "stop" : 1718587518859,
+      "start" : 1718612790591,
+      "stop" : 1718612790591,
       "duration" : 0
     },
     "status" : "passed",
@@ -114,14 +114,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
     "name" : "feature",
     "value" : "Spam Checking"
   }, {
     "name" : "story",
     "value" : "Spam Checking Test"
-  }, {
-    "name" : "severity",
-    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -130,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "3b7bf6d6e6f8"
+    "value" : "cfb32604d161"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,11 +160,19 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 238,
+        "passed" : 239,
         "unknown" : 0,
-        "total" : 242
+        "total" : 243
       },
       "items" : [ {
+        "uid" : "20bd66f01a63bbb6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1718587445050,
+          "stop" : 1718587454551,
+          "duration" : 9501
+        }
+      }, {
         "uid" : "1f013b0c0f39fa08",
         "status" : "passed",
         "time" : {
@@ -316,18 +324,10 @@
           "stop" : 1718037305125,
           "duration" : 10207
         }
-      }, {
-        "uid" : "3790b2bcfbd73e2",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718007950846,
-          "stop" : 1718007960519,
-          "duration" : 9673
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "20bd66f01a63bbb6.json",
+  "source" : "94303fa16641b9fd.json",
   "parameterValues" : [ ]
 }
