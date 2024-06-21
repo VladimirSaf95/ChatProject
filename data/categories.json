@@ -1,52 +1,130 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
+      "children" : [ {
+        "name" : "test_click_chat_room",
+        "uid" : "e09ef1abb5e2882f",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958221070,
+          "stop" : 1718958221070,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_open_rules_in_different_locales",
+        "uid" : "e031fc418d453012",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958821508,
+          "stop" : 1718958821508,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_close_rules_modal",
+        "uid" : "78627682bec82b31",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958821547,
+          "stop" : 1718958821547,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_guest_write_text",
+        "uid" : "cfd9fa67654ff482",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958822446,
+          "stop" : 1718958822446,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_clickchatbutton",
+        "uid" : "9fc666c80f1556db",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958899498,
+          "stop" : 1718958899498,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_showdetailschat",
+        "uid" : "6843fa85d64ac70c",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958899542,
+          "stop" : 1718958899542,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_click_chat_button_close",
+        "uid" : "5e58dc01f8eda437",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958899600,
+          "stop" : 1718958899600,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_show_chat_messages",
+        "uid" : "7e6d7e79508f493b",
+        "parentUid" : "e1a39ba4773ebab3aba289f96557618f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1718958899650,
+          "stop" : 1718958899650,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e1a39ba4773ebab3aba289f96557618f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: assert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-      "children" : [ {
-        "name" : "test_block_players",
-        "uid" : "b1aaf39167a2c6cd",
-        "parentUid" : "8c3a62190d26e79ad141cada7e69187b",
-        "status" : "failed",
-        "time" : {
-          "start" : 1718932779193,
-          "stop" : 1718932785522,
-          "duration" : 6329
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "8c3a62190d26e79ad141cada7e69187b"
-    }, {
-      "name" : "AssertionError: The 'total' value did not decrease by one\nassert 1 == (1 - 1)",
-      "children" : [ {
-        "name" : "test_unblock_players",
-        "uid" : "92e6c7a274af11d0",
-        "parentUid" : "ace9ccc4c21e10f9756ac4a1b9bdc618",
-        "status" : "failed",
-        "time" : {
-          "start" : 1718932785562,
-          "stop" : 1718932809455,
-          "duration" : 23893
-        },
-        "flaky" : false,
-        "newFailed" : true,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ace9ccc4c21e10f9756ac4a1b9bdc618"
-    }, {
       "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
       "children" : [ {
         "name" : "test_delete_dmsg",
-        "uid" : "c53bf5c051c12570",
+        "uid" : "a8ff1ce449734d2a",
         "parentUid" : "6b6a70086243924495b8afdaf625d52d",
         "status" : "failed",
         "time" : {
-          "start" : 1718932852778,
-          "stop" : 1718932912958,
-          "duration" : 60180
+          "start" : 1718958839357,
+          "stop" : 1718958899489,
+          "duration" : 60132
         },
         "flaky" : false,
         "newFailed" : false,
