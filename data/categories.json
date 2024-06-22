@@ -1,24 +1,187 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'NoneType' object has no attribute 'encode'",
+      "children" : [ {
+        "name" : "test_block_players",
+        "uid" : "8f1b352317ffb449",
+        "parentUid" : "76c898b269f1e5a87d8260f04f8430bd",
+        "status" : "broken",
+        "time" : {
+          "start" : 1719019210717,
+          "stop" : 1719019212961,
+          "duration" : 2244
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "76c898b269f1e5a87d8260f04f8430bd"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
     "name" : "Product defects",
     "children" : [ {
+      "name" : "AssertionError: The 'total' value did not decrease by one\nassert 1 == (1 - 1)",
+      "children" : [ {
+        "name" : "test_unblock_players",
+        "uid" : "5b96cc734fa8f8f0",
+        "parentUid" : "ace9ccc4c21e10f9756ac4a1b9bdc618",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019212999,
+          "stop" : 1719019236997,
+          "duration" : 23998
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ace9ccc4c21e10f9756ac4a1b9bdc618"
+    }, {
+      "name" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+      "children" : [ {
+        "name" : "test_get_chanel",
+        "uid" : "43218326c03ec406",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019262806,
+          "stop" : 1719019263046,
+          "duration" : 240
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_messages",
+        "uid" : "f493a39ff4821632",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019264480,
+          "stop" : 1719019266006,
+          "duration" : 1526
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_emoji",
+        "uid" : "f1e0739d9a774b3f",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019266022,
+          "stop" : 1719019266797,
+          "duration" : 775
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_reaction",
+        "uid" : "4cb26329537c27b3",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019266807,
+          "stop" : 1719019268998,
+          "duration" : 2191
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_tag_user",
+        "uid" : "4be66bf99a026a58",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019269008,
+          "stop" : 1719019269330,
+          "duration" : 322
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_url",
+        "uid" : "be0a10d0cbf56edd",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019269344,
+          "stop" : 1719019269632,
+          "duration" : 288
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_gif",
+        "uid" : "7f757fc80212ddfd",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019270310,
+          "stop" : 1719019271000,
+          "duration" : 690
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_complaint",
+        "uid" : "158b681db2da650d",
+        "parentUid" : "1f66ec44f1e731f40db4c1815d77405e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019271016,
+          "stop" : 1719019272459,
+          "duration" : 1443
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1f66ec44f1e731f40db4c1815d77405e"
+    }, {
       "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
       "children" : [ {
         "name" : "test_delete_dmsg",
-        "uid" : "5c7fa147a08f0d0f",
+        "uid" : "1443818ff6c486d",
         "parentUid" : "6b6a70086243924495b8afdaf625d52d",
         "status" : "failed",
         "time" : {
-          "start" : 1718987028840,
-          "stop" : 1718987088979,
-          "duration" : 60139
+          "start" : 1719019274977,
+          "stop" : 1719019335715,
+          "duration" : 60738
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "6b6a70086243924495b8afdaf625d52d"
+    }, {
+      "name" : "AssertionError: Сообщение с ID None не найдено.\nassert []",
+      "children" : [ {
+        "name" : "test_show_chat_messages",
+        "uid" : "342a11d39a0a94c9",
+        "parentUid" : "a6e8ed2fd2000b992378f5f730eddc00",
+        "status" : "failed",
+        "time" : {
+          "start" : 1719019336457,
+          "stop" : 1719019349578,
+          "duration" : 13121
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a6e8ed2fd2000b992378f5f730eddc00"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ],
