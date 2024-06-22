@@ -1,22 +1,22 @@
 {
-  "uid" : "860f407307c8da8c",
+  "uid" : "7c173bd14af4e240",
   "name" : "test_send_messages",
   "fullName" : "test.test_messages_functionality#test_send_messages",
   "historyId" : "9b9ea771234bc682fdfb1cb249d672cb",
   "time" : {
-    "start" : 1719044595106,
-    "stop" : 1719044596284,
-    "duration" : 1178
+    "start" : 1719073476895,
+    "stop" : 1719073477880,
+    "duration" : 985
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1719044535634,
-      "stop" : 1719044535635,
-      "duration" : 1
+      "start" : 1719073403288,
+      "stop" : 1719073403288,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,9 +29,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1719044531741,
-      "stop" : 1719044535634,
-      "duration" : 3893
+      "start" : 1719073403288,
+      "stop" : 1719073420357,
+      "duration" : 17069
     },
     "status" : "passed",
     "steps" : [ ],
@@ -42,10 +42,10 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "api_client",
     "time" : {
-      "start" : 1719044531741,
-      "stop" : 1719044531741,
+      "start" : 1719073420357,
+      "stop" : 1719073420357,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending messages and checking response",
       "time" : {
-        "start" : 1719044595106,
-        "stop" : 1719044596281,
-        "duration" : 1175
+        "start" : 1719073476895,
+        "stop" : 1719073477876,
+        "duration" : 981
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Check response code for message A",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477875,
+          "stop" : 1719073477875,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Check for invalid message in response A",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477875,
+          "stop" : 1719073477875,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,9 +100,9 @@
       }, {
         "name" : "Check response code for message B",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
-          "duration" : 0
+          "start" : 1719073477875,
+          "stop" : 1719073477876,
+          "duration" : 1
         },
         "status" : "passed",
         "steps" : [ ],
@@ -115,8 +115,8 @@
       }, {
         "name" : "Check for invalid message in response B",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477876,
+          "stop" : 1719073477876,
           "duration" : 0
         },
         "status" : "passed",
@@ -130,8 +130,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response A",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477876,
+          "stop" : 1719073477876,
           "duration" : 0
         },
         "status" : "passed",
@@ -145,8 +145,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response B",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477876,
+          "stop" : 1719073477876,
           "duration" : 0
         },
         "status" : "passed",
@@ -160,8 +160,8 @@
       }, {
         "name" : "Check response time for message A",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477876,
+          "stop" : 1719073477876,
           "duration" : 0
         },
         "status" : "passed",
@@ -175,8 +175,8 @@
       }, {
         "name" : "Check response time for message B",
         "time" : {
-          "start" : 1719044596281,
-          "stop" : 1719044596281,
+          "start" : 1719073477876,
+          "stop" : 1719073477876,
           "duration" : 0
         },
         "status" : "passed",
@@ -205,8 +205,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1719044676547,
-      "stop" : 1719044676547,
+      "start" : 1719073556631,
+      "stop" : 1719073556631,
       "duration" : 0
     },
     "status" : "passed",
@@ -235,7 +235,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "f1d50af90d05"
+    "value" : "e0db959a3c7a"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -265,11 +265,19 @@
         "failed" : 2,
         "broken" : 15,
         "skipped" : 0,
-        "passed" : 241,
+        "passed" : 242,
         "unknown" : 0,
-        "total" : 258
+        "total" : 259
       },
       "items" : [ {
+        "uid" : "860f407307c8da8c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719044595106,
+          "stop" : 1719044596284,
+          "duration" : 1178
+        }
+      }, {
         "uid" : "f493a39ff4821632",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -422,18 +430,10 @@
           "stop" : 1718501226043,
           "duration" : 945
         }
-      }, {
-        "uid" : "e379b0f27850eaf0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718468635196,
-          "stop" : 1718468636040,
-          "duration" : 844
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "860f407307c8da8c.json",
+  "source" : "7c173bd14af4e240.json",
   "parameterValues" : [ ]
 }
