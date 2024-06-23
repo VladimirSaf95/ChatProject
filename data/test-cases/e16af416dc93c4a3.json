@@ -1,22 +1,22 @@
 {
-  "uid" : "e83d3199578dde6e",
+  "uid" : "e16af416dc93c4a3",
   "name" : "test_click_chat_room",
   "fullName" : "test.test_changeroom#test_click_chat_room",
   "historyId" : "be97e1ba70b4c1a08c49976b38facb9c",
   "time" : {
-    "start" : 1719130888082,
-    "stop" : 1719130903910,
-    "duration" : 15828
+    "start" : 1719159739916,
+    "stop" : 1719159757456,
+    "duration" : 17540
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1719130852609,
-      "stop" : 1719130855019,
-      "duration" : 2410
+      "start" : 1719159704465,
+      "stop" : 1719159704465,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,10 +27,10 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1719130855019,
-      "stop" : 1719130855019,
+      "start" : 1719159699766,
+      "stop" : 1719159699766,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,9 +44,9 @@
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1719130886793,
-      "stop" : 1719130888081,
-      "duration" : 1288
+      "start" : 1719159738513,
+      "stop" : 1719159739915,
+      "duration" : 1402
     },
     "status" : "passed",
     "steps" : [ ],
@@ -57,11 +57,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1719130852609,
-      "stop" : 1719130852609,
-      "duration" : 0
+      "start" : 1719159699766,
+      "stop" : 1719159704465,
+      "duration" : 4699
     },
     "status" : "passed",
     "steps" : [ ],
@@ -77,9 +77,9 @@
     "steps" : [ {
       "name" : "Checking if chat button exists",
       "time" : {
-        "start" : 1719130888082,
-        "stop" : 1719130897580,
-        "duration" : 9498
+        "start" : 1719159739916,
+        "stop" : 1719159751152,
+        "duration" : 11236
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "Clicking on Room B",
       "time" : {
-        "start" : 1719130897580,
-        "stop" : 1719130900770,
-        "duration" : 3190
+        "start" : 1719159751152,
+        "stop" : 1719159754327,
+        "duration" : 3175
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,9 +107,9 @@
     }, {
       "name" : "Verifying Room B is selected",
       "time" : {
-        "start" : 1719130900770,
-        "stop" : 1719130900790,
-        "duration" : 20
+        "start" : 1719159754327,
+        "stop" : 1719159754343,
+        "duration" : 16
       },
       "status" : "passed",
       "steps" : [ ],
@@ -122,9 +122,9 @@
     }, {
       "name" : "Clicking on Room A",
       "time" : {
-        "start" : 1719130900790,
-        "stop" : 1719130903893,
-        "duration" : 3103
+        "start" : 1719159754343,
+        "stop" : 1719159757436,
+        "duration" : 3093
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "Verifying Room A is selected",
       "time" : {
-        "start" : 1719130903893,
-        "stop" : 1719130903909,
-        "duration" : 16
+        "start" : 1719159757436,
+        "stop" : 1719159757456,
+        "duration" : 20
       },
       "status" : "passed",
       "steps" : [ ],
@@ -151,9 +151,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "118ecd00fb359e23",
+      "uid" : "85e3a31a9f271c75",
       "name" : "log",
-      "source" : "118ecd00fb359e23.txt",
+      "source" : "85e3a31a9f271c75.txt",
       "type" : "text/plain",
       "size" : 511
     } ],
@@ -166,8 +166,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1719130990005,
-      "stop" : 1719130990005,
+      "start" : 1719159846557,
+      "stop" : 1719159846557,
       "duration" : 0
     },
     "status" : "passed",
@@ -181,9 +181,9 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1719130989939,
-      "stop" : 1719130990005,
-      "duration" : 66
+      "start" : 1719159846490,
+      "stop" : 1719159846557,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -195,14 +195,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Clicking Chat Room"
-  }, {
     "name" : "severity",
     "value" : "critical"
   }, {
     "name" : "feature",
     "value" : "Chat Rooms"
+  }, {
+    "name" : "story",
+    "value" : "Clicking Chat Room"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -211,7 +211,7 @@
     "value" : "test_changeroom"
   }, {
     "name" : "host",
-    "value" : "8ad47effc261"
+    "value" : "3f9d812c17b6"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -241,11 +241,19 @@
         "failed" : 2,
         "broken" : 48,
         "skipped" : 0,
-        "passed" : 211,
+        "passed" : 212,
         "unknown" : 0,
-        "total" : 261
+        "total" : 262
       },
       "items" : [ {
+        "uid" : "e83d3199578dde6e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719130888082,
+          "stop" : 1719130903910,
+          "duration" : 15828
+        }
+      }, {
         "uid" : "300977891725cd4f",
         "status" : "passed",
         "time" : {
@@ -401,19 +409,10 @@
           "stop" : 1718587429552,
           "duration" : 17767
         }
-      }, {
-        "uid" : "3d8197e9e83a572c",
-        "status" : "broken",
-        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
-        "time" : {
-          "start" : 1718554926513,
-          "stop" : 1718554926513,
-          "duration" : 0
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e83d3199578dde6e.json",
+  "source" : "e16af416dc93c4a3.json",
   "parameterValues" : [ ]
 }
