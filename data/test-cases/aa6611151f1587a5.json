@@ -1,38 +1,23 @@
 {
-  "uid" : "8909be17dc5b31b2",
+  "uid" : "aa6611151f1587a5",
   "name" : "test_send_gif",
   "fullName" : "test.test_messages_functionality#test_send_gif",
   "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
   "time" : {
-    "start" : 1719995112740,
-    "stop" : 1719995113451,
-    "duration" : 711
+    "start" : 1720023934304,
+    "stop" : 1720023935010,
+    "duration" : 706
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1ce6dc5fd0>\n\n    @allure.feature(\"Sending GIFs\")\n    @allure.story(\"Sending GIF in Chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_gif(api_client):\n        data = {\n            \"msgtype\": \"m.gif\",\n            \"format\": \"org.matrix.custom.html\",\n            \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\",\n            \"body\": \"{\\\"type\\\":\\\"GIF\\\",\\\"imgUrl\\\":\\\"https://media.tenor.com/2w1XsfvQD5kAAAAM/hhgf.gif\\\"}\"\n        }\n    \n        with allure.step(\"Sending GIF message\"):\n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n        with allure.step(\"Asserting response status code\"):\n>           assert response.status_code == 200, \"Response status code is not 200\"\nE           AssertionError: Response status code is not 200\nE           assert 500 == 200\nE            +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:204: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f82884e9880>\n\n    @allure.feature(\"Sending GIFs\")\n    @allure.story(\"Sending GIF in Chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_gif(api_client):\n        data = {\n            \"msgtype\": \"m.gif\",\n            \"format\": \"org.matrix.custom.html\",\n            \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\",\n            \"body\": \"{\\\"type\\\":\\\"GIF\\\",\\\"imgUrl\\\":\\\"https://media.tenor.com/2w1XsfvQD5kAAAAM/hhgf.gif\\\"}\"\n        }\n    \n        with allure.step(\"Sending GIF message\"):\n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n        with allure.step(\"Asserting response status code\"):\n>           assert response.status_code == 200, \"Response status code is not 200\"\nE           AssertionError: Response status code is not 200\nE           assert 500 == 200\nE            +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:204: AssertionError",
   "flaky" : true,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "api_client",
     "time" : {
-      "start" : 1719995057623,
-      "stop" : 1719995057624,
-      "duration" : 1
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1719995053497,
-      "stop" : 1719995053497,
+      "start" : 1720023878125,
+      "stop" : 1720023878125,
       "duration" : 0
     },
     "status" : "passed",
@@ -41,14 +26,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1719995053497,
-      "stop" : 1719995057623,
-      "duration" : 4126
+      "start" : 1720023874968,
+      "stop" : 1720023878124,
+      "duration" : 3156
     },
     "status" : "passed",
     "steps" : [ ],
@@ -56,19 +41,34 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1720023874967,
+      "stop" : 1720023874968,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
   } ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1ce6dc5fd0>\n\n    @allure.feature(\"Sending GIFs\")\n    @allure.story(\"Sending GIF in Chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_gif(api_client):\n        data = {\n            \"msgtype\": \"m.gif\",\n            \"format\": \"org.matrix.custom.html\",\n            \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\",\n            \"body\": \"{\\\"type\\\":\\\"GIF\\\",\\\"imgUrl\\\":\\\"https://media.tenor.com/2w1XsfvQD5kAAAAM/hhgf.gif\\\"}\"\n        }\n    \n        with allure.step(\"Sending GIF message\"):\n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n        with allure.step(\"Asserting response status code\"):\n>           assert response.status_code == 200, \"Response status code is not 200\"\nE           AssertionError: Response status code is not 200\nE           assert 500 == 200\nE            +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:204: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f82884e9880>\n\n    @allure.feature(\"Sending GIFs\")\n    @allure.story(\"Sending GIF in Chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_gif(api_client):\n        data = {\n            \"msgtype\": \"m.gif\",\n            \"format\": \"org.matrix.custom.html\",\n            \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\",\n            \"body\": \"{\\\"type\\\":\\\"GIF\\\",\\\"imgUrl\\\":\\\"https://media.tenor.com/2w1XsfvQD5kAAAAM/hhgf.gif\\\"}\"\n        }\n    \n        with allure.step(\"Sending GIF message\"):\n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n        with allure.step(\"Asserting response status code\"):\n>           assert response.status_code == 200, \"Response status code is not 200\"\nE           AssertionError: Response status code is not 200\nE           assert 500 == 200\nE            +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:204: AssertionError",
     "steps" : [ {
       "name" : "Sending GIF message",
       "time" : {
-        "start" : 1719995112740,
-        "stop" : 1719995113451,
-        "duration" : 711
+        "start" : 1720023934304,
+        "stop" : 1720023935009,
+        "duration" : 705
       },
       "status" : "passed",
       "steps" : [ ],
@@ -76,13 +76,13 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
+      "hasContent" : false,
+      "stepsCount" : 0
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1719995113451,
-        "stop" : 1719995113451,
+        "start" : 1720023935009,
+        "stop" : 1720023935009,
         "duration" : 0
       },
       "status" : "failed",
@@ -93,22 +93,22 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : true,
-      "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : true,
+      "stepsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : true,
-    "stepsCount" : 2,
-    "hasContent" : true
+    "hasContent" : true,
+    "stepsCount" : 2
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1719995118656,
-      "stop" : 1719995118657,
-      "duration" : 1
+      "start" : 1720023939741,
+      "stop" : 1720023939741,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -116,18 +116,18 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
+    "hasContent" : false,
+    "stepsCount" : 0
   } ],
   "labels" : [ {
     "name" : "feature",
     "value" : "Sending GIFs"
   }, {
-    "name" : "story",
-    "value" : "Sending GIF in Chat"
-  }, {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "Sending GIF in Chat"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -136,7 +136,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "9327128c1f4f"
+    "value" : "53f093d5a490"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -167,14 +167,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 16,
+        "failed" : 17,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 251,
         "unknown" : 0,
-        "total" : 271
+        "total" : 272
       },
       "items" : [ {
+        "uid" : "8909be17dc5b31b2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1719995112740,
+          "stop" : 1719995113451,
+          "duration" : 711
+        }
+      }, {
         "uid" : "c38f3629b73bb233",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -329,18 +338,10 @@
           "stop" : 1718871902121,
           "duration" : 865
         }
-      }, {
-        "uid" : "1fccb85b1939fe4f",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718846408173,
-          "stop" : 1718846408868,
-          "duration" : 695
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "8909be17dc5b31b2.json",
+  "source" : "aa6611151f1587a5.json",
   "parameterValues" : [ ]
 }
