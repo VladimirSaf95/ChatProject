@@ -1,74 +1,74 @@
 {
-  "uid" : "814aaaef9172d7cf",
+  "uid" : "325e620a035f05d",
   "name" : "test_get_chanel",
   "fullName" : "test.test_get_chanel#test_get_chanel",
   "historyId" : "84e91ba442c690feffdfef2b3a65d80f",
   "time" : {
-    "start" : 1719969706677,
-    "stop" : 1719969706891,
-    "duration" : 214
+    "start" : 1719995103697,
+    "stop" : 1719995103976,
+    "duration" : 279
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f905d4efa00>\n\n    @allure.feature(\"Channel Operations\")\n    @allure.story(\"Checking Channel Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_chanel(api_client):\n        with allure.step(\"Sending GET request for channels\"):\n            # Отправка GET-запроса\n            response = api_client.get(f\"{api_client.roomA}:{api_client.room_second_part}/state/m.room.power_levels?roomId={api_client.roomA}%3A{api_client.room_second_part}\")\n    \n            with allure.step(\"Asserting response status code\"):\n                # Проверка кода состояния\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_get_chanel.py:22: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1ce6dc5fd0>\n\n    @allure.feature(\"Channel Operations\")\n    @allure.story(\"Checking Channel Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_chanel(api_client):\n        with allure.step(\"Sending GET request for channels\"):\n            # Отправка GET-запроса\n            response = api_client.get(f\"{api_client.roomA}:{api_client.room_second_part}/state/m.room.power_levels?roomId={api_client.roomA}%3A{api_client.room_second_part}\")\n    \n            with allure.step(\"Asserting response status code\"):\n                # Проверка кода состояния\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_get_chanel.py:22: AssertionError",
   "flaky" : true,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1719969659269,
-      "stop" : 1719969661560,
-      "duration" : 2291
+      "start" : 1719995057623,
+      "stop" : 1719995057624,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1719969659268,
-      "stop" : 1719969659268,
+      "start" : 1719995053497,
+      "stop" : 1719995053497,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1719969661560,
-      "stop" : 1719969661560,
-      "duration" : 0
+      "start" : 1719995053497,
+      "stop" : 1719995057623,
+      "duration" : 4126
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f905d4efa00>\n\n    @allure.feature(\"Channel Operations\")\n    @allure.story(\"Checking Channel Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_chanel(api_client):\n        with allure.step(\"Sending GET request for channels\"):\n            # Отправка GET-запроса\n            response = api_client.get(f\"{api_client.roomA}:{api_client.room_second_part}/state/m.room.power_levels?roomId={api_client.roomA}%3A{api_client.room_second_part}\")\n    \n            with allure.step(\"Asserting response status code\"):\n                # Проверка кода состояния\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_get_chanel.py:22: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1ce6dc5fd0>\n\n    @allure.feature(\"Channel Operations\")\n    @allure.story(\"Checking Channel Retrieval\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_get_chanel(api_client):\n        with allure.step(\"Sending GET request for channels\"):\n            # Отправка GET-запроса\n            response = api_client.get(f\"{api_client.roomA}:{api_client.room_second_part}/state/m.room.power_levels?roomId={api_client.roomA}%3A{api_client.room_second_part}\")\n    \n            with allure.step(\"Asserting response status code\"):\n                # Проверка кода состояния\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_get_chanel.py:22: AssertionError",
     "steps" : [ {
       "name" : "Sending GET request for channels",
       "time" : {
-        "start" : 1719969706677,
-        "stop" : 1719969706890,
-        "duration" : 213
+        "start" : 1719995103697,
+        "stop" : 1719995103976,
+        "duration" : 279
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -76,8 +76,8 @@
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1719969706890,
-          "stop" : 1719969706890,
+          "start" : 1719995103976,
+          "stop" : 1719995103976,
           "duration" : 0
         },
         "status" : "failed",
@@ -86,47 +86,47 @@
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
-        "hasContent" : true,
         "attachmentsCount" : 0,
-        "shouldDisplayMessage" : true
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
-      "hasContent" : true,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 2,
-    "hasContent" : true,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 2,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1719969716683,
-      "stop" : 1719969716683,
-      "duration" : 0
+      "start" : 1719995118656,
+      "stop" : 1719995118657,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Checking Channel Retrieval"
-  }, {
     "name" : "severity",
     "value" : "critical"
+  }, {
+    "name" : "story",
+    "value" : "Checking Channel Retrieval"
   }, {
     "name" : "feature",
     "value" : "Channel Operations"
@@ -138,7 +138,7 @@
     "value" : "test_get_chanel"
   }, {
     "name" : "host",
-    "value" : "fd7a09610131"
+    "value" : "9327128c1f4f"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -169,14 +169,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 15,
+        "failed" : 16,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 251,
         "unknown" : 0,
-        "total" : 270
+        "total" : 271
       },
       "items" : [ {
+        "uid" : "814aaaef9172d7cf",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1719969706677,
+          "stop" : 1719969706891,
+          "duration" : 214
+        }
+      }, {
         "uid" : "2843c009d4fbfd3c",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -330,18 +339,10 @@
           "stop" : 1718846402799,
           "duration" : 215
         }
-      }, {
-        "uid" : "770402bb773b1b50",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718814827124,
-          "stop" : 1718814827877,
-          "duration" : 753
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "814aaaef9172d7cf.json",
+  "source" : "325e620a035f05d.json",
   "parameterValues" : [ ]
 }

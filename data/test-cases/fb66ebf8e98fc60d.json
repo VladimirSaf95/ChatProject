@@ -1,74 +1,74 @@
 {
-  "uid" : "a236ed2abe85f0b",
+  "uid" : "fb66ebf8e98fc60d",
   "name" : "test_tag_user",
   "fullName" : "test.test_messages_functionality#test_tag_user",
   "historyId" : "585b036b510637bc4e1227ec18f2d0bf",
   "time" : {
-    "start" : 1719969710747,
-    "stop" : 1719969711151,
-    "duration" : 404
+    "start" : 1719995111197,
+    "stop" : 1719995111832,
+    "duration" : 635
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f905d4efa00>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1ce6dc5fd0>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
   "flaky" : true,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1719969659269,
-      "stop" : 1719969661560,
-      "duration" : 2291
+      "start" : 1719995057623,
+      "stop" : 1719995057624,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1719969659268,
-      "stop" : 1719969659268,
+      "start" : 1719995053497,
+      "stop" : 1719995053497,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1719969661560,
-      "stop" : 1719969661560,
-      "duration" : 0
+      "start" : 1719995053497,
+      "stop" : 1719995057623,
+      "duration" : 4126
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f905d4efa00>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f1ce6dc5fd0>\n\n    @allure.feature(\"Tagging Players\")\n    @allure.story(\"Tagging player in chat\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_tag_user(api_client):\n        with allure.step(\"Tagging player in chat\"):\n            data = {\"body\": \"@testchat100 text tag player\", \"mention\": [api_client.senderid_adm], \"msgtype\": \"m.text\",\n                    \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:118: AssertionError",
     "steps" : [ {
       "name" : "Tagging player in chat",
       "time" : {
-        "start" : 1719969710747,
-        "stop" : 1719969711151,
-        "duration" : 404
+        "start" : 1719995111197,
+        "stop" : 1719995111832,
+        "duration" : 635
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -76,8 +76,8 @@
       "steps" : [ {
         "name" : "Check response code",
         "time" : {
-          "start" : 1719969711151,
-          "stop" : 1719969711151,
+          "start" : 1719995111832,
+          "stop" : 1719995111832,
           "duration" : 0
         },
         "status" : "failed",
@@ -86,40 +86,40 @@
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
-        "hasContent" : true,
         "attachmentsCount" : 0,
-        "shouldDisplayMessage" : true
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
-      "hasContent" : true,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 2,
-    "hasContent" : true,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 2,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1719969716683,
-      "stop" : 1719969716683,
-      "duration" : 0
+      "start" : 1719995118656,
+      "stop" : 1719995118657,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "severity",
@@ -138,7 +138,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "fd7a09610131"
+    "value" : "9327128c1f4f"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -169,14 +169,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 15,
+        "failed" : 16,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 251,
         "unknown" : 0,
-        "total" : 270
+        "total" : 271
       },
       "items" : [ {
+        "uid" : "a236ed2abe85f0b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1719969710747,
+          "stop" : 1719969711151,
+          "duration" : 404
+        }
+      }, {
         "uid" : "ece31dc1e1de0b8b",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -330,18 +339,10 @@
           "stop" : 1718846406534,
           "duration" : 431
         }
-      }, {
-        "uid" : "176aca70d9c9ddd3",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718814832664,
-          "stop" : 1718814833655,
-          "duration" : 991
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "a236ed2abe85f0b.json",
+  "source" : "fb66ebf8e98fc60d.json",
   "parameterValues" : [ ]
 }
