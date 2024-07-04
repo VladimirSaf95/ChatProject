@@ -1,11 +1,11 @@
 {
-  "uid" : "e1c1310fbfd90bf6",
+  "uid" : "2ebb29c8275ae99b",
   "name" : "test_unpinned_msg",
   "fullName" : "test.test_messages_functionality#test_unpinned_msg",
   "historyId" : "e51d1fcd71fa2b661252b5536f450782",
   "time" : {
-    "start" : 1720056139312,
-    "stop" : 1720056139312,
+    "start" : 1720081514241,
+    "stop" : 1720081514241,
     "duration" : 0
   },
   "status" : "skipped",
@@ -14,11 +14,11 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1720056085983,
-      "stop" : 1720056088112,
-      "duration" : 2129
+      "start" : 1720081452512,
+      "stop" : 1720081452512,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,8 +31,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1720056088112,
-      "stop" : 1720056088112,
+      "start" : 1720081455761,
+      "stop" : 1720081455761,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,11 +44,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720056085983,
-      "stop" : 1720056085983,
-      "duration" : 0
+      "start" : 1720081452512,
+      "stop" : 1720081455761,
+      "duration" : 3249
     },
     "status" : "passed",
     "steps" : [ ],
@@ -66,8 +66,8 @@
     "steps" : [ {
       "name" : "Getting pinned message ID",
       "time" : {
-        "start" : 1720056139312,
-        "stop" : 1720056139312,
+        "start" : 1720081514241,
+        "stop" : 1720081514241,
         "duration" : 0
       },
       "status" : "skipped",
@@ -91,8 +91,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720056142318,
-      "stop" : 1720056142318,
+      "start" : 1720081517231,
+      "stop" : 1720081517231,
       "duration" : 0
     },
     "status" : "passed",
@@ -108,11 +108,11 @@
     "name" : "story",
     "value" : "Message Unpinning by Moderator"
   }, {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "feature",
     "value" : "Message Unpinning"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -121,7 +121,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "102bf675c248"
+    "value" : "5e7876427c53"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -150,12 +150,21 @@
       "statistic" : {
         "failed" : 0,
         "broken" : 4,
-        "skipped" : 17,
+        "skipped" : 18,
         "passed" : 252,
         "unknown" : 0,
-        "total" : 273
+        "total" : 274
       },
       "items" : [ {
+        "uid" : "e1c1310fbfd90bf6",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: event_id_pinmsg was not passed from the previous test",
+        "time" : {
+          "start" : 1720056139312,
+          "stop" : 1720056139312,
+          "duration" : 0
+        }
+      }, {
         "uid" : "413875c2403d77b5",
         "status" : "skipped",
         "statusDetails" : "Skipped: event_id_pinmsg was not passed from the previous test",
@@ -311,18 +320,10 @@
           "stop" : 1718932843220,
           "duration" : 761
         }
-      }, {
-        "uid" : "5d8bc7791856d3fd",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718900784086,
-          "stop" : 1718900784636,
-          "duration" : 550
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e1c1310fbfd90bf6.json",
+  "source" : "2ebb29c8275ae99b.json",
   "parameterValues" : [ ]
 }

@@ -1,24 +1,24 @@
 {
-  "uid" : "1e500c83c4b7ee30",
+  "uid" : "421771e0babbe73b",
   "name" : "test_send_not_allow_symbol",
   "fullName" : "test.test_messages_functionality#test_send_not_allow_symbol",
   "historyId" : "a7c8da64ecec62788bdb01ada3b6be57",
   "time" : {
-    "start" : 1720056136635,
-    "stop" : 1720056137042,
-    "duration" : 407
+    "start" : 1720081510373,
+    "stop" : 1720081511045,
+    "duration" : 672
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f25389dd880>\n\n    @allure.feature(\"Sending Symbols\")\n    @allure.story(\"Sending Disallowed Symbol\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_not_allow_symbol(api_client):\n        with allure.step(\"Sending disallowed symbol\"):\n            data_url1 = {\"body\": \"LOL\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data_url1)\n    \n            with allure.step(\"Asserting response for disallowed symbol\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:179: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f42406a27f0>\n\n    @allure.feature(\"Sending Symbols\")\n    @allure.story(\"Sending Disallowed Symbol\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_not_allow_symbol(api_client):\n        with allure.step(\"Sending disallowed symbol\"):\n            data_url1 = {\"body\": \"LOL\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data_url1)\n    \n            with allure.step(\"Asserting response for disallowed symbol\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:179: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1720056085983,
-      "stop" : 1720056088112,
-      "duration" : 2129
+      "start" : 1720081452512,
+      "stop" : 1720081452512,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,8 +31,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1720056088112,
-      "stop" : 1720056088112,
+      "start" : 1720081455761,
+      "stop" : 1720081455761,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,11 +44,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720056085983,
-      "stop" : 1720056085983,
-      "duration" : 0
+      "start" : 1720081452512,
+      "stop" : 1720081455761,
+      "duration" : 3249
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,13 +62,13 @@
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f25389dd880>\n\n    @allure.feature(\"Sending Symbols\")\n    @allure.story(\"Sending Disallowed Symbol\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_not_allow_symbol(api_client):\n        with allure.step(\"Sending disallowed symbol\"):\n            data_url1 = {\"body\": \"LOL\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data_url1)\n    \n            with allure.step(\"Asserting response for disallowed symbol\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:179: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f42406a27f0>\n\n    @allure.feature(\"Sending Symbols\")\n    @allure.story(\"Sending Disallowed Symbol\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_not_allow_symbol(api_client):\n        with allure.step(\"Sending disallowed symbol\"):\n            data_url1 = {\"body\": \"LOL\", \"msgtype\": \"m.text\",\n                         \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data_url1)\n    \n            with allure.step(\"Asserting response for disallowed symbol\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:179: AssertionError",
     "steps" : [ {
       "name" : "Sending disallowed symbol",
       "time" : {
-        "start" : 1720056136635,
-        "stop" : 1720056137042,
-        "duration" : 407
+        "start" : 1720081510373,
+        "stop" : 1720081511045,
+        "duration" : 672
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -76,9 +76,9 @@
       "steps" : [ {
         "name" : "Asserting response for disallowed symbol",
         "time" : {
-          "start" : 1720056137042,
-          "stop" : 1720056137042,
-          "duration" : 0
+          "start" : 1720081511044,
+          "stop" : 1720081511045,
+          "duration" : 1
         },
         "status" : "failed",
         "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -108,8 +108,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720056142318,
-      "stop" : 1720056142318,
+      "start" : 1720081517231,
+      "stop" : 1720081517231,
       "duration" : 0
     },
     "status" : "passed",
@@ -125,11 +125,11 @@
     "name" : "story",
     "value" : "Sending Disallowed Symbol"
   }, {
-    "name" : "severity",
-    "value" : "normal"
-  }, {
     "name" : "feature",
     "value" : "Sending Symbols"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -138,7 +138,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "102bf675c248"
+    "value" : "5e7876427c53"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -169,14 +169,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 16,
+        "failed" : 17,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 253,
         "unknown" : 0,
-        "total" : 273
+        "total" : 274
       },
       "items" : [ {
+        "uid" : "1e500c83c4b7ee30",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1720056136635,
+          "stop" : 1720056137042,
+          "duration" : 407
+        }
+      }, {
         "uid" : "dcb9192983b3a056",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -332,18 +341,10 @@
           "stop" : 1718932841126,
           "duration" : 693
         }
-      }, {
-        "uid" : "84b074fe96cb753b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718900782096,
-          "stop" : 1718900782563,
-          "duration" : 467
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "1e500c83c4b7ee30.json",
+  "source" : "421771e0babbe73b.json",
   "parameterValues" : [ ]
 }
