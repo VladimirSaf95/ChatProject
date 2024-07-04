@@ -1,23 +1,38 @@
 {
-  "uid" : "264160fcd04638e6",
+  "uid" : "c9b64c5ecad875e",
   "name" : "test_send_emoji",
   "fullName" : "test.test_messages_functionality#test_send_emoji",
   "historyId" : "7bb320f962adcc3b1847931bf3d7efa9",
   "time" : {
-    "start" : 1720023930669,
-    "stop" : 1720023931343,
-    "duration" : 674
+    "start" : 1720056134433,
+    "stop" : 1720056134848,
+    "duration" : 415
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f82884e9880>\n\n    @allure.feature(\"Sending Messages\")\n    @allure.story(\"Sending Emoji\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_emoji(api_client):\n        with allure.step(\"Sending emoji and checking response\"):\n            data = {\"body\": \"\uD83D\uDE05\", \"msgtype\": \"m.text\", \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:57: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f25389dd880>\n\n    @allure.feature(\"Sending Messages\")\n    @allure.story(\"Sending Emoji\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_emoji(api_client):\n        with allure.step(\"Sending emoji and checking response\"):\n            data = {\"body\": \"\uD83D\uDE05\", \"msgtype\": \"m.text\", \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:57: AssertionError",
   "flaky" : true,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1720056085983,
+      "stop" : 1720056088112,
+      "duration" : 2129
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1720023878125,
-      "stop" : 1720023878125,
+      "start" : 1720056088112,
+      "stop" : 1720056088112,
       "duration" : 0
     },
     "status" : "passed",
@@ -26,29 +41,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
-  }, {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1720023874968,
-      "stop" : 1720023878124,
-      "duration" : 3156
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720023874967,
-      "stop" : 1720023874968,
-      "duration" : 1
+      "start" : 1720056085983,
+      "stop" : 1720056085983,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -56,19 +56,19 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f82884e9880>\n\n    @allure.feature(\"Sending Messages\")\n    @allure.story(\"Sending Emoji\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_emoji(api_client):\n        with allure.step(\"Sending emoji and checking response\"):\n            data = {\"body\": \"\uD83D\uDE05\", \"msgtype\": \"m.text\", \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:57: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f25389dd880>\n\n    @allure.feature(\"Sending Messages\")\n    @allure.story(\"Sending Emoji\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_emoji(api_client):\n        with allure.step(\"Sending emoji and checking response\"):\n            data = {\"body\": \"\uD83D\uDE05\", \"msgtype\": \"m.text\", \"senderId\": f\"@{api_client.senderid}:{api_client.room_second_part}\"}\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.room.message\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 500 == 200\nE                +  where 500 = <Response [500]>.status_code\n\ntest/test_messages_functionality.py:57: AssertionError",
     "steps" : [ {
       "name" : "Sending emoji and checking response",
       "time" : {
-        "start" : 1720023930669,
-        "stop" : 1720023931343,
-        "duration" : 674
+        "start" : 1720056134433,
+        "stop" : 1720056134847,
+        "duration" : 414
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code\n",
@@ -76,8 +76,8 @@
       "steps" : [ {
         "name" : "Check response code",
         "time" : {
-          "start" : 1720023931342,
-          "stop" : 1720023931342,
+          "start" : 1720056134847,
+          "stop" : 1720056134847,
           "duration" : 0
         },
         "status" : "failed",
@@ -88,28 +88,28 @@
         "parameters" : [ ],
         "attachmentsCount" : 0,
         "shouldDisplayMessage" : true,
-        "hasContent" : true,
-        "stepsCount" : 0
+        "stepsCount" : 0,
+        "hasContent" : true
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true,
-      "stepsCount" : 1
+      "stepsCount" : 1,
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : true,
-    "hasContent" : true,
-    "stepsCount" : 2
+    "stepsCount" : 2,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720023939741,
-      "stop" : 1720023939741,
+      "start" : 1720056142318,
+      "stop" : 1720056142318,
       "duration" : 0
     },
     "status" : "passed",
@@ -118,8 +118,8 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "severity",
@@ -138,7 +138,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "53f093d5a490"
+    "value" : "102bf675c248"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -169,14 +169,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 17,
+        "failed" : 18,
         "broken" : 4,
         "skipped" : 0,
         "passed" : 251,
         "unknown" : 0,
-        "total" : 272
+        "total" : 273
       },
       "items" : [ {
+        "uid" : "264160fcd04638e6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
+        "time" : {
+          "start" : 1720023930669,
+          "stop" : 1720023931343,
+          "duration" : 674
+        }
+      }, {
         "uid" : "d8c332bc51082afe",
         "status" : "failed",
         "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
@@ -332,18 +341,10 @@
           "stop" : 1718900780102,
           "duration" : 512
         }
-      }, {
-        "uid" : "9ae76a9113c9509a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1718871897495,
-          "stop" : 1718871898389,
-          "duration" : 894
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "264160fcd04638e6.json",
+  "source" : "c9b64c5ecad875e.json",
   "parameterValues" : [ ]
 }
