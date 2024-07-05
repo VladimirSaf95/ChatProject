@@ -1,5 +1,60 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: The 'total' value did not increase by one\nassert 0 == (0 + 1)",
+      "children" : [ {
+        "name" : "test_block_players",
+        "uid" : "4df5b1050f5975eb",
+        "parentUid" : "38dd11943e2549e7db14b2f59e1af819",
+        "status" : "failed",
+        "time" : {
+          "start" : 1720167793678,
+          "stop" : 1720167803455,
+          "duration" : 9777
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "38dd11943e2549e7db14b2f59e1af819"
+    }, {
+      "name" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
+      "children" : [ {
+        "name" : "test_unblock_players",
+        "uid" : "4edd32ab02e9322a",
+        "parentUid" : "1da6e14fd45e316dec756d2b5df3fb88",
+        "status" : "failed",
+        "time" : {
+          "start" : 1720167803496,
+          "stop" : 1720167827776,
+          "duration" : 24280
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1da6e14fd45e316dec756d2b5df3fb88"
+    }, {
+      "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
+      "children" : [ {
+        "name" : "test_delete_dmsg",
+        "uid" : "b669e19c41d41464",
+        "parentUid" : "6b6a70086243924495b8afdaf625d52d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1720167884732,
+          "stop" : 1720167944949,
+          "duration" : 60217
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6b6a70086243924495b8afdaf625d52d"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
   "name" : "categories"
 }
