@@ -1,22 +1,22 @@
 {
-  "uid" : "d421d146f697287f",
-  "name" : "test_clickchatbutton",
-  "fullName" : "test.test_open_and_close_chat#test_clickchatbutton",
-  "historyId" : "336199c1d540adbc6dd3cdcb40af25fe",
+  "uid" : "448e67964e12e693",
+  "name" : "test_click_chat_button_close",
+  "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
+  "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1720196727059,
-    "stop" : 1720196727330,
-    "duration" : 271
+    "start" : 1720228914330,
+    "stop" : 1720228914631,
+    "duration" : 301
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1720196587854,
-      "stop" : 1720196590909,
-      "duration" : 3055
+      "start" : 1720228775739,
+      "stop" : 1720228775739,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720196590909,
-      "stop" : 1720196590909,
-      "duration" : 0
+      "start" : 1720228772064,
+      "stop" : 1720228775739,
+      "duration" : 3675
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720196587853,
-      "stop" : 1720196587853,
+      "start" : 1720228772064,
+      "stop" : 1720228772064,
       "duration" : 0
     },
     "status" : "passed",
@@ -59,9 +59,9 @@
   }, {
     "name" : "app",
     "time" : {
-      "start" : 1720196622106,
-      "stop" : 1720196623209,
-      "duration" : 1103
+      "start" : 1720228808449,
+      "stop" : 1720228809749,
+      "duration" : 1300
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,11 +75,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Clicking on the chat button",
+      "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1720196727165,
-        "stop" : 1720196727315,
-        "duration" : 150
+        "start" : 1720228914434,
+        "stop" : 1720228914439,
+        "duration" : 5
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,11 +90,26 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Asserting chat button existence",
+      "name" : "Clicking on the chat close button",
       "time" : {
-        "start" : 1720196727315,
-        "stop" : 1720196727329,
-        "duration" : 14
+        "start" : 1720228914439,
+        "stop" : 1720228914597,
+        "duration" : 158
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Verifying that the chat is closed",
+      "time" : {
+        "start" : 1720228914597,
+        "stop" : 1720228914631,
+        "duration" : 34
       },
       "status" : "passed",
       "steps" : [ ],
@@ -109,14 +124,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 2,
+    "stepsCount" : 3,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720196731206,
-      "stop" : 1720196731206,
+      "start" : 1720228917911,
+      "stop" : 1720228917911,
       "duration" : 0
     },
     "status" : "passed",
@@ -130,8 +145,8 @@
   }, {
     "name" : "app::0",
     "time" : {
-      "start" : 1720196731137,
-      "stop" : 1720196731205,
+      "start" : 1720228917843,
+      "stop" : 1720228917911,
       "duration" : 68
     },
     "status" : "passed",
@@ -144,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Chat Functionality"
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "story",
-    "value" : "Clicking Chat Button"
+    "value" : "Clicking Chat Button to Close"
   }, {
-    "name" : "severity",
-    "value" : "blocker"
+    "name" : "feature",
+    "value" : "Chat Functionality"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +175,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "d4e46a406b9f"
+    "value" : "44a6845a839c"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -182,7 +197,7 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "blocker",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
     "history" : {
@@ -190,176 +205,176 @@
         "failed" : 10,
         "broken" : 49,
         "skipped" : 0,
-        "passed" : 218,
+        "passed" : 219,
         "unknown" : 0,
-        "total" : 277
+        "total" : 278
       },
       "items" : [ {
-        "uid" : "aaca944320e7d28a",
+        "uid" : "1c538adb1411515e",
         "status" : "passed",
         "time" : {
-          "start" : 1720167944964,
-          "stop" : 1720167945328,
-          "duration" : 364
+          "start" : 1720196727575,
+          "stop" : 1720196727931,
+          "duration" : 356
         }
       }, {
-        "uid" : "ef4fc3198569a7ba",
+        "uid" : "51fbe305f42e19c3",
         "status" : "passed",
         "time" : {
-          "start" : 1720110305230,
-          "stop" : 1720110305511,
-          "duration" : 281
+          "start" : 1720167945549,
+          "stop" : 1720167945849,
+          "duration" : 300
         }
       }, {
-        "uid" : "29895c1ad07136f8",
+        "uid" : "a84b95db1ab35d36",
         "status" : "passed",
         "time" : {
-          "start" : 1720081515893,
-          "stop" : 1720081516093,
+          "start" : 1720110305763,
+          "stop" : 1720110306160,
+          "duration" : 397
+        }
+      }, {
+        "uid" : "8e9aa6638b630a51",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720081516336,
+          "stop" : 1720081516536,
           "duration" : 200
         }
       }, {
-        "uid" : "cd38892a86beb8b9",
+        "uid" : "d8651b0265ed5bca",
         "status" : "passed",
         "time" : {
-          "start" : 1720056140375,
-          "stop" : 1720056140764,
-          "duration" : 389
+          "start" : 1720056141000,
+          "stop" : 1720056141188,
+          "duration" : 188
         }
       }, {
-        "uid" : "1eb105213612452b",
+        "uid" : "be6b37449e9227a4",
         "status" : "passed",
         "time" : {
-          "start" : 1720023937910,
-          "stop" : 1720023938133,
-          "duration" : 223
+          "start" : 1720023938406,
+          "stop" : 1720023938601,
+          "duration" : 195
         }
       }, {
-        "uid" : "89e772e07ee4ddb",
+        "uid" : "3fde87ab772f6189",
         "status" : "passed",
         "time" : {
-          "start" : 1719995116308,
-          "stop" : 1719995116525,
-          "duration" : 217
+          "start" : 1719995116797,
+          "stop" : 1719995116994,
+          "duration" : 197
         }
       }, {
-        "uid" : "66488b3f9b3fc963",
+        "uid" : "f92385d353bca17b",
         "status" : "passed",
         "time" : {
-          "start" : 1719969715214,
-          "stop" : 1719969715465,
-          "duration" : 251
+          "start" : 1719969715689,
+          "stop" : 1719969715868,
+          "duration" : 179
         }
       }, {
-        "uid" : "b1b555a279c2126",
+        "uid" : "cf00167d842042dd",
         "status" : "failed",
-        "statusDetails" : "AssertionError: assert False is True\n +  where False = <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f6b996e8f40>>()\n +    where <bound method HelperBase.check_chatbutton_existence of <fixture.helper_base.HelperBase object at 0x7f6b996e8f40>> = <fixture.helper_base.HelperBase object at 0x7f6b996e8f40>.check_chatbutton_existence",
+        "statusDetails" : "AssertionError: Chat is not open\nassert False is True",
         "time" : {
-          "start" : 1719937638081,
-          "stop" : 1719937641234,
-          "duration" : 3153
+          "start" : 1719937644408,
+          "stop" : 1719937644517,
+          "duration" : 109
         }
       }, {
-        "uid" : "dcf0c6bff51d7ed6",
+        "uid" : "9bcf91fc6bd1742c",
         "status" : "passed",
         "time" : {
-          "start" : 1719908757346,
-          "stop" : 1719908757616,
-          "duration" : 270
+          "start" : 1719908757843,
+          "stop" : 1719908758117,
+          "duration" : 274
         }
       }, {
-        "uid" : "d7a9cc002f4caf58",
+        "uid" : "2df180977ab8344",
         "status" : "passed",
         "time" : {
-          "start" : 1719883426001,
-          "stop" : 1719883426283,
-          "duration" : 282
+          "start" : 1719883426514,
+          "stop" : 1719883426803,
+          "duration" : 289
         }
       }, {
-        "uid" : "40f37989e8d94ca1",
+        "uid" : "e6fa00026db762be",
         "status" : "passed",
         "time" : {
-          "start" : 1719851127357,
-          "stop" : 1719851127623,
-          "duration" : 266
+          "start" : 1719851127857,
+          "stop" : 1719851128121,
+          "duration" : 264
         }
       }, {
-        "uid" : "2cd25629b8181182",
+        "uid" : "247dee11e1e7f942",
         "status" : "passed",
         "time" : {
-          "start" : 1719822467132,
-          "stop" : 1719822467417,
-          "duration" : 285
+          "start" : 1719822467651,
+          "stop" : 1719822467922,
+          "duration" : 271
         }
       }, {
-        "uid" : "412f3e3c788fc919",
+        "uid" : "cf52018ae231f7cf",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
         "time" : {
-          "start" : 1719218190819,
-          "stop" : 1719218190819,
+          "start" : 1719218190922,
+          "stop" : 1719218190922,
           "duration" : 0
         }
       }, {
-        "uid" : "afb9562e019384b6",
+        "uid" : "5a797061b23112f7",
         "status" : "passed",
         "time" : {
-          "start" : 1719192233340,
-          "stop" : 1719192233601,
-          "duration" : 261
+          "start" : 1719192233828,
+          "stop" : 1719192234096,
+          "duration" : 268
         }
       }, {
-        "uid" : "6e135cd55aea1c0f",
+        "uid" : "656a5ac81c3d8367",
         "status" : "passed",
         "time" : {
-          "start" : 1719159842544,
-          "stop" : 1719159842802,
-          "duration" : 258
+          "start" : 1719159843019,
+          "stop" : 1719159843284,
+          "duration" : 265
         }
       }, {
-        "uid" : "f7e37453dcdcbfac",
+        "uid" : "afc0493bd18cbdf1",
         "status" : "passed",
         "time" : {
-          "start" : 1719130985983,
-          "stop" : 1719130986243,
-          "duration" : 260
+          "start" : 1719130986460,
+          "stop" : 1719130986742,
+          "duration" : 282
         }
       }, {
-        "uid" : "bc32e07e435ed7ac",
+        "uid" : "dc6c638317226b68",
         "status" : "passed",
         "time" : {
-          "start" : 1719106036401,
-          "stop" : 1719106036712,
-          "duration" : 311
+          "start" : 1719106036930,
+          "stop" : 1719106037179,
+          "duration" : 249
         }
       }, {
-        "uid" : "9c494bec7d28dc6a",
+        "uid" : "619396dba73fb219",
         "status" : "passed",
         "time" : {
-          "start" : 1719073552558,
-          "stop" : 1719073552872,
-          "duration" : 314
+          "start" : 1719073553102,
+          "stop" : 1719073553368,
+          "duration" : 266
         }
       }, {
-        "uid" : "9bf4a01236e3611e",
+        "uid" : "8aeb783215c18169",
         "status" : "passed",
         "time" : {
-          "start" : 1719044672518,
-          "stop" : 1719044672781,
-          "duration" : 263
-        }
-      }, {
-        "uid" : "c171f47f1b243ad7",
-        "status" : "passed",
-        "time" : {
-          "start" : 1719019335724,
-          "stop" : 1719019335980,
-          "duration" : 256
+          "start" : 1719044673008,
+          "stop" : 1719044673285,
+          "duration" : 277
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "d421d146f697287f.json",
+  "source" : "448e67964e12e693.json",
   "parameterValues" : [ ]
 }
