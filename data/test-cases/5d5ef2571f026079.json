@@ -1,21 +1,36 @@
 {
-  "uid" : "cefc28e2510c96ff",
+  "uid" : "5d5ef2571f026079",
   "name" : "test_unpinned_msg",
   "fullName" : "test.test_messages_functionality#test_unpinned_msg",
   "historyId" : "e51d1fcd71fa2b661252b5536f450782",
   "time" : {
-    "start" : 1720282980439,
-    "stop" : 1720282980997,
-    "duration" : 558
+    "start" : 1720316108318,
+    "stop" : 1720316108692,
+    "duration" : 374
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "init_authorization",
+    "time" : {
+      "start" : 1720316037845,
+      "stop" : 1720316041082,
+      "duration" : 3237
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1720282915202,
-      "stop" : 1720282915202,
+      "start" : 1720316041082,
+      "stop" : 1720316041082,
       "duration" : 0
     },
     "status" : "passed",
@@ -24,28 +39,13 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
-  }, {
-    "name" : "init_authorization",
-    "time" : {
-      "start" : 1720282912610,
-      "stop" : 1720282915202,
-      "duration" : 2592
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720282912610,
-      "stop" : 1720282912610,
+      "start" : 1720316037845,
+      "stop" : 1720316037845,
       "duration" : 0
     },
     "status" : "passed",
@@ -54,16 +54,16 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Getting pinned message ID",
       "time" : {
-        "start" : 1720282980439,
-        "stop" : 1720282980439,
+        "start" : 1720316108318,
+        "stop" : 1720316108318,
         "duration" : 0
       },
       "status" : "passed",
@@ -72,14 +72,14 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Unpinning the message",
       "time" : {
-        "start" : 1720282980439,
-        "stop" : 1720282980995,
-        "duration" : 556
+        "start" : 1720316108318,
+        "stop" : 1720316108691,
+        "duration" : 373
       },
       "status" : "passed",
       "steps" : [ ],
@@ -87,13 +87,13 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Verifying response status code",
       "time" : {
-        "start" : 1720282980995,
-        "stop" : 1720282980995,
+        "start" : 1720316108691,
+        "stop" : 1720316108691,
         "duration" : 0
       },
       "status" : "passed",
@@ -102,13 +102,13 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Verifying event_id in response JSON",
       "time" : {
-        "start" : 1720282980995,
-        "stop" : 1720282980995,
+        "start" : 1720316108691,
+        "stop" : 1720316108691,
         "duration" : 0
       },
       "status" : "passed",
@@ -117,21 +117,21 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : true,
-    "stepsCount" : 4
+    "stepsCount" : 4,
+    "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720283054896,
-      "stop" : 1720283054896,
+      "start" : 1720316182875,
+      "stop" : 1720316182875,
       "duration" : 0
     },
     "status" : "passed",
@@ -140,18 +140,18 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "story",
+    "value" : "Message Unpinning by Moderator"
+  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "feature",
     "value" : "Message Unpinning"
-  }, {
-    "name" : "story",
-    "value" : "Message Unpinning by Moderator"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "4d1849d37621"
+    "value" : "747b274b8100"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 0,
         "broken" : 4,
         "skipped" : 18,
-        "passed" : 258,
+        "passed" : 259,
         "unknown" : 0,
-        "total" : 280
+        "total" : 281
       },
       "items" : [ {
+        "uid" : "cefc28e2510c96ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720282980439,
+          "stop" : 1720282980997,
+          "duration" : 558
+        }
+      }, {
         "uid" : "250c44df896e69d0",
         "status" : "passed",
         "time" : {
@@ -352,18 +360,10 @@
           "stop" : 1719130916074,
           "duration" : 539
         }
-      }, {
-        "uid" : "e47d69880cd54a88",
-        "status" : "passed",
-        "time" : {
-          "start" : 1719105965752,
-          "stop" : 1719105966330,
-          "duration" : 578
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "cefc28e2510c96ff.json",
+  "source" : "5d5ef2571f026079.json",
   "parameterValues" : [ ]
 }
