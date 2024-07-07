@@ -1,22 +1,22 @@
 {
-  "uid" : "aab9fd39b643d7a7",
+  "uid" : "1b2ac1ce566de90d",
   "name" : "test_pinned_msg",
   "fullName" : "test.test_messages_functionality#test_pinned_msg",
   "historyId" : "ecdfbf7aa572308243a68350daaed9a0",
   "time" : {
-    "start" : 1720340568622,
-    "stop" : 1720340569277,
-    "duration" : 655
+    "start" : 1720369358902,
+    "stop" : 1720369359668,
+    "duration" : 766
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720340505414,
-      "stop" : 1720340505414,
-      "duration" : 0
+      "start" : 1720369285807,
+      "stop" : 1720369290933,
+      "duration" : 5126
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720340502794,
-      "stop" : 1720340502794,
+      "start" : 1720369285807,
+      "stop" : 1720369285807,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1720340502794,
-      "stop" : 1720340505414,
-      "duration" : 2620
+      "start" : 1720369290933,
+      "stop" : 1720369290933,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,8 +62,8 @@
     "steps" : [ {
       "name" : "Sending message",
       "time" : {
-        "start" : 1720340568622,
-        "stop" : 1720340568622,
+        "start" : 1720369358903,
+        "stop" : 1720369358903,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,9 +77,9 @@
     }, {
       "name" : "Pinning message",
       "time" : {
-        "start" : 1720340568622,
-        "stop" : 1720340569275,
-        "duration" : 653
+        "start" : 1720369358903,
+        "stop" : 1720369359667,
+        "duration" : 764
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,8 +92,8 @@
     }, {
       "name" : "Verifying response status code",
       "time" : {
-        "start" : 1720340569275,
-        "stop" : 1720340569275,
+        "start" : 1720369359667,
+        "stop" : 1720369359667,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,8 +107,8 @@
     }, {
       "name" : "Verifying event_id in response JSON",
       "time" : {
-        "start" : 1720340569275,
-        "stop" : 1720340569275,
+        "start" : 1720369359667,
+        "stop" : 1720369359667,
         "duration" : 0
       },
       "status" : "passed",
@@ -130,8 +130,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720340643719,
-      "stop" : 1720340643719,
+      "start" : 1720369434091,
+      "stop" : 1720369434091,
       "duration" : 0
     },
     "status" : "passed",
@@ -144,14 +144,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Message Pinning by Moderator"
-  }, {
     "name" : "feature",
     "value" : "Message Pinning"
   }, {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "Message Pinning by Moderator"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +160,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "f77c63aa8215"
+    "value" : "ef754a172538"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 1,
         "broken" : 21,
         "skipped" : 0,
-        "passed" : 260,
+        "passed" : 261,
         "unknown" : 0,
-        "total" : 282
+        "total" : 283
       },
       "items" : [ {
+        "uid" : "aab9fd39b643d7a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720340568622,
+          "stop" : 1720340569277,
+          "duration" : 655
+        }
+      }, {
         "uid" : "271137b5c346e09b",
         "status" : "passed",
         "time" : {
@@ -352,18 +360,10 @@
           "stop" : 1719192162855,
           "duration" : 302
         }
-      }, {
-        "uid" : "c7bca1067d508c3a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1719159771553,
-          "stop" : 1719159771976,
-          "duration" : 423
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "aab9fd39b643d7a7.json",
+  "source" : "1b2ac1ce566de90d.json",
   "parameterValues" : [ ]
 }

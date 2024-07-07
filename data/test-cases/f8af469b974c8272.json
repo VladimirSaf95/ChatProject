@@ -1,22 +1,22 @@
 {
-  "uid" : "e82e27289b8471c6",
+  "uid" : "f8af469b974c8272",
   "name" : "test_send_complaint",
   "fullName" : "test.test_messages_functionality#test_send_complaint",
   "historyId" : "31f8786fe3f6ff4b035b30b6ade7469c",
   "time" : {
-    "start" : 1720340567842,
-    "stop" : 1720340568619,
-    "duration" : 777
+    "start" : 1720369357919,
+    "stop" : 1720369358900,
+    "duration" : 981
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720340505414,
-      "stop" : 1720340505414,
-      "duration" : 0
+      "start" : 1720369285807,
+      "stop" : 1720369290933,
+      "duration" : 5126
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720340502794,
-      "stop" : 1720340502794,
+      "start" : 1720369285807,
+      "stop" : 1720369285807,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1720340502794,
-      "stop" : 1720340505414,
-      "duration" : 2620
+      "start" : 1720369290933,
+      "stop" : 1720369290933,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Filing complaint on message",
       "time" : {
-        "start" : 1720340567843,
-        "stop" : 1720340568617,
-        "duration" : 774
+        "start" : 1720369357920,
+        "stop" : 1720369358898,
+        "duration" : 978
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1720340568617,
-        "stop" : 1720340568617,
+        "start" : 1720369358899,
+        "stop" : 1720369358899,
         "duration" : 0
       },
       "status" : "passed",
@@ -100,8 +100,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720340643719,
-      "stop" : 1720340643719,
+      "start" : 1720369434091,
+      "stop" : 1720369434091,
       "duration" : 0
     },
     "status" : "passed",
@@ -130,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "f77c63aa8215"
+    "value" : "ef754a172538"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,11 +160,19 @@
         "failed" : 2,
         "broken" : 21,
         "skipped" : 0,
-        "passed" : 259,
+        "passed" : 260,
         "unknown" : 0,
-        "total" : 282
+        "total" : 283
       },
       "items" : [ {
+        "uid" : "e82e27289b8471c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720340567842,
+          "stop" : 1720340568619,
+          "duration" : 777
+        }
+      }, {
         "uid" : "efff71d5d1ebb33b",
         "status" : "passed",
         "time" : {
@@ -322,18 +330,10 @@
           "stop" : 1719192162550,
           "duration" : 434
         }
-      }, {
-        "uid" : "5dc5b1b8a37edc28",
-        "status" : "passed",
-        "time" : {
-          "start" : 1719159770531,
-          "stop" : 1719159771551,
-          "duration" : 1020
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "e82e27289b8471c6.json",
+  "source" : "f8af469b974c8272.json",
   "parameterValues" : [ ]
 }
