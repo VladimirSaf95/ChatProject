@@ -1,22 +1,22 @@
 {
-  "uid" : "c89097870bb9fae3",
+  "uid" : "9a235efa69a0252e",
   "name" : "test_send_gif",
   "fullName" : "test.test_messages_functionality#test_send_gif",
   "historyId" : "e2c73fa8c2349ddfce495417c4df003c",
   "time" : {
-    "start" : 1720661055474,
-    "stop" : 1720661056175,
-    "duration" : 701
+    "start" : 1720686309073,
+    "stop" : 1720686310057,
+    "duration" : 984
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720660992018,
-      "stop" : 1720660992019,
-      "duration" : 1
+      "start" : 1720686236954,
+      "stop" : 1720686240541,
+      "duration" : 3587
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1720660989596,
-      "stop" : 1720660992018,
-      "duration" : 2422
+      "start" : 1720686240542,
+      "stop" : 1720686240542,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,9 +44,9 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720660989596,
-      "stop" : 1720660989596,
-      "duration" : 0
+      "start" : 1720686236953,
+      "stop" : 1720686236954,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,9 +62,9 @@
     "steps" : [ {
       "name" : "Sending GIF message",
       "time" : {
-        "start" : 1720661055474,
-        "stop" : 1720661056172,
-        "duration" : 698
+        "start" : 1720686309073,
+        "stop" : 1720686310054,
+        "duration" : 981
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1720661056172,
-        "stop" : 1720661056172,
+        "start" : 1720686310054,
+        "stop" : 1720686310054,
         "duration" : 0
       },
       "status" : "passed",
@@ -92,8 +92,8 @@
     }, {
       "name" : "Asserting response text",
       "time" : {
-        "start" : 1720661056172,
-        "stop" : 1720661056172,
+        "start" : 1720686310054,
+        "stop" : 1720686310054,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,8 +107,8 @@
     }, {
       "name" : "Asserting 'event_id' key in JSON response",
       "time" : {
-        "start" : 1720661056172,
-        "stop" : 1720661056172,
+        "start" : 1720686310054,
+        "stop" : 1720686310054,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,8 +122,8 @@
     }, {
       "name" : "Asserting response time",
       "time" : {
-        "start" : 1720661056172,
-        "stop" : 1720661056172,
+        "start" : 1720686310054,
+        "stop" : 1720686310054,
         "duration" : 0
       },
       "status" : "passed",
@@ -145,8 +145,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720661131792,
-      "stop" : 1720661131792,
+      "start" : 1720686385978,
+      "stop" : 1720686385978,
       "duration" : 0
     },
     "status" : "passed",
@@ -159,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "story",
+    "value" : "Sending GIF in Chat"
+  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "feature",
     "value" : "Sending GIFs"
-  }, {
-    "name" : "story",
-    "value" : "Sending GIF in Chat"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -175,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "1d5c14e4c840"
+    "value" : "b0a57d7c49ea"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 19,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 270,
+        "passed" : 271,
         "unknown" : 0,
-        "total" : 293
+        "total" : 294
       },
       "items" : [ {
+        "uid" : "c89097870bb9fae3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720661055474,
+          "stop" : 1720661056175,
+          "duration" : 701
+        }
+      }, {
         "uid" : "bc68c2c1e7ab52b2",
         "status" : "passed",
         "time" : {
@@ -362,19 +370,10 @@
           "stop" : 1720081511822,
           "duration" : 729
         }
-      }, {
-        "uid" : "376f5f0cba0935a3",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1720056137077,
-          "stop" : 1720056137559,
-          "duration" : 482
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c89097870bb9fae3.json",
+  "source" : "9a235efa69a0252e.json",
   "parameterValues" : [ ]
 }

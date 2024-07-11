@@ -1,22 +1,22 @@
 {
-  "uid" : "4315131ad4a8ec51",
+  "uid" : "a3726e93d3f53508",
   "name" : "test_send_not_allow_symbol",
   "fullName" : "test.test_messages_functionality#test_send_not_allow_symbol",
   "historyId" : "a7c8da64ecec62788bdb01ada3b6be57",
   "time" : {
-    "start" : 1720661054991,
-    "stop" : 1720661055469,
-    "duration" : 478
+    "start" : 1720686308364,
+    "stop" : 1720686309071,
+    "duration" : 707
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1720660992018,
-      "stop" : 1720660992019,
-      "duration" : 1
+      "start" : 1720686236954,
+      "stop" : 1720686240541,
+      "duration" : 3587
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1720660989596,
-      "stop" : 1720660992018,
-      "duration" : 2422
+      "start" : 1720686240542,
+      "stop" : 1720686240542,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,9 +44,9 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1720660989596,
-      "stop" : 1720660989596,
-      "duration" : 0
+      "start" : 1720686236953,
+      "stop" : 1720686236954,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending disallowed symbol",
       "time" : {
-        "start" : 1720661054991,
-        "stop" : 1720661055466,
-        "duration" : 475
+        "start" : 1720686308364,
+        "stop" : 1720686309069,
+        "duration" : 705
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for disallowed symbol",
         "time" : {
-          "start" : 1720661055466,
-          "stop" : 1720661055466,
+          "start" : 1720686309069,
+          "stop" : 1720686309069,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,8 +100,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1720661131792,
-      "stop" : 1720661131792,
+      "start" : 1720686385978,
+      "stop" : 1720686385978,
       "duration" : 0
     },
     "status" : "passed",
@@ -114,14 +114,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Sending Symbols"
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "story",
     "value" : "Sending Disallowed Symbol"
   }, {
-    "name" : "severity",
-    "value" : "normal"
+    "name" : "feature",
+    "value" : "Sending Symbols"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -130,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "1d5c14e4c840"
+    "value" : "b0a57d7c49ea"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,11 +160,19 @@
         "failed" : 17,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 272,
+        "passed" : 273,
         "unknown" : 0,
-        "total" : 293
+        "total" : 294
       },
       "items" : [ {
+        "uid" : "4315131ad4a8ec51",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720661054991,
+          "stop" : 1720661055469,
+          "duration" : 478
+        }
+      }, {
         "uid" : "3ae70e6eeca34da4",
         "status" : "passed",
         "time" : {
@@ -317,19 +325,10 @@
           "stop" : 1720081511045,
           "duration" : 672
         }
-      }, {
-        "uid" : "1e500c83c4b7ee30",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Response status code is not 200\nassert 500 == 200\n +  where 500 = <Response [500]>.status_code",
-        "time" : {
-          "start" : 1720056136635,
-          "stop" : 1720056137042,
-          "duration" : 407
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "4315131ad4a8ec51.json",
+  "source" : "a3726e93d3f53508.json",
   "parameterValues" : [ ]
 }
