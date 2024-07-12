@@ -1,21 +1,36 @@
 {
-  "uid" : "49af120bb4b05356",
+  "uid" : "9c51a4d305c1a5a4",
   "name" : "test_click_chat_button_close",
   "fullName" : "test.test_open_and_close_chat#test_click_chat_button_close",
   "historyId" : "bf8bf8635c680621b1f1ddb83cfb1276",
   "time" : {
-    "start" : 1720715147080,
-    "stop" : 1720715147366,
-    "duration" : 286
+    "start" : 1720747448600,
+    "stop" : 1720747448939,
+    "duration" : 339
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "config",
+    "name" : "app",
     "time" : {
-      "start" : 1720715000417,
-      "stop" : 1720715000417,
+      "start" : 1720747342928,
+      "stop" : 1720747344324,
+      "duration" : 1396
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1720747311643,
+      "stop" : 1720747311643,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +44,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1720715000417,
-      "stop" : 1720715004169,
-      "duration" : 3752
+      "start" : 1720747309301,
+      "stop" : 1720747311643,
+      "duration" : 2342
     },
     "status" : "passed",
     "steps" : [ ],
@@ -42,26 +57,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client",
+    "name" : "config",
     "time" : {
-      "start" : 1720715004169,
-      "stop" : 1720715004169,
+      "start" : 1720747309301,
+      "stop" : 1720747309301,
       "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
-    "name" : "app",
-    "time" : {
-      "start" : 1720715037246,
-      "stop" : 1720715038796,
-      "duration" : 1550
     },
     "status" : "passed",
     "steps" : [ ],
@@ -77,8 +77,8 @@
     "steps" : [ {
       "name" : "Checking if chat is open",
       "time" : {
-        "start" : 1720715147184,
-        "stop" : 1720715147191,
+        "start" : 1720747448710,
+        "stop" : 1720747448717,
         "duration" : 7
       },
       "status" : "passed",
@@ -92,9 +92,9 @@
     }, {
       "name" : "Clicking on the chat close button",
       "time" : {
-        "start" : 1720715147191,
-        "stop" : 1720715147349,
-        "duration" : 158
+        "start" : 1720747448717,
+        "stop" : 1720747448913,
+        "duration" : 196
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,9 +107,9 @@
     }, {
       "name" : "Verifying that the chat is closed",
       "time" : {
-        "start" : 1720715147349,
-        "stop" : 1720715147366,
-        "duration" : 17
+        "start" : 1720747448913,
+        "stop" : 1720747448939,
+        "duration" : 26
       },
       "status" : "passed",
       "steps" : [ ],
@@ -128,11 +128,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "api_client::0",
+    "name" : "app::0",
     "time" : {
-      "start" : 1720715150676,
-      "stop" : 1720715150676,
-      "duration" : 0
+      "start" : 1720747452181,
+      "stop" : 1720747452250,
+      "duration" : 69
     },
     "status" : "passed",
     "steps" : [ ],
@@ -143,11 +143,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "app::0",
+    "name" : "api_client::0",
     "time" : {
-      "start" : 1720715150606,
-      "stop" : 1720715150676,
-      "duration" : 70
+      "start" : 1720747452251,
+      "stop" : 1720747452251,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -159,14 +159,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
     "name" : "story",
     "value" : "Clicking Chat Button to Close"
   }, {
     "name" : "feature",
     "value" : "Chat Functionality"
-  }, {
-    "name" : "severity",
-    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -175,7 +175,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "acb90c115a54"
+    "value" : "e92cff976c1c"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -205,11 +205,19 @@
         "failed" : 10,
         "broken" : 49,
         "skipped" : 0,
-        "passed" : 236,
+        "passed" : 237,
         "unknown" : 0,
-        "total" : 295
+        "total" : 296
       },
       "items" : [ {
+        "uid" : "49af120bb4b05356",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720715147080,
+          "stop" : 1720715147366,
+          "duration" : 286
+        }
+      }, {
         "uid" : "6674bb90d43bdb6e",
         "status" : "passed",
         "time" : {
@@ -361,18 +369,10 @@
           "stop" : 1720167945849,
           "duration" : 300
         }
-      }, {
-        "uid" : "a84b95db1ab35d36",
-        "status" : "passed",
-        "time" : {
-          "start" : 1720110305763,
-          "stop" : 1720110306160,
-          "duration" : 397
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "49af120bb4b05356.json",
+  "source" : "9c51a4d305c1a5a4.json",
   "parameterValues" : [ ]
 }
