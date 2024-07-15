@@ -1,22 +1,22 @@
 {
-  "uid" : "ad0cb2601c729ed8",
+  "uid" : "dd1db3fa8a9caedc",
   "name" : "test_guest_write_text",
   "fullName" : "test.test_guest_write_text#test_guest_write_text",
   "historyId" : "ce0cd46787e71938b1e1382945934dfe",
   "time" : {
-    "start" : 1721031965586,
-    "stop" : 1721031967160,
-    "duration" : 1574
+    "start" : 1721060707887,
+    "stop" : 1721060709514,
+    "duration" : 1627
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "app",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1721031939479,
-      "stop" : 1721031940701,
-      "duration" : 1222
+      "start" : 1721060641551,
+      "stop" : 1721060645302,
+      "duration" : 3751
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "app",
     "time" : {
-      "start" : 1721031902172,
-      "stop" : 1721031902172,
-      "duration" : 0
+      "start" : 1721060678749,
+      "stop" : 1721060680012,
+      "duration" : 1263
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,9 +44,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1721031905594,
-      "stop" : 1721031905594,
-      "duration" : 0
+      "start" : 1721060645302,
+      "stop" : 1721060645303,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -57,11 +57,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1721031902172,
-      "stop" : 1721031905593,
-      "duration" : 3421
+      "start" : 1721060641551,
+      "stop" : 1721060641551,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -77,9 +77,9 @@
     "steps" : [ {
       "name" : "Clicking on the chat input field",
       "time" : {
-        "start" : 1721031965698,
-        "stop" : 1721031966972,
-        "duration" : 1274
+        "start" : 1721060707998,
+        "stop" : 1721060709297,
+        "duration" : 1299
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "Asserting redirection to login page",
       "time" : {
-        "start" : 1721031966972,
-        "stop" : 1721031967160,
-        "duration" : 188
+        "start" : 1721060709297,
+        "stop" : 1721060709514,
+        "duration" : 217
       },
       "status" : "passed",
       "steps" : [ ],
@@ -115,9 +115,9 @@
   "afterStages" : [ {
     "name" : "app::0",
     "time" : {
-      "start" : 1721032051239,
-      "stop" : 1721032051307,
-      "duration" : 68
+      "start" : 1721060793378,
+      "stop" : 1721060793445,
+      "duration" : 67
     },
     "status" : "passed",
     "steps" : [ ],
@@ -130,8 +130,8 @@
   }, {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1721032051307,
-      "stop" : 1721032051307,
+      "start" : 1721060793445,
+      "stop" : 1721060793445,
       "duration" : 0
     },
     "status" : "passed",
@@ -144,14 +144,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
     "name" : "feature",
     "value" : "Guest Chat Functionality"
   }, {
     "name" : "story",
     "value" : "Writing Text as Guest"
-  }, {
-    "name" : "severity",
-    "value" : "normal"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -160,7 +160,7 @@
     "value" : "test_guest_write_text"
   }, {
     "name" : "host",
-    "value" : "622d78e33e74"
+    "value" : "de2a9aa00452"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -190,11 +190,19 @@
         "failed" : 7,
         "broken" : 50,
         "skipped" : 0,
-        "passed" : 249,
+        "passed" : 250,
         "unknown" : 0,
-        "total" : 306
+        "total" : 307
       },
       "items" : [ {
+        "uid" : "ad0cb2601c729ed8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721031965586,
+          "stop" : 1721031967160,
+          "duration" : 1574
+        }
+      }, {
         "uid" : "bc5b9f0a14374983",
         "status" : "passed",
         "time" : {
@@ -347,18 +355,10 @@
           "stop" : 1720488233047,
           "duration" : 2200
         }
-      }, {
-        "uid" : "d779a771cb924cc0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1720455913962,
-          "stop" : 1720455915504,
-          "duration" : 1542
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "ad0cb2601c729ed8.json",
+  "source" : "dd1db3fa8a9caedc.json",
   "parameterValues" : [ ]
 }
