@@ -1,23 +1,23 @@
 {
-  "uid" : "1b19831e0b65d2df",
+  "uid" : "4c391013a0088f26",
   "name" : "test_unblock_players",
   "fullName" : "test.test_block_and_unblock#test_unblock_players",
   "historyId" : "7c0ba69dbab38077018a8fbc2f4cc147",
   "time" : {
-    "start" : 1721118310037,
-    "stop" : 1721118333707,
-    "duration" : 23670
+    "start" : 1721146977224,
+    "stop" : 1721147001159,
+    "duration" : 23935
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f937704a6a0>\n\n    @pytest.mark.dependency(depends=[\"block_players\"])\n    @allure.feature(\"User Management\")\n    @allure.story(\"Unblocking Players\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_unblock_players(api_client):\n        with allure.step(\"Waiting for previous operations to complete\"):\n            # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока\n            time.sleep(20)\n    \n        with allure.step(\"Fetching information about blocked players before unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ДО\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Preparing data for unblocking user\"):\n            # Подготовка данных для POST-запроса\n            data = {\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\"\n            }\n    \n            # Используйте quote для каждого параметра, который требует URL-кодирования\n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n            )\n    \n        with allure.step(\"Sending request to unblock user\"):\n            response = api_client.delete_token_s(url, json=data)\n            # Необходима задержка, чтобы успел отработать запрос на получение забаненных юзеров\n            time.sleep(3)\n            print(\"URL запроса:\", response.url)\n    \n        with allure.step(\"Asserting response status code\"):\n            assert response.status_code == 200, \"Response status code is not 200\"\n    \n        with allure.step(\"Fetching information about blocked players after unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ПОСЛЕ\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Asserting response content\"):\n            # Проверка, что нужный ключ есть в ответе\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n            # Проверка, что забаненных игроков уменьшилось на один\n>           assert total_after == total_before - 1, \"The 'total' value did not decrease by one\"\nE           AssertionError: The 'total' value did not decrease by one\nE           assert 0 == (0 - 1)\n\ntest/test_block_and_unblock.py:148: AssertionError",
+  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7fdf25e41c40>\n\n    @pytest.mark.dependency(depends=[\"block_players\"])\n    @allure.feature(\"User Management\")\n    @allure.story(\"Unblocking Players\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_unblock_players(api_client):\n        with allure.step(\"Waiting for previous operations to complete\"):\n            # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока\n            time.sleep(20)\n    \n        with allure.step(\"Fetching information about blocked players before unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ДО\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Preparing data for unblocking user\"):\n            # Подготовка данных для POST-запроса\n            data = {\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\"\n            }\n    \n            # Используйте quote для каждого параметра, который требует URL-кодирования\n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n            )\n    \n        with allure.step(\"Sending request to unblock user\"):\n            response = api_client.delete_token_s(url, json=data)\n            # Необходима задержка, чтобы успел отработать запрос на получение забаненных юзеров\n            time.sleep(3)\n            print(\"URL запроса:\", response.url)\n    \n        with allure.step(\"Asserting response status code\"):\n            assert response.status_code == 200, \"Response status code is not 200\"\n    \n        with allure.step(\"Fetching information about blocked players after unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ПОСЛЕ\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Asserting response content\"):\n            # Проверка, что нужный ключ есть в ответе\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n            # Проверка, что забаненных игроков уменьшилось на один\n>           assert total_after == total_before - 1, \"The 'total' value did not decrease by one\"\nE           AssertionError: The 'total' value did not decrease by one\nE           assert 0 == (0 - 1)\n\ntest/test_block_and_unblock.py:148: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "config",
     "time" : {
-      "start" : 1721118298940,
-      "stop" : 1721118298940,
+      "start" : 1721146964079,
+      "stop" : 1721146964079,
       "duration" : 0
     },
     "status" : "passed",
@@ -31,9 +31,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1721118298940,
-      "stop" : 1721118301595,
-      "duration" : 2655
+      "start" : 1721146964079,
+      "stop" : 1721146967819,
+      "duration" : 3740
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,8 +46,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1721118301595,
-      "stop" : 1721118301595,
+      "start" : 1721146967820,
+      "stop" : 1721146967820,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,12 +62,12 @@
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f937704a6a0>\n\n    @pytest.mark.dependency(depends=[\"block_players\"])\n    @allure.feature(\"User Management\")\n    @allure.story(\"Unblocking Players\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_unblock_players(api_client):\n        with allure.step(\"Waiting for previous operations to complete\"):\n            # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока\n            time.sleep(20)\n    \n        with allure.step(\"Fetching information about blocked players before unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ДО\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Preparing data for unblocking user\"):\n            # Подготовка данных для POST-запроса\n            data = {\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\"\n            }\n    \n            # Используйте quote для каждого параметра, который требует URL-кодирования\n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n            )\n    \n        with allure.step(\"Sending request to unblock user\"):\n            response = api_client.delete_token_s(url, json=data)\n            # Необходима задержка, чтобы успел отработать запрос на получение забаненных юзеров\n            time.sleep(3)\n            print(\"URL запроса:\", response.url)\n    \n        with allure.step(\"Asserting response status code\"):\n            assert response.status_code == 200, \"Response status code is not 200\"\n    \n        with allure.step(\"Fetching information about blocked players after unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ПОСЛЕ\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Asserting response content\"):\n            # Проверка, что нужный ключ есть в ответе\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n            # Проверка, что забаненных игроков уменьшилось на один\n>           assert total_after == total_before - 1, \"The 'total' value did not decrease by one\"\nE           AssertionError: The 'total' value did not decrease by one\nE           assert 0 == (0 - 1)\n\ntest/test_block_and_unblock.py:148: AssertionError",
+    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7fdf25e41c40>\n\n    @pytest.mark.dependency(depends=[\"block_players\"])\n    @allure.feature(\"User Management\")\n    @allure.story(\"Unblocking Players\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_unblock_players(api_client):\n        with allure.step(\"Waiting for previous operations to complete\"):\n            # Задержка по времени необходимо для того, чтобы успел отработать запрос по блокировке игрока\n            time.sleep(20)\n    \n        with allure.step(\"Fetching information about blocked players before unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ДО\n            getuserbanbefore = api_client.getuserban()\n            total_before = getuserbanbefore.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Preparing data for unblocking user\"):\n            # Подготовка данных для POST-запроса\n            data = {\n                \"nodeUid\": api_client.xnodeid,\n                \"roomUid\": api_client.roomB,\n                \"userUid\": f\"@{api_client.senderid}\"\n            }\n    \n            # Используйте quote для каждого параметра, который требует URL-кодирования\n            url = (\n                f\"api/v1/synapse/user/ban?\"\n                f\"nodeUid={quote(api_client.xnodeid)}&\"\n                f\"userUid={quote(f'@{api_client.senderid}')}%3A{api_client.room_second_part}&\"\n                f\"roomUid={quote(api_client.roomB)}%3A{api_client.room_second_part}&\"\n            )\n    \n        with allure.step(\"Sending request to unblock user\"):\n            response = api_client.delete_token_s(url, json=data)\n            # Необходима задержка, чтобы успел отработать запрос на получение забаненных юзеров\n            time.sleep(3)\n            print(\"URL запроса:\", response.url)\n    \n        with allure.step(\"Asserting response status code\"):\n            assert response.status_code == 200, \"Response status code is not 200\"\n    \n        with allure.step(\"Fetching information about blocked players after unblocking\"):\n            # Получаем информацию о том, сколько было забанненых игроков ПОСЛЕ\n            getuserbanafter = api_client.getuserban()\n            total_after = getuserbanafter.json()[\"pagination\"][\"total\"]\n    \n        with allure.step(\"Asserting response content\"):\n            # Проверка, что нужный ключ есть в ответе\n            assert \"total\" in getuserbanbefore.json()[\"pagination\"], \"The key 'total' is not found in the JSON response before\"\n            assert \"total\" in getuserbanafter.json()[\"pagination\"], \"The key 'total' is not found in the JSON response after\"\n    \n            # Проверка, что забаненных игроков уменьшилось на один\n>           assert total_after == total_before - 1, \"The 'total' value did not decrease by one\"\nE           AssertionError: The 'total' value did not decrease by one\nE           assert 0 == (0 - 1)\n\ntest/test_block_and_unblock.py:148: AssertionError",
     "steps" : [ {
       "name" : "Waiting for previous operations to complete",
       "time" : {
-        "start" : 1721118310037,
-        "stop" : 1721118330057,
+        "start" : 1721146977225,
+        "stop" : 1721146997245,
         "duration" : 20020
       },
       "status" : "passed",
@@ -81,9 +81,9 @@
     }, {
       "name" : "Fetching information about blocked players before unblocking",
       "time" : {
-        "start" : 1721118330057,
-        "stop" : 1721118330285,
-        "duration" : 228
+        "start" : 1721146997245,
+        "stop" : 1721146997540,
+        "duration" : 295
       },
       "status" : "passed",
       "steps" : [ ],
@@ -96,8 +96,8 @@
     }, {
       "name" : "Preparing data for unblocking user",
       "time" : {
-        "start" : 1721118330285,
-        "stop" : 1721118330285,
+        "start" : 1721146997540,
+        "stop" : 1721146997540,
         "duration" : 0
       },
       "status" : "passed",
@@ -111,9 +111,9 @@
     }, {
       "name" : "Sending request to unblock user",
       "time" : {
-        "start" : 1721118330285,
-        "stop" : 1721118333495,
-        "duration" : 3210
+        "start" : 1721146997540,
+        "stop" : 1721147000847,
+        "duration" : 3307
       },
       "status" : "passed",
       "steps" : [ ],
@@ -126,8 +126,8 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1721118333495,
-        "stop" : 1721118333495,
+        "start" : 1721147000847,
+        "stop" : 1721147000847,
         "duration" : 0
       },
       "status" : "passed",
@@ -141,9 +141,9 @@
     }, {
       "name" : "Fetching information about blocked players after unblocking",
       "time" : {
-        "start" : 1721118333495,
-        "stop" : 1721118333707,
-        "duration" : 212
+        "start" : 1721147000847,
+        "stop" : 1721147001158,
+        "duration" : 311
       },
       "status" : "passed",
       "steps" : [ ],
@@ -156,9 +156,9 @@
     }, {
       "name" : "Asserting response content",
       "time" : {
-        "start" : 1721118333707,
-        "stop" : 1721118333707,
-        "duration" : 0
+        "start" : 1721147001158,
+        "stop" : 1721147001159,
+        "duration" : 1
       },
       "status" : "failed",
       "statusMessage" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)\n",
@@ -181,8 +181,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1721118442171,
-      "stop" : 1721118442171,
+      "start" : 1721147112516,
+      "stop" : 1721147112516,
       "duration" : 0
     },
     "status" : "passed",
@@ -198,11 +198,11 @@
     "name" : "feature",
     "value" : "User Management"
   }, {
-    "name" : "story",
-    "value" : "Unblocking Players"
-  }, {
     "name" : "severity",
     "value" : "critical"
+  }, {
+    "name" : "story",
+    "value" : "Unblocking Players"
   }, {
     "name" : "tag",
     "value" : "dependency(depends=['block_players'])"
@@ -214,7 +214,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "22f0020fea32"
+    "value" : "46b34f6c75ad"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -245,14 +245,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 48,
+        "failed" : 49,
         "broken" : 22,
         "skipped" : 0,
         "passed" : 239,
         "unknown" : 0,
-        "total" : 309
+        "total" : 310
       },
       "items" : [ {
+        "uid" : "1b19831e0b65d2df",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
+        "time" : {
+          "start" : 1721118310037,
+          "stop" : 1721118333707,
+          "duration" : 23670
+        }
+      }, {
         "uid" : "1d555ec3cdb23321",
         "status" : "failed",
         "statusDetails" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
@@ -423,19 +432,10 @@
           "stop" : 1720574599949,
           "duration" : 23704
         }
-      }, {
-        "uid" : "ac079b43b8e974b1",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
-        "time" : {
-          "start" : 1720542269753,
-          "stop" : 1720542294118,
-          "duration" : 24365
-        }
       } ]
     },
     "tags" : [ "dependency(depends=['block_players'])" ]
   },
-  "source" : "1b19831e0b65d2df.json",
+  "source" : "4c391013a0088f26.json",
   "parameterValues" : [ ]
 }
