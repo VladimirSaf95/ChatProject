@@ -1,22 +1,22 @@
 {
-  "uid" : "569b05cd8b769626",
+  "uid" : "22d0a5c736c8ff7e",
   "name" : "test_send_messages",
   "fullName" : "test.test_messages_functionality#test_send_messages",
   "historyId" : "9b9ea771234bc682fdfb1cb249d672cb",
   "time" : {
-    "start" : 1721147029407,
-    "stop" : 1721147031630,
-    "duration" : 2223
+    "start" : 1721179466235,
+    "stop" : 1721179468058,
+    "duration" : 1823
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1721146964079,
-      "stop" : 1721146964079,
-      "duration" : 0
+      "start" : 1721179404916,
+      "stop" : 1721179407989,
+      "duration" : 3073
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1721146964079,
-      "stop" : 1721146967819,
-      "duration" : 3740
+      "start" : 1721179404916,
+      "stop" : 1721179404916,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1721146967820,
-      "stop" : 1721146967820,
+      "start" : 1721179407989,
+      "stop" : 1721179407989,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending messages and checking response",
       "time" : {
-        "start" : 1721147029407,
-        "stop" : 1721147031626,
-        "duration" : 2219
+        "start" : 1721179466235,
+        "stop" : 1721179468056,
+        "duration" : 1821
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Check response code for message A",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Check for invalid message in response A",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,8 +100,8 @@
       }, {
         "name" : "Check response code for message B",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
       }, {
         "name" : "Check for invalid message in response B",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -130,8 +130,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response A",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -145,8 +145,8 @@
       }, {
         "name" : "Check for 'event_id' in JSON response B",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -160,8 +160,8 @@
       }, {
         "name" : "Check response time for message A",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468055,
+          "stop" : 1721179468055,
           "duration" : 0
         },
         "status" : "passed",
@@ -175,8 +175,8 @@
       }, {
         "name" : "Check response time for message B",
         "time" : {
-          "start" : 1721147031626,
-          "stop" : 1721147031626,
+          "start" : 1721179468056,
+          "stop" : 1721179468056,
           "duration" : 0
         },
         "status" : "passed",
@@ -205,8 +205,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1721147112516,
-      "stop" : 1721147112516,
+      "start" : 1721179548489,
+      "stop" : 1721179548489,
       "duration" : 0
     },
     "status" : "passed",
@@ -219,14 +219,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "critical"
-  }, {
     "name" : "story",
     "value" : "Sending Text Messages"
   }, {
     "name" : "feature",
     "value" : "Sending Messages"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -235,7 +235,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "46b34f6c75ad"
+    "value" : "635f2d090d94"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -265,11 +265,19 @@
         "failed" : 2,
         "broken" : 21,
         "skipped" : 0,
-        "passed" : 287,
+        "passed" : 288,
         "unknown" : 0,
-        "total" : 310
+        "total" : 311
       },
       "items" : [ {
+        "uid" : "569b05cd8b769626",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721147029407,
+          "stop" : 1721147031630,
+          "duration" : 2223
+        }
+      }, {
         "uid" : "6f501af802c78303",
         "status" : "passed",
         "time" : {
@@ -421,18 +429,10 @@
           "stop" : 1720599980066,
           "duration" : 1964
         }
-      }, {
-        "uid" : "a71dc3341abd84d0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1720574628379,
-          "stop" : 1720574629936,
-          "duration" : 1557
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "569b05cd8b769626.json",
+  "source" : "22d0a5c736c8ff7e.json",
   "parameterValues" : [ ]
 }
