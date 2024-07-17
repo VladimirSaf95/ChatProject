@@ -1,22 +1,22 @@
 {
-  "uid" : "1db6d27f47837850",
+  "uid" : "a1225428f8572729",
   "name" : "test_send_not_allow_symbol",
   "fullName" : "test.test_messages_functionality#test_send_not_allow_symbol",
   "historyId" : "a7c8da64ecec62788bdb01ada3b6be57",
   "time" : {
-    "start" : 1721179471051,
-    "stop" : 1721179471581,
-    "duration" : 530
+    "start" : 1721204728583,
+    "stop" : 1721204728777,
+    "duration" : 194
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1721179404916,
-      "stop" : 1721179407989,
-      "duration" : 3073
+      "start" : 1721204662535,
+      "stop" : 1721204662535,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1721179404916,
-      "stop" : 1721179404916,
-      "duration" : 0
+      "start" : 1721204662535,
+      "stop" : 1721204665211,
+      "duration" : 2676
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1721179407989,
-      "stop" : 1721179407989,
+      "start" : 1721204665211,
+      "stop" : 1721204665211,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending disallowed symbol",
       "time" : {
-        "start" : 1721179471051,
-        "stop" : 1721179471579,
-        "duration" : 528
+        "start" : 1721204728584,
+        "stop" : 1721204728775,
+        "duration" : 191
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response for disallowed symbol",
         "time" : {
-          "start" : 1721179471579,
-          "stop" : 1721179471579,
+          "start" : 1721204728775,
+          "stop" : 1721204728775,
           "duration" : 0
         },
         "status" : "passed",
@@ -100,8 +100,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1721179548489,
-      "stop" : 1721179548489,
+      "start" : 1721204805663,
+      "stop" : 1721204805663,
       "duration" : 0
     },
     "status" : "passed",
@@ -114,14 +114,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Sending Disallowed Symbol"
-  }, {
     "name" : "severity",
     "value" : "normal"
   }, {
     "name" : "feature",
     "value" : "Sending Symbols"
+  }, {
+    "name" : "story",
+    "value" : "Sending Disallowed Symbol"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -130,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "635f2d090d94"
+    "value" : "a8bcaeb270a6"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,11 +160,19 @@
         "failed" : 17,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 290,
+        "passed" : 291,
         "unknown" : 0,
-        "total" : 311
+        "total" : 312
       },
       "items" : [ {
+        "uid" : "1db6d27f47837850",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721179471051,
+          "stop" : 1721179471581,
+          "duration" : 530
+        }
+      }, {
         "uid" : "1450f017398d556f",
         "status" : "passed",
         "time" : {
@@ -316,18 +324,10 @@
           "stop" : 1720628720653,
           "duration" : 493
         }
-      }, {
-        "uid" : "c307fd7584b5de6c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1720599983628,
-          "stop" : 1720599984065,
-          "duration" : 437
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "1db6d27f47837850.json",
+  "source" : "a1225428f8572729.json",
   "parameterValues" : [ ]
 }
