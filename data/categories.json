@@ -1,52 +1,86 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "children" : [ {
-    "name" : "Product defects",
+    "name" : "Test defects",
     "children" : [ {
-      "name" : "AssertionError: The 'total' value did not increase by one\nassert 0 == (0 + 1)",
+      "name" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
       "children" : [ {
         "name" : "test_block_players",
-        "uid" : "de551764750acd73",
-        "parentUid" : "38dd11943e2549e7db14b2f59e1af819",
-        "status" : "failed",
+        "uid" : "7acc6c5a98734f85",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
         "time" : {
-          "start" : 1721319821242,
-          "stop" : 1721319828947,
-          "duration" : 7705
+          "start" : 1721377420429,
+          "stop" : 1721377428299,
+          "duration" : 7870
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "38dd11943e2549e7db14b2f59e1af819"
-    }, {
-      "name" : "AssertionError: The 'total' value did not decrease by one\nassert 0 == (0 - 1)",
-      "children" : [ {
+      }, {
         "name" : "test_unblock_players",
-        "uid" : "2d30bd4b807ff7a8",
-        "parentUid" : "1da6e14fd45e316dec756d2b5df3fb88",
-        "status" : "failed",
+        "uid" : "75aee31145a462fb",
+        "parentUid" : "0deff55915d4c9ebc746eac29285817c",
+        "status" : "broken",
         "time" : {
-          "start" : 1721319828986,
-          "stop" : 1721319852721,
-          "duration" : 23735
+          "start" : 1721377428364,
+          "stop" : 1721377448629,
+          "duration" : 20265
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "1da6e14fd45e316dec756d2b5df3fb88"
+      "uid" : "0deff55915d4c9ebc746eac29285817c"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: Response status code is not 200\nassert 403 == 200\n +  where 403 = <Response [403]>.status_code",
+      "children" : [ {
+        "name" : "test_send_complaint",
+        "uid" : "d8098f87c4e0f56d",
+        "parentUid" : "53f57a04747930939be87dc452a7f811",
+        "status" : "failed",
+        "time" : {
+          "start" : 1721377480358,
+          "stop" : 1721377480852,
+          "duration" : 494
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "53f57a04747930939be87dc452a7f811"
+    }, {
+      "name" : "AssertionError: assert 429 == 500\n +  where 429 = <Response [429]>.status_code",
+      "children" : [ {
+        "name" : "test_checked_spam",
+        "uid" : "6b5b8f8116197f8b",
+        "parentUid" : "402cbfe07b4bac0dfb3657eed6edf09a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1721377481893,
+          "stop" : 1721377491294,
+          "duration" : 9401
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "402cbfe07b4bac0dfb3657eed6edf09a"
     }, {
       "name" : "AssertionError: Response status code is not 200\nassert 504 == 200\n +  where 504 = <Response [504]>.status_code",
       "children" : [ {
         "name" : "test_delete_dmsg",
-        "uid" : "93bbc503911518a",
+        "uid" : "8998234a14a45ce1",
         "parentUid" : "6b6a70086243924495b8afdaf625d52d",
         "status" : "failed",
         "time" : {
-          "start" : 1721319898486,
-          "stop" : 1721319958659,
-          "duration" : 60173
+          "start" : 1721377491303,
+          "stop" : 1721377551456,
+          "duration" : 60153
         },
         "flaky" : false,
         "newFailed" : false,
