@@ -1,39 +1,22 @@
 {
-  "uid" : "f36781b11b4fe68d",
+  "uid" : "d18b18bcbbd62856",
   "name" : "test_send_reaction",
   "fullName" : "test.test_messages_functionality#test_send_reaction",
   "historyId" : "c97f0dca0399de29e1f93fc1150eb31b",
   "time" : {
-    "start" : 1721377488452,
-    "stop" : 1721377489160,
-    "duration" : 708
+    "start" : 1721406345721,
+    "stop" : 1721406346135,
+    "duration" : 414
   },
-  "status" : "failed",
-  "statusMessage" : "AssertionError: Response status code is not 200\nassert 429 == 200\n +  where 429 = <Response [429]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f397ac99940>\n\n    @allure.feature(\"Reaction to Message\")\n    @allure.story(\"Setting reaction\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_reaction(api_client):\n        with allure.step(\"Setting reaction on message\"):\n            event_id = os.environ.get(\"EVENT_ID_A\")\n            if event_id is None:\n                responseA = api_client.sendmessages(response_b=False)\n                event_id = os.environ.get(\"EVENT_ID_A\")\n    \n            data = {\n                \"m.relates_to\": {\n                    \"event_id\": event_id,\n                    \"key\": \"\uD83D\uDC4D\",\n                    \"rel_type\": \"m.annotation\"\n                }\n            }\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.reaction\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 429 == 200\nE                +  where 429 = <Response [429]>.status_code\n\ntest/test_messages_functionality.py:93: AssertionError",
+  "status" : "passed",
   "flaky" : false,
-  "newFailed" : true,
+  "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
-    "time" : {
-      "start" : 1721377425463,
-      "stop" : 1721377425463,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "config",
     "time" : {
-      "start" : 1721377422155,
-      "stop" : 1721377422156,
-      "duration" : 1
+      "start" : 1721406274900,
+      "stop" : 1721406274900,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,9 +29,9 @@
   }, {
     "name" : "init_authorization",
     "time" : {
-      "start" : 1721377422156,
-      "stop" : 1721377425463,
-      "duration" : 3307
+      "start" : 1721406274900,
+      "stop" : 1721406278601,
+      "duration" : 3701
     },
     "status" : "passed",
     "steps" : [ ],
@@ -58,58 +41,11 @@
     "shouldDisplayMessage" : false,
     "stepsCount" : 0,
     "hasContent" : false
-  } ],
-  "testStage" : {
-    "status" : "failed",
-    "statusMessage" : "AssertionError: Response status code is not 200\nassert 429 == 200\n +  where 429 = <Response [429]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7f397ac99940>\n\n    @allure.feature(\"Reaction to Message\")\n    @allure.story(\"Setting reaction\")\n    @allure.severity(allure.severity_level.NORMAL)\n    def test_send_reaction(api_client):\n        with allure.step(\"Setting reaction on message\"):\n            event_id = os.environ.get(\"EVENT_ID_A\")\n            if event_id is None:\n                responseA = api_client.sendmessages(response_b=False)\n                event_id = os.environ.get(\"EVENT_ID_A\")\n    \n            data = {\n                \"m.relates_to\": {\n                    \"event_id\": event_id,\n                    \"key\": \"\uD83D\uDC4D\",\n                    \"rel_type\": \"m.annotation\"\n                }\n            }\n    \n            response = api_client.post_token1(f\"{api_client.roomA}%3A{api_client.room_second_part}/send/m.reaction\",\n                                              json=data)\n    \n            with allure.step(\"Check response code\"):\n>               assert response.status_code == 200, \"Response status code is not 200\"\nE               AssertionError: Response status code is not 200\nE               assert 429 == 200\nE                +  where 429 = <Response [429]>.status_code\n\ntest/test_messages_functionality.py:93: AssertionError",
-    "steps" : [ {
-      "name" : "Setting reaction on message",
-      "time" : {
-        "start" : 1721377488452,
-        "stop" : 1721377489160,
-        "duration" : 708
-      },
-      "status" : "failed",
-      "statusMessage" : "AssertionError: Response status code is not 200\nassert 429 == 200\n +  where 429 = <Response [429]>.status_code\n",
-      "statusTrace" : "  File \"/usr/workspace/test/test_messages_functionality.py\", line 93, in test_send_reaction\n    assert response.status_code == 200, \"Response status code is not 200\"\n",
-      "steps" : [ {
-        "name" : "Check response code",
-        "time" : {
-          "start" : 1721377489159,
-          "stop" : 1721377489160,
-          "duration" : 1
-        },
-        "status" : "failed",
-        "statusMessage" : "AssertionError: Response status code is not 200\nassert 429 == 200\n +  where 429 = <Response [429]>.status_code\n",
-        "statusTrace" : "  File \"/usr/workspace/test/test_messages_functionality.py\", line 93, in test_send_reaction\n    assert response.status_code == 200, \"Response status code is not 200\"\n",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : true,
-        "stepsCount" : 0,
-        "hasContent" : true
-      } ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 1,
-      "hasContent" : true
-    } ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true,
-    "stepsCount" : 2,
-    "hasContent" : true
-  },
-  "afterStages" : [ {
-    "name" : "api_client::0",
+  }, {
+    "name" : "api_client",
     "time" : {
-      "start" : 1721377560126,
-      "stop" : 1721377560126,
+      "start" : 1721406278601,
+      "stop" : 1721406278601,
       "duration" : 0
     },
     "status" : "passed",
@@ -121,15 +57,116 @@
     "stepsCount" : 0,
     "hasContent" : false
   } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Setting reaction on message",
+      "time" : {
+        "start" : 1721406345721,
+        "stop" : 1721406346133,
+        "duration" : 412
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check response code",
+        "time" : {
+          "start" : 1721406346133,
+          "stop" : 1721406346133,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Check for invalid message in response",
+        "time" : {
+          "start" : 1721406346133,
+          "stop" : 1721406346133,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Check for 'event_id' in JSON response",
+        "time" : {
+          "start" : 1721406346133,
+          "stop" : 1721406346133,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Check response time",
+        "time" : {
+          "start" : 1721406346133,
+          "stop" : 1721406346133,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 4,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 5,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "api_client::0",
+    "time" : {
+      "start" : 1721406426049,
+      "stop" : 1721406426050,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Reaction to Message"
+    "name" : "severity",
+    "value" : "normal"
   }, {
     "name" : "story",
     "value" : "Setting reaction"
   }, {
-    "name" : "severity",
-    "value" : "normal"
+    "name" : "feature",
+    "value" : "Reaction to Message"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -138,7 +175,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "d9c22d653bb1"
+    "value" : "1b1b59d96522"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -162,21 +199,26 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ {
-      "name" : "Product defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "history" : {
       "statistic" : {
         "failed" : 3,
         "broken" : 21,
         "skipped" : 0,
-        "passed" : 293,
+        "passed" : 294,
         "unknown" : 0,
-        "total" : 317
+        "total" : 318
       },
       "items" : [ {
+        "uid" : "f36781b11b4fe68d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 429 == 200\n +  where 429 = <Response [429]>.status_code",
+        "time" : {
+          "start" : 1721377488452,
+          "stop" : 1721377489160,
+          "duration" : 708
+        }
+      }, {
         "uid" : "e3c4f648db3b3c69",
         "status" : "passed",
         "time" : {
@@ -328,18 +370,10 @@
           "stop" : 1720801507798,
           "duration" : 373
         }
-      }, {
-        "uid" : "efbc277d96b02259",
-        "status" : "passed",
-        "time" : {
-          "start" : 1720773311248,
-          "stop" : 1720773311947,
-          "duration" : 699
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "f36781b11b4fe68d.json",
+  "source" : "d18b18bcbbd62856.json",
   "parameterValues" : [ ]
 }
