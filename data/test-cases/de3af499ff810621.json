@@ -1,22 +1,22 @@
 {
-  "uid" : "df2230e19ea9359",
+  "uid" : "de3af499ff810621",
   "name" : "test_get_chanel",
   "fullName" : "test.test_get_chanel#test_get_chanel",
   "historyId" : "84e91ba442c690feffdfef2b3a65d80f",
   "time" : {
-    "start" : 1721438540535,
-    "stop" : 1721438540735,
-    "duration" : 200
+    "start" : 1721463776567,
+    "stop" : 1721463776807,
+    "duration" : 240
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1721438482867,
-      "stop" : 1721438482867,
-      "duration" : 0
+      "start" : 1721463712150,
+      "stop" : 1721463716351,
+      "duration" : 4201
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1721438480347,
-      "stop" : 1721438480347,
+      "start" : 1721463712150,
+      "stop" : 1721463712150,
       "duration" : 0
     },
     "status" : "passed",
@@ -42,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1721438480347,
-      "stop" : 1721438482867,
-      "duration" : 2520
+      "start" : 1721463716352,
+      "stop" : 1721463716352,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -62,17 +62,17 @@
     "steps" : [ {
       "name" : "Sending GET request for channels",
       "time" : {
-        "start" : 1721438540535,
-        "stop" : 1721438540733,
-        "duration" : 198
+        "start" : 1721463776567,
+        "stop" : 1721463776805,
+        "duration" : 238
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1721438540732,
-          "stop" : 1721438540733,
-          "duration" : 1
+          "start" : 1721463776805,
+          "stop" : 1721463776805,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ ],
@@ -85,8 +85,8 @@
       }, {
         "name" : "Asserting response content",
         "time" : {
-          "start" : 1721438540733,
-          "stop" : 1721438540733,
+          "start" : 1721463776805,
+          "stop" : 1721463776805,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1721438624058,
-      "stop" : 1721438624058,
+      "start" : 1721463862736,
+      "stop" : 1721463862736,
       "duration" : 0
     },
     "status" : "passed",
@@ -129,14 +129,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "feature",
-    "value" : "Channel Operations"
+    "name" : "story",
+    "value" : "Checking Channel Retrieval"
   }, {
     "name" : "severity",
     "value" : "critical"
   }, {
-    "name" : "story",
-    "value" : "Checking Channel Retrieval"
+    "name" : "feature",
+    "value" : "Channel Operations"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -145,7 +145,7 @@
     "value" : "test_get_chanel"
   }, {
     "name" : "host",
-    "value" : "f5852b607567"
+    "value" : "83b72b472d23"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 19,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 296,
+        "passed" : 297,
         "unknown" : 0,
-        "total" : 319
+        "total" : 320
       },
       "items" : [ {
+        "uid" : "df2230e19ea9359",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721438540535,
+          "stop" : 1721438540735,
+          "duration" : 200
+        }
+      }, {
         "uid" : "f040095b2ddc7f43",
         "status" : "passed",
         "time" : {
@@ -331,18 +339,10 @@
           "stop" : 1720858964459,
           "duration" : 237
         }
-      }, {
-        "uid" : "54e4c1c048e1c873",
-        "status" : "passed",
-        "time" : {
-          "start" : 1720833827127,
-          "stop" : 1720833827365,
-          "duration" : 238
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "df2230e19ea9359.json",
+  "source" : "de3af499ff810621.json",
   "parameterValues" : [ ]
 }
