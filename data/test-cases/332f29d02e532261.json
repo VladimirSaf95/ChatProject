@@ -1,22 +1,22 @@
 {
-  "uid" : "acada444c5900991",
+  "uid" : "332f29d02e532261",
   "name" : "test_showdetailschat",
   "fullName" : "test.test_open_and_close_chat#test_showdetailschat",
   "historyId" : "7695f6dd6468ddddf82ea1b95cf71f99",
   "time" : {
-    "start" : 1721611674557,
-    "stop" : 1721611674893,
-    "duration" : 336
+    "start" : 1721636878887,
+    "stop" : 1721636879136,
+    "duration" : 249
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "app",
     "time" : {
-      "start" : 1721611534154,
-      "stop" : 1721611536844,
-      "duration" : 2690
+      "start" : 1721636770517,
+      "stop" : 1721636772142,
+      "duration" : 1625
     },
     "status" : "passed",
     "steps" : [ ],
@@ -24,28 +24,13 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
-  }, {
-    "name" : "config",
-    "time" : {
-      "start" : 1721611534154,
-      "stop" : 1721611534154,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1721611536844,
-      "stop" : 1721611536844,
+      "start" : 1721636738062,
+      "stop" : 1721636738062,
       "duration" : 0
     },
     "status" : "passed",
@@ -54,14 +39,14 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   }, {
-    "name" : "app",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1721611568648,
-      "stop" : 1721611569787,
-      "duration" : 1139
+      "start" : 1721636734919,
+      "stop" : 1721636738061,
+      "duration" : 3142
     },
     "status" : "passed",
     "steps" : [ ],
@@ -69,17 +54,32 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "config",
+    "time" : {
+      "start" : 1721636734918,
+      "stop" : 1721636734919,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Checking existence of chat details",
       "time" : {
-        "start" : 1721611674687,
-        "stop" : 1721611674893,
-        "duration" : 206
+        "start" : 1721636879049,
+        "stop" : 1721636879135,
+        "duration" : 86
       },
       "status" : "passed",
       "steps" : [ ],
@@ -87,21 +87,36 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : true,
-    "stepsCount" : 1
+    "stepsCount" : 1,
+    "hasContent" : true
   },
   "afterStages" : [ {
+    "name" : "app::0",
+    "time" : {
+      "start" : 1721636882651,
+      "stop" : 1721636882720,
+      "duration" : 69
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1721611678506,
-      "stop" : 1721611678506,
+      "start" : 1721636882720,
+      "stop" : 1721636882720,
       "duration" : 0
     },
     "status" : "passed",
@@ -110,33 +125,18 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
-  }, {
-    "name" : "app::0",
-    "time" : {
-      "start" : 1721611678431,
-      "stop" : 1721611678505,
-      "duration" : 74
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false,
-    "stepsCount" : 0
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
     "name" : "feature",
     "value" : "Chat Functionality"
   }, {
     "name" : "story",
     "value" : "Showing Chat Details"
-  }, {
-    "name" : "severity",
-    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -145,7 +145,7 @@
     "value" : "test_open_and_close_chat"
   }, {
     "name" : "host",
-    "value" : "245856cd860b"
+    "value" : "6f0620873fed"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 10,
         "broken" : 51,
         "skipped" : 0,
-        "passed" : 264,
+        "passed" : 265,
         "unknown" : 0,
-        "total" : 325
+        "total" : 326
       },
       "items" : [ {
+        "uid" : "acada444c5900991",
+        "status" : "passed",
+        "time" : {
+          "start" : 1721611674557,
+          "stop" : 1721611674893,
+          "duration" : 336
+        }
+      }, {
         "uid" : "9e2b4e85586b6040",
         "status" : "passed",
         "time" : {
@@ -332,18 +340,10 @@
           "stop" : 1721032047741,
           "duration" : 319
         }
-      }, {
-        "uid" : "c284e4f1ad2a93c0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1721006832295,
-          "stop" : 1721006832532,
-          "duration" : 237
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "acada444c5900991.json",
+  "source" : "332f29d02e532261.json",
   "parameterValues" : [ ]
 }
