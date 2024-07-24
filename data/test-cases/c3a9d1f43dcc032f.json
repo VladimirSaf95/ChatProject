@@ -1,12 +1,12 @@
 {
-  "uid" : "b6d7e0a9e66d317d",
+  "uid" : "c3a9d1f43dcc032f",
   "name" : "test_close_rules_modal",
   "fullName" : "test.test_clickable_button_rules#test_close_rules_modal",
   "historyId" : "bb949eee6ec3189213ba299c4dc9ddbe",
   "time" : {
-    "start" : 1721784285832,
-    "stop" : 1721784285947,
-    "duration" : 115
+    "start" : 1721809477427,
+    "stop" : 1721809477562,
+    "duration" : 135
   },
   "status" : "skipped",
   "statusMessage" : "Skipped: The rules of chat did not open, skipping this test",
@@ -14,11 +14,11 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "app",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1721784260396,
-      "stop" : 1721784261720,
-      "duration" : 1324
+      "start" : 1721809417156,
+      "stop" : 1721809420322,
+      "duration" : 3166
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,8 +31,8 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1721784227254,
-      "stop" : 1721784227254,
+      "start" : 1721809420322,
+      "stop" : 1721809420322,
       "duration" : 0
     },
     "status" : "passed",
@@ -44,11 +44,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "app",
     "time" : {
-      "start" : 1721784223467,
-      "stop" : 1721784227254,
-      "duration" : 3787
+      "start" : 1721809452793,
+      "stop" : 1721809454131,
+      "duration" : 1338
     },
     "status" : "passed",
     "steps" : [ ],
@@ -61,8 +61,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1721784223467,
-      "stop" : 1721784223467,
+      "start" : 1721809417155,
+      "stop" : 1721809417155,
       "duration" : 0
     },
     "status" : "passed",
@@ -81,9 +81,9 @@
     "steps" : [ {
       "name" : "Checking if test open rules in different locales passed",
       "time" : {
-        "start" : 1721784285935,
-        "stop" : 1721784285946,
-        "duration" : 11
+        "start" : 1721809477531,
+        "stop" : 1721809477562,
+        "duration" : 31
       },
       "status" : "skipped",
       "statusMessage" : "Skipped: The rules of chat did not open, skipping this test\n",
@@ -104,11 +104,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "app::0",
+    "name" : "api_client::0",
     "time" : {
-      "start" : 1721784371046,
-      "stop" : 1721784371116,
-      "duration" : 70
+      "start" : 1721809561540,
+      "stop" : 1721809561540,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -119,11 +119,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "api_client::0",
+    "name" : "app::0",
     "time" : {
-      "start" : 1721784371116,
-      "stop" : 1721784371116,
-      "duration" : 0
+      "start" : 1721809561471,
+      "stop" : 1721809561540,
+      "duration" : 69
     },
     "status" : "passed",
     "steps" : [ ],
@@ -135,11 +135,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Closing Chat Rules Modal"
-  }, {
     "name" : "feature",
     "value" : "Chat Rules"
+  }, {
+    "name" : "story",
+    "value" : "Closing Chat Rules Modal"
   }, {
     "name" : "severity",
     "value" : "normal"
@@ -151,7 +151,7 @@
     "value" : "test_clickable_button_rules"
   }, {
     "name" : "host",
-    "value" : "06c33c9adda0"
+    "value" : "40f488c95dde"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -180,12 +180,21 @@
       "statistic" : {
         "failed" : 0,
         "broken" : 53,
-        "skipped" : 268,
+        "skipped" : 269,
         "passed" : 10,
         "unknown" : 0,
-        "total" : 331
+        "total" : 332
       },
       "items" : [ {
+        "uid" : "b6d7e0a9e66d317d",
+        "status" : "skipped",
+        "statusDetails" : "Skipped: The rules of chat did not open, skipping this test",
+        "time" : {
+          "start" : 1721784285832,
+          "stop" : 1721784285947,
+          "duration" : 115
+        }
+      }, {
         "uid" : "3d85ef0a76475b58",
         "status" : "broken",
         "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: headless chrome=102.0.5005.182)",
@@ -356,19 +365,10 @@
           "stop" : 1721204721938,
           "duration" : 208
         }
-      }, {
-        "uid" : "c59b8fde04c9e52d",
-        "status" : "skipped",
-        "statusDetails" : "Skipped: The rules of chat did not open, skipping this test",
-        "time" : {
-          "start" : 1721179463830,
-          "stop" : 1721179463947,
-          "duration" : 117
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "b6d7e0a9e66d317d.json",
+  "source" : "c3a9d1f43dcc032f.json",
   "parameterValues" : [ ]
 }
