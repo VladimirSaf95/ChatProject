@@ -1,22 +1,22 @@
 {
-  "uid" : "dbfdf9d915cf6ddc",
+  "uid" : "c6114c69dc7b5d07",
   "name" : "test_get_user_ban",
   "fullName" : "test.test_block_and_unblock#test_get_user_ban",
   "historyId" : "f5b3dfaebdee0a0aef475549ad00aaa4",
   "time" : {
-    "start" : 1722216331262,
-    "stop" : 1722216331707,
-    "duration" : 445
+    "start" : 1722241488308,
+    "stop" : 1722241488771,
+    "duration" : 463
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "api_client",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1722216331261,
-      "stop" : 1722216331261,
-      "duration" : 0
+      "start" : 1722241485909,
+      "stop" : 1722241488307,
+      "duration" : 2398
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "init_authorization",
+    "name" : "api_client",
     "time" : {
-      "start" : 1722216328814,
-      "stop" : 1722216331261,
-      "duration" : 2447
+      "start" : 1722241488307,
+      "stop" : 1722241488307,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,8 +44,8 @@
   }, {
     "name" : "config",
     "time" : {
-      "start" : 1722216328813,
-      "stop" : 1722216328813,
+      "start" : 1722241485909,
+      "stop" : 1722241485909,
       "duration" : 0
     },
     "status" : "passed",
@@ -62,16 +62,16 @@
     "steps" : [ {
       "name" : "Sending GET request for blocked players",
       "time" : {
-        "start" : 1722216331262,
-        "stop" : 1722216331705,
-        "duration" : 443
+        "start" : 1722241488308,
+        "stop" : 1722241488769,
+        "duration" : 461
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Asserting response status code",
         "time" : {
-          "start" : 1722216331705,
-          "stop" : 1722216331705,
+          "start" : 1722241488769,
+          "stop" : 1722241488769,
           "duration" : 0
         },
         "status" : "passed",
@@ -85,8 +85,8 @@
       }, {
         "name" : "Asserting JSON content",
         "time" : {
-          "start" : 1722216331705,
-          "stop" : 1722216331705,
+          "start" : 1722241488769,
+          "stop" : 1722241488769,
           "duration" : 0
         },
         "status" : "passed",
@@ -115,8 +115,8 @@
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1722216471227,
-      "stop" : 1722216471227,
+      "start" : 1722241627881,
+      "stop" : 1722241627881,
       "duration" : 0
     },
     "status" : "passed",
@@ -145,7 +145,7 @@
     "value" : "test_block_and_unblock"
   }, {
     "name" : "host",
-    "value" : "db8b9eee31cf"
+    "value" : "652306101ab7"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -175,11 +175,19 @@
         "failed" : 18,
         "broken" : 4,
         "skipped" : 0,
-        "passed" : 324,
+        "passed" : 325,
         "unknown" : 0,
-        "total" : 346
+        "total" : 347
       },
       "items" : [ {
+        "uid" : "dbfdf9d915cf6ddc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1722216331262,
+          "stop" : 1722216331707,
+          "duration" : 445
+        }
+      }, {
         "uid" : "1e76d08444565993",
         "status" : "passed",
         "time" : {
@@ -331,18 +339,10 @@
           "stop" : 1721665477770,
           "duration" : 508
         }
-      }, {
-        "uid" : "e2bdcec7e2ac6d52",
-        "status" : "passed",
-        "time" : {
-          "start" : 1721636738062,
-          "stop" : 1721636738693,
-          "duration" : 631
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "dbfdf9d915cf6ddc.json",
+  "source" : "c6114c69dc7b5d07.json",
   "parameterValues" : [ ]
 }
