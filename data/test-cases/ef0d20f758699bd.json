@@ -1,24 +1,22 @@
 {
-  "uid" : "b7fc5631eb96e658",
+  "uid" : "ef0d20f758699bd",
   "name" : "test_send_complaint",
   "fullName" : "test.test_messages_functionality#test_send_complaint",
   "historyId" : "31f8786fe3f6ff4b035b30b6ade7469c",
   "time" : {
-    "start" : 1722500743996,
-    "stop" : 1722500753602,
-    "duration" : 9606
+    "start" : 1722561882148,
+    "stop" : 1722561882795,
+    "duration" : 647
   },
-  "status" : "failed",
-  "statusMessage" : "AssertionError: Response status code is not 200\nassert 403 == 200\n +  where 403 = <Response [403]>.status_code",
-  "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7ffa3b888c40>\n\n    @allure.feature(\"Sending Complaints\")\n    @allure.story(\"Filing Complaint on Message\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_send_complaint(api_client):\n        event_id = os.environ.get(\"EVENT_ID_A\")\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        data = {\"eventUid\": event_id, \"channelUid\": f\"{api_client.roomA}%3A{api_client.room_second_part}\",\n                \"reason\": \"trolling\"}\n    \n        with allure.step(\"Filing complaint on message\"):\n            response = api_client.post_token_s(f\"api/v1/complaint/send/{api_client.xnodeid}\", json=data)\n    \n        with allure.step(\"Asserting response status code\"):\n>           assert response.status_code == 200, \"Response status code is not 200\"\nE           AssertionError: Response status code is not 200\nE           assert 403 == 200\nE            +  where 403 = <Response [403]>.status_code\n\ntest/test_messages_functionality.py:235: AssertionError",
+  "status" : "passed",
   "flaky" : false,
-  "newFailed" : true,
+  "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "init_authorization",
+    "name" : "config",
     "time" : {
-      "start" : 1722500675320,
-      "stop" : 1722500678095,
-      "duration" : 2775
+      "start" : 1722561808737,
+      "stop" : 1722561808737,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +29,9 @@
   }, {
     "name" : "api_client",
     "time" : {
-      "start" : 1722500678095,
-      "stop" : 1722500678096,
-      "duration" : 1
+      "start" : 1722561812941,
+      "stop" : 1722561812941,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,11 +42,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "config",
+    "name" : "init_authorization",
     "time" : {
-      "start" : 1722500675320,
-      "stop" : 1722500675320,
-      "duration" : 0
+      "start" : 1722561808737,
+      "stop" : 1722561812941,
+      "duration" : 4204
     },
     "status" : "passed",
     "steps" : [ ],
@@ -60,15 +58,13 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "status" : "failed",
-    "statusMessage" : "AssertionError: Response status code is not 200\nassert 403 == 200\n +  where 403 = <Response [403]>.status_code",
-    "statusTrace" : "api_client = <fixture.api_client.APIClient object at 0x7ffa3b888c40>\n\n    @allure.feature(\"Sending Complaints\")\n    @allure.story(\"Filing Complaint on Message\")\n    @allure.severity(allure.severity_level.CRITICAL)\n    def test_send_complaint(api_client):\n        event_id = os.environ.get(\"EVENT_ID_A\")\n        if event_id is None:\n            responseA = api_client.sendmessages(response_b=False)\n            event_id = os.environ.get(\"EVENT_ID_A\")\n    \n        data = {\"eventUid\": event_id, \"channelUid\": f\"{api_client.roomA}%3A{api_client.room_second_part}\",\n                \"reason\": \"trolling\"}\n    \n        with allure.step(\"Filing complaint on message\"):\n            response = api_client.post_token_s(f\"api/v1/complaint/send/{api_client.xnodeid}\", json=data)\n    \n        with allure.step(\"Asserting response status code\"):\n>           assert response.status_code == 200, \"Response status code is not 200\"\nE           AssertionError: Response status code is not 200\nE           assert 403 == 200\nE            +  where 403 = <Response [403]>.status_code\n\ntest/test_messages_functionality.py:235: AssertionError",
+    "status" : "passed",
     "steps" : [ {
       "name" : "Filing complaint on message",
       "time" : {
-        "start" : 1722500743996,
-        "stop" : 1722500753601,
-        "duration" : 9605
+        "start" : 1722561882148,
+        "stop" : 1722561882793,
+        "duration" : 645
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,33 +77,31 @@
     }, {
       "name" : "Asserting response status code",
       "time" : {
-        "start" : 1722500753601,
-        "stop" : 1722500753601,
-        "duration" : 0
+        "start" : 1722561882793,
+        "stop" : 1722561882794,
+        "duration" : 1
       },
-      "status" : "failed",
-      "statusMessage" : "AssertionError: Response status code is not 200\nassert 403 == 200\n +  where 403 = <Response [403]>.status_code\n",
-      "statusTrace" : "  File \"/usr/workspace/test/test_messages_functionality.py\", line 235, in test_send_complaint\n    assert response.status_code == 200, \"Response status code is not 200\"\n",
+      "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
+      "shouldDisplayMessage" : false,
       "stepsCount" : 0,
-      "hasContent" : true
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : true,
+    "shouldDisplayMessage" : false,
     "stepsCount" : 2,
     "hasContent" : true
   },
   "afterStages" : [ {
     "name" : "api_client::0",
     "time" : {
-      "start" : 1722500828183,
-      "stop" : 1722500828183,
+      "start" : 1722561958229,
+      "stop" : 1722561958229,
       "duration" : 0
     },
     "status" : "passed",
@@ -120,14 +114,14 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "critical"
+    "name" : "feature",
+    "value" : "Sending Complaints"
   }, {
     "name" : "story",
     "value" : "Filing Complaint on Message"
   }, {
-    "name" : "feature",
-    "value" : "Sending Complaints"
+    "name" : "severity",
+    "value" : "critical"
   }, {
     "name" : "parentSuite",
     "value" : "test"
@@ -136,7 +130,7 @@
     "value" : "test_messages_functionality"
   }, {
     "name" : "host",
-    "value" : "dbcb0fba9889"
+    "value" : "50bcc4d91f05"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -160,21 +154,26 @@
   "extra" : {
     "severity" : "critical",
     "retries" : [ ],
-    "categories" : [ {
-      "name" : "Product defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "history" : {
       "statistic" : {
         "failed" : 3,
         "broken" : 21,
         "skipped" : 0,
-        "passed" : 332,
+        "passed" : 333,
         "unknown" : 0,
-        "total" : 356
+        "total" : 357
       },
       "items" : [ {
+        "uid" : "b7fc5631eb96e658",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Response status code is not 200\nassert 403 == 200\n +  where 403 = <Response [403]>.status_code",
+        "time" : {
+          "start" : 1722500743996,
+          "stop" : 1722500753602,
+          "duration" : 9606
+        }
+      }, {
         "uid" : "c4b983b492448f98",
         "status" : "passed",
         "time" : {
@@ -326,18 +325,10 @@
           "stop" : 1721957034242,
           "duration" : 887
         }
-      }, {
-        "uid" : "7fc156ba58e7b08b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1721924756581,
-          "stop" : 1721924757484,
-          "duration" : 903
-        }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "b7fc5631eb96e658.json",
+  "source" : "ef0d20f758699bd.json",
   "parameterValues" : [ ]
 }
